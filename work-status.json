@@ -1,8 +1,8 @@
 {
   "project": "VlandGenerator",
   "version": "4.0.0",
-  "updatedAt": "2026-10-26T16:40:39.405177+00:00",
-  "status": "landscape_qa_complete_main_unavailable",
+  "updatedAt": "2026-10-26T17:29:09.752641+00:00",
+  "status": "github_published_cleanup_refused",
   "policy": "Public schema 4 only; authored zones and spawners; no direct entity placement or legacy migrations.",
   "location": "Standalone local folder; remote synchronization is a separate task.",
   "stages": {
@@ -588,11 +588,11 @@
     "evidence/biome-share-docs.json"
   ],
   "remaining": [
-    "Optional user visual review of the generated comparisons. Main address9670 was unavailable during final verification; activation there is not confirmed."
+    "Fresh publication QA copy remains: automatic approval review rejected its removal (blocked by policy); no retry. See the local .git/publication-qa-location.json for its exact path."
   ],
   "lastChange": {
-    "name": "Six stale landscape test expectations aligned with current accepted behavior; full459/459 PASS",
-    "evidence": "evidence/landscape-remaining-summary.json"
+    "name": "Publish verified VlandGenerator4 snapshot to GitHub main",
+    "evidence": "evidence/git-publication-summary.json"
   },
   "cleanup": {
     "policy": {
@@ -759,16 +759,18 @@
     "Browser360 is desktop width, not a physical mobile device.",
     "Maximum side300 is subject to total98304 physical cells and JSON/raster/session budgets.",
     "Current MoiRi4 stop/delete and older8xQQHl/Hu6QqF/4S7xIA refusals respected; no alternative attempts.",
-    "Latest full Node suite459/459 PASS. Isolated desktop/360px, JS/HTTP/CLI and schema checks passed; main9670 has no listener and was not restarted."
+    "Latest full Node suite459/459 PASS. Isolated desktop/360px, JS/HTTP/CLI and schema checks passed; main9670 has no listener and was not restarted.",
+    "Publication source snapshot is on GitHub/main and verified from a clean Git clone. The temporary publication QA copy remains after a cleanup approval rejection; no further deletion attempted."
   ],
   "activePlan": "work/SETTLEMENT_TERRAIN_PLAN.md",
   "canonicalCheckpoint": "work/CONTEXT_STATE.md",
   "canonicalCheckpointWriteRefused": true,
   "currentTask": {
-    "name": "landscape-qa-alignment",
+    "name": "github-publication",
     "checkpoint": "work/SETTLEMENT_TERRAIN_PLAN.md",
-    "implementation": "complete_tests_only",
-    "verification": "complete_in_isolated_copy_main_unavailable"
+    "implementation": "published",
+    "verification": "complete_clean_git_clone",
+    "cleanup": "automatic_review_rejected"
   },
   "settlementOpenPlanQA": {
     "maximum": {
@@ -1053,5 +1055,52 @@
       "limitation": "Current main-server activation is not verified; isolated HTTP/browser checks passed."
     },
     "userTabsTouched": false
+  },
+  "gitPublication": {
+    "status": "published",
+    "repository": "https://github.com/vavelifefr/VlandGenerator",
+    "branch": "main",
+    "sourceCommit": "809f1d7e3aa4badd2b63097900e57419f277e1a6",
+    "remoteSourceVerified": true,
+    "verifiedAt": "2026-10-26T17:29:09.752641+00:00",
+    "sourceFiles": 857,
+    "sourceBytes": 456090403,
+    "cleanGitCloneVerified": true,
+    "userDataAbsentFromClone": true,
+    "fullNode": {
+      "tests": 459,
+      "pass": 459,
+      "fail": 0
+    },
+    "content": {
+      "maps": 24,
+      "modes": 8,
+      "operations": 288
+    },
+    "browserCases": 6,
+    "browserWidths": [
+      1100,
+      360
+    ],
+    "pageErrors": 0,
+    "jsHttpCliCases": 3,
+    "userTabsTouched": false,
+    "excluded": [
+      ".run/",
+      "projects/",
+      "local dependencies and credentials",
+      "unreferenced generated QA output"
+    ],
+    "cleanup": {
+      "copyRemoved": false,
+      "automaticReviewRejected": true,
+      "reason": "blocked by policy",
+      "retryAttemptedAfterRejection": false
+    },
+    "logs": [
+      "evidence/git-publication-tests.log",
+      "evidence/git-publication-content.log",
+      "evidence/git-publication-browser.log"
+    ]
   }
 }

@@ -1,0 +1,47 @@
+{
+  "status": "published",
+  "repository": "https://github.com/vavelifefr/VlandGenerator",
+  "branch": "main",
+  "sourceCommit": "809f1d7e3aa4badd2b63097900e57419f277e1a6",
+  "remoteSourceVerified": true,
+  "verifiedAt": "2026-10-26T17:29:09.752641+00:00",
+  "sourceFiles": 857,
+  "sourceBytes": 456090403,
+  "cleanGitCloneVerified": true,
+  "userDataAbsentFromClone": true,
+  "fullNode": {
+    "tests": 459,
+    "pass": 459,
+    "fail": 0
+  },
+  "content": {
+    "maps": 24,
+    "modes": 8,
+    "operations": 288
+  },
+  "browserCases": 6,
+  "browserWidths": [
+    1100,
+    360
+  ],
+  "pageErrors": 0,
+  "jsHttpCliCases": 3,
+  "userTabsTouched": false,
+  "excluded": [
+    ".run/",
+    "projects/",
+    "local dependencies and credentials",
+    "unreferenced generated QA output"
+  ],
+  "cleanup": {
+    "copyRemoved": false,
+    "automaticReviewRejected": true,
+    "reason": "blocked by policy",
+    "retryAttemptedAfterRejection": false
+  },
+  "logs": [
+    "evidence/git-publication-tests.log",
+    "evidence/git-publication-content.log",
+    "evidence/git-publication-browser.log"
+  ]
+}

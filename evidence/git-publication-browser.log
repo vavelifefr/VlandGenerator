@@ -1,0 +1,7 @@
+PASS browser landscape 1100
+PASS browser hexlandscape 1100
+PASS browser settlements 1100
+PASS browser landscape 360
+PASS browser hexlandscape 360
+PASS browser settlements 360
+{"ok":true,"browser":6,"native":3,"pageErrors":0}
