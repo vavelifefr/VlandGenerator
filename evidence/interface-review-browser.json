@@ -1,0 +1,161 @@
+{
+  "ok": true,
+  "complete": true,
+  "results": [
+    {
+      "mode": "landscape",
+      "width": 1100,
+      "duplicateToolbar": false,
+      "editorBelowMap": true,
+      "noOverflow": true,
+      "geometryAndSourceShortcuts": true,
+      "inputAndDialogProtected": true,
+      "diagnosticReadonly": true,
+      "keyboardInput": "synthetic"
+    },
+    {
+      "mode": "landscape",
+      "width": 360,
+      "duplicateToolbar": false,
+      "editorBelowMap": true,
+      "noOverflow": true,
+      "geometryAndSourceShortcuts": true,
+      "inputAndDialogProtected": true,
+      "diagnosticReadonly": true,
+      "keyboardInput": "synthetic"
+    },
+    {
+      "mode": "dungeon",
+      "width": 1100,
+      "duplicateToolbar": false,
+      "editorBelowMap": true,
+      "noOverflow": true,
+      "geometryAndSourceShortcuts": true,
+      "inputAndDialogProtected": true,
+      "diagnosticReadonly": true,
+      "keyboardInput": "synthetic"
+    },
+    {
+      "mode": "dungeon",
+      "width": 360,
+      "duplicateToolbar": false,
+      "editorBelowMap": true,
+      "noOverflow": true,
+      "geometryAndSourceShortcuts": true,
+      "inputAndDialogProtected": true,
+      "diagnosticReadonly": true,
+      "keyboardInput": "synthetic"
+    },
+    {
+      "mode": "tiers",
+      "width": 1100,
+      "duplicateToolbar": false,
+      "editorBelowMap": true,
+      "noOverflow": true,
+      "geometryAndSourceShortcuts": true,
+      "inputAndDialogProtected": true,
+      "diagnosticReadonly": true,
+      "keyboardInput": "synthetic"
+    },
+    {
+      "mode": "tiers",
+      "width": 360,
+      "duplicateToolbar": false,
+      "editorBelowMap": true,
+      "noOverflow": true,
+      "geometryAndSourceShortcuts": true,
+      "inputAndDialogProtected": true,
+      "diagnosticReadonly": true,
+      "keyboardInput": "synthetic"
+    },
+    {
+      "mode": "sideview",
+      "width": 1100,
+      "duplicateToolbar": false,
+      "editorBelowMap": true,
+      "noOverflow": true,
+      "geometryAndSourceShortcuts": true,
+      "inputAndDialogProtected": true,
+      "diagnosticReadonly": true,
+      "keyboardInput": "synthetic"
+    },
+    {
+      "mode": "sideview",
+      "width": 360,
+      "duplicateToolbar": false,
+      "editorBelowMap": true,
+      "noOverflow": true,
+      "geometryAndSourceShortcuts": true,
+      "inputAndDialogProtected": true,
+      "diagnosticReadonly": true,
+      "keyboardInput": "synthetic"
+    },
+    {
+      "mode": "caves",
+      "width": 1100,
+      "duplicateToolbar": false,
+      "editorBelowMap": true,
+      "noOverflow": true,
+      "geometryAndSourceShortcuts": true,
+      "inputAndDialogProtected": true,
+      "diagnosticReadonly": true,
+      "keyboardInput": "synthetic"
+    },
+    {
+      "mode": "caves",
+      "width": 360,
+      "duplicateToolbar": false,
+      "editorBelowMap": true,
+      "noOverflow": true,
+      "geometryAndSourceShortcuts": true,
+      "inputAndDialogProtected": true,
+      "diagnosticReadonly": true,
+      "keyboardInput": "synthetic"
+    },
+    {
+      "mode": "settlements",
+      "width": 1100,
+      "duplicateToolbar": false,
+      "editorBelowMap": true,
+      "noOverflow": true,
+      "geometryAndSourceShortcuts": true,
+      "inputAndDialogProtected": true,
+      "diagnosticReadonly": true,
+      "keyboardInput": "synthetic"
+    },
+    {
+      "mode": "settlements",
+      "width": 360,
+      "duplicateToolbar": false,
+      "editorBelowMap": true,
+      "noOverflow": true,
+      "geometryAndSourceShortcuts": true,
+      "inputAndDialogProtected": true,
+      "diagnosticReadonly": true,
+      "keyboardInput": "synthetic"
+    },
+    {
+      "mode": "relief",
+      "width": 1100,
+      "duplicateToolbar": false,
+      "editorBelowMap": true,
+      "noOverflow": true,
+      "geometryAndSourceShortcuts": true,
+      "inputAndDialogProtected": true,
+      "diagnosticReadonly": true,
+      "keyboardInput": "synthetic"
+    },
+    {
+      "mode": "relief",
+      "width": 360,
+      "duplicateToolbar": false,
+      "editorBelowMap": true,
+      "noOverflow": true,
+      "geometryAndSourceShortcuts": true,
+      "inputAndDialogProtected": true,
+      "diagnosticReadonly": true,
+      "keyboardInput": "synthetic"
+    }
+  ],
+  "errors": []
+}

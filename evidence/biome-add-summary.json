@@ -1,0 +1,91 @@
+{
+  "status": "implemented_verified",
+  "updatedAt": "2026-10-25T21:27:59.329924+00:00",
+  "scope": {
+    "modes": [
+      "landscape",
+      "hexlandscape"
+    ],
+    "structures": [
+      "land",
+      "coast",
+      "islands",
+      "continent"
+    ],
+    "defaultPercent": 25,
+    "remainingBudgetCapsCurrentCard": true,
+    "pendingDraftsReserveBudget": true,
+    "onlySuccessfulInnerAddGenerates": false,
+    "firstMapCanBeCreatedByInnerAdd": true,
+    "newPublicFields": false,
+    "activeDeletionAlsoGenerates": true,
+    "baseBiomeSelectionGenerates": true,
+    "activeShareCommitGenerates": true,
+    "percentTypingGenerates": false,
+    "unconfirmedShareRequiresAdd": true
+  },
+  "node": {
+    "tests": 52,
+    "pass": 52,
+    "fail": 0,
+    "report": "evidence/island-layout-rarity-tests.txt"
+  },
+  "focusedNode": {
+    "tests": 26,
+    "pass": 26,
+    "fail": 0,
+    "report": "evidence/biome-add-green.txt"
+  },
+  "tddRed": "evidence/biome-add-red.txt",
+  "browser": {
+    "ok": true,
+    "cases": 16,
+    "automaticGenerations": 64,
+    "widths": [
+      1100,
+      360
+    ],
+    "pageErrors": [],
+    "report": "evidence/biome-add-browser.json",
+    "copyAbsent": true
+  },
+  "main": {
+    "ok": true,
+    "currentFiles": 6,
+    "report": "evidence/biome-add-main.json",
+    "restart": false
+  },
+  "portable": {
+    "ok": true,
+    "pending": false,
+    "report": "evidence/island-natural-portable.json",
+    "tests": 52,
+    "syntaxModules": 236,
+    "relativeImports": 791,
+    "exactJsHttpCliCases": 4,
+    "schemaReport": "evidence/island-natural-portable-schema.json",
+    "schemas": 60,
+    "documents": 16,
+    "negativeControls": 16,
+    "copyAbsent": true
+  },
+  "relatedIslandLayoutReport": "evidence/island-layout-rarity.json",
+  "protected": {
+    "liveSessionUsed": false,
+    "userTabsControlled": false,
+    "authoredDataModified": false,
+    "dependenciesInstalled": false,
+    "commitsCreated": false
+  },
+  "implementationVerified": true,
+  "documentation": {
+    "ok": true,
+    "utf8Files": 6,
+    "balancedFences": 6,
+    "localLinks": 35,
+    "brokenLinks": []
+  },
+  "currentBehaviorExtension": "evidence/biome-share-summary.json",
+  "previousRemovalReport": "evidence/biome-remove-summary.json",
+  "previousBaseReport": "evidence/base-biome-summary.json"
+}

@@ -1,0 +1,35 @@
+✔ native landscape normalization is strict, canonical before preset merge, immutable and idempotent (6.8219ms)
+✔ all 28 landscape choices keep underlying sea geometry, base identity and valid hydrology on small square and hex surfaces (492.025ms)
+✔ real atlases remain valid for every structure and biome with their own normalized requests (2545.5397ms)
+✔ profile generation keeps underground physical layers linked to their actual surface and deterministic (135.5608ms)
+✔ profile-free native generation keeps its pre-integration checksum unchanged (37.9332ms)
+✔ landscape selection has exactly four structures and seven explicit mandatory base biomes (2.2625ms)
+✔ underlying land, coast, islands and continent have their promised sea geometry on square and hex grids (106.8172ms)
+✔ all base biomes retain structure guarantees and distinct meaningful elevation character (35.8206ms)
+✔ profile fields are deterministic, seed-sensitive, finite on a large rectangular hex map, and do not mutate requests (68.2057ms)
+✔ base biomes determine dry-land identity without random climate changing a desert into forest (0.3008ms)
+✔ profile climate preserves hot dry deserts, wet swamps and cold snow with bounded local variation (1.0129ms)
+✔ volcanic profile produces a cone rim above its crater and uses existing basalt ground (0.1412ms)
+✔ profile elevation feeds existing hydrology with a sea frame while allowing freshwater (3.1239ms)
+✔ hex16x256 pure seed2026 builds three connected islands without a one-cell satellite (23.1856ms)
+✔ native hex16x256 seed11 heightmap preserves the three island cores before navigation repairs (193.1806ms)
+✔ coast hex16x256 seed125 keeps shoreline land connected without a detached cell (5.63ms)
+✔ coast remains one mainland with fully dry and sea opposite edges across 768 narrow-map cases (726.3906ms)
+✔ seed changes continent placement and aspect, and rotates the three-island composition (798.9265ms)
+ℹ {"seedRange":"0..63","size":"64x64","reports":[{"kind":"square","structure":"islands","uniqueMasks":64,"centerX":[11.041009463722398,52.49769585253456],"centerY":[10.701333333333332,51.31901840490798],"aspect":[0.6956521739130435,1.6666666666666667]},{"kind":"square","structure":"continent","uniqueMasks":64,"centerX":[27.55761523046092,35.46222222222222],"centerY":[27.302009456264777,35.737125748503],"aspect":[0.6842105263157895,1.425]},{"kind":"hex","structure":"islands","uniqueMasks":64,"centerX":[11.058441558441558,51.625],"centerY":[10.662125340599456,51.27018633540373],"aspect":[0.6956521739130435,1.6666666666666667]},{"kind":"hex","structure":"continent","uniqueMasks":64,"centerX":[27.347695390781563,35.27760416666667],"centerY":[27.263002364066192,35.7],"aspect":[0.7017543859649122,1.425]}]}
+✔ connected seed geometry keeps three separated islands or one large continent and deep sea on both grids and narrow maps (179.8891ms)
+✔ minimum 16x16 maps keep every core usable across 128 seeds on both grids (78.0391ms)
+✔ prepared geometry follows request/seed changes without mutating input or exposing cache state (12.5114ms)
+✔ 256x256 prepared island and continent geometry fits the existing worker time budget (231.4666ms)
+ℹ {"size":"256x256","results":[{"kind":"square","structure":"islands","elapsedMs":72},{"kind":"square","structure":"continent","elapsedMs":40},{"kind":"hex","structure":"islands","elapsedMs":64},{"kind":"hex","structure":"continent","elapsedMs":41}]}
+ℹ tests 22
+ℹ suites 0
+ℹ pass 22
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 3314.9435
+{"check":"actualCoastGenerateAtlas","kind":"hex","width":16,"height":256,"seed":125,"elapsedMs":92,"groups":[2047],"validation":true}
+{"check":"actualCoastGenerateAtlas","kind":"square","width":256,"height":256,"seed":125,"elapsedMs":733,"groups":[32738],"validation":true}
+{"check":"actualCoastGenerateAtlas","kind":"hex","width":256,"height":256,"seed":125,"elapsedMs":725,"groups":[32738],"validation":true}

@@ -1,0 +1,261 @@
+{
+  "ok": true,
+  "maps": 24,
+  "modes": 8,
+  "sourceOperations": 288,
+  "rows": [
+    {
+      "mode": "relief",
+      "seed": 7,
+      "layers": 1,
+      "sources": 14,
+      "operations": 12,
+      "firstBatch": 18,
+      "afterReplacement": 18,
+      "valid": true
+    },
+    {
+      "mode": "relief",
+      "seed": 42,
+      "layers": 1,
+      "sources": 14,
+      "operations": 12,
+      "firstBatch": 18,
+      "afterReplacement": 18,
+      "valid": true
+    },
+    {
+      "mode": "relief",
+      "seed": 2026,
+      "layers": 1,
+      "sources": 14,
+      "operations": 12,
+      "firstBatch": 18,
+      "afterReplacement": 18,
+      "valid": true
+    },
+    {
+      "mode": "dungeon",
+      "seed": 7,
+      "layers": 1,
+      "sources": 14,
+      "operations": 12,
+      "firstBatch": 18,
+      "afterReplacement": 18,
+      "valid": true
+    },
+    {
+      "mode": "dungeon",
+      "seed": 42,
+      "layers": 1,
+      "sources": 14,
+      "operations": 12,
+      "firstBatch": 18,
+      "afterReplacement": 18,
+      "valid": true
+    },
+    {
+      "mode": "dungeon",
+      "seed": 2026,
+      "layers": 1,
+      "sources": 14,
+      "operations": 12,
+      "firstBatch": 18,
+      "afterReplacement": 18,
+      "valid": true
+    },
+    {
+      "mode": "tiers",
+      "seed": 7,
+      "layers": 2,
+      "sources": 14,
+      "operations": 12,
+      "firstBatch": 18,
+      "afterReplacement": 18,
+      "valid": true
+    },
+    {
+      "mode": "tiers",
+      "seed": 42,
+      "layers": 2,
+      "sources": 14,
+      "operations": 12,
+      "firstBatch": 18,
+      "afterReplacement": 18,
+      "valid": true
+    },
+    {
+      "mode": "tiers",
+      "seed": 2026,
+      "layers": 2,
+      "sources": 14,
+      "operations": 12,
+      "firstBatch": 18,
+      "afterReplacement": 18,
+      "valid": true
+    },
+    {
+      "mode": "sideview",
+      "seed": 7,
+      "layers": 1,
+      "sources": 14,
+      "operations": 12,
+      "firstBatch": 18,
+      "afterReplacement": 18,
+      "valid": true
+    },
+    {
+      "mode": "sideview",
+      "seed": 42,
+      "layers": 1,
+      "sources": 14,
+      "operations": 12,
+      "firstBatch": 18,
+      "afterReplacement": 18,
+      "valid": true
+    },
+    {
+      "mode": "sideview",
+      "seed": 2026,
+      "layers": 1,
+      "sources": 14,
+      "operations": 12,
+      "firstBatch": 18,
+      "afterReplacement": 18,
+      "valid": true
+    },
+    {
+      "mode": "caves",
+      "seed": 7,
+      "layers": 2,
+      "sources": 14,
+      "operations": 12,
+      "firstBatch": 18,
+      "afterReplacement": 18,
+      "valid": true
+    },
+    {
+      "mode": "caves",
+      "seed": 42,
+      "layers": 2,
+      "sources": 14,
+      "operations": 12,
+      "firstBatch": 18,
+      "afterReplacement": 18,
+      "valid": true
+    },
+    {
+      "mode": "caves",
+      "seed": 2026,
+      "layers": 2,
+      "sources": 14,
+      "operations": 12,
+      "firstBatch": 18,
+      "afterReplacement": 18,
+      "valid": true
+    },
+    {
+      "mode": "settlements",
+      "seed": 7,
+      "layers": 1,
+      "sources": 14,
+      "operations": 12,
+      "firstBatch": 18,
+      "afterReplacement": 18,
+      "valid": true
+    },
+    {
+      "mode": "settlements",
+      "seed": 42,
+      "layers": 1,
+      "sources": 14,
+      "operations": 12,
+      "firstBatch": 18,
+      "afterReplacement": 18,
+      "valid": true
+    },
+    {
+      "mode": "settlements",
+      "seed": 2026,
+      "layers": 1,
+      "sources": 14,
+      "operations": 12,
+      "firstBatch": 18,
+      "afterReplacement": 18,
+      "valid": true
+    },
+    {
+      "mode": "landscape",
+      "seed": 7,
+      "layers": 2,
+      "sources": 14,
+      "operations": 12,
+      "firstBatch": 18,
+      "afterReplacement": 18,
+      "valid": true
+    },
+    {
+      "mode": "landscape",
+      "seed": 42,
+      "layers": 2,
+      "sources": 14,
+      "operations": 12,
+      "firstBatch": 18,
+      "afterReplacement": 18,
+      "valid": true
+    },
+    {
+      "mode": "landscape",
+      "seed": 2026,
+      "layers": 2,
+      "sources": 14,
+      "operations": 12,
+      "firstBatch": 18,
+      "afterReplacement": 18,
+      "valid": true
+    },
+    {
+      "mode": "hexlandscape",
+      "seed": 7,
+      "layers": 2,
+      "sources": 14,
+      "operations": 12,
+      "firstBatch": 18,
+      "afterReplacement": 18,
+      "valid": true
+    },
+    {
+      "mode": "hexlandscape",
+      "seed": 42,
+      "layers": 2,
+      "sources": 14,
+      "operations": 12,
+      "firstBatch": 18,
+      "afterReplacement": 18,
+      "valid": true
+    },
+    {
+      "mode": "hexlandscape",
+      "seed": 2026,
+      "layers": 2,
+      "sources": 14,
+      "operations": 12,
+      "firstBatch": 18,
+      "afterReplacement": 18,
+      "valid": true
+    }
+  ],
+  "demo": {
+    "sources": 8,
+    "categories": [
+      "flora",
+      "fauna",
+      "resources",
+      "events",
+      "items",
+      "objects"
+    ],
+    "previewEntities": 63,
+    "initialEntities": 0
+  }
+}

@@ -1,0 +1,7 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {landscapeElevation} from '../engine/core/landscape-profile.mjs';
+import {longestAxisShore} from '../tools/continent-shape-metrics.mjs';
+const mask=r=>Uint8Array.from({length:r.width*r.height},(_,i)=>+(landscapeElevation(.5,r,i%r.width,Math.floor(i/r.width))>.36));
+test('maximum erosion has a regional coast feature even for the former feature-off seed42',()=>{for(const kind of ['square','hex'])for(const size of [100,300]){const r={width:size,height:size,seed:42,topology:{kind},landscape:{structure:'coast',baseBiome:'meadow',landPercent:75,coastErosion:100}},a=mask(r),hs=[],vs=[];for(let x=0;x<size;x++){let n=0;for(let y=0;y<size;y++)n+=a[y*size+x];hs.push(n);}for(let y=0;y<size;y++){let n=0;for(let x=0;x<size;x++)n+=a[y*size+x];vs.push(n);}const spans=[hs,vs].map(v=>(Math.max(...v)-Math.min(...v))/size);assert.ok(Math.min(...spans)>.12,kind+'/'+size+' regional coastal penetration '+spans);}});
+test('maximum island erosion breaks long straight outer coasts at75percent on both grids',()=>{for(const kind of ['square','hex'])for(const size of [100,300]){const r={width:size,height:size,seed:42,topology:{kind},landscape:{structure:'islands',baseBiome:'meadow',landPercent:75,coastErosion:100}},a=mask(r);assert.ok(longestAxisShore(a,size,size).fractionOfSide<=.25,kind+'/'+size+' must not expose straight frame cuts');}});

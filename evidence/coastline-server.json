@@ -1,0 +1,11 @@
+{
+  "ok": false,
+  "started": "2026-10-24T07:17:23.543Z",
+  "static": [],
+  "cases": [],
+  "sessionApiUsed": false,
+  "namedProjectsUsed": false,
+  "restart": false,
+  "error": "fetch failed",
+  "finished": "2026-10-24T07:17:23.565Z"
+}

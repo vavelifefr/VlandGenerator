@@ -1,0 +1,90 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://vland.invalid/schemas/distribution-request.schema.json",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "schema": {
+      "const": "vland.distribution.request"
+    },
+    "schemaVersion": {
+      "const": 4
+    },
+    "groupId": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 64,
+      "pattern": "^[a-zA-Z][a-zA-Z0-9_-]{0,63}$",
+      "not": {
+        "enum": [
+          "__proto__",
+          "prototype",
+          "constructor"
+        ]
+      }
+    },
+    "layerIds": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 64,
+        "pattern": "^[a-zA-Z][a-zA-Z0-9_-]{0,63}$",
+        "not": {
+          "enum": [
+            "__proto__",
+            "prototype",
+            "constructor"
+          ]
+        }
+      },
+      "maxItems": 256,
+      "uniqueItems": true,
+      "minItems": 1
+    },
+    "template": {
+      "$ref": "source.schema.json"
+    },
+    "placement": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "mode": {
+          "enum": [
+            "count",
+            "density"
+          ]
+        },
+        "count": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 256
+        },
+        "density": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "minDistance": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 128
+        }
+      },
+      "required": [
+        "mode",
+        "count",
+        "density",
+        "minDistance"
+      ]
+    }
+  },
+  "required": [
+    "schema",
+    "schemaVersion",
+    "groupId",
+    "layerIds",
+    "template",
+    "placement"
+  ]
+}

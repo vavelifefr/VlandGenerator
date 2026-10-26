@@ -1,0 +1,80 @@
+{
+  "ok": true,
+  "startedAt": "2026-10-22T18:22:59.637Z",
+  "node": "v24.21.0",
+  "phases": [
+    {
+      "name": "fresh-copy",
+      "ok": true,
+      "elapsedMs": 334,
+      "outsideProject": true,
+      "excludedConfirmed": true
+    },
+    {
+      "name": "node-full-suite",
+      "ok": true,
+      "elapsedMs": 52549,
+      "tests": 314,
+      "pass": 314,
+      "fail": 0
+    },
+    {
+      "name": "production-js-and-imports",
+      "ok": true,
+      "elapsedMs": 2178,
+      "syntaxModules": 202,
+      "relativeImports": 704,
+      "authoredExamplesAndFixturesRead": false
+    },
+    {
+      "name": "synthetic-js-cli-http-square-hex",
+      "ok": true,
+      "elapsedMs": 6095,
+      "ephemeralPort": 4871,
+      "health": 200,
+      "home": 200,
+      "cases": [
+        {
+          "mode": "landscape",
+          "size": 50,
+          "topology": "square",
+          "repeatedCards": true,
+          "decimalShare": true,
+          "generateExact": true,
+          "rebuildExact": true,
+          "validationJsCliHttp": true,
+          "contextParity": true,
+          "elapsedMs": 3122
+        },
+        {
+          "mode": "hexlandscape",
+          "size": 50,
+          "topology": "hex",
+          "repeatedCards": true,
+          "decimalShare": true,
+          "generateExact": true,
+          "rebuildExact": true,
+          "validationJsCliHttp": true,
+          "contextParity": true,
+          "elapsedMs": 2849
+        }
+      ],
+      "liveSessionApiUsed": false,
+      "namedProjectApiUsed": false
+    }
+  ],
+  "sourceAudit": "No hashes or content audits of authored examples/fixtures; standard tests may use their static fixtures.",
+  "excluded": [
+    "projects",
+    ".run",
+    "evidence",
+    ".git"
+  ],
+  "syntheticOnly": true,
+  "cleanup": {
+    "attempted": true,
+    "removed": true
+  },
+  "copy": "C:\\Users\\vaveMain\\AppData\\Local\\Temp\\Vland-Surface-portable-UOls8c\\VlandGenerator",
+  "finishedAt": "2026-10-22T18:24:00.832Z"
+}

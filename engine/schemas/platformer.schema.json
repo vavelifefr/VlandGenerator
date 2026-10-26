@@ -1,0 +1,1193 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://vland.invalid/engine/schemas/platformer.schema.json",
+  "oneOf": [
+    {
+      "type": "object",
+      "properties": {
+        "schema": {
+          "const": "vland.platformer"
+        },
+        "schemaVersion": {
+          "const": 1
+        },
+        "apiVersion": {
+          "const": 1
+        },
+        "generatorVersion": {
+          "type": "string",
+          "maxLength": 32
+        },
+        "platformerVersion": {
+          "const": "1.0.0"
+        },
+        "seed": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 4294967295
+        },
+        "request": {
+          "type": "object",
+          "properties": {
+            "schema": {
+              "const": "vland.platformer.request"
+            },
+            "schemaVersion": {
+              "const": 1
+            },
+            "seed": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 4294967295
+            },
+            "preset": {
+              "enum": [
+                "metroidvania",
+                "roguelite",
+                "vertical"
+              ]
+            },
+            "rooms": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 30
+            },
+            "roomWidth": {
+              "type": "object",
+              "properties": {
+                "min": {
+                  "type": "integer",
+                  "minimum": 12,
+                  "maximum": 28
+                },
+                "max": {
+                  "type": "integer",
+                  "minimum": 12,
+                  "maximum": 28
+                }
+              },
+              "required": [],
+              "additionalProperties": false
+            },
+            "roomHeight": {
+              "type": "object",
+              "properties": {
+                "min": {
+                  "type": "integer",
+                  "minimum": 9,
+                  "maximum": 22
+                },
+                "max": {
+                  "type": "integer",
+                  "minimum": 9,
+                  "maximum": 22
+                }
+              },
+              "required": [],
+              "additionalProperties": false
+            },
+            "branches": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1
+            },
+            "platforms": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1
+            },
+            "gaps": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1
+            },
+            "physics": {
+              "type": "object",
+              "properties": {
+                "width": {
+                  "type": "integer",
+                  "minimum": 1,
+                  "maximum": 2
+                },
+                "height": {
+                  "type": "integer",
+                  "minimum": 1,
+                  "maximum": 3
+                },
+                "speed": {
+                  "type": "number",
+                  "minimum": 2,
+                  "maximum": 8
+                },
+                "jumpSpeed": {
+                  "type": "number",
+                  "minimum": 8,
+                  "maximum": 18
+                },
+                "gravity": {
+                  "type": "number",
+                  "minimum": 16,
+                  "maximum": 40
+                },
+                "climbSpeed": {
+                  "type": "number",
+                  "minimum": 1,
+                  "maximum": 6
+                }
+              },
+              "required": [],
+              "additionalProperties": false
+            }
+          },
+          "required": [
+            "schema",
+            "schemaVersion"
+          ],
+          "additionalProperties": false
+        },
+        "board": {
+          "type": "object",
+          "properties": {
+            "width": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 4096
+            },
+            "height": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 4096
+            },
+            "walls": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "x": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 4095
+                  },
+                  "y": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 4095
+                  },
+                  "type": {
+                    "enum": [
+                      "rock",
+                      "tree",
+                      "ruin",
+                      "bedrock"
+                    ]
+                  }
+                },
+                "required": [
+                  "x",
+                  "y",
+                  "type"
+                ],
+                "additionalProperties": false
+              },
+              "maxItems": 100000,
+              "minItems": 0
+            }
+          },
+          "required": [
+            "width",
+            "height",
+            "walls"
+          ],
+          "additionalProperties": false
+        },
+        "rooms": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "maxLength": 96
+              },
+              "x": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 4095
+              },
+              "y": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 4095
+              },
+              "width": {
+                "type": "integer",
+                "minimum": 1,
+                "maximum": 100
+              },
+              "height": {
+                "type": "integer",
+                "minimum": 1,
+                "maximum": 100
+              },
+              "role": {
+                "enum": [
+                  "start",
+                  "exit",
+                  "traverse",
+                  "reward"
+                ]
+              }
+            },
+            "required": [
+              "id",
+              "x",
+              "y",
+              "width",
+              "height",
+              "role"
+            ],
+            "additionalProperties": false
+          },
+          "maxItems": 30,
+          "minItems": 1
+        },
+        "connectors": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "maxLength": 96
+              },
+              "kind": {
+                "enum": [
+                  "passage",
+                  "ladder"
+                ]
+              },
+              "length": {
+                "type": "integer",
+                "minimum": 1,
+                "maximum": 3
+              },
+              "from": {
+                "type": "string",
+                "maxLength": 96
+              },
+              "to": {
+                "type": "string",
+                "maxLength": 96
+              },
+              "x": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 4095
+              },
+              "y": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 4095
+              },
+              "width": {
+                "type": "integer",
+                "minimum": 1,
+                "maximum": 100
+              },
+              "height": {
+                "type": "integer",
+                "minimum": 1,
+                "maximum": 100
+              }
+            },
+            "required": [
+              "id",
+              "kind",
+              "length",
+              "from",
+              "to",
+              "x",
+              "y",
+              "width",
+              "height"
+            ],
+            "additionalProperties": false
+          },
+          "maxItems": 29,
+          "minItems": 0
+        },
+        "platforms": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "x": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 4095
+              },
+              "y": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 4095
+              },
+              "width": {
+                "type": "integer",
+                "minimum": 1,
+                "maximum": 100
+              },
+              "height": {
+                "type": "integer",
+                "minimum": 1,
+                "maximum": 100
+              }
+            },
+            "required": [
+              "x",
+              "y",
+              "width",
+              "height"
+            ],
+            "additionalProperties": false
+          },
+          "maxItems": 1000,
+          "minItems": 0
+        },
+        "ladders": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "x": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 4095
+              },
+              "y": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 4095
+              }
+            },
+            "required": [
+              "x",
+              "y"
+            ],
+            "additionalProperties": false
+          },
+          "maxItems": 100000,
+          "minItems": 0
+        },
+        "spawn": {
+          "type": "object",
+          "properties": {
+            "x": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 4095
+            },
+            "y": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 4095
+            }
+          },
+          "required": [
+            "x",
+            "y"
+          ],
+          "additionalProperties": false
+        },
+        "exit": {
+          "type": "object",
+          "properties": {
+            "x": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 4095
+            },
+            "y": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 4095
+            }
+          },
+          "required": [
+            "x",
+            "y"
+          ],
+          "additionalProperties": false
+        },
+        "sites": {
+          "type": "array",
+          "items": {
+            "type": "object"
+          },
+          "maxItems": 30,
+          "minItems": 0
+        },
+        "analysis": {
+          "type": "object"
+        },
+        "fingerprint": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{8}$"
+        }
+      },
+      "required": [
+        "schema",
+        "schemaVersion",
+        "apiVersion",
+        "generatorVersion",
+        "platformerVersion",
+        "seed",
+        "request",
+        "board",
+        "rooms",
+        "connectors",
+        "platforms",
+        "ladders",
+        "spawn",
+        "exit",
+        "sites",
+        "fingerprint"
+      ],
+      "additionalProperties": false
+    },
+    {
+      "type": "object",
+      "properties": {
+        "schema": {
+          "const": "vland.platformer"
+        },
+        "schemaVersion": {
+          "const": 2
+        },
+        "apiVersion": {
+          "const": 1
+        },
+        "generatorVersion": {
+          "type": "string",
+          "maxLength": 32
+        },
+        "platformerVersion": {
+          "const": "2.0.0"
+        },
+        "seed": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 4294967295
+        },
+        "request": {
+          "type": "object",
+          "properties": {
+            "schema": {
+              "const": "vland.platformer.request"
+            },
+            "schemaVersion": {
+              "const": 2
+            },
+            "seed": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 4294967295
+            },
+            "preset": {
+              "enum": [
+                "metroidvania",
+                "roguelite",
+                "vertical"
+              ]
+            },
+            "rooms": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 30
+            },
+            "roomWidth": {
+              "type": "object",
+              "properties": {
+                "min": {
+                  "type": "integer",
+                  "minimum": 12,
+                  "maximum": 28
+                },
+                "max": {
+                  "type": "integer",
+                  "minimum": 12,
+                  "maximum": 28
+                }
+              },
+              "required": [],
+              "additionalProperties": false
+            },
+            "roomHeight": {
+              "type": "object",
+              "properties": {
+                "min": {
+                  "type": "integer",
+                  "minimum": 9,
+                  "maximum": 22
+                },
+                "max": {
+                  "type": "integer",
+                  "minimum": 9,
+                  "maximum": 22
+                }
+              },
+              "required": [],
+              "additionalProperties": false
+            },
+            "branches": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1
+            },
+            "platforms": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1
+            },
+            "gaps": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1
+            },
+            "physics": {
+              "type": "object",
+              "properties": {
+                "width": {
+                  "type": "integer",
+                  "minimum": 1,
+                  "maximum": 2
+                },
+                "height": {
+                  "type": "integer",
+                  "minimum": 1,
+                  "maximum": 3
+                },
+                "speed": {
+                  "type": "number",
+                  "minimum": 2,
+                  "maximum": 8
+                },
+                "jumpSpeed": {
+                  "type": "number",
+                  "minimum": 8,
+                  "maximum": 18
+                },
+                "gravity": {
+                  "type": "number",
+                  "minimum": 16,
+                  "maximum": 40
+                },
+                "climbSpeed": {
+                  "type": "number",
+                  "minimum": 1,
+                  "maximum": 6
+                },
+                "doubleJumpSpeed": {
+                  "type": "number",
+                  "minimum": 8,
+                  "maximum": 18
+                },
+                "dashSpeed": {
+                  "type": "number",
+                  "minimum": 8,
+                  "maximum": 32
+                },
+                "dashDuration": {
+                  "type": "number",
+                  "minimum": 0.1,
+                  "maximum": 0.5
+                },
+                "wallJumpSpeed": {
+                  "type": "number",
+                  "minimum": 8,
+                  "maximum": 18
+                },
+                "wallJumpPush": {
+                  "type": "number",
+                  "minimum": 2,
+                  "maximum": 12
+                }
+              },
+              "required": [],
+              "additionalProperties": false
+            },
+            "abilities": {
+              "type": "object",
+              "properties": {
+                "initial": {
+                  "type": "array",
+                  "items": {
+                    "enum": [
+                      "double-jump",
+                      "dash",
+                      "wall-jump"
+                    ]
+                  },
+                  "maxItems": 3,
+                  "uniqueItems": true
+                },
+                "unlockOrder": {
+                  "type": "array",
+                  "items": {
+                    "enum": [
+                      "double-jump",
+                      "dash",
+                      "wall-jump"
+                    ]
+                  },
+                  "maxItems": 3,
+                  "uniqueItems": true
+                }
+              },
+              "additionalProperties": false
+            }
+          },
+          "required": [
+            "schema",
+            "schemaVersion"
+          ],
+          "additionalProperties": false
+        },
+        "board": {
+          "type": "object",
+          "properties": {
+            "width": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 4096
+            },
+            "height": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 4096
+            },
+            "walls": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "x": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 4095
+                  },
+                  "y": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 4095
+                  },
+                  "type": {
+                    "enum": [
+                      "rock",
+                      "tree",
+                      "ruin",
+                      "bedrock"
+                    ]
+                  }
+                },
+                "required": [
+                  "x",
+                  "y",
+                  "type"
+                ],
+                "additionalProperties": false
+              },
+              "maxItems": 100000,
+              "minItems": 0
+            }
+          },
+          "required": [
+            "width",
+            "height",
+            "walls"
+          ],
+          "additionalProperties": false
+        },
+        "rooms": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "maxLength": 96
+              },
+              "x": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 4095
+              },
+              "y": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 4095
+              },
+              "width": {
+                "type": "integer",
+                "minimum": 1,
+                "maximum": 100
+              },
+              "height": {
+                "type": "integer",
+                "minimum": 1,
+                "maximum": 100
+              },
+              "role": {
+                "enum": [
+                  "start",
+                  "exit",
+                  "traverse",
+                  "reward"
+                ]
+              }
+            },
+            "required": [
+              "id",
+              "x",
+              "y",
+              "width",
+              "height",
+              "role"
+            ],
+            "additionalProperties": false
+          },
+          "maxItems": 30,
+          "minItems": 1
+        },
+        "connectors": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "maxLength": 96
+              },
+              "kind": {
+                "enum": [
+                  "passage",
+                  "ladder"
+                ]
+              },
+              "length": {
+                "type": "integer",
+                "minimum": 1,
+                "maximum": 3
+              },
+              "from": {
+                "type": "string",
+                "maxLength": 96
+              },
+              "to": {
+                "type": "string",
+                "maxLength": 96
+              },
+              "x": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 4095
+              },
+              "y": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 4095
+              },
+              "width": {
+                "type": "integer",
+                "minimum": 1,
+                "maximum": 100
+              },
+              "height": {
+                "type": "integer",
+                "minimum": 1,
+                "maximum": 100
+              }
+            },
+            "required": [
+              "id",
+              "kind",
+              "length",
+              "from",
+              "to",
+              "x",
+              "y",
+              "width",
+              "height"
+            ],
+            "additionalProperties": false
+          },
+          "maxItems": 29,
+          "minItems": 0
+        },
+        "platforms": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "x": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 4095
+              },
+              "y": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 4095
+              },
+              "width": {
+                "type": "integer",
+                "minimum": 1,
+                "maximum": 100
+              },
+              "height": {
+                "type": "integer",
+                "minimum": 1,
+                "maximum": 100
+              }
+            },
+            "required": [
+              "x",
+              "y",
+              "width",
+              "height"
+            ],
+            "additionalProperties": false
+          },
+          "maxItems": 1000,
+          "minItems": 0
+        },
+        "ladders": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "x": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 4095
+              },
+              "y": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 4095
+              }
+            },
+            "required": [
+              "x",
+              "y"
+            ],
+            "additionalProperties": false
+          },
+          "maxItems": 100000,
+          "minItems": 0
+        },
+        "spawn": {
+          "type": "object",
+          "properties": {
+            "x": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 4095
+            },
+            "y": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 4095
+            }
+          },
+          "required": [
+            "x",
+            "y"
+          ],
+          "additionalProperties": false
+        },
+        "exit": {
+          "type": "object",
+          "properties": {
+            "x": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 4095
+            },
+            "y": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 4095
+            }
+          },
+          "required": [
+            "x",
+            "y"
+          ],
+          "additionalProperties": false
+        },
+        "sites": {
+          "type": "array",
+          "items": {
+            "type": "object"
+          },
+          "maxItems": 30,
+          "minItems": 0
+        },
+        "analysis": {
+          "type": "object"
+        },
+        "fingerprint": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{8}$"
+        },
+        "grants": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 96
+              },
+              "ability": {
+                "enum": [
+                  "double-jump",
+                  "dash",
+                  "wall-jump"
+                ]
+              },
+              "roomId": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 96
+              },
+              "position": {
+                "type": "object",
+                "properties": {
+                  "x": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 4095
+                  },
+                  "y": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 4095
+                  }
+                },
+                "required": [
+                  "x",
+                  "y"
+                ],
+                "additionalProperties": false
+              }
+            },
+            "required": [
+              "id",
+              "ability",
+              "roomId",
+              "position"
+            ],
+            "additionalProperties": false
+          },
+          "maxItems": 3
+        },
+        "challenges": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 96
+              },
+              "ability": {
+                "enum": [
+                  "double-jump",
+                  "dash",
+                  "wall-jump"
+                ]
+              },
+              "roomId": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 96
+              },
+              "nextRoomId": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 96
+              },
+              "kind": {
+                "enum": [
+                  "high-ledge",
+                  "low-tunnel-gap",
+                  "wall-shaft"
+                ]
+              },
+              "from": {
+                "type": "object",
+                "properties": {
+                  "x": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 4095
+                  },
+                  "y": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 4095
+                  }
+                },
+                "required": [
+                  "x",
+                  "y"
+                ],
+                "additionalProperties": false
+              },
+              "to": {
+                "type": "object",
+                "properties": {
+                  "x": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 4095
+                  },
+                  "y": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 4095
+                  }
+                },
+                "required": [
+                  "x",
+                  "y"
+                ],
+                "additionalProperties": false
+              },
+              "barrierX": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 4095
+              },
+              "rise": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 22
+              }
+            },
+            "required": [
+              "id",
+              "ability",
+              "roomId",
+              "nextRoomId",
+              "kind",
+              "from",
+              "to",
+              "barrierX",
+              "rise"
+            ],
+            "additionalProperties": false
+          },
+          "maxItems": 3
+        },
+        "hazards": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 96
+              },
+              "kind": {
+                "const": "void"
+              },
+              "x": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 4095
+              },
+              "y": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 4095
+              },
+              "width": {
+                "type": "integer",
+                "minimum": 1,
+                "maximum": 4096
+              },
+              "height": {
+                "type": "integer",
+                "minimum": 1,
+                "maximum": 4096
+              }
+            },
+            "required": [
+              "id",
+              "kind",
+              "x",
+              "y",
+              "width",
+              "height"
+            ],
+            "additionalProperties": false
+          },
+          "maxItems": 30
+        },
+        "omitted": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "ability": {
+                "enum": [
+                  "double-jump",
+                  "dash",
+                  "wall-jump"
+                ]
+              },
+              "reason": {
+                "type": "string",
+                "maxLength": 500
+              }
+            },
+            "required": [
+              "ability",
+              "reason"
+            ],
+            "additionalProperties": false
+          },
+          "maxItems": 3
+        }
+      },
+      "required": [
+        "schema",
+        "schemaVersion",
+        "apiVersion",
+        "generatorVersion",
+        "platformerVersion",
+        "seed",
+        "request",
+        "board",
+        "rooms",
+        "connectors",
+        "platforms",
+        "ladders",
+        "spawn",
+        "exit",
+        "sites",
+        "fingerprint",
+        "grants",
+        "challenges",
+        "hazards",
+        "omitted"
+      ],
+      "additionalProperties": false
+    }
+  ]
+}

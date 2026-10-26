@@ -1,0 +1,35 @@
+✔ repeatable biome rows remain drafts until per-card Add, then retain repeated types and IDs (17.5029ms)
+✔ per-card Add caps the shared budget while invalid drafts do not block Create (5.7627ms)
+✔ request and context schemas expose repeatable percentage cards with bounded IDs (4.5982ms)
+✔ landscape rebuild request requires both source project and full recipe (0.6447ms)
+✔ restoring ten independent UI fields preserves cards and commits only changed active shares (10.9781ms)
+✔ compact biome settings retain add action and cards without explanatory paragraphs (3.2122ms)
+✔ landscape biome cards normalize strictly, immutably and preserve stable repeated-card order (2.4363ms)
+✔ explicit local landscape biome identity retains water and steep-slope exceptions (0.2089ms)
+✔ requested maximum erosion adds resolved sea-connected bays at50 and300 on both grids (1663.7148ms)
+ℹ [{"size":50,"kind":"square","structure":"islands","zeroBayDepth":1.4263994477758974,"highBayDepth":2.5},{"size":50,"kind":"square","structure":"continent","zeroBayDepth":0.22360679774997896,"highBayDepth":13.457768702929119},{"size":50,"kind":"hex","structure":"islands","zeroBayDepth":1.7439550769285372,"highBayDepth":2.666666666666664},{"size":50,"kind":"hex","structure":"continent","zeroBayDepth":0.36629483719650174,"highBayDepth":13.514637635295607},{"size":300,"kind":"square","structure":"islands","zeroBayDepth":7.675605377298489,"highBayDepth":19.430836137338733},{"size":300,"kind":"square","structure":"continent","zeroBayDepth":0.47961646018645887,"highBayDepth":87.25653934540715},{"size":300,"kind":"hex","structure":"islands","zeroBayDepth":7.8691546881236265,"highBayDepth":19.61024259829906},{"size":300,"kind":"hex","structure":"continent","zeroBayDepth":0.6171523470365192,"highBayDepth":87.4211925998052}]
+✔ irregular shapes preserve topology, determinism and bounded 300 preparation for all requested scales (1946.5512ms)
+ℹ [{"size":50,"kind":"square","structure":"islands","elapsedMs":12},{"size":50,"kind":"square","structure":"continent","elapsedMs":8},{"size":50,"kind":"square","structure":"coast","elapsedMs":4},{"size":50,"kind":"hex","structure":"islands","elapsedMs":5},{"size":50,"kind":"hex","structure":"continent","elapsedMs":9},{"size":50,"kind":"hex","structure":"coast","elapsedMs":4},{"size":100,"kind":"square","structure":"islands","elapsedMs":27},{"size":100,"kind":"square","structure":"continent","elapsedMs":32},{"size":100,"kind":"square","structure":"coast","elapsedMs":15},{"size":100,"kind":"hex","structure":"islands","elapsedMs":28},{"size":100,"kind":"hex","structure":"continent","elapsedMs":20},{"size":100,"kind":"hex","structure":"coast","elapsedMs":12},{"size":200,"kind":"square","structure":"islands","elapsedMs":84},{"size":200,"kind":"square","structure":"continent","elapsedMs":127},{"size":200,"kind":"square","structure":"coast","elapsedMs":42},{"size":200,"kind":"hex","structure":"islands","elapsedMs":90},{"size":200,"kind":"hex","structure":"continent","elapsedMs":85},{"size":200,"kind":"hex","structure":"coast","elapsedMs":49},{"size":300,"kind":"square","structure":"islands","elapsedMs":162},{"size":300,"kind":"square","structure":"continent","elapsedMs":173},{"size":300,"kind":"square","structure":"coast","elapsedMs":136},{"size":300,"kind":"hex","structure":"islands","elapsedMs":251},{"size":300,"kind":"hex","structure":"continent","elapsedMs":274},{"size":300,"kind":"hex","structure":"coast","elapsedMs":128}]
+✔ actual app seeds preserve staggered island arrangements across both grids (984.4558ms)
+ℹ [{"mode":"landscape","seed":42,"shapeSeed":93344066,"triangleArea":0.12158531054735332,"elongation":[1.3038630847212802,1.1874575076601437,1.8543472390474094]},{"mode":"hexlandscape","seed":42,"shapeSeed":93344066,"triangleArea":0.12106511079095635,"elongation":[1.3084844883467865,1.1847312857058212,1.8553895704931496]},{"mode":"landscape","seed":7,"shapeSeed":1683744565,"triangleArea":0.11033416659217377,"elongation":[1.4033492573863788,1.701715437953051,1.8186199128083709]},{"mode":"hexlandscape","seed":7,"shapeSeed":1683744565,"triangleArea":0.10989334538886861,"elongation":[1.4085196342961326,1.709770906009413,1.8184457607400644]}]
+✔ coastline silhouettes stay deterministic under explicit coverage, including feasible16-cell islands (1073.8533ms)
+✔ profile streams reach their dry boundary outlet on both grids without changing the flow graph (88.6692ms)
+✔ removing undersized lakes retains strong river channels, rather than a dry gap or a restored lake (87.9818ms)
+✔ profile width one is exactly the strong river core, without an automatic extra bank (3.3478ms)
+✔ profile widening stays within width minus one neighbor layers and never replaces sea or retained lakes (11.9754ms)
+✔ profile rivers zero stays river free through lake filtering and widening, retaining ocean and large lakes (5.8978ms)
+✔ native requests without a landscape profile retain their observed water output exactly (9.2376ms)
+✔ real profile river corrections preserve native navigation and access in both workspaces (418.5315ms)
+✔ profile freshwater fills to a shared conditioned head while retaining sea, masks, flow and width (3.4012ms)
+✔ profile water levels do not rise along wet flow through widened rivers, lake exits or sea contacts (1.5622ms)
+✔ profile flat bed one retains a positive freshwater depth without capping its internal head at one (3.5064ms)
+✔ normalized profile matrix keeps final wet flow levels monotone, depths bounded and navigation accessible (5395.3228ms)
+✔ generated bridge water level uses the immutable bed rather than its navigation deck elevation (85.6929ms)
+ℹ tests 24
+ℹ suites 0
+ℹ pass 24
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 6256.1732

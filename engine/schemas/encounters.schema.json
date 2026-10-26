@@ -1,0 +1,418 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://vland.invalid/engine/schemas/encounters.schema.json",
+  "title": "VlandGenerator encounters v1",
+  "type": "object",
+  "properties": {
+    "schema": {
+      "const": "vland.encounters"
+    },
+    "schemaVersion": {
+      "const": 1
+    },
+    "sourceFingerprint": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 8,
+      "pattern": "^[0-9a-f]{8}$"
+    },
+    "seed": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 4294967295
+    },
+    "rooms": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 96
+          },
+          "roomId": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 96
+          },
+          "type": {
+            "enum": [
+              "crossfire",
+              "flanking",
+              "holdout",
+              "hazard-bait",
+              "guardian-cache",
+              "ambush"
+            ]
+          },
+          "name": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 256
+          },
+          "entry": {
+            "type": "object",
+            "properties": {
+              "x": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 4095
+              },
+              "y": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 4095
+              }
+            },
+            "additionalProperties": false,
+            "required": [
+              "x",
+              "y"
+            ]
+          },
+          "exits": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "x": {
+                  "type": "integer",
+                  "minimum": 0,
+                  "maximum": 4095
+                },
+                "y": {
+                  "type": "integer",
+                  "minimum": 0,
+                  "maximum": 4095
+                }
+              },
+              "additionalProperties": false,
+              "required": [
+                "x",
+                "y"
+              ]
+            },
+            "maxItems": 512,
+            "minItems": 0
+          },
+          "budget": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 100
+          },
+          "spent": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 100
+          },
+          "actors": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 96
+                },
+                "sourceHintId": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 96
+                },
+                "role": {
+                  "enum": [
+                    "frontline",
+                    "ranged",
+                    "flanker",
+                    "support",
+                    "heavy",
+                    "ambusher",
+                    "neutral"
+                  ]
+                },
+                "profile": {
+                  "$ref": "movement-profile.schema.json"
+                },
+                "anchor": {
+                  "type": "object",
+                  "properties": {
+                    "x": {
+                      "type": "integer",
+                      "minimum": 0,
+                      "maximum": 4095
+                    },
+                    "y": {
+                      "type": "integer",
+                      "minimum": 0,
+                      "maximum": 4095
+                    }
+                  },
+                  "additionalProperties": false,
+                  "required": [
+                    "x",
+                    "y"
+                  ]
+                },
+                "cells": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "x": {
+                        "type": "integer",
+                        "minimum": 0,
+                        "maximum": 4095
+                      },
+                      "y": {
+                        "type": "integer",
+                        "minimum": 0,
+                        "maximum": 4095
+                      }
+                    },
+                    "additionalProperties": false,
+                    "required": [
+                      "x",
+                      "y"
+                    ]
+                  },
+                  "maxItems": 64,
+                  "minItems": 1
+                },
+                "approachPath": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "x": {
+                        "type": "integer",
+                        "minimum": 0,
+                        "maximum": 4095
+                      },
+                      "y": {
+                        "type": "integer",
+                        "minimum": 0,
+                        "maximum": 4095
+                      }
+                    },
+                    "additionalProperties": false,
+                    "required": [
+                      "x",
+                      "y"
+                    ]
+                  },
+                  "maxItems": 250000,
+                  "minItems": 1
+                },
+                "cost": {
+                  "type": "number",
+                  "minimum": 0,
+                  "maximum": 100
+                },
+                "cues": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 128
+                  },
+                  "maxItems": 8,
+                  "minItems": 0
+                },
+                "lineOfFire": {
+                  "anyOf": [
+                    {
+                      "type": "null"
+                    },
+                    {
+                      "type": "object",
+                      "properties": {
+                        "from": {
+                          "type": "object",
+                          "properties": {
+                            "x": {
+                              "type": "integer",
+                              "minimum": 0,
+                              "maximum": 4095
+                            },
+                            "y": {
+                              "type": "integer",
+                              "minimum": 0,
+                              "maximum": 4095
+                            }
+                          },
+                          "additionalProperties": false,
+                          "required": [
+                            "x",
+                            "y"
+                          ]
+                        },
+                        "to": {
+                          "type": "object",
+                          "properties": {
+                            "x": {
+                              "type": "integer",
+                              "minimum": 0,
+                              "maximum": 4095
+                            },
+                            "y": {
+                              "type": "integer",
+                              "minimum": 0,
+                              "maximum": 4095
+                            }
+                          },
+                          "additionalProperties": false,
+                          "required": [
+                            "x",
+                            "y"
+                          ]
+                        }
+                      },
+                      "additionalProperties": false,
+                      "required": [
+                        "from",
+                        "to"
+                      ]
+                    }
+                  ]
+                }
+              },
+              "additionalProperties": false,
+              "required": [
+                "id",
+                "sourceHintId",
+                "role",
+                "profile",
+                "anchor",
+                "cells",
+                "approachPath",
+                "cost",
+                "cues",
+                "lineOfFire"
+              ]
+            },
+            "maxItems": 12,
+            "minItems": 0
+          },
+          "unassigned": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 96
+                },
+                "reason": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 1024
+                }
+              },
+              "additionalProperties": false,
+              "required": [
+                "id",
+                "reason"
+              ]
+            },
+            "maxItems": 256,
+            "minItems": 0
+          },
+          "affordances": {
+            "type": "object",
+            "properties": {
+              "coverIds": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 96
+                },
+                "maxItems": 50000,
+                "minItems": 0
+              },
+              "mediumIds": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 96
+                },
+                "maxItems": 50000,
+                "minItems": 0
+              },
+              "circuitIds": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 96
+                },
+                "maxItems": 50000,
+                "minItems": 0
+              },
+              "propIds": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 96
+                },
+                "maxItems": 50000,
+                "minItems": 0
+              }
+            },
+            "additionalProperties": false,
+            "required": [
+              "coverIds",
+              "mediumIds",
+              "circuitIds",
+              "propIds"
+            ]
+          },
+          "protectedRoute": {
+            "const": true
+          }
+        },
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "roomId",
+          "type",
+          "entry",
+          "budget",
+          "spent",
+          "actors",
+          "unassigned",
+          "affordances",
+          "protectedRoute"
+        ]
+      },
+      "maxItems": 120,
+      "minItems": 0
+    },
+    "warnings": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 2048
+      },
+      "maxItems": 1000,
+      "minItems": 0
+    },
+    "note": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": true,
+  "required": [
+    "schema",
+    "schemaVersion",
+    "sourceFingerprint",
+    "seed",
+    "rooms"
+  ]
+}

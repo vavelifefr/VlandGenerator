@@ -1,0 +1,15 @@
+import {gridNeighbors} from './topology.mjs';
+import {valueNoise} from '../api/terrain.mjs';
+export const clamp=(v,a=0,b=1)=>Math.max(a,Math.min(b,v));
+export const rounded=v=>Math.round(v*1e6)/1e6;
+export const D4=Object.freeze([[0,-1],[1,0],[0,1],[-1,0]]);
+export function hash2(seed,x,y){let n=(seed^Math.imul(x|0,0x1f123bb5)^Math.imul(y|0,0x5f356495))>>>0;n=Math.imul(n^(n>>>16),0x7feb352d);n=Math.imul(n^(n>>>15),0x846ca68b);return((n^(n>>>16))>>>0)/4294967296;}
+export function fractalNoise(seed,x,y,{octaves=5,persistence=.52,lacunarity=2,ridged=false}={}){let a=1,f=1,sum=0,total=0;for(let k=0;k<octaves;k++){const v=valueNoise((seed+Math.imul(k,0x9e3779b9))>>>0,x*f,y*f);sum+=(ridged?1-Math.abs(v*2-1):v)*a;total+=a;a*=persistence;f*=lacunarity;}return sum/total;}
+export function warpedNoise(seed,x,y,strength=0,options={}){const dx=fractalNoise(seed^0x34fb123,x*.65+71,y*.65-19,{octaves:3})*2-1,dy=fractalNoise(seed^0x76ad947,x*.65-29,y*.65+91,{octaves:3})*2-1;return fractalNoise(seed,x+dx*strength,y+dy*strength,options);}
+export function gaussianBlur(values,width,height,sigma){if(!(sigma>0))return [...values];const radius=Math.ceil(sigma*3),kernel=Array.from({length:radius*2+1},(_,i)=>Math.exp(-((i-radius)**2)/(2*sigma*sigma))),sum=kernel.reduce((a,b)=>a+b,0);for(let i=0;i<kernel.length;i++)kernel[i]/=sum;let temp=new Float64Array(values.length),result=new Array(values.length);for(let y=0;y<height;y++)for(let x=0;x<width;x++){let n=0;for(let d=-radius;d<=radius;d++)n+=values[y*width+clamp(x+d,0,width-1)]*kernel[d+radius];temp[y*width+x]=n;}for(let y=0;y<height;y++)for(let x=0;x<width;x++){let n=0;for(let d=-radius;d<=radius;d++)n+=temp[clamp(y+d,0,height-1)*width+x]*kernel[d+radius];result[y*width+x]=rounded(n);}return result;}
+// Conservative thermal relaxation. Each transfer is added with opposite signs.
+export function thermalErosion(values,width,height,iterations,talus=.045,topology){let h=Float64Array.from(values);for(let step=0;step<iterations;step++){const delta=new Float64Array(h.length);for(let y=0;y<height;y++)for(let x=0;x<width;x++){const i=y*width+x;let j=-1,d=talus;for(const k of gridNeighbors(i,width,height,topology))if(h[i]-h[k]>d){d=h[i]-h[k];j=k;}if(j>=0){const transfer=(d-talus)*.2;delta[i]-=transfer;delta[j]+=transfer;}}for(let i=0;i<h.length;i++)h[i]+=delta[i];}return Array.from(h,rounded);}
+export function minHeap(){const q=[];return{push(id,cost){const item={id,cost};q.push(item);let i=q.length-1;while(i){const p=(i-1)>>1;if(q[p].cost<cost||q[p].cost===cost&&q[p].id<=id)break;q[i]=q[p];i=p;}q[i]=item;},pop(){if(!q.length)return null;const result=q[0],last=q.pop();if(q.length){let i=0;while(i*2+1<q.length){let c=i*2+1;if(c+1<q.length&&(q[c+1].cost<q[c].cost||q[c+1].cost===q[c].cost&&q[c+1].id<q[c].id))c++;if(q[c].cost>last.cost||q[c].cost===last.cost&&q[c].id>=last.id)break;q[i]=q[c];i=c;}q[i]=last;}return result;},get length(){return q.length;}};}
+export const neighbors=(i,width,height,topology)=>gridNeighbors(i,width,height,topology);
+export const cell=(i,width)=>({x:i%width,y:Math.floor(i/width)});
+export const index=(p,width)=>p.y*width+p.x;

@@ -1,0 +1,80 @@
+{
+  "ok": true,
+  "stateless": true,
+  "restart": false,
+  "files": [
+    {
+      "file": "Web/HTML/landscape.html",
+      "status": 200,
+      "current": true
+    },
+    {
+      "file": "Web/HTML/hexlandscape.html",
+      "status": 200,
+      "current": true
+    },
+    {
+      "file": "Web/HTML/ui/controls.mjs",
+      "status": 200,
+      "current": true
+    },
+    {
+      "file": "Web/HTML/guide.html",
+      "status": 200,
+      "current": true
+    },
+    {
+      "file": "Web/HTML/llm.html",
+      "status": 200,
+      "current": true
+    },
+    {
+      "file": "engine/core/landscape-profile.mjs",
+      "status": 200,
+      "current": true
+    }
+  ],
+  "cases": [
+    {
+      "mode": "landscape",
+      "structure": "coast",
+      "size": 100,
+      "erosion": 100,
+      "generationExact": true,
+      "contextExact": true,
+      "invalidErosionRejected": true,
+      "checksum": "63334b67"
+    },
+    {
+      "mode": "landscape",
+      "structure": "islands",
+      "size": 100,
+      "erosion": 100,
+      "generationExact": true,
+      "contextExact": true,
+      "invalidErosionRejected": true,
+      "checksum": "5fb176be"
+    },
+    {
+      "mode": "hexlandscape",
+      "structure": "coast",
+      "size": 100,
+      "erosion": 100,
+      "generationExact": true,
+      "contextExact": true,
+      "invalidErosionRejected": true,
+      "checksum": "af93fb61"
+    },
+    {
+      "mode": "hexlandscape",
+      "structure": "islands",
+      "size": 100,
+      "erosion": 100,
+      "generationExact": true,
+      "contextExact": true,
+      "invalidErosionRejected": true,
+      "checksum": "a67a8f9a"
+    }
+  ],
+  "health": 200
+}

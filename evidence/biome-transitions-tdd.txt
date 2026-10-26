@@ -1,0 +1,75 @@
+✖ a secondary biome uses its saved legend color in the shared cell and PNG transition (2.2476ms)
+✔ an explicit primary biome color remains exact despite secondary blending and solid shading (1.4762ms)
+✖ landscape manual biome override clears only its derived band and preserves the immutable source (181.4968ms)
+✖ hexlandscape manual biome override clears only its derived band and preserves the immutable source (129.636ms)
+ℹ tests 4
+ℹ suites 0
+ℹ pass 1
+ℹ fail 3
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 422.9494
+
+✖ failing tests:
+
+test at tests\biome-transitions.test.mjs:18:1
+✖ a secondary biome uses its saved legend color in the shared cell and PNG transition (2.2476ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:
+  + actual - expected
+  
+    [
+  +   100,
+  +   134,
+  +   84
+  -   174,
+  -   89,
+  -   157
+    ]
+  
+      at TestContext.<anonymous> (file:///C:/Vibecoding/Games/VlandGenerator/tests/biome-transitions.test.mjs:20:9)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.start (node:internal/test_runner/test:1262:17)
+      at startSubtestAfterBootstrap (node:internal/test_runner/harness:387:17) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: [ 100, 134, 84 ],
+    expected: [ 174, 89, 157 ],
+    operator: 'deepStrictEqual',
+    diff: 'simple'
+  }
+
+test at tests\biome-transitions.test.mjs:30:48
+✖ landscape manual biome override clears only its derived band and preserves the immutable source (181.4968ms)
+  AssertionError [ERR_ASSERTION]: Manual cell has no old secondary biome
+  
+  'beach' !== ''
+  
+      at TestContext.<anonymous> (file:///C:/Vibecoding/Games/VlandGenerator/tests/biome-transitions.test.mjs:36:47)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: 'beach',
+    expected: '',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests\biome-transitions.test.mjs:30:48
+✖ hexlandscape manual biome override clears only its derived band and preserves the immutable source (129.636ms)
+  AssertionError [ERR_ASSERTION]: Manual cell has no old secondary biome
+  
+  'beach' !== ''
+  
+      at TestContext.<anonymous> (file:///C:/Vibecoding/Games/VlandGenerator/tests/biome-transitions.test.mjs:36:47)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: 'beach',
+    expected: '',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

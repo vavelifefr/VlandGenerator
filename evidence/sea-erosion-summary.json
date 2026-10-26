@@ -1,0 +1,111 @@
+{
+  "implementationVerified": true,
+  "status": "implemented_verified_user_visual_review_pending",
+  "updatedAt": "2026-10-25T19:25:54.887115+00:00",
+  "scope": {
+    "structures": [
+      "coast",
+      "islands"
+    ],
+    "unchangedContinentContractVerified": true,
+    "naturalSizes": [
+      100,
+      300
+    ],
+    "topologies": [
+      "square",
+      "hex"
+    ],
+    "fullHistoricalSuiteRerun": false
+  },
+  "nodeChecks": {
+    "sea-erosion-targeted.txt": {
+      "tests": 36,
+      "pass": 36,
+      "fail": 0
+    },
+    "sea-erosion-prior-shape-green.txt": {
+      "tests": 3,
+      "pass": 3,
+      "fail": 0
+    },
+    "sea-erosion-docs-tests.txt": {
+      "tests": 1,
+      "pass": 1,
+      "fail": 0
+    }
+  },
+  "geometry": {
+    "report": "evidence/sea-erosion-matrix.json",
+    "actualMaps": 28,
+    "controls": 4,
+    "repeats": 2,
+    "pngFiles": 84,
+    "visualReview": [
+      "evidence/sea-erosion-coast-review.png",
+      "evidence/sea-erosion-islands-review.png"
+    ],
+    "technicalVisualReview": true,
+    "userArtisticAcceptance": "not_claimed"
+  },
+  "browser": {
+    "report": "evidence/sea-erosion-browser.json",
+    "cases": 16,
+    "widths": [
+      1100,
+      360
+    ],
+    "pageErrors": [],
+    "physicalPhone": false,
+    "setupFailure": "evidence/sea-erosion-browser-setup.txt",
+    "existingChromiumUsedWithoutInstall": true
+  },
+  "portable": {
+    "report": "evidence/sea-erosion-portable.json",
+    "schemaReport": "evidence/sea-erosion-portable-schema.json",
+    "tests": 36,
+    "syntaxModules": 233,
+    "relativeImports": 785,
+    "interfaces": 4,
+    "schemas": 60,
+    "schemaDocuments": 16,
+    "schemaNegativeControls": 16,
+    "copyRemovedIndependentlyVerified": true,
+    "note": "Production app/content/engine/Web behavior was unchanged after this copy; subsequent edits affect QA tools, tests and status documentation."
+  },
+  "content": {
+    "report": "evidence/content-verification.json",
+    "command": "node tools/verify-content.mjs --surface-100",
+    "maps": 24,
+    "modes": 8,
+    "operations": 288
+  },
+  "activation": {
+    "report": "evidence/sea-erosion-main.json",
+    "verified": true,
+    "verifiedAt": "2026-10-25T19:25:54.887115+00:00",
+    "health": 200,
+    "currentFiles": 6,
+    "cases": 4,
+    "generationAndContextExact": true,
+    "invalidErosionRejected": true,
+    "launchAttempted": false,
+    "startedBy": "user",
+    "restart": false,
+    "next": "Optional user visual evaluation of coast/islands0/50/100; no outstanding technical activation checks."
+  },
+  "protected": {
+    "authoredDataModified": false,
+    "liveSessionAccessed": false,
+    "userBrowserTabsControlled": false,
+    "dependenciesInstalled": false,
+    "commitsCreated": false
+  },
+  "documentation": {
+    "ok": true,
+    "utf8Files": 7,
+    "balancedFences": 7,
+    "localLinks": 52,
+    "brokenLinks": []
+  }
+}

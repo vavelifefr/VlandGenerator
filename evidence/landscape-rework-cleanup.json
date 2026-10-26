@@ -1,0 +1,13 @@
+{
+  "ok": false,
+  "qaCopy": "C:/Users/vaveMain/AppData/Local/Temp/Vland large map QA MoiRi4",
+  "pid": 18892,
+  "port": 11503,
+  "qaCopyRemoved": false,
+  "qaServerStopped": false,
+  "knownOwnQaTabsClosed": true,
+  "cleanupRejected": true,
+  "reason": "Automatic approval review rejected bundled verified-owner stop/delete command: blocked by policy. No alternate stop/deletion attempted.",
+  "olderRefusedTargetsUntouched": true,
+  "mainServerLeftRunning": "http://127.0.0.1:9670/"
+}

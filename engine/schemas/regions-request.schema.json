@@ -1,0 +1,139 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://vland.invalid/engine/schemas/regions-request.schema.json",
+  "title": "VlandGenerator regions-request v1",
+  "type": "object",
+  "properties": {
+    "schema": {
+      "const": "vland.regions.request"
+    },
+    "schemaVersion": {
+      "const": 1
+    },
+    "seed": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 4294967295
+    },
+    "regions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 48,
+            "pattern": "^(?!__proto__$|constructor$|prototype$)[a-zA-Z0-9_-]+$"
+          },
+          "request": {
+            "anyOf": [
+              {
+                "$ref": "request.schema.json"
+              },
+              {
+                "$ref": "recipe.schema.json"
+              }
+            ]
+          }
+        },
+        "additionalProperties": false,
+        "required": [
+          "id"
+        ]
+      },
+      "maxItems": 12,
+      "minItems": 1
+    },
+    "connections": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 48,
+            "pattern": "^(?!__proto__$|constructor$|prototype$)[a-zA-Z0-9_-]+$"
+          },
+          "from": {
+            "type": "object",
+            "properties": {
+              "regionId": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 48,
+                "pattern": "^(?!__proto__$|constructor$|prototype$)[a-zA-Z0-9_-]+$"
+              },
+              "port": {
+                "enum": [
+                  "entry",
+                  "exit"
+                ]
+              }
+            },
+            "additionalProperties": false,
+            "required": [
+              "regionId",
+              "port"
+            ]
+          },
+          "to": {
+            "type": "object",
+            "properties": {
+              "regionId": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 48,
+                "pattern": "^(?!__proto__$|constructor$|prototype$)[a-zA-Z0-9_-]+$"
+              },
+              "port": {
+                "enum": [
+                  "entry",
+                  "exit"
+                ]
+              }
+            },
+            "additionalProperties": false,
+            "required": [
+              "regionId",
+              "port"
+            ]
+          },
+          "direction": {
+            "enum": [
+              "both",
+              "forward"
+            ]
+          }
+        },
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "from",
+          "to"
+        ]
+      },
+      "maxItems": 32,
+      "minItems": 0
+    },
+    "entryRegionId": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 48,
+      "pattern": "^(?!__proto__$|constructor$|prototype$)[a-zA-Z0-9_-]+$"
+    },
+    "exitRegionId": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 48,
+      "pattern": "^(?!__proto__$|constructor$|prototype$)[a-zA-Z0-9_-]+$"
+    }
+  },
+  "additionalProperties": false,
+  "required": [
+    "schema",
+    "schemaVersion",
+    "regions"
+  ]
+}

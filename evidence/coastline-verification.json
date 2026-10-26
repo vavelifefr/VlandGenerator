@@ -1,0 +1,111 @@
+{
+  "status": "independent_changes_verified_waiting_for_settings_decisions",
+  "complete": false,
+  "updatedAt": "2026-10-23T19:49:45.060151+00:00",
+  "implemented": [
+    "Sparse nonperiodic coast with zero or one broad regional feature; no mandatory alternating horns.",
+    "Manual biome drafts, Add below repeated cards; explicit Create applies drafts; disclosure retained.",
+    "Compact generation settings, visible dimensions after seed, access below map.",
+    "Landscape surfaces only in creation UI; Chunk on chunk.html; stable mode caves and imported layers preserved.",
+    "Landscape and hexlandscape defaults128x128."
+  ],
+  "validation": {
+    "rootNode": {
+      "pass": 373,
+      "fail": 0,
+      "evidence": "coast-sparse-suite.txt"
+    },
+    "portable": {
+      "ok": true,
+      "tests": 373,
+      "syntaxModules": 211,
+      "relativeImports": 740,
+      "evidence": "coastline-portable.json"
+    },
+    "content": {
+      "maps": 24,
+      "sourceOperations": 288,
+      "ok": true,
+      "evidence": "coast-sparse-content.txt"
+    },
+    "coast": {
+      "geometryCases": 82,
+      "realMaps": 12,
+      "interfaceCases": 4,
+      "schemaDocuments": 8,
+      "schemaNegativeControls": 8,
+      "ok": true,
+      "evidence": [
+        "coast-correction-shapes.json",
+        "coast-correction-matrix.json",
+        "coast-correction-real-schemas.json"
+      ]
+    },
+    "browser": {
+      "ok": true,
+      "cases": 4,
+      "primaryGenerations": 24,
+      "explicitDraftGenerations": 8,
+      "widths": [
+        1100,
+        360
+      ],
+      "manualBiomeDraftsVerified": true,
+      "evidence": "coastline-browser.json"
+    },
+    "priorAllPageUi": {
+      "cases": 16,
+      "evidence": "chunk-page-ui.json",
+      "scope": "All8modes1100/360 compact layout and canonical navigation; default128 verified later separately."
+    }
+  },
+  "visualReview": {
+    "rootViewed": [
+      "coast-sparse-candidate-landscape-128-material.png",
+      "coast-sparse-candidate-landscape-300-material.png",
+      "coast-sparse-candidate-hexlandscape-300-biome.png",
+      "coastline-ui-landscape-1100-coast-map.png",
+      "coastline-ui-hexlandscape-360-coast-map.png"
+    ],
+    "scope": "Repeated horns and triangular rhythm removed in reviewed cases; broad mild bends dominate; artistic diversity still needs user review.",
+    "preview": "coast-correction-map-comparison.html",
+    "openInCodex": "queued, actual visibility not confirmed"
+  },
+  "pendingDecisions": {
+    "islandLandPercentDefault": "Whether island/islands should also default75% land or use separate values.",
+    "landUniformity": "Biomes only or jointly biomes, relief and river systems."
+  },
+  "notImplemented": [
+    "Public landPercent controls, including coast75% default.",
+    "Public land uniformity mechanics."
+  ],
+  "delivery": {
+    "server": {
+      "ok": false,
+      "started": "2026-10-23T19:43:03.768Z",
+      "static": [],
+      "cases": [],
+      "sessionApiUsed": false,
+      "namedProjectsUsed": false,
+      "restart": false,
+      "error": "fetch failed",
+      "finished": "2026-10-23T19:43:03.820Z"
+    },
+    "mainOpen": false,
+    "previewOpenQueued": true,
+    "restartAttempted": false,
+    "reason": "Main9670 fetch failed; earlier automatic launch refusal respected. User must start Web/start.cmd."
+  },
+  "automation": {
+    "id": "vland-surface",
+    "status": "deleted",
+    "reason": "Independent authorized work verified; remaining settings need user decisions and main server needs user start."
+  },
+  "protected": {
+    "userProjectsTouched": false,
+    "liveSessionUsed": false,
+    "userDesktopControlled": false,
+    "oldRefusedTargetsRetried": false,
+    "commits": false
+  }
+}

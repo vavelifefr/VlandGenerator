@@ -1,0 +1,1021 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://vland.invalid/engine/schemas/level.schema.json",
+  "title": "Room Dungeon v2",
+  "type": "object",
+  "required": [
+    "schema",
+    "schemaVersion",
+    "seed",
+    "options",
+    "board",
+    "rooms",
+    "plan",
+    "connections",
+    "features",
+    "gates",
+    "mechanisms",
+    "spawn",
+    "protectedTiles",
+    "quality"
+  ],
+  "properties": {
+    "schema": {
+      "const": "room-dungeon"
+    },
+    "schemaVersion": {
+      "const": 2
+    },
+    "seed": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 4294967295
+    },
+    "options": {
+      "type": "object",
+      "properties": {
+        "transports": {
+          "$ref": "transport-settings.schema.json"
+        },
+        "corridors": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "minLength": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 24
+            },
+            "maxLength": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 24
+            },
+            "preferredLength": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 24
+            },
+            "openWidth": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 3
+            }
+          },
+          "required": []
+        },
+        "architecture": {
+          "enum": [
+            "organic",
+            "compact",
+            "gallery",
+            "clustered",
+            "ring"
+          ]
+        }
+      }
+    },
+    "spawn": {
+      "type": "object",
+      "required": [
+        "x",
+        "y"
+      ],
+      "properties": {
+        "x": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 4095
+        },
+        "y": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 4095
+        }
+      }
+    },
+    "board": {
+      "type": "object",
+      "required": [
+        "width",
+        "height",
+        "walls"
+      ],
+      "properties": {
+        "width": {
+          "type": "integer",
+          "minimum": 5,
+          "maximum": 4096
+        },
+        "height": {
+          "type": "integer",
+          "minimum": 5,
+          "maximum": 4096
+        },
+        "walls": {
+          "type": "array",
+          "items": {
+            "allOf": [
+              {
+                "type": "object",
+                "required": [
+                  "x",
+                  "y"
+                ],
+                "properties": {
+                  "x": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 4095
+                  },
+                  "y": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 4095
+                  }
+                }
+              },
+              {
+                "type": "object",
+                "required": [
+                  "type"
+                ],
+                "properties": {
+                  "type": {
+                    "enum": [
+                      "bedrock",
+                      "internal",
+                      "door"
+                    ]
+                  },
+                  "featureId": {
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 96
+                  },
+                  "gateId": {
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 96
+                  }
+                }
+              }
+            ]
+          },
+          "maxItems": 250000
+        }
+      }
+    },
+    "rooms": {
+      "type": "array",
+      "minItems": 2,
+      "maxItems": 120,
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "x",
+          "y",
+          "width",
+          "height",
+          "core",
+          "doors",
+          "floorTiles",
+          "shape"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 96
+          },
+          "x": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 4095
+          },
+          "y": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 4095
+          },
+          "width": {
+            "type": "integer",
+            "minimum": 5,
+            "maximum": 256
+          },
+          "height": {
+            "type": "integer",
+            "minimum": 5,
+            "maximum": 256
+          },
+          "core": {
+            "type": "object",
+            "required": [
+              "x",
+              "y"
+            ],
+            "properties": {
+              "x": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 4095
+              },
+              "y": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 4095
+              }
+            }
+          },
+          "shape": {
+            "enum": [
+              "rectangle",
+              "beveled",
+              "rounded",
+              "L",
+              "T",
+              "cross",
+              "stepped",
+              "courtyard",
+              "S",
+              "Z",
+              "U",
+              "H",
+              "P",
+              "I",
+              "X",
+              "O",
+              "Pi",
+              "G",
+              "N",
+              "E"
+            ],
+            "description": "N is allowed only for compatibility with stored snapshots; new generation emits Z."
+          },
+          "doors": {
+            "type": "array",
+            "items": {
+              "allOf": [
+                {
+                  "type": "object",
+                  "required": [
+                    "x",
+                    "y"
+                  ],
+                  "properties": {
+                    "x": {
+                      "type": "integer",
+                      "minimum": 0,
+                      "maximum": 4095
+                    },
+                    "y": {
+                      "type": "integer",
+                      "minimum": 0,
+                      "maximum": 4095
+                    }
+                  }
+                },
+                {
+                  "type": "object",
+                  "required": [
+                    "inside",
+                    "edgeId"
+                  ],
+                  "properties": {
+                    "inside": {
+                      "type": "object",
+                      "required": [
+                        "x",
+                        "y"
+                      ],
+                      "properties": {
+                        "x": {
+                          "type": "integer",
+                          "minimum": 0,
+                          "maximum": 4095
+                        },
+                        "y": {
+                          "type": "integer",
+                          "minimum": 0,
+                          "maximum": 4095
+                        }
+                      }
+                    },
+                    "edgeId": {
+                      "type": "string",
+                      "minLength": 1,
+                      "maxLength": 96
+                    }
+                  }
+                }
+              ]
+            },
+            "maxItems": 64
+          },
+          "floorTiles": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "x",
+                "y"
+              ],
+              "properties": {
+                "x": {
+                  "type": "integer",
+                  "minimum": 0,
+                  "maximum": 4095
+                },
+                "y": {
+                  "type": "integer",
+                  "minimum": 0,
+                  "maximum": 4095
+                }
+              }
+            },
+            "maxItems": 250000
+          },
+          "floorArea": {
+            "type": "integer",
+            "minimum": 9,
+            "maximum": 65536
+          },
+          "walkableArea": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 65536
+          },
+          "interiorTemplate": {
+            "type": "object",
+            "required": [
+              "type"
+            ],
+            "properties": {
+              "type": {
+                "enum": [
+                  "scattered",
+                  "colonnade",
+                  "pool",
+                  "lake",
+                  "mazeEasy",
+                  "mazeHard"
+                ]
+              },
+              "cells": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "properties": {
+                    "x": {
+                      "type": "integer",
+                      "minimum": 0,
+                      "maximum": 4095
+                    },
+                    "y": {
+                      "type": "integer",
+                      "minimum": 0,
+                      "maximum": 4095
+                    }
+                  },
+                  "required": [
+                    "x",
+                    "y"
+                  ]
+                },
+                "minItems": 0,
+                "maxItems": 65536
+              }
+            }
+          }
+        }
+      }
+    },
+    "plan": {
+      "type": "object",
+      "required": [
+        "nodes",
+        "edges",
+        "startId",
+        "finalId",
+        "keys",
+        "controllers",
+        "dependencyMode"
+      ],
+      "properties": {
+        "nodes": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "id",
+              "x",
+              "y",
+              "spanX",
+              "spanY"
+            ],
+            "properties": {
+              "id": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 96
+              }
+            }
+          },
+          "maxItems": 120
+        },
+        "edges": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "id",
+              "from",
+              "to",
+              "kind"
+            ],
+            "properties": {
+              "id": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 96
+              },
+              "from": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 96
+              },
+              "to": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 96
+              },
+              "kind": {
+                "enum": [
+                  "open",
+                  "key",
+                  "lever",
+                  "secret",
+                  "breakable",
+                  "one-way"
+                ]
+              }
+            }
+          },
+          "maxItems": 512
+        },
+        "keys": {
+          "type": "array",
+          "items": {
+            "type": "object"
+          },
+          "maxItems": 512
+        },
+        "controllers": {
+          "type": "array",
+          "items": {
+            "type": "object"
+          },
+          "maxItems": 512
+        },
+        "startId": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 96
+        },
+        "finalId": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 96
+        },
+        "dependencyMode": {
+          "enum": [
+            "local",
+            "progressive"
+          ]
+        }
+      }
+    },
+    "connections": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "from",
+          "to",
+          "kind",
+          "cells",
+          "fromDoor",
+          "toDoor"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 96
+          },
+          "cells": {
+            "type": "array",
+            "minItems": 1,
+            "maxItems": 24,
+            "items": {
+              "type": "object",
+              "required": [
+                "x",
+                "y"
+              ],
+              "properties": {
+                "x": {
+                  "type": "integer",
+                  "minimum": 0,
+                  "maximum": 4095
+                },
+                "y": {
+                  "type": "integer",
+                  "minimum": 0,
+                  "maximum": 4095
+                }
+              }
+            }
+          },
+          "fromDoor": {
+            "type": "object",
+            "required": [
+              "x",
+              "y"
+            ],
+            "properties": {
+              "x": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 4095
+              },
+              "y": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 4095
+              }
+            }
+          },
+          "toDoor": {
+            "type": "object",
+            "required": [
+              "x",
+              "y"
+            ],
+            "properties": {
+              "x": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 4095
+              },
+              "y": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 4095
+              }
+            }
+          },
+          "openWidth": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 3
+          },
+          "footprintCells": {
+            "type": "array",
+            "maxItems": 78,
+            "items": {
+              "type": "object",
+              "required": [
+                "x",
+                "y"
+              ],
+              "properties": {
+                "x": {
+                  "type": "integer",
+                  "minimum": 0,
+                  "maximum": 4095
+                },
+                "y": {
+                  "type": "integer",
+                  "minimum": 0,
+                  "maximum": 4095
+                }
+              }
+            }
+          }
+        }
+      },
+      "maxItems": 512
+    },
+    "features": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "roomId",
+          "material",
+          "destructible",
+          "cells"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 96
+          },
+          "roomId": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 96
+          },
+          "material": {
+            "enum": [
+              "bedrock",
+              "internal"
+            ]
+          },
+          "destructible": {
+            "type": "boolean"
+          },
+          "cells": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "x",
+                "y"
+              ],
+              "properties": {
+                "x": {
+                  "type": "integer",
+                  "minimum": 0,
+                  "maximum": 4095
+                },
+                "y": {
+                  "type": "integer",
+                  "minimum": 0,
+                  "maximum": 4095
+                }
+              }
+            },
+            "maxItems": 512
+          }
+        }
+      },
+      "maxItems": 2000
+    },
+    "gates": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "kind",
+          "position"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 96
+          },
+          "position": {
+            "type": "object",
+            "required": [
+              "x",
+              "y"
+            ],
+            "properties": {
+              "x": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 4095
+              },
+              "y": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 4095
+              }
+            }
+          }
+        }
+      },
+      "maxItems": 512
+    },
+    "mechanisms": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "kind",
+          "position",
+          "roomId",
+          "edgeId"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 96
+          },
+          "kind": {
+            "enum": [
+              "key",
+              "lever"
+            ]
+          },
+          "position": {
+            "type": "object",
+            "required": [
+              "x",
+              "y"
+            ],
+            "properties": {
+              "x": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 4095
+              },
+              "y": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 4095
+              }
+            }
+          },
+          "roomId": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 96
+          },
+          "edgeId": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 96
+          }
+        }
+      },
+      "maxItems": 512
+    },
+    "protectedTiles": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^[0-9]+:[0-9]+$"
+      },
+      "maxItems": 250000
+    },
+    "quality": {
+      "type": "object",
+      "required": [
+        "score",
+        "components",
+        "metrics"
+      ]
+    },
+    "transportLinks": {
+      "type": "array",
+      "maxItems": 32,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "edgeId",
+          "kind",
+          "bidirectional",
+          "from",
+          "to"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "edgeId": {
+            "type": "string"
+          },
+          "kind": {
+            "enum": [
+              "teleport",
+              "lift",
+              "stairs"
+            ]
+          },
+          "bidirectional": {
+            "const": true
+          },
+          "from": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "roomId",
+              "x",
+              "y"
+            ],
+            "properties": {
+              "roomId": {
+                "type": "string"
+              },
+              "x": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "y": {
+                "type": "integer",
+                "minimum": 0
+              }
+            }
+          },
+          "to": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "roomId",
+              "x",
+              "y"
+            ],
+            "properties": {
+              "roomId": {
+                "type": "string"
+              },
+              "x": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "y": {
+                "type": "integer",
+                "minimum": 0
+              }
+            }
+          },
+          "automatic": {
+            "const": true
+          },
+          "travelCost": {
+            "type": "number",
+            "minimum": 1,
+            "maximum": 1000
+          }
+        }
+      }
+    },
+    "isolation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "enabled",
+        "isolatedRoomIds"
+      ],
+      "properties": {
+        "enabled": {
+          "const": true
+        },
+        "isolatedRoomIds": {
+          "type": "array",
+          "maxItems": 120,
+          "uniqueItems": true,
+          "items": {
+            "type": "string"
+          }
+        },
+        "reason": {
+          "type": "string"
+        },
+        "groups": {
+          "type": "array",
+          "maxItems": 4,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "edgeId": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 96
+              },
+              "transportId": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 96
+              },
+              "roomIds": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 96
+                },
+                "minItems": 1,
+                "maxItems": 8,
+                "uniqueItems": true
+              }
+            },
+            "required": [
+              "edgeId",
+              "transportId",
+              "roomIds"
+            ]
+          }
+        }
+      }
+    },
+    "externalTransports": {
+      "type": "array",
+      "maxItems": 4,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "edgeId",
+          "kind",
+          "bidirectional",
+          "from",
+          "to",
+          "worldLinkId",
+          "automatic",
+          "travelCost"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "edgeId": {
+            "type": "string"
+          },
+          "kind": {
+            "enum": [
+              "stairs",
+              "lift"
+            ]
+          },
+          "bidirectional": {
+            "const": true
+          },
+          "from": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "roomId",
+              "x",
+              "y"
+            ],
+            "properties": {
+              "roomId": {
+                "type": "string"
+              },
+              "x": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "y": {
+                "type": "integer",
+                "minimum": 0
+              }
+            }
+          },
+          "to": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "roomId",
+              "x",
+              "y"
+            ],
+            "properties": {
+              "roomId": {
+                "type": "string"
+              },
+              "x": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "y": {
+                "type": "integer",
+                "minimum": 0
+              }
+            }
+          },
+          "automatic": {
+            "const": true
+          },
+          "travelCost": {
+            "type": "number",
+            "minimum": 1,
+            "maximum": 1000
+          },
+          "worldLinkId": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 96
+          }
+        }
+      }
+    }
+  }
+}

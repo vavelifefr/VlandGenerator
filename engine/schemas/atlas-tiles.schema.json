@@ -1,0 +1,1035 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://vland.invalid/engine/schemas/atlas-tiles.schema.json",
+  "type": "object",
+  "properties": {
+    "schema": {
+      "const": "vland.atlas.tiles"
+    },
+    "schemaVersion": {
+      "const": 1
+    },
+    "atlasVersion": {
+      "const": "1.0.0"
+    },
+    "sourceFingerprint": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{8}$"
+    },
+    "origin": {
+      "type": "object",
+      "properties": {
+        "x": {
+          "type": "integer",
+          "minimum": -1000000,
+          "maximum": 1000000
+        },
+        "y": {
+          "type": "integer",
+          "minimum": -1000000,
+          "maximum": 1000000
+        }
+      },
+      "required": [
+        "x",
+        "y"
+      ],
+      "additionalProperties": false
+    },
+    "spawn": {
+      "type": "object",
+      "properties": {
+        "x": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 4095
+        },
+        "y": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 4095
+        },
+        "layerId": {
+          "type": "string",
+          "maxLength": 48
+        }
+      },
+      "required": [
+        "x",
+        "y",
+        "layerId"
+      ],
+      "additionalProperties": false
+    },
+    "exit": {
+      "type": "object",
+      "properties": {
+        "x": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 4095
+        },
+        "y": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 4095
+        },
+        "layerId": {
+          "type": "string",
+          "maxLength": 48
+        }
+      },
+      "required": [
+        "x",
+        "y",
+        "layerId"
+      ],
+      "additionalProperties": false
+    },
+    "links": {
+      "type": "array",
+      "maxItems": 128,
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "maxLength": 96
+          },
+          "kind": {
+            "enum": [
+              "stairs",
+              "climb",
+              "lift",
+              "teleport"
+            ]
+          },
+          "from": {
+            "type": "object",
+            "properties": {
+              "x": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 4095
+              },
+              "y": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 4095
+              },
+              "layerId": {
+                "type": "string",
+                "maxLength": 48
+              }
+            },
+            "required": [
+              "x",
+              "y",
+              "layerId"
+            ],
+            "additionalProperties": false
+          },
+          "to": {
+            "type": "object",
+            "properties": {
+              "x": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 4095
+              },
+              "y": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 4095
+              },
+              "layerId": {
+                "type": "string",
+                "maxLength": 48
+              }
+            },
+            "required": [
+              "x",
+              "y",
+              "layerId"
+            ],
+            "additionalProperties": false
+          },
+          "footprint": {
+            "type": "object",
+            "properties": {
+              "width": {
+                "type": "integer",
+                "minimum": 1,
+                "maximum": 8
+              },
+              "height": {
+                "type": "integer",
+                "minimum": 1,
+                "maximum": 8
+              }
+            },
+            "required": [
+              "width",
+              "height"
+            ],
+            "additionalProperties": false
+          },
+          "clearance": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 8
+          },
+          "travelCost": {
+            "type": "number",
+            "minimum": 1,
+            "maximum": 100
+          },
+          "automatic": {
+            "type": "boolean"
+          },
+          "bidirectional": {
+            "type": "boolean"
+          },
+          "reason": {
+            "enum": [
+              "layer-chain",
+              "isolated-region"
+            ]
+          }
+        },
+        "required": [
+          "id",
+          "kind",
+          "from",
+          "to",
+          "footprint",
+          "clearance",
+          "travelCost"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "catalogs": {
+      "type": "object"
+    },
+    "layers": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "maxLength": 48
+          },
+          "z": {
+            "type": "integer",
+            "minimum": -768,
+            "maximum": 2
+          },
+          "kind": {
+            "enum": [
+              "surface",
+              "aboveground",
+              "underground"
+            ]
+          },
+          "width": {
+            "type": "integer",
+            "minimum": 16,
+            "maximum": 300
+          },
+          "height": {
+            "type": "integer",
+            "minimum": 16,
+            "maximum": 300
+          },
+          "fields": {
+            "type": "object",
+            "properties": {
+              "elevation": {
+                "type": "array",
+                "items": {
+                  "type": "number",
+                  "minimum": 0,
+                  "maximum": 1
+                },
+                "maxItems": 98304,
+                "minItems": 0
+              },
+              "heightmap": {
+                "type": "array",
+                "items": {
+                  "type": "number",
+                  "minimum": 0,
+                  "maximum": 1
+                },
+                "maxItems": 98304,
+                "minItems": 0
+              },
+              "humidity": {
+                "type": "array",
+                "items": {
+                  "type": "number",
+                  "minimum": 0,
+                  "maximum": 1
+                },
+                "maxItems": 98304,
+                "minItems": 0
+              },
+              "temperature": {
+                "type": "array",
+                "items": {
+                  "type": "number",
+                  "minimum": 0,
+                  "maximum": 1
+                },
+                "maxItems": 98304,
+                "minItems": 0
+              },
+              "rainfall": {
+                "type": "array",
+                "items": {
+                  "type": "number",
+                  "minimum": 0,
+                  "maximum": 1
+                },
+                "maxItems": 98304,
+                "minItems": 0
+              },
+              "erosion": {
+                "type": "array",
+                "items": {
+                  "type": "number",
+                  "minimum": 0,
+                  "maximum": 1
+                },
+                "maxItems": 98304,
+                "minItems": 0
+              },
+              "slope": {
+                "type": "array",
+                "items": {
+                  "type": "number",
+                  "minimum": 0,
+                  "maximum": 1
+                },
+                "maxItems": 98304,
+                "minItems": 0
+              },
+              "fertility": {
+                "type": "array",
+                "items": {
+                  "type": "number",
+                  "minimum": 0,
+                  "maximum": 1
+                },
+                "maxItems": 98304,
+                "minItems": 0
+              },
+              "hardness": {
+                "type": "array",
+                "items": {
+                  "type": "number",
+                  "minimum": 0,
+                  "maximum": 1
+                },
+                "maxItems": 98304,
+                "minItems": 0
+              },
+              "waterDepth": {
+                "type": "array",
+                "items": {
+                  "type": "number",
+                  "minimum": 0,
+                  "maximum": 1
+                },
+                "maxItems": 98304,
+                "minItems": 0
+              },
+              "obstacle": {
+                "type": "array",
+                "items": {
+                  "enum": [
+                    0,
+                    1
+                  ]
+                },
+                "maxItems": 98304,
+                "minItems": 0
+              },
+              "support": {
+                "type": "array",
+                "items": {
+                  "enum": [
+                    0,
+                    1
+                  ]
+                },
+                "maxItems": 98304,
+                "minItems": 0
+              },
+              "reserved": {
+                "type": "array",
+                "items": {
+                  "enum": [
+                    0,
+                    1
+                  ]
+                },
+                "maxItems": 98304,
+                "minItems": 0
+              },
+              "bridge": {
+                "type": "array",
+                "items": {
+                  "enum": [
+                    0,
+                    1
+                  ]
+                },
+                "maxItems": 98304,
+                "minItems": 0
+              },
+              "frozen": {
+                "type": "array",
+                "items": {
+                  "enum": [
+                    0,
+                    1
+                  ]
+                },
+                "maxItems": 98304,
+                "minItems": 0
+              },
+              "ceiling": {
+                "type": "array",
+                "items": {
+                  "type": "number",
+                  "minimum": 0,
+                  "maximum": 8
+                },
+                "maxItems": 98304,
+                "minItems": 0
+              },
+              "road": {
+                "type": "array",
+                "items": {
+                  "enum": [
+                    "",
+                    "trail",
+                    "bridge",
+                    "pier"
+                  ]
+                },
+                "maxItems": 98304,
+                "minItems": 0
+              },
+              "biome": {
+                "type": "array",
+                "items": {
+                  "enum": [
+                    "beach",
+                    "rocky-coast",
+                    "gravel-shore",
+                    "floodplain",
+                    "foothills",
+                    "ocean",
+                    "coast",
+                    "lake",
+                    "river",
+                    "plains",
+                    "forest",
+                    "shallow-water",
+                    "gravel",
+                    "square",
+                    "park",
+                    "rainforest",
+                    "taiga",
+                    "savanna",
+                    "desert",
+                    "cold-desert",
+                    "wetland",
+                    "tundra",
+                    "snow",
+                    "alpine",
+                    "cliffs",
+                    "volcanic",
+                    "badlands",
+                    "dry-cave",
+                    "lush-cave",
+                    "fungal-cave",
+                    "crystal-cave",
+                    "karst-cave",
+                    "ice-cave",
+                    "magma-cave",
+                    "underground-lake",
+                    "cave-wall",
+                    "canopy",
+                    "high-ledge",
+                    "void"
+                  ]
+                },
+                "maxItems": 98304,
+                "minItems": 0
+              },
+              "material": {
+                "type": "array",
+                "items": {
+                  "enum": [
+                    "granite",
+                    "basalt",
+                    "limestone",
+                    "sandstone",
+                    "shale",
+                    "slate",
+                    "marble",
+                    "gneiss",
+                    "obsidian",
+                    "halite",
+                    "soil",
+                    "grass",
+                    "sand",
+                    "clay",
+                    "mud",
+                    "peat",
+                    "gravel",
+                    "snow",
+                    "ice",
+                    "brick",
+                    "timber",
+                    "water",
+                    "lava",
+                    "air",
+                    "bedrock"
+                  ]
+                },
+                "maxItems": 98304,
+                "minItems": 0
+              },
+              "rock": {
+                "type": "array",
+                "items": {
+                  "enum": [
+                    "granite",
+                    "basalt",
+                    "limestone",
+                    "sandstone",
+                    "shale",
+                    "slate",
+                    "marble",
+                    "gneiss",
+                    "obsidian",
+                    "halite"
+                  ]
+                },
+                "maxItems": 98304,
+                "minItems": 0
+              },
+              "waterType": {
+                "type": "array",
+                "items": {
+                  "enum": [
+                    "none",
+                    "sea",
+                    "river",
+                    "lake",
+                    "groundwater",
+                    "lava"
+                  ]
+                },
+                "maxItems": 98304,
+                "minItems": 0
+              },
+              "vegetation": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "maxLength": 48
+                },
+                "maxItems": 98304,
+                "minItems": 0
+              },
+              "resource": {
+                "type": "array",
+                "items": {
+                  "enum": [
+                    "",
+                    "iron",
+                    "copper",
+                    "coal",
+                    "tin",
+                    "quartz",
+                    "salt",
+                    "silver",
+                    "gold",
+                    "uranium",
+                    "gems",
+                    "sulfur",
+                    "oil"
+                  ]
+                },
+                "maxItems": 98304,
+                "minItems": 0
+              },
+              "resourceAmount": {
+                "type": "array",
+                "items": {
+                  "type": "integer",
+                  "minimum": 0,
+                  "maximum": 10000
+                },
+                "maxItems": 98304,
+                "minItems": 0
+              },
+              "deposit": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "maxLength": 96
+                },
+                "maxItems": 98304,
+                "minItems": 0
+              },
+              "structure": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "maxLength": 96
+                },
+                "maxItems": 98304,
+                "minItems": 0
+              },
+              "flowTo": {
+                "type": "array",
+                "items": {
+                  "type": "integer",
+                  "minimum": -1,
+                  "maximum": 98303
+                },
+                "maxItems": 98304,
+                "minItems": 0
+              },
+              "flowRank": {
+                "type": "array",
+                "items": {
+                  "type": "integer",
+                  "minimum": 0,
+                  "maximum": 98303
+                },
+                "maxItems": 98304,
+                "minItems": 0
+              },
+              "filledElevation": {
+                "type": "array",
+                "items": {
+                  "type": "number",
+                  "minimum": 0,
+                  "maximum": 1
+                },
+                "maxItems": 98304,
+                "minItems": 0
+              },
+              "basin": {
+                "type": "array",
+                "items": {
+                  "type": "integer",
+                  "minimum": 0,
+                  "maximum": 98303
+                },
+                "maxItems": 98304,
+                "minItems": 0
+              },
+              "drainage": {
+                "type": "array",
+                "items": {
+                  "type": "number",
+                  "minimum": 0,
+                  "maximum": 98304
+                },
+                "maxItems": 98304,
+                "minItems": 0
+              },
+              "coastDistance": {
+                "type": "array",
+                "items": {
+                  "type": "number",
+                  "minimum": 0,
+                  "maximum": 600
+                },
+                "maxItems": 98304
+              },
+              "salinity": {
+                "type": "array",
+                "items": {
+                  "type": "number",
+                  "minimum": 0,
+                  "maximum": 1
+                },
+                "maxItems": 98304
+              },
+              "floodRisk": {
+                "type": "array",
+                "items": {
+                  "type": "number",
+                  "minimum": 0,
+                  "maximum": 1
+                },
+                "maxItems": 98304
+              },
+              "transitionStrength": {
+                "type": "array",
+                "items": {
+                  "type": "number",
+                  "minimum": 0,
+                  "maximum": 1
+                },
+                "maxItems": 98304
+              },
+              "landform": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "maxItems": 98304
+              },
+              "secondaryBiome": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "maxItems": 98304
+              }
+            },
+            "required": [
+              "elevation",
+              "heightmap",
+              "humidity",
+              "temperature",
+              "rainfall",
+              "erosion",
+              "slope",
+              "fertility",
+              "hardness",
+              "waterDepth",
+              "obstacle",
+              "support",
+              "reserved",
+              "bridge",
+              "frozen",
+              "ceiling",
+              "road",
+              "biome",
+              "material",
+              "rock",
+              "waterType",
+              "vegetation",
+              "resource",
+              "resourceAmount",
+              "deposit",
+              "structure"
+            ],
+            "additionalProperties": false
+          },
+          "sites": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string",
+                  "maxLength": 96
+                },
+                "kind": {
+                  "enum": [
+                    "structure",
+                    "event",
+                    "spawner",
+                    "supply"
+                  ]
+                },
+                "type": {
+                  "type": "string",
+                  "maxLength": 96
+                },
+                "position": {
+                  "type": "object",
+                  "properties": {
+                    "x": {
+                      "type": "integer",
+                      "minimum": 0,
+                      "maximum": 4095
+                    },
+                    "y": {
+                      "type": "integer",
+                      "minimum": 0,
+                      "maximum": 4095
+                    }
+                  },
+                  "required": [
+                    "x",
+                    "y"
+                  ],
+                  "additionalProperties": false
+                },
+                "footprint": {
+                  "type": "object",
+                  "properties": {
+                    "width": {
+                      "type": "integer",
+                      "minimum": 1,
+                      "maximum": 8
+                    },
+                    "height": {
+                      "type": "integer",
+                      "minimum": 1,
+                      "maximum": 8
+                    }
+                  },
+                  "required": [
+                    "width",
+                    "height"
+                  ],
+                  "additionalProperties": false
+                },
+                "cells": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "x": {
+                        "type": "integer",
+                        "minimum": 0,
+                        "maximum": 4095
+                      },
+                      "y": {
+                        "type": "integer",
+                        "minimum": 0,
+                        "maximum": 4095
+                      }
+                    },
+                    "required": [
+                      "x",
+                      "y"
+                    ],
+                    "additionalProperties": false
+                  },
+                  "maxItems": 64,
+                  "minItems": 1
+                },
+                "approach": {
+                  "type": "object",
+                  "properties": {
+                    "x": {
+                      "type": "integer",
+                      "minimum": 0,
+                      "maximum": 4095
+                    },
+                    "y": {
+                      "type": "integer",
+                      "minimum": 0,
+                      "maximum": 4095
+                    }
+                  },
+                  "required": [
+                    "x",
+                    "y"
+                  ],
+                  "additionalProperties": false
+                },
+                "biome": {
+                  "enum": [
+                    "ocean",
+                    "coast",
+                    "lake",
+                    "river",
+                    "plains",
+                    "forest",
+                    "rainforest",
+                    "taiga",
+                    "savanna",
+                    "desert",
+                    "cold-desert",
+                    "wetland",
+                    "tundra",
+                    "snow",
+                    "alpine",
+                    "cliffs",
+                    "volcanic",
+                    "badlands",
+                    "dry-cave",
+                    "lush-cave",
+                    "fungal-cave",
+                    "crystal-cave",
+                    "karst-cave",
+                    "ice-cave",
+                    "magma-cave",
+                    "underground-lake",
+                    "cave-wall",
+                    "canopy",
+                    "high-ledge",
+                    "void"
+                  ]
+                },
+                "depth": {
+                  "type": "integer",
+                  "minimum": 0,
+                  "maximum": 6
+                }
+              },
+              "required": [
+                "id",
+                "kind",
+                "type",
+                "position",
+                "footprint",
+                "cells",
+                "approach",
+                "biome",
+                "depth"
+              ],
+              "additionalProperties": true
+            },
+            "maxItems": 98304,
+            "minItems": 0
+          },
+          "deposits": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string",
+                  "maxLength": 96
+                },
+                "type": {
+                  "enum": [
+                    "iron",
+                    "copper",
+                    "coal",
+                    "tin",
+                    "quartz",
+                    "salt",
+                    "silver",
+                    "gold",
+                    "uranium",
+                    "gems",
+                    "sulfur",
+                    "oil"
+                  ]
+                },
+                "depth": {
+                  "type": "integer",
+                  "minimum": 0,
+                  "maximum": 6
+                },
+                "hostRule": {
+                  "type": "array",
+                  "items": {
+                    "enum": [
+                      "granite",
+                      "basalt",
+                      "limestone",
+                      "sandstone",
+                      "shale",
+                      "slate",
+                      "marble",
+                      "gneiss",
+                      "obsidian",
+                      "halite"
+                    ]
+                  },
+                  "maxItems": 10,
+                  "minItems": 1,
+                  "uniqueItems": true
+                },
+                "cells": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "x": {
+                        "type": "integer",
+                        "minimum": 0,
+                        "maximum": 4095
+                      },
+                      "y": {
+                        "type": "integer",
+                        "minimum": 0,
+                        "maximum": 4095
+                      }
+                    },
+                    "required": [
+                      "x",
+                      "y"
+                    ],
+                    "additionalProperties": false
+                  },
+                  "maxItems": 98304,
+                  "minItems": 1
+                },
+                "amount": {
+                  "type": "integer",
+                  "minimum": 1,
+                  "maximum": 10000000
+                }
+              },
+              "required": [
+                "id",
+                "type",
+                "depth",
+                "hostRule",
+                "cells",
+                "amount"
+              ],
+              "additionalProperties": false
+            },
+            "maxItems": 98304,
+            "minItems": 0
+          },
+          "topology": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "kind": {
+                "enum": [
+                  "square",
+                  "hex"
+                ]
+              }
+            },
+            "required": [
+              "kind"
+            ]
+          }
+        },
+        "required": [
+          "id",
+          "z",
+          "kind",
+          "width",
+          "height",
+          "fields",
+          "sites",
+          "deposits",
+          "topology"
+        ],
+        "additionalProperties": false
+      },
+      "maxItems": 9,
+      "minItems": 1
+    }
+  },
+  "required": [
+    "schema",
+    "schemaVersion",
+    "atlasVersion",
+    "sourceFingerprint",
+    "origin",
+    "spawn",
+    "exit",
+    "links",
+    "catalogs",
+    "layers"
+  ],
+  "additionalProperties": false
+}

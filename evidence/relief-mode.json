@@ -1,0 +1,75 @@
+{
+  "status": "verified_awaiting_server_restart",
+  "features": [
+    "Landscape physical map stack and individual cave-layer settings",
+    "Separate relief page/provider/schema and default elevation view",
+    "PNG export availability on numeric and diagnostic fields"
+  ],
+  "testsPassed": 156,
+  "portableTestsPassed": 156,
+  "portable": {
+    "ok": true,
+    "files": 325,
+    "syntaxModules": 205,
+    "relativeImports": 700,
+    "httpFiles": 272,
+    "cli": true,
+    "cliSourceWorkflow": true,
+    "cliTransitions": true,
+    "httpTransitions": true,
+    "rasterCli": true,
+    "rasterHttp": true,
+    "diagnosticsCli": true,
+    "diagnosticsHttp": true,
+    "automaticAccessCli": true,
+    "automaticAccessHttp": true,
+    "isolatedContentModule": true,
+    "httpModes": 7,
+    "copyRemovedAfterCheck": true
+  },
+  "browser": {
+    "report": "evidence/relief-mode-browser.json",
+    "cases": 14,
+    "widths": [
+      1100,
+      360
+    ],
+    "modes": 7,
+    "pngAvailabilityAsserted": true,
+    "input": "Synthetic keydown in all-mode harness; actual CUA locator click confirmed map inspection separately"
+  },
+  "landscapeStack": {
+    "report": "evidence/landscape-layers.json",
+    "cases": 4
+  },
+  "content": {
+    "maps": 21,
+    "sourceOperations": 252
+  },
+  "interfaces": {
+    "ok": true,
+    "mode": "relief",
+    "checksum": "782da601",
+    "httpCliExact": true,
+    "cliValidation": true,
+    "layerCount": 1
+  },
+  "protectedFilesUnchanged": 18,
+  "productionMatchesPortable": true,
+  "limitations": {
+    "pythonJsonSchema": "jsonschema unavailable; not installed",
+    "mainServer": "9670 process keeps six modes in imported contract and session-store; explicit user decision needed before restart because current session is protected"
+  },
+  "cleanup": {
+    "qaTabClosed": true,
+    "qaServerStopped": true,
+    "qaCopyRemoved": true,
+    "oldRejectedTargetNotTouched": true
+  },
+  "remaining": [
+    "Authorize primary-server restart after explicit project saves, then verify relief session on9670",
+    "Settlement roads avoid sea/cliffs; river bridges and short piers",
+    "Neighborhood/quarter area controls and grouping",
+    "Interface audit"
+  ]
+}

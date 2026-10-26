@@ -1,0 +1,802 @@
+{
+  "schema": "vland.recipe",
+  "schemaVersion": 4,
+  "title": "Данж",
+  "mode": "dungeon",
+  "seed": 42,
+  "generation": {
+    "profile": "balanced",
+    "rooms": {
+      "count": 10,
+      "minSize": 10,
+      "maxSize": 20,
+      "style": "architectural",
+      "specialChance": 0.18,
+      "contourVariation": true,
+      "templates": {
+        "scattered": 6,
+        "colonnade": 2,
+        "pool": 1,
+        "lake": 1,
+        "mazeEasy": 1,
+        "mazeHard": 1
+      }
+    },
+    "layout": {
+      "architecture": "organic",
+      "corridors": {
+        "minLength": 1,
+        "maxLength": 3,
+        "preferredLength": 2,
+        "openWidth": 1
+      },
+      "allowDisconnected": false,
+      "transports": {
+        "maxGroups": 1,
+        "maxRoomsPerGroup": 3,
+        "chance": 1,
+        "travelCost": 1
+      },
+      "preset": "compact",
+      "packing": "contact",
+      "routePatterns": true,
+      "loopChance": 0.5,
+      "destructibleRatio": 0.6
+    },
+    "search": {
+      "candidates": 3,
+      "mode": "quality"
+    }
+  },
+  "catalog": [
+    {
+      "id": "chest",
+      "name": "Сундук",
+      "category": "items",
+      "type": "container",
+      "subtype": "default",
+      "channel": "prop",
+      "color": "#dfc77d",
+      "glyph": "□",
+      "footprint": {
+        "width": 1,
+        "height": 1
+      },
+      "blocking": false,
+      "constraints": {
+        "allowedEnvironments": [
+          "land",
+          "underground"
+        ],
+        "requiresWalkable": true,
+        "requiresEmptyTile": true
+      },
+      "properties": {
+        "contents": [],
+        "lootTable": "default"
+      }
+    },
+    {
+      "id": "supply",
+      "name": "Припасы",
+      "category": "items",
+      "type": "supplies",
+      "subtype": "default",
+      "channel": "prop",
+      "color": "#a1c6db",
+      "glyph": "▣",
+      "footprint": {
+        "width": 1,
+        "height": 1
+      },
+      "blocking": false,
+      "constraints": {
+        "allowedEnvironments": [
+          "land",
+          "underground"
+        ],
+        "requiresWalkable": true,
+        "requiresEmptyTile": true
+      },
+      "properties": {}
+    },
+    {
+      "id": "guard",
+      "name": "Охранник",
+      "category": "fauna",
+      "type": "human",
+      "subtype": "security",
+      "channel": "actor",
+      "color": "#d88e7e",
+      "glyph": "●",
+      "footprint": {
+        "width": 1,
+        "height": 1
+      },
+      "blocking": false,
+      "constraints": {
+        "allowedEnvironments": [
+          "land",
+          "underground"
+        ],
+        "requiresWalkable": true,
+        "requiresEmptyTile": true
+      },
+      "properties": {
+        "aggression": "hostile"
+      }
+    },
+    {
+      "id": "beast",
+      "name": "Пещерный зверь",
+      "category": "fauna",
+      "type": "monster",
+      "subtype": "default",
+      "channel": "actor",
+      "color": "#cc9181",
+      "glyph": "◆",
+      "footprint": {
+        "width": 1,
+        "height": 1
+      },
+      "blocking": false,
+      "constraints": {
+        "allowedEnvironments": [
+          "underground"
+        ],
+        "requiresWalkable": true,
+        "requiresEmptyTile": true
+      },
+      "properties": {}
+    },
+    {
+      "id": "boss",
+      "name": "Крупное существо",
+      "category": "fauna",
+      "type": "monster",
+      "subtype": "boss",
+      "channel": "actor",
+      "color": "#e47c95",
+      "glyph": "✦",
+      "footprint": {
+        "width": 3,
+        "height": 3
+      },
+      "blocking": false,
+      "constraints": {
+        "allowedEnvironments": [
+          "land",
+          "underground"
+        ],
+        "requiresWalkable": true,
+        "requiresEmptyTile": true
+      },
+      "properties": {}
+    },
+    {
+      "id": "traveler",
+      "name": "Путешественник",
+      "category": "fauna",
+      "type": "human",
+      "subtype": "neutral",
+      "channel": "actor",
+      "color": "#d9d2a3",
+      "glyph": "○",
+      "footprint": {
+        "width": 1,
+        "height": 1
+      },
+      "blocking": false,
+      "constraints": {
+        "allowedEnvironments": [
+          "land",
+          "underground"
+        ],
+        "requiresWalkable": true,
+        "requiresEmptyTile": true
+      },
+      "properties": {}
+    },
+    {
+      "id": "deer",
+      "name": "Олень",
+      "category": "fauna",
+      "type": "mammal",
+      "subtype": "default",
+      "channel": "actor",
+      "color": "#ccb087",
+      "glyph": "○",
+      "footprint": {
+        "width": 1,
+        "height": 1
+      },
+      "blocking": false,
+      "constraints": {
+        "allowedEnvironments": [
+          "land"
+        ],
+        "requiresWalkable": true,
+        "requiresEmptyTile": true,
+        "allowedTerrain": [
+          "soil",
+          "snow"
+        ]
+      },
+      "properties": {
+        "aggression": "neutral",
+        "activityRadius": 8
+      }
+    },
+    {
+      "id": "fish-fresh",
+      "name": "Пресноводная рыба",
+      "category": "fauna",
+      "type": "fish",
+      "subtype": "freshwater",
+      "channel": "actor",
+      "color": "#8dbed0",
+      "glyph": "◁",
+      "footprint": {
+        "width": 1,
+        "height": 1
+      },
+      "blocking": false,
+      "constraints": {
+        "allowedEnvironments": [
+          "freshwater"
+        ],
+        "requiresWalkable": false,
+        "requiresEmptyTile": true
+      },
+      "properties": {}
+    },
+    {
+      "id": "fish-sea",
+      "name": "Морская рыба",
+      "category": "fauna",
+      "type": "fish",
+      "subtype": "saltwater",
+      "channel": "actor",
+      "color": "#7ab6cd",
+      "glyph": "◁",
+      "footprint": {
+        "width": 1,
+        "height": 1
+      },
+      "blocking": false,
+      "constraints": {
+        "allowedEnvironments": [
+          "saltwater"
+        ],
+        "requiresWalkable": false,
+        "requiresEmptyTile": true
+      },
+      "properties": {}
+    },
+    {
+      "id": "bird",
+      "name": "Птица",
+      "category": "fauna",
+      "type": "bird",
+      "subtype": "default",
+      "channel": "air",
+      "color": "#c9d2c5",
+      "glyph": "⌁",
+      "footprint": {
+        "width": 1,
+        "height": 1
+      },
+      "blocking": false,
+      "constraints": {
+        "allowedEnvironments": [
+          "air"
+        ],
+        "requiresWalkable": false,
+        "requiresEmptyTile": true
+      },
+      "properties": {}
+    },
+    {
+      "id": "bat",
+      "name": "Летучая мышь",
+      "category": "fauna",
+      "type": "flying",
+      "subtype": "default",
+      "channel": "air",
+      "color": "#af9dc6",
+      "glyph": "⌁",
+      "footprint": {
+        "width": 1,
+        "height": 1
+      },
+      "blocking": false,
+      "constraints": {
+        "allowedEnvironments": [
+          "air"
+        ],
+        "allowedLayerKinds": [
+          "underground",
+          "dungeon",
+          "tier"
+        ],
+        "requiresWalkable": false,
+        "requiresEmptyTile": true
+      },
+      "properties": {}
+    },
+    {
+      "id": "lever",
+      "name": "Рычаг",
+      "category": "objects",
+      "type": "mechanism",
+      "subtype": "default",
+      "channel": "prop",
+      "color": "#e8af74",
+      "glyph": "⌐",
+      "footprint": {
+        "width": 1,
+        "height": 1
+      },
+      "blocking": false,
+      "constraints": {
+        "allowedEnvironments": [
+          "land",
+          "underground"
+        ],
+        "requiresWalkable": true,
+        "requiresEmptyTile": true
+      },
+      "properties": {
+        "targetId": null,
+        "action": "toggle"
+      }
+    },
+    {
+      "id": "pump",
+      "name": "Насос",
+      "category": "objects",
+      "type": "mechanism",
+      "subtype": "default",
+      "channel": "prop",
+      "color": "#7dc4cf",
+      "glyph": "▤",
+      "footprint": {
+        "width": 1,
+        "height": 1
+      },
+      "blocking": false,
+      "constraints": {
+        "allowedEnvironments": [
+          "land",
+          "underground"
+        ],
+        "requiresWalkable": true,
+        "requiresEmptyTile": true
+      },
+      "properties": {
+        "targetId": null,
+        "action": "drain"
+      }
+    },
+    {
+      "id": "portal",
+      "name": "Портал",
+      "category": "objects",
+      "type": "teleport",
+      "subtype": "default",
+      "channel": "prop",
+      "color": "#81c7d4",
+      "glyph": "◌",
+      "footprint": {
+        "width": 1,
+        "height": 1
+      },
+      "blocking": false,
+      "constraints": {
+        "allowedEnvironments": [
+          "land",
+          "underground"
+        ],
+        "requiresWalkable": true,
+        "requiresEmptyTile": true
+      },
+      "properties": {
+        "transport": {
+          "kind": "teleport",
+          "bidirectional": true,
+          "travelCost": 1
+        }
+      }
+    },
+    {
+      "id": "stairs",
+      "name": "Лестница",
+      "category": "objects",
+      "type": "transport",
+      "subtype": "stairs",
+      "channel": "prop",
+      "color": "#c7ad87",
+      "glyph": "≡",
+      "footprint": {
+        "width": 1,
+        "height": 1
+      },
+      "blocking": false,
+      "constraints": {
+        "allowedEnvironments": [
+          "land",
+          "underground"
+        ],
+        "requiresWalkable": true,
+        "requiresEmptyTile": true
+      },
+      "properties": {
+        "transport": {
+          "kind": "stairs",
+          "bidirectional": true,
+          "travelCost": 1
+        }
+      }
+    },
+    {
+      "id": "lift",
+      "name": "Лифт",
+      "category": "objects",
+      "type": "transport",
+      "subtype": "lift",
+      "channel": "prop",
+      "color": "#8fbcc7",
+      "glyph": "↕",
+      "footprint": {
+        "width": 1,
+        "height": 1
+      },
+      "blocking": false,
+      "constraints": {
+        "allowedEnvironments": [
+          "land",
+          "underground"
+        ],
+        "requiresWalkable": true,
+        "requiresEmptyTile": true
+      },
+      "properties": {
+        "transport": {
+          "kind": "lift",
+          "bidirectional": true,
+          "travelCost": 1
+        }
+      }
+    },
+    {
+      "id": "lamp",
+      "name": "Светильник",
+      "category": "objects",
+      "type": "light",
+      "subtype": "default",
+      "channel": "prop",
+      "color": "#ead595",
+      "glyph": "✧",
+      "footprint": {
+        "width": 1,
+        "height": 1
+      },
+      "blocking": false,
+      "constraints": {
+        "allowedEnvironments": [
+          "land",
+          "underground"
+        ],
+        "requiresWalkable": true,
+        "requiresEmptyTile": true
+      },
+      "properties": {
+        "mount": "wall",
+        "radius": 5
+      }
+    },
+    {
+      "id": "spikes",
+      "name": "Ловушка",
+      "category": "objects",
+      "type": "trap",
+      "subtype": "default",
+      "channel": "prop",
+      "color": "#d28b68",
+      "glyph": "×",
+      "footprint": {
+        "width": 1,
+        "height": 1
+      },
+      "blocking": false,
+      "constraints": {
+        "allowedEnvironments": [
+          "land",
+          "underground"
+        ],
+        "requiresWalkable": true,
+        "requiresEmptyTile": true
+      },
+      "properties": {
+        "trigger": "pressure",
+        "telegraph": true
+      }
+    },
+    {
+      "id": "workbench",
+      "name": "Верстак",
+      "category": "objects",
+      "type": "structure",
+      "subtype": "default",
+      "channel": "solid",
+      "color": "#c5a07e",
+      "glyph": "▣",
+      "footprint": {
+        "width": 2,
+        "height": 1
+      },
+      "blocking": true,
+      "constraints": {
+        "allowedEnvironments": [
+          "land",
+          "underground"
+        ],
+        "requiresWalkable": true,
+        "requiresEmptyTile": true
+      },
+      "properties": {}
+    },
+    {
+      "id": "oak",
+      "name": "Дуб",
+      "category": "flora",
+      "type": "tree",
+      "subtype": "deciduous",
+      "channel": "solid",
+      "color": "#719582",
+      "glyph": "♣",
+      "footprint": {
+        "width": 1,
+        "height": 1
+      },
+      "blocking": true,
+      "constraints": {
+        "allowedEnvironments": [
+          "land"
+        ],
+        "requiresWalkable": true,
+        "requiresEmptyTile": true,
+        "allowedTerrain": [
+          "soil"
+        ],
+        "excludedTerrain": [
+          "sand",
+          "rock",
+          "water"
+        ]
+      },
+      "properties": {}
+    },
+    {
+      "id": "shrub",
+      "name": "Кустарник",
+      "category": "flora",
+      "type": "shrub",
+      "subtype": "default",
+      "channel": "cover",
+      "color": "#91a16b",
+      "glyph": "♣",
+      "footprint": {
+        "width": 1,
+        "height": 1
+      },
+      "blocking": false,
+      "constraints": {
+        "allowedEnvironments": [
+          "land"
+        ],
+        "requiresWalkable": true,
+        "requiresEmptyTile": true,
+        "allowedTerrain": [
+          "soil"
+        ]
+      },
+      "properties": {}
+    },
+    {
+      "id": "mushroom",
+      "name": "Пещерные грибы",
+      "category": "flora",
+      "type": "fungus",
+      "subtype": "default",
+      "channel": "cover",
+      "color": "#b392b7",
+      "glyph": "♣",
+      "footprint": {
+        "width": 1,
+        "height": 1
+      },
+      "blocking": false,
+      "constraints": {
+        "allowedEnvironments": [
+          "underground"
+        ],
+        "requiresWalkable": true,
+        "requiresEmptyTile": true
+      },
+      "properties": {}
+    },
+    {
+      "id": "algae",
+      "name": "Водоросли",
+      "category": "flora",
+      "type": "aquatic",
+      "subtype": "default",
+      "channel": "cover",
+      "color": "#6aa889",
+      "glyph": "≋",
+      "footprint": {
+        "width": 1,
+        "height": 1
+      },
+      "blocking": false,
+      "constraints": {
+        "allowedEnvironments": [
+          "freshwater",
+          "saltwater"
+        ],
+        "requiresWalkable": false,
+        "requiresEmptyTile": true
+      },
+      "properties": {}
+    },
+    {
+      "id": "iron",
+      "name": "Железная руда",
+      "category": "resources",
+      "type": "ore",
+      "subtype": "default",
+      "channel": "subsurface",
+      "color": "#b98371",
+      "glyph": "◆",
+      "footprint": {
+        "width": 1,
+        "height": 1
+      },
+      "blocking": false,
+      "constraints": {
+        "allowedEnvironments": [
+          "land",
+          "underground"
+        ],
+        "allowedRocks": [
+          "granite",
+          "basalt"
+        ],
+        "minDepth": 0,
+        "maxDepth": 100000,
+        "requiresWalkable": false,
+        "requiresEmptyTile": true
+      },
+      "properties": {
+        "amount": 100,
+        "renewable": false
+      }
+    },
+    {
+      "id": "crystal",
+      "name": "Кристаллы",
+      "category": "resources",
+      "type": "mineral",
+      "subtype": "default",
+      "channel": "subsurface",
+      "color": "#9dccd6",
+      "glyph": "◆",
+      "footprint": {
+        "width": 1,
+        "height": 1
+      },
+      "blocking": false,
+      "constraints": {
+        "allowedEnvironments": [
+          "underground"
+        ],
+        "requiresWalkable": false,
+        "requiresEmptyTile": true
+      },
+      "properties": {
+        "amount": 30
+      }
+    },
+    {
+      "id": "spring",
+      "name": "Родник",
+      "category": "resources",
+      "type": "source",
+      "subtype": "default",
+      "channel": "prop",
+      "color": "#85bfd2",
+      "glyph": "≈",
+      "footprint": {
+        "width": 1,
+        "height": 1
+      },
+      "blocking": false,
+      "constraints": {
+        "allowedEnvironments": [
+          "land",
+          "underground"
+        ],
+        "requiresWalkable": true,
+        "requiresEmptyTile": true
+      },
+      "properties": {
+        "medium": "freshwater",
+        "renewable": true
+      }
+    },
+    {
+      "id": "event",
+      "name": "Событие",
+      "category": "events",
+      "type": "trigger",
+      "subtype": "default",
+      "channel": "trigger",
+      "color": "#9fc5e7",
+      "glyph": "◇",
+      "footprint": {
+        "width": 1,
+        "height": 1
+      },
+      "blocking": false,
+      "constraints": {
+        "allowedEnvironments": [
+          "land",
+          "underground"
+        ],
+        "requiresWalkable": false,
+        "requiresEmptyTile": true
+      },
+      "properties": {
+        "trigger": "enter",
+        "outcomes": [
+          "success",
+          "failure"
+        ]
+      }
+    },
+    {
+      "id": "timed-trial",
+      "name": "Испытание на время",
+      "category": "events",
+      "type": "timed",
+      "subtype": "default",
+      "channel": "trigger",
+      "color": "#dfb78c",
+      "glyph": "◷",
+      "footprint": {
+        "width": 1,
+        "height": 1
+      },
+      "blocking": false,
+      "constraints": {
+        "allowedEnvironments": [
+          "land",
+          "underground"
+        ],
+        "requiresWalkable": true,
+        "requiresEmptyTile": true
+      },
+      "properties": {
+        "trigger": "enter",
+        "clock": "turns",
+        "budget": 20,
+        "margin": 3,
+        "outcomes": [
+          "success",
+          "timeout"
+        ]
+      }
+    }
+  ]
+}

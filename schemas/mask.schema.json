@@ -1,0 +1,42 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://vland.invalid/schemas/mask.schema.json",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "encoding": {
+      "const": "rle-rows-v1"
+    },
+    "runs": {
+      "type": "array",
+      "items": {
+        "type": "array",
+        "prefixItems": [
+          {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 4095
+          },
+          {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 4095
+          },
+          {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 4096
+          }
+        ],
+        "items": false,
+        "minItems": 3,
+        "maxItems": 3
+      },
+      "maxItems": 250000
+    }
+  },
+  "required": [
+    "encoding",
+    "runs"
+  ]
+}

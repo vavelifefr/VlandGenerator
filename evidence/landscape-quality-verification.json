@@ -1,0 +1,133 @@
+{
+  "ok": true,
+  "stage": "Landscape quality audit: shapes, rivers and biome transitions",
+  "updatedAt": "2026-10-21T11:41:00.358605+00:00",
+  "modes": 8,
+  "nodeTests": 260,
+  "portableTests": 260,
+  "portable": {
+    "files": 379,
+    "syntaxModules": 246,
+    "relativeImports": 845,
+    "httpFiles": 293,
+    "httpModes": 8,
+    "llmGuideModes": 8,
+    "jsonSchemaInstances": true,
+    "jsonSchemaDocuments": 381
+  },
+  "productionMatchesPortable": true,
+  "coreFilesCompared": 311,
+  "schemas": 59,
+  "profileSchemaDocuments": 98,
+  "profileSchemaNegativeControls": 98,
+  "portableSchemaDocuments": 381,
+  "portableSchemaNegativeControls": 348,
+  "contentMaps": 24,
+  "sourceOperations": 288,
+  "landscapeProfileJsMaps": 56,
+  "landscapeProfileHttpCliCases": 14,
+  "generationStressMaps": 56,
+  "naturalAutomaticLinks": 40,
+  "shapeChecks": {
+    "targetTests": 22,
+    "coastMasks": 768,
+    "minimumIslandContinentMasks": 512,
+    "rectangularMasks": 100
+  },
+  "riverChecks": {
+    "targetTests": 12,
+    "realMaps": 122
+  },
+  "biomeNewTests": 4,
+  "browserWidths": [
+    1100,
+    360
+  ],
+  "browser": {
+    "biome": {
+      "cases": 4,
+      "ok": true
+    },
+    "profile": {
+      "cases": 4,
+      "ok": true
+    },
+    "large": {
+      "cases": 4,
+      "ok": true
+    },
+    "stack": {
+      "cases": 4,
+      "ok": true
+    },
+    "export": {
+      "cases": 6,
+      "ok": true
+    }
+  },
+  "profileBrowserGenerations": 28,
+  "documentationBrowserCases": 4,
+  "largeCases": 4,
+  "server": {
+    "ok": true,
+    "port": 9670,
+    "pid": 39016,
+    "staticFilesExact": 6,
+    "health200": true,
+    "rows": [
+      {
+        "mode": "landscape",
+        "checksum": "44a53131",
+        "valid": true,
+        "localHttpExact": true,
+        "context200": true,
+        "invalid400": true
+      },
+      {
+        "mode": "hexlandscape",
+        "checksum": "f0887935",
+        "valid": true,
+        "localHttpExact": true,
+        "context200": true,
+        "invalid400": true
+      }
+    ],
+    "sessionApiUsed": false,
+    "namedSaves": false
+  },
+  "cleanup": {
+    "qaCopy": "C:/Users/vaveMain/AppData/Local/Temp/Vland large map QA 04pz2d",
+    "qaTabsClosed": true,
+    "qaServerStopped": true,
+    "qaCopyRemoved": true,
+    "olderRefusedTargetsUntouched": true
+  },
+  "limits": [
+    "Static drainage and saturated water head, no hydrodynamics simulation",
+    "Discrete bounded landform kernels; not geological simulation",
+    "Browser360 is desktop width, not a physical mobile device",
+    "Synthetic DOM/pointer and stub file handles, not trusted physical pointer verification"
+  ],
+  "corrections": [
+    "Observed259/260 initial suite: intentional new default256 checksum8d9199f3, golden updated then260/260",
+    "First additive growth passed numeric tests but diamond forms rejected visually; minimax visually reviewed",
+    "Concurrent own-origin QA session restore incomplete; preserved report and sequential stack4/4 passed"
+  ],
+  "evidence": [
+    "work/LANDSCAPE_SHAPE_AUDIT.md",
+    "work/LANDSCAPE_RIVER_AUDIT.md",
+    "work/LANDSCAPE_BIOME_AUDIT.md",
+    "evidence/landscape-quality-suite-initial.txt",
+    "evidence/landscape-quality-suite.txt",
+    "evidence/landscape-quality-portable.txt",
+    "evidence/landscape-quality-schemas.json",
+    "evidence/landscape-quality-server.json"
+  ],
+  "automation": {
+    "id": "vland",
+    "status": "DELETED",
+    "reason": "Current audit complete"
+  },
+  "homeOpenInCodex": "queued",
+  "finalDocsHttpExact": true
+}

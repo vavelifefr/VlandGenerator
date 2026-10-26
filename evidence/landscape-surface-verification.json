@@ -1,0 +1,92 @@
+{
+  "ok": true,
+  "date": "2026-10-22",
+  "implementationComplete": true,
+  "verificationComplete": true,
+  "deliveryComplete": false,
+  "stageStatus": "awaiting_manual_server_start",
+  "checks": {
+    "portableNode": {
+      "pass": 314,
+      "fail": 0,
+      "evidence": "landscape-surface-portable.json"
+    },
+    "productionSyntaxModules": 202,
+    "relativeImports": 704,
+    "actualMatrixMaps": 32,
+    "repeatedCardCases": 2,
+    "jsHttpCliCases": 4,
+    "browser": {
+      "cases": 4,
+      "generations": 16,
+      "widths": [
+        1100,
+        360
+      ],
+      "modes": [
+        "landscape",
+        "hexlandscape"
+      ],
+      "pageErrors": [],
+      "caseIsolation": true,
+      "evidence": "landscape-surface-browser.json"
+    },
+    "content": {
+      "maps": 24,
+      "sourceOperations": 288,
+      "evidence": "landscape-surface-content.txt"
+    },
+    "jsonSchema": {
+      "schemas": 60,
+      "documents": 381,
+      "negativeControls": 348,
+      "large300Documents": 8,
+      "large300NegativeControls": 8
+    },
+    "llmGuide": {
+      "modes": 8,
+      "operations": 18,
+      "evidence": "llm-guide.json"
+    },
+    "workerStackRegression": "tests/landscape-surface-stack.test.mjs"
+  },
+  "activation": {
+    "url": "http://127.0.0.1:9670/",
+    "verified": false,
+    "automaticStartRejected": true,
+    "reason": "blocked by policy",
+    "requiredUserAction": "Run Web/start.cmd manually; no alternate launch attempted"
+  },
+  "automation": {
+    "id": "vland-surface",
+    "status": "PAUSED",
+    "intervalMinutes": 30
+  },
+  "knownLimits": [
+    "Percentages count dry territories after hydrology, before route repairs and manual overrides; contextual tileID histogram differs.",
+    "64 MiB working session cap is unchanged. Separate browser QA cases have isolated server roots.",
+    "Coastline skeleton is unchanged and some contours remain smooth; visual acceptance is not confirmed.",
+    "Browser360 is headless desktop iframe width, not a physical mobile device."
+  ],
+  "observedFailuresAndFixes": [
+    "Missing repeatable-card contract/UI: observed FAIL then implementation PASS.",
+    "Python jsonschema float multipleOf0.1: observed0.3FAIL then exact Decimal PASS.",
+    "Biome control paths were not unique: observed restore test FAIL then indexed paths PASS.",
+    "Browser300 stack overflow: observed FAIL, bounded extrema loop preserves SHA256 on256/512KiB stacks, browser PASS.",
+    "QA setup /tools403 fixed by relocating own QA entry into temporary root.",
+    "Combined QA session reached64MiB; isolated cases now pass without changing the application cap."
+  ],
+  "cleanup": {
+    "refusedTarget": "C:/Users/vaveMain/AppData/Local/Temp/Vland-Surface-browser-oHhcDK",
+    "refusedTargetRemoved": false,
+    "refusedAction": "Remove-Item own failed QA setup copy",
+    "reason": "blocked by policy",
+    "ownFailedDriver2704Stopped": true,
+    "laterBrowserCopiesRemoved": true,
+    "portableCopyRemoved": true,
+    "earlierRefusalsRespected": true
+  },
+  "userProjectsFixturesLiveSessionUntouched": true,
+  "commits": false,
+  "externalAiCalls": 0
+}

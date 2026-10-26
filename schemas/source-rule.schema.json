@@ -1,0 +1,176 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://vland.invalid/schemas/source-rule.schema.json",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "id": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 64,
+      "pattern": "^[a-zA-Z][a-zA-Z0-9_-]{0,63}$",
+      "not": {
+        "enum": [
+          "__proto__",
+          "prototype",
+          "constructor"
+        ]
+      }
+    },
+    "entries": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "catalogId": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 64,
+            "pattern": "^[a-zA-Z][a-zA-Z0-9_-]{0,63}$",
+            "not": {
+              "enum": [
+                "__proto__",
+                "prototype",
+                "constructor"
+              ]
+            }
+          },
+          "weight": {
+            "type": "number",
+            "minimum": 0.001,
+            "maximum": 1000
+          }
+        },
+        "required": [
+          "catalogId",
+          "weight"
+        ]
+      },
+      "maxItems": 16,
+      "minItems": 1
+    },
+    "generator": {
+      "enum": [
+        "scatter",
+        "groups",
+        "deposits"
+      ]
+    },
+    "quantity": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "mode": {
+          "enum": [
+            "count",
+            "density"
+          ]
+        },
+        "min": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 5000
+        },
+        "max": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 5000
+        },
+        "density": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100
+        }
+      },
+      "required": [
+        "mode",
+        "min",
+        "max",
+        "density"
+      ]
+    },
+    "minDistance": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 32
+    },
+    "group": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "min": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 32
+        },
+        "max": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 32
+        },
+        "radius": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 32
+        }
+      },
+      "required": [
+        "min",
+        "max",
+        "radius"
+      ]
+    },
+    "deposit": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "minSize": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 256
+        },
+        "maxSize": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 256
+        },
+        "minAmount": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 100000
+        },
+        "maxAmount": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 100000
+        }
+      },
+      "required": [
+        "minSize",
+        "maxSize",
+        "minAmount",
+        "maxAmount"
+      ]
+    },
+    "chance": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "filters": {
+      "$ref": "constraints.schema.json"
+    }
+  },
+  "required": [
+    "id",
+    "entries",
+    "generator",
+    "quantity",
+    "minDistance",
+    "group",
+    "deposit",
+    "chance",
+    "filters"
+  ]
+}

@@ -1,0 +1,170 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://vland.invalid/engine/schemas/regions.schema.json",
+  "title": "VlandGenerator regions v1",
+  "type": "object",
+  "properties": {
+    "schema": {
+      "const": "vland.regions"
+    },
+    "schemaVersion": {
+      "const": 1
+    },
+    "apiVersion": {
+      "const": 1
+    },
+    "generatorVersion": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 32
+    },
+    "seed": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 4294967295
+    },
+    "regions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 48,
+            "pattern": "^(?!__proto__$|constructor$|prototype$)[a-zA-Z0-9_-]+$"
+          },
+          "recipe": {
+            "$ref": "recipe.schema.json"
+          },
+          "level": {
+            "$ref": "level.schema.json"
+          },
+          "boundary": {
+            "type": "object"
+          }
+        },
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "recipe",
+          "level",
+          "boundary"
+        ]
+      },
+      "maxItems": 12,
+      "minItems": 1
+    },
+    "connections": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 48,
+            "pattern": "^(?!__proto__$|constructor$|prototype$)[a-zA-Z0-9_-]+$"
+          },
+          "from": {
+            "type": "object",
+            "properties": {
+              "regionId": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 48,
+                "pattern": "^(?!__proto__$|constructor$|prototype$)[a-zA-Z0-9_-]+$"
+              },
+              "port": {
+                "enum": [
+                  "entry",
+                  "exit"
+                ]
+              }
+            },
+            "additionalProperties": false,
+            "required": [
+              "regionId",
+              "port"
+            ]
+          },
+          "to": {
+            "type": "object",
+            "properties": {
+              "regionId": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 48,
+                "pattern": "^(?!__proto__$|constructor$|prototype$)[a-zA-Z0-9_-]+$"
+              },
+              "port": {
+                "enum": [
+                  "entry",
+                  "exit"
+                ]
+              }
+            },
+            "additionalProperties": false,
+            "required": [
+              "regionId",
+              "port"
+            ]
+          },
+          "direction": {
+            "enum": [
+              "both",
+              "forward"
+            ]
+          },
+          "kind": {
+            "const": "portal"
+          }
+        },
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "from",
+          "to",
+          "direction",
+          "kind"
+        ]
+      },
+      "maxItems": 32,
+      "minItems": 0
+    },
+    "entryRegionId": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 48,
+      "pattern": "^(?!__proto__$|constructor$|prototype$)[a-zA-Z0-9_-]+$"
+    },
+    "exitRegionId": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 48,
+      "pattern": "^(?!__proto__$|constructor$|prototype$)[a-zA-Z0-9_-]+$"
+    },
+    "fingerprint": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 8,
+      "pattern": "^[0-9a-f]{8}$"
+    },
+    "note": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": true,
+  "required": [
+    "schema",
+    "schemaVersion",
+    "apiVersion",
+    "generatorVersion",
+    "seed",
+    "regions",
+    "connections",
+    "entryRegionId",
+    "exitRegionId",
+    "fingerprint"
+  ]
+}

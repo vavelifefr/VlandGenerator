@@ -1,0 +1,232 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://vland.invalid/engine/schemas/map.schema.json",
+  "title": "VlandGenerator map v1",
+  "oneOf": [
+    {
+      "$ref": "bundle.schema.json"
+    },
+    {
+      "$ref": "level.schema.json"
+    },
+    {
+      "$ref": "world.schema.json"
+    },
+    {
+      "$ref": "terrain.schema.json"
+    },
+    {
+      "$ref": "regions.schema.json"
+    },
+    {
+      "type": "object",
+      "properties": {
+        "schema": {
+          "const": "vland.region-session"
+        },
+        "schemaVersion": {
+          "const": 1
+        },
+        "apiVersion": {
+          "const": 1
+        },
+        "generatorVersion": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 32
+        },
+        "plan": {
+          "$ref": "regions.schema.json"
+        },
+        "state": {
+          "$ref": "region-state.schema.json"
+        },
+        "position": {
+          "anyOf": [
+            {
+              "type": "null"
+            },
+            {
+              "type": "object",
+              "properties": {
+                "regionId": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 48,
+                  "pattern": "^(?!__proto__$|constructor$|prototype$)[a-zA-Z0-9_-]+$"
+                },
+                "x": {
+                  "type": "integer",
+                  "minimum": 0,
+                  "maximum": 4095
+                },
+                "y": {
+                  "type": "integer",
+                  "minimum": 0,
+                  "maximum": 4095
+                }
+              },
+              "additionalProperties": false,
+              "required": [
+                "regionId",
+                "x",
+                "y"
+              ]
+            }
+          ]
+        },
+        "fingerprint": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 8,
+          "pattern": "^[0-9a-f]{8}$"
+        }
+      },
+      "additionalProperties": true,
+      "required": [
+        "schema",
+        "schemaVersion",
+        "apiVersion",
+        "generatorVersion",
+        "plan",
+        "state",
+        "position",
+        "fingerprint"
+      ]
+    },
+    {
+      "type": "object",
+      "properties": {
+        "schema": {
+          "const": "vland.seed-batch"
+        },
+        "schemaVersion": {
+          "const": 1
+        },
+        "recipe": {
+          "$ref": "recipe.schema.json"
+        },
+        "startSeed": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 4294967295
+        },
+        "count": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 50
+        },
+        "rows": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "index": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 49
+              },
+              "seed": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 4294967295
+              },
+              "selectedSeed": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 4294967295
+              },
+              "valid": {
+                "type": "boolean"
+              },
+              "fingerprint": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 8,
+                "pattern": "^[0-9a-f]{8}$"
+              },
+              "score": {
+                "type": "number",
+                "minimum": 0,
+                "maximum": 100
+              },
+              "loops": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 1000
+              },
+              "shapes": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 20
+              },
+              "maxPassage": {
+                "type": "integer",
+                "minimum": 1,
+                "maximum": 3
+              },
+              "specialRooms": {
+                "anyOf": [
+                  {
+                    "type": "null"
+                  },
+                  {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 120
+                  }
+                ]
+              },
+              "elapsedMs": {
+                "type": "number",
+                "minimum": 0,
+                "maximum": 10000000000.0
+              },
+              "error": {
+                "type": "object"
+              }
+            },
+            "additionalProperties": false,
+            "required": [
+              "index",
+              "seed",
+              "valid",
+              "elapsedMs"
+            ]
+          },
+          "maxItems": 50,
+          "minItems": 1
+        },
+        "summary": {
+          "type": "object"
+        },
+        "note": {
+          "type": "string"
+        },
+        "fingerprint": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 8,
+          "pattern": "^[0-9a-f]{8}$"
+        }
+      },
+      "additionalProperties": true,
+      "required": [
+        "schema",
+        "schemaVersion",
+        "recipe",
+        "startSeed",
+        "count",
+        "rows",
+        "summary",
+        "fingerprint"
+      ]
+    },
+    {
+      "$ref": "atlas.schema.json"
+    },
+    {
+      "$ref": "platformer.schema.json"
+    }
+  ]
+}

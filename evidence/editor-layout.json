@@ -1,0 +1,56 @@
+{
+  "status": "complete",
+  "stage": "editor_deduplication_and_surface_default",
+  "testsPassed": 148,
+  "testsFailed": 0,
+  "portableTestsPassed": 148,
+  "portable": {
+    "ok": true,
+    "files": 317,
+    "syntaxModules": 199,
+    "relativeImports": 682,
+    "httpFiles": 267,
+    "cli": true,
+    "cliSourceWorkflow": true,
+    "cliTransitions": true,
+    "httpTransitions": true,
+    "rasterCli": true,
+    "rasterHttp": true,
+    "diagnosticsCli": true,
+    "diagnosticsHttp": true,
+    "automaticAccessCli": true,
+    "automaticAccessHttp": true,
+    "isolatedContentModule": true,
+    "httpModes": 6,
+    "copyRemovedAfterCheck": true
+  },
+  "browser": "evidence/editor-layout-browser.json",
+  "cases": 12,
+  "widths": [
+    1100,
+    360
+  ],
+  "tdd": {
+    "before": "2 expected failures: duplicate toolbar construction; four-layer default",
+    "after": "5 targeted tests passed"
+  },
+  "content": {
+    "maps": 18,
+    "sourceOperations": 216
+  },
+  "remaining": [
+    "Physical layer stack and thematic sublayers",
+    "Relief mode clarification",
+    "Settlement roads, piers, neighborhood and quarter areas",
+    "Full interface audit"
+  ],
+  "limits": "Browser keyboard checks use synthetic keydown; this is not a trusted-pointer or physical mobile test.",
+  "cleanup": {
+    "qaServerStopped": true,
+    "qaTabClosed": true,
+    "qaCopyRemoved": false,
+    "qaCopy": "C:/Users/vaveMain/AppData/Local/Temp/Vland large map QA Hu6QqF",
+    "removal": "Automatic approval review rejected bundled cleanup command: blocked by policy. No alternate deletion attempted.",
+    "mainServerLeftRunning": "http://127.0.0.1:9670/"
+  }
+}

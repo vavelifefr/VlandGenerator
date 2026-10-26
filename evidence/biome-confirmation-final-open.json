@@ -1,0 +1,11 @@
+{
+  "checkedAt": "2026-10-24T16:59:16.978239+00:00",
+  "url": "http://127.0.0.1:9670/",
+  "health": null,
+  "error": "ECONNREFUSED 127.0.0.1:9670 at final readonly check; no TCP listener observed",
+  "earlierActivation": "evidence/biome-confirmation-main.json",
+  "automaticLaunchRetried": false,
+  "manualEntry": "Web/start.cmd",
+  "comparison": "file:///C:/Vibecoding/Games/VlandGenerator/evidence/landscape-biomes-comparison.html",
+  "openRequests": "HTTP landscape/comparison and local file comparison returned queued; visibility not confirmed"
+}

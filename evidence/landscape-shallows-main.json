@@ -1,0 +1,20 @@
+{
+  "ok": true,
+  "stateless": true,
+  "serverRestarted": false,
+  "cases": [
+    {
+      "mode": "landscape",
+      "shallowCells": 137,
+      "jsHttpExact": true,
+      "fingerprint": "bd2c287f"
+    },
+    {
+      "mode": "hexlandscape",
+      "shallowCells": 140,
+      "jsHttpExact": true,
+      "fingerprint": "20fc1159"
+    }
+  ],
+  "previousOwnCopyAbsent": true
+}

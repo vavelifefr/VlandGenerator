@@ -1,0 +1,92 @@
+{
+  "ok": true,
+  "completedAt": "2026-10-24T16:58:21.141593+00:00",
+  "scope": "Per-card confirmation; two greens; five geographic biome formulas and discrete named transition colors",
+  "node": {
+    "tests": 409,
+    "pass": 409,
+    "fail": 0,
+    "source": "evidence/biome-confirmation-portable.json"
+  },
+  "syntaxModulesPortable": 221,
+  "relativeImportsPortable": 765,
+  "actualMaps": 54,
+  "exactRepeats": 4,
+  "pngFiles": 54,
+  "mapSizes": [
+    50,
+    128,
+    300
+  ],
+  "topologies": [
+    "square",
+    "hex"
+  ],
+  "browserWidths": [
+    1100,
+    360
+  ],
+  "browser": {
+    "cardWorkflowCases": 4,
+    "allSevenPalette300Cases": 4,
+    "exactCoreSamples": 28,
+    "pageErrors": 0
+  },
+  "content": {
+    "maps": 24,
+    "sourceOperations": 288
+  },
+  "schema": {
+    "schemas": 60,
+    "allModeDocuments": 381,
+    "allModeNegativeControls": 348,
+    "additional300Documents": 10,
+    "additional300NegativeControls": 10
+  },
+  "parity": "JS/CLI/HTTP generate/rebuild/validate/context in independent copy; exact main generation and PNG for both grids",
+  "main": {
+    "url": "http://127.0.0.1:9670/",
+    "health": 200,
+    "currentFiles": 12,
+    "exactGenerationCases": 2,
+    "exactPngCases": 2,
+    "restart": false,
+    "liveSessionUsed": false,
+    "activationEarlierPassed": true,
+    "currentHealth": "unavailable",
+    "finalProbe": "evidence/biome-confirmation-final-open.json"
+  },
+  "visualReview": [
+    "biome-palette-stack300.png",
+    "biome-palette-default256.png",
+    "biome-palette-ui-landscape-1100-map.png",
+    "biome-palette-ui-hexlandscape-360-map.png",
+    "landscape-biomes-landscape-300-land-swamp-biome.png",
+    "landscape-biomes-landscape-300-land-desert-biome.png",
+    "landscape-biomes-hexlandscape-300-land-mountains-biome.png",
+    "landscape-biomes-hexlandscape-300-land-snow-biome.png",
+    "landscape-biomes-hexlandscape-300-land-volcanic-biome.png"
+  ],
+  "reports": [
+    "evidence/biome-card-confirmation-targeted.txt",
+    "evidence/biome-discrete-palette-green.txt",
+    "evidence/landscape-biomes-matrix.json",
+    "evidence/biome-card-confirmation-browser.json",
+    "evidence/biome-palette-browser.json",
+    "evidence/biome-confirmation-portable.json",
+    "evidence/biome-confirmation-large-schema.json",
+    "evidence/biome-confirmation-main.json",
+    "evidence/biome-confirmation-content.log",
+    "evidence/biome-confirmation-schema.log",
+    "evidence/biome-confirmation-final-open.json"
+  ],
+  "comparison": "evidence/landscape-biomes-comparison.html",
+  "limitations": [
+    "360px is desktop responsive layout, not physical mobile device.",
+    "Transition zones consume parts of requested territories; quotas refer to regions, not exact counts of a single tile/color.",
+    "Existing generated geometry remains immutable until explicit Create.",
+    "Previous refused canonical write, launch and cleanup targets were not retried."
+  ],
+  "implementationAndQaComplete": true,
+  "delivery": "Local comparison open queued; live editor requires manual server start"
+}

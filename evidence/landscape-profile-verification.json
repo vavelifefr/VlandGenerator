@@ -1,0 +1,130 @@
+{
+  "ok": true,
+  "stage": "Landscape structures and base biomes; full accepted plan complete",
+  "updatedAt": "2026-10-21T00:40:43.113510+00:00",
+  "modes": 8,
+  "nodeTests": 235,
+  "portableTests": 235,
+  "portable": {
+    "files": 370,
+    "syntaxModules": 241,
+    "relativeImports": 823,
+    "httpFiles": 289,
+    "httpModes": 8,
+    "llmGuideModes": 8,
+    "jsonSchemaInstances": true,
+    "jsonSchemaDocuments": 381
+  },
+  "productionMatchesPortable": true,
+  "coreFilesCompared": 306,
+  "protectedExamplesUnchanged": 18,
+  "schemas": 59,
+  "standardSchemaDocuments": 381,
+  "standardNegativeControls": 348,
+  "profileSchemaDocuments": 98,
+  "profileNegativeControls": 98,
+  "profileStructures": 4,
+  "baseBiomes": 7,
+  "profileJsMaps": 56,
+  "profileJsHttpCliCases": 14,
+  "engineSurfaceCases": 224,
+  "engineAtlasCases": 224,
+  "contentMaps": 24,
+  "contentOperations": 288,
+  "evolutionMaps": 56,
+  "evolutionAutomaticLinks": 40,
+  "llmGuideOperations": 17,
+  "llmGuideModes": 8,
+  "browser": {
+    "profileGenerations": 28,
+    "editorCases": 16,
+    "stackCases": 4,
+    "large256Cases": 4,
+    "exportCases": 6,
+    "documentationCases": 4,
+    "transportCases": 4,
+    "adaptiveHelpCases": 4,
+    "widths": [
+      1100,
+      360
+    ],
+    "synthetic": true,
+    "physicalPhone": false,
+    "screenshot": "evidence/landscape-profile-360.png"
+  },
+  "largeAdditionalContextCases": 2,
+  "extremeAspectCases": 8,
+  "largeSquareDefaultChecksum": "507092dd",
+  "largeHexDefaultChecksum": "8bddc1d9",
+  "profileFreeLargeSquareChecksum": "e2f4d469",
+  "mainServer": {
+    "ok": true,
+    "port": 9670,
+    "pid": 37312,
+    "health200": true,
+    "home200": true,
+    "pages200": true,
+    "schema200": true,
+    "rows": [
+      {
+        "mode": "landscape",
+        "profile": {
+          "structure": "islands",
+          "baseBiome": "forest"
+        },
+        "checksum": "28d4f8b3",
+        "valid": true,
+        "context": true,
+        "invalid400": true
+      },
+      {
+        "mode": "hexlandscape",
+        "profile": {
+          "structure": "continent",
+          "baseBiome": "volcanic"
+        },
+        "checksum": "1d74f367",
+        "valid": true,
+        "context": true,
+        "invalid400": true
+      }
+    ],
+    "sessionApiUsed": false,
+    "namedSaves": false
+  },
+  "qa": {
+    "ownTabClosed": true,
+    "copy": "C:/Users/vaveMain/AppData/Local/Temp/Vland large map QA fJXqSW",
+    "copyRemoved": true,
+    "port11503Free": true,
+    "olderRefusedTargetsNotTouched": true,
+    "oldCurrentRefusal": {
+      "copy": "C:/Users/vaveMain/AppData/Local/Temp/Vland large map QA 8xQQHl",
+      "pid": 37068,
+      "port": 11502,
+      "action": "SIGINT via original exec session",
+      "result": "automatic approval rejected; no alternate stop or deletion attempted"
+    }
+  },
+  "corrections": [
+    "Initial profile-free checksum regression accidentally used raw provider content defaults; test corrected to geometry-only recipe and passes old checksum.",
+    "Historical protected-file manifest accidentally included live .run byte hashes; no content output or test writes; corrected audit scopes18examples only.",
+    "Visual-only inline QA script blocked by existing CSP; external own QA module used without relaxing CSP."
+  ],
+  "runtimeDependenciesAdded": false,
+  "schemaQaDependency": "external jsonschema4.26.0",
+  "externalAiCalls": 0,
+  "automation": {
+    "id": "vland",
+    "status": "deleted",
+    "reason": "All current LANDSCAPE_PLAN tasks complete; avoid rerunning unchanged checks"
+  },
+  "pending": [],
+  "homeOpen": {
+    "url": "http://127.0.0.1:9670/",
+    "tool": "open_in_codex",
+    "status": "queued",
+    "visibleOpeningVerified": false
+  },
+  "mainHttpMatchesCurrentUiAndGuides": true
+}

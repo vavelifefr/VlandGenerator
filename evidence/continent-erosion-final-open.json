@@ -1,0 +1,18 @@
+{
+  "checkedAt": "2026-10-24T18:08:08.969Z",
+  "urls": [
+    {
+      "url": "http://127.0.0.1:9670/api/health",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:9670/evidence/continent-erosion-comparison.html",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:9670/Web/HTML/landscape.html",
+      "status": 200
+    }
+  ],
+  "ok": true
+}

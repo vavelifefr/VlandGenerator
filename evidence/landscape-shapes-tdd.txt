@@ -1,0 +1,152 @@
+✖ hex16x256 pure seed2026 builds three connected islands without a one-cell satellite (6.9941ms)
+✖ native hex16x256 seed11 heightmap preserves the three island cores before navigation repairs (146.0482ms)
+✖ seed changes continent placement and aspect, and rotates the three-island composition (84.9153ms)
+✖ connected seed geometry keeps three separated islands or one large continent and deep sea on both grids and narrow maps (58.5722ms)
+✔ prepared geometry follows request/seed changes without mutating input or exposing cache state (6.3122ms)
+✔ 256x256 prepared island and continent geometry fits the existing worker time budget (72.8761ms)
+ℹ {"size":"256x256","results":[{"kind":"square","structure":"islands","elapsedMs":25},{"kind":"square","structure":"continent","elapsedMs":9},{"kind":"hex","structure":"islands","elapsedMs":18},{"kind":"hex","structure":"continent","elapsedMs":9}]}
+ℹ tests 6
+ℹ suites 0
+ℹ pass 2
+ℹ fail 4
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 464.7155
+
+✖ failing tests:
+
+test at tests\landscape-shapes.test.mjs:13:1
+✖ hex16x256 pure seed2026 builds three connected islands without a one-cell satellite (6.9941ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  4 !== 3
+  
+      at TestContext.<anonymous> (file:///C:/Vibecoding/Games/VlandGenerator/tests/landscape-shapes.test.mjs:14:58)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.start (node:internal/test_runner/test:1262:17)
+      at startSubtestAfterBootstrap (node:internal/test_runner/harness:387:17) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 4,
+    expected: 3,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests\landscape-shapes.test.mjs:17:1
+✖ native hex16x256 seed11 heightmap preserves the three island cores before navigation repairs (146.0482ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  4 !== 3
+  
+      at TestContext.<anonymous> (file:///C:/Vibecoding/Games/VlandGenerator/tests/landscape-shapes.test.mjs:18:297)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 4,
+    expected: 3,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests\landscape-shapes.test.mjs:21:1
+✖ seed changes continent placement and aspect, and rotates the three-island composition (84.9153ms)
+  AssertionError [ERR_ASSERTION]: square: leftmost core can be in the lower half
+      at TestContext.<anonymous> (file:///C:/Vibecoding/Games/VlandGenerator/tests/landscape-shapes.test.mjs:27:108)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }
+
+test at tests\landscape-shapes.test.mjs:33:1
+✖ connected seed geometry keeps three separated islands or one large continent and deep sea on both grids and narrow maps (58.5722ms)
+  AssertionError [ERR_ASSERTION]: hex/16/256/2026/islands
+  
+  4 !== 3
+  
+      at TestContext.<anonymous> (file:///C:/Vibecoding/Games/VlandGenerator/tests/landscape-shapes.test.mjs:35:128)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: 4,
+    expected: 3,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+FOLLOW-UP OBSERVED VISUAL FAIL (root review): evidence/landscape-quality-forms.png shows the additive square/D4 shortest-path front producing conspicuous diamond-shaped islands/continents. Root rejected this result despite connectivity PASS; accepted follow-up is minimax Euclidean-potential connected growth. This is visual evidence reported by root, not a new automated style threshold. Original failing tests above are preserved.
+
+COAST FOLLOW-UP: reproduce pure hex16x256 coast/meadow seed125 and 768-map shape matrix before connected coast implementation.
+✖ coast hex16x256 seed125 keeps shoreline land connected without a detached cell (5.7996ms)
+✖ coast remains one mainland with fully dry and sea opposite edges across 768 narrow-map cases (244.8521ms)
+ℹ tests 2
+ℹ suites 0
+ℹ pass 0
+ℹ fail 2
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 336.1603
+
+✖ failing tests:
+
+test at tests\landscape-shapes.test.mjs:21:1
+✖ coast hex16x256 seed125 keeps shoreline land connected without a detached cell (5.7996ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  2 !== 1
+  
+      at TestContext.<anonymous> (file:///C:/Vibecoding/Games/VlandGenerator/tests/landscape-shapes.test.mjs:22:51)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.start (node:internal/test_runner/test:1262:17)
+      at startSubtestAfterBootstrap (node:internal/test_runner/harness:387:17) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 2,
+    expected: 1,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests\landscape-shapes.test.mjs:25:1
+✖ coast remains one mainland with fully dry and sea opposite edges across 768 narrow-map cases (244.8521ms)
+  AssertionError [ERR_ASSERTION]: hex/16/256/125/coast connected mainland
+  
+  2 !== 1
+  
+      at TestContext.<anonymous> (file:///C:/Vibecoding/Games/VlandGenerator/tests/landscape-shapes.test.mjs:28:10)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: 2,
+    expected: 1,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

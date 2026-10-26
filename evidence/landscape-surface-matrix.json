@@ -1,0 +1,2491 @@
+{
+  "ok": true,
+  "coreChecked": true,
+  "started": "2026-10-22T18:15:32.255Z",
+  "finished": "2026-10-22T18:21:19.274Z",
+  "realMaps": 32,
+  "repeatCases": [
+    {
+      "mode": "landscape",
+      "tenRepeatedCards": true,
+      "baseBiome": "volcanic",
+      "valid": true
+    },
+    {
+      "mode": "hexlandscape",
+      "tenRepeatedCards": true,
+      "baseBiome": "volcanic",
+      "valid": true
+    }
+  ],
+  "interfaceCases": 4,
+  "schemaDocuments": 8,
+  "schemaChecked": true,
+  "images": 18,
+  "sessionApiUsed": false,
+  "namedProjectsUsed": false,
+  "authoredFixturesUsed": false,
+  "rows": [
+    {
+      "mode": "landscape",
+      "size": 50,
+      "structure": "land",
+      "seed": 42,
+      "profile": {
+        "structure": "land",
+        "baseBiome": "mountains",
+        "biomes": [
+          {
+            "id": "forest-west",
+            "type": "forest",
+            "percent": 18
+          },
+          {
+            "id": "meadows",
+            "type": "meadow",
+            "percent": 12
+          },
+          {
+            "id": "wetlands",
+            "type": "swamp",
+            "percent": 8
+          },
+          {
+            "id": "forest-east",
+            "type": "forest",
+            "percent": 7
+          }
+        ]
+      },
+      "generateMs": 154,
+      "validateMs": 68,
+      "checksum": "bc453acc",
+      "valid": true,
+      "groups": [
+        2500
+      ],
+      "biomes": {
+        "foothills": 735,
+        "forest": 149,
+        "taiga": 235,
+        "wetland": 132,
+        "plains": 224,
+        "floodplain": 59,
+        "tundra": 9,
+        "lake": 168,
+        "snow": 175,
+        "river": 13,
+        "alpine": 601
+      },
+      "water": {
+        "none": 2319,
+        "lake": 168,
+        "river": 13
+      },
+      "dryCells": 2319,
+      "height": {
+        "min": 0.385,
+        "q10": 0.537053,
+        "median": 0.700548,
+        "q90": 0.851365,
+        "max": 0.965
+      },
+      "transitionCells": 1551
+    },
+    {
+      "mode": "landscape",
+      "size": 50,
+      "structure": "coast",
+      "seed": 42,
+      "profile": {
+        "structure": "coast",
+        "baseBiome": "forest",
+        "biomes": [
+          {
+            "id": "meadows",
+            "type": "meadow",
+            "percent": 25
+          },
+          {
+            "id": "wetlands",
+            "type": "swamp",
+            "percent": 10
+          },
+          {
+            "id": "drylands",
+            "type": "desert",
+            "percent": 8
+          },
+          {
+            "id": "forest-east",
+            "type": "forest",
+            "percent": 5
+          }
+        ]
+      },
+      "generateMs": 95,
+      "validateMs": 48,
+      "checksum": "cc84ce4f",
+      "valid": true,
+      "groups": [
+        1324
+      ],
+      "biomes": {
+        "forest": 332,
+        "river": 66,
+        "taiga": 178,
+        "cold-desert": 34,
+        "desert": 72,
+        "savanna": 94,
+        "plains": 359,
+        "floodplain": 82,
+        "wetland": 45,
+        "beach": 39,
+        "ocean": 1176,
+        "gravel-shore": 15,
+        "tundra": 8
+      },
+      "water": {
+        "none": 1258,
+        "river": 66,
+        "sea": 1176
+      },
+      "dryCells": 1258,
+      "height": {
+        "min": 0.166,
+        "q10": 0.209037,
+        "median": 0.383192,
+        "q90": 0.677276,
+        "max": 0.838946
+      },
+      "transitionCells": 1026
+    },
+    {
+      "mode": "landscape",
+      "size": 50,
+      "structure": "islands",
+      "seed": 42,
+      "profile": {
+        "structure": "islands",
+        "baseBiome": "meadow",
+        "biomes": [
+          {
+            "id": "forest-west",
+            "type": "forest",
+            "percent": 25
+          },
+          {
+            "id": "highlands",
+            "type": "mountains",
+            "percent": 18
+          },
+          {
+            "id": "wetlands",
+            "type": "swamp",
+            "percent": 7
+          },
+          {
+            "id": "forest-east",
+            "type": "forest",
+            "percent": 10
+          }
+        ]
+      },
+      "generateMs": 195,
+      "validateMs": 58,
+      "checksum": "80783a08",
+      "valid": true,
+      "groups": [
+        117,
+        113,
+        49
+      ],
+      "biomes": {
+        "ocean": 2221,
+        "rocky-coast": 48,
+        "cliffs": 46,
+        "foothills": 73,
+        "gravel-shore": 8,
+        "plains": 23,
+        "wetland": 11,
+        "floodplain": 2,
+        "alpine": 16,
+        "forest": 28,
+        "river": 6,
+        "tundra": 18
+      },
+      "water": {
+        "sea": 2221,
+        "none": 273,
+        "river": 6
+      },
+      "dryCells": 273,
+      "height": {
+        "min": 0.166,
+        "q10": 0.166,
+        "median": 0.166,
+        "q90": 0.385611,
+        "max": 0.72508
+      },
+      "transitionCells": 158
+    },
+    {
+      "mode": "landscape",
+      "size": 50,
+      "structure": "continent",
+      "seed": 42,
+      "profile": {
+        "structure": "continent",
+        "baseBiome": "mountains",
+        "biomes": [
+          {
+            "id": "forest-west",
+            "type": "forest",
+            "percent": 20
+          },
+          {
+            "id": "meadows",
+            "type": "meadow",
+            "percent": 20
+          },
+          {
+            "id": "wetlands",
+            "type": "swamp",
+            "percent": 10
+          },
+          {
+            "id": "snowlands",
+            "type": "snow",
+            "percent": 10
+          },
+          {
+            "id": "forest-east",
+            "type": "forest",
+            "percent": 5
+          }
+        ]
+      },
+      "generateMs": 100,
+      "validateMs": 47,
+      "checksum": "7ab8665c",
+      "valid": true,
+      "groups": [
+        1059
+      ],
+      "biomes": {
+        "ocean": 1441,
+        "beach": 22,
+        "gravel-shore": 52,
+        "foothills": 267,
+        "wetland": 22,
+        "plains": 115,
+        "taiga": 68,
+        "forest": 67,
+        "floodplain": 9,
+        "river": 102,
+        "lake": 88,
+        "rocky-coast": 36,
+        "alpine": 119,
+        "snow": 87,
+        "tundra": 5
+      },
+      "water": {
+        "sea": 1441,
+        "none": 869,
+        "river": 102,
+        "lake": 88
+      },
+      "dryCells": 869,
+      "height": {
+        "min": 0.166,
+        "q10": 0.219522,
+        "median": 0.33303,
+        "q90": 0.675268,
+        "max": 0.804603
+      },
+      "transitionCells": 680
+    },
+    {
+      "mode": "landscape",
+      "size": 100,
+      "structure": "land",
+      "seed": 42,
+      "profile": {
+        "structure": "land",
+        "baseBiome": "mountains",
+        "biomes": [
+          {
+            "id": "forest-west",
+            "type": "forest",
+            "percent": 18
+          },
+          {
+            "id": "meadows",
+            "type": "meadow",
+            "percent": 12
+          },
+          {
+            "id": "wetlands",
+            "type": "swamp",
+            "percent": 8
+          },
+          {
+            "id": "forest-east",
+            "type": "forest",
+            "percent": 7
+          }
+        ]
+      },
+      "generateMs": 369,
+      "validateMs": 204,
+      "checksum": "3b33f7ee",
+      "valid": true,
+      "groups": [
+        10000
+      ],
+      "biomes": {
+        "alpine": 2403,
+        "foothills": 2275,
+        "plains": 641,
+        "wetland": 532,
+        "floodplain": 240,
+        "river": 765,
+        "taiga": 1138,
+        "forest": 600,
+        "lake": 454,
+        "tundra": 248,
+        "snow": 704
+      },
+      "water": {
+        "none": 8781,
+        "river": 765,
+        "lake": 454
+      },
+      "dryCells": 8781,
+      "height": {
+        "min": 0.385,
+        "q10": 0.551553,
+        "median": 0.684371,
+        "q90": 0.826708,
+        "max": 0.965
+      },
+      "transitionCells": 5702
+    },
+    {
+      "mode": "landscape",
+      "size": 100,
+      "structure": "coast",
+      "seed": 42,
+      "profile": {
+        "structure": "coast",
+        "baseBiome": "forest",
+        "biomes": [
+          {
+            "id": "meadows",
+            "type": "meadow",
+            "percent": 25
+          },
+          {
+            "id": "wetlands",
+            "type": "swamp",
+            "percent": 10
+          },
+          {
+            "id": "drylands",
+            "type": "desert",
+            "percent": 8
+          },
+          {
+            "id": "forest-east",
+            "type": "forest",
+            "percent": 5
+          }
+        ]
+      },
+      "generateMs": 752,
+      "validateMs": 250,
+      "checksum": "ec69f75f",
+      "valid": true,
+      "groups": [
+        5362
+      ],
+      "biomes": {
+        "forest": 1708,
+        "taiga": 572,
+        "cold-desert": 24,
+        "desert": 234,
+        "savanna": 216,
+        "plains": 803,
+        "tundra": 310,
+        "river": 402,
+        "lake": 358,
+        "rainforest": 47,
+        "floodplain": 322,
+        "wetland": 161,
+        "beach": 205,
+        "ocean": 4638
+      },
+      "water": {
+        "none": 4602,
+        "river": 402,
+        "lake": 358,
+        "sea": 4638
+      },
+      "dryCells": 4602,
+      "height": {
+        "min": 0.166,
+        "q10": 0.216238,
+        "median": 0.399784,
+        "q90": 0.654968,
+        "max": 0.874356
+      },
+      "transitionCells": 2683
+    },
+    {
+      "mode": "landscape",
+      "size": 100,
+      "structure": "islands",
+      "seed": 42,
+      "profile": {
+        "structure": "islands",
+        "baseBiome": "meadow",
+        "biomes": [
+          {
+            "id": "forest-west",
+            "type": "forest",
+            "percent": 25
+          },
+          {
+            "id": "highlands",
+            "type": "mountains",
+            "percent": 18
+          },
+          {
+            "id": "wetlands",
+            "type": "swamp",
+            "percent": 7
+          },
+          {
+            "id": "forest-east",
+            "type": "forest",
+            "percent": 10
+          }
+        ]
+      },
+      "generateMs": 572,
+      "validateMs": 212,
+      "checksum": "35f296be",
+      "valid": true,
+      "groups": [
+        450,
+        372,
+        213
+      ],
+      "biomes": {
+        "ocean": 8965,
+        "gravel-shore": 103,
+        "rocky-coast": 53,
+        "beach": 10,
+        "plains": 175,
+        "floodplain": 26,
+        "wetland": 33,
+        "forest": 86,
+        "foothills": 237,
+        "rainforest": 10,
+        "savanna": 1,
+        "alpine": 89,
+        "river": 57,
+        "tundra": 33,
+        "cliffs": 86,
+        "taiga": 36
+      },
+      "water": {
+        "sea": 8965,
+        "none": 978,
+        "river": 57
+      },
+      "dryCells": 978,
+      "height": {
+        "min": 0.166,
+        "q10": 0.166,
+        "median": 0.166,
+        "q90": 0.367381,
+        "max": 0.815078
+      },
+      "transitionCells": 813
+    },
+    {
+      "mode": "landscape",
+      "size": 100,
+      "structure": "continent",
+      "seed": 42,
+      "profile": {
+        "structure": "continent",
+        "baseBiome": "mountains",
+        "biomes": [
+          {
+            "id": "forest-west",
+            "type": "forest",
+            "percent": 20
+          },
+          {
+            "id": "meadows",
+            "type": "meadow",
+            "percent": 20
+          },
+          {
+            "id": "wetlands",
+            "type": "swamp",
+            "percent": 10
+          },
+          {
+            "id": "snowlands",
+            "type": "snow",
+            "percent": 10
+          },
+          {
+            "id": "forest-east",
+            "type": "forest",
+            "percent": 5
+          }
+        ]
+      },
+      "generateMs": 655,
+      "validateMs": 236,
+      "checksum": "e2397a30",
+      "valid": true,
+      "groups": [
+        4237
+      ],
+      "biomes": {
+        "ocean": 5763,
+        "beach": 275,
+        "gravel-shore": 143,
+        "foothills": 1242,
+        "wetland": 31,
+        "floodplain": 109,
+        "forest": 307,
+        "alpine": 449,
+        "plains": 330,
+        "rainforest": 15,
+        "tundra": 342,
+        "snow": 436,
+        "taiga": 372,
+        "lake": 18,
+        "river": 167,
+        "rocky-coast": 1
+      },
+      "water": {
+        "sea": 5763,
+        "none": 4052,
+        "lake": 18,
+        "river": 167
+      },
+      "dryCells": 4052,
+      "height": {
+        "min": 0.166,
+        "q10": 0.205378,
+        "median": 0.333641,
+        "q90": 0.742593,
+        "max": 0.965
+      },
+      "transitionCells": 3194
+    },
+    {
+      "mode": "landscape",
+      "size": 200,
+      "structure": "land",
+      "seed": 42,
+      "profile": {
+        "structure": "land",
+        "baseBiome": "mountains",
+        "biomes": [
+          {
+            "id": "forest-west",
+            "type": "forest",
+            "percent": 18
+          },
+          {
+            "id": "meadows",
+            "type": "meadow",
+            "percent": 12
+          },
+          {
+            "id": "wetlands",
+            "type": "swamp",
+            "percent": 8
+          },
+          {
+            "id": "forest-east",
+            "type": "forest",
+            "percent": 7
+          }
+        ]
+      },
+      "generateMs": 3601,
+      "validateMs": 2031,
+      "checksum": "f99953b2",
+      "valid": true,
+      "groups": [
+        40000
+      ],
+      "biomes": {
+        "plains": 2344,
+        "foothills": 6092,
+        "wetland": 2063,
+        "taiga": 3269,
+        "forest": 2768,
+        "river": 1606,
+        "alpine": 11707,
+        "rainforest": 303,
+        "floodplain": 1239,
+        "savanna": 97,
+        "tundra": 879,
+        "lake": 3825,
+        "snow": 3808
+      },
+      "water": {
+        "none": 34569,
+        "river": 1606,
+        "lake": 3825
+      },
+      "dryCells": 34569,
+      "height": {
+        "min": 0.385,
+        "q10": 0.583149,
+        "median": 0.742285,
+        "q90": 0.849079,
+        "max": 0.965
+      },
+      "transitionCells": 16671
+    },
+    {
+      "mode": "landscape",
+      "size": 200,
+      "structure": "coast",
+      "seed": 42,
+      "profile": {
+        "structure": "coast",
+        "baseBiome": "forest",
+        "biomes": [
+          {
+            "id": "meadows",
+            "type": "meadow",
+            "percent": 25
+          },
+          {
+            "id": "wetlands",
+            "type": "swamp",
+            "percent": 10
+          },
+          {
+            "id": "drylands",
+            "type": "desert",
+            "percent": 8
+          },
+          {
+            "id": "forest-east",
+            "type": "forest",
+            "percent": 5
+          }
+        ]
+      },
+      "generateMs": 6647,
+      "validateMs": 2161,
+      "checksum": "b8d09e88",
+      "valid": true,
+      "groups": [
+        20740
+      ],
+      "biomes": {
+        "forest": 4887,
+        "plains": 3787,
+        "tundra": 883,
+        "taiga": 4009,
+        "river": 601,
+        "floodplain": 947,
+        "desert": 1066,
+        "savanna": 1431,
+        "rainforest": 935,
+        "cold-desert": 76,
+        "lake": 664,
+        "wetland": 1055,
+        "beach": 399,
+        "ocean": 19260
+      },
+      "water": {
+        "none": 19475,
+        "river": 601,
+        "lake": 664,
+        "sea": 19260
+      },
+      "dryCells": 19475,
+      "height": {
+        "min": 0.166,
+        "q10": 0.209235,
+        "median": 0.378225,
+        "q90": 0.694338,
+        "max": 0.838472
+      },
+      "transitionCells": 11927
+    },
+    {
+      "mode": "landscape",
+      "size": 200,
+      "structure": "islands",
+      "seed": 42,
+      "profile": {
+        "structure": "islands",
+        "baseBiome": "meadow",
+        "biomes": [
+          {
+            "id": "forest-west",
+            "type": "forest",
+            "percent": 25
+          },
+          {
+            "id": "highlands",
+            "type": "mountains",
+            "percent": 18
+          },
+          {
+            "id": "wetlands",
+            "type": "swamp",
+            "percent": 7
+          },
+          {
+            "id": "forest-east",
+            "type": "forest",
+            "percent": 10
+          }
+        ]
+      },
+      "generateMs": 8669,
+      "validateMs": 2519,
+      "checksum": "6f201ea1",
+      "valid": true,
+      "groups": [
+        1677,
+        1362,
+        1102
+      ],
+      "biomes": {
+        "ocean": 35859,
+        "beach": 153,
+        "wetland": 51,
+        "gravel-shore": 261,
+        "floodplain": 128,
+        "forest": 168,
+        "taiga": 505,
+        "plains": 1222,
+        "tundra": 227,
+        "rocky-coast": 132,
+        "savanna": 2,
+        "foothills": 560,
+        "alpine": 318,
+        "river": 40,
+        "snow": 200,
+        "cliffs": 174
+      },
+      "water": {
+        "sea": 35859,
+        "none": 4101,
+        "river": 40
+      },
+      "dryCells": 4101,
+      "height": {
+        "min": 0.166,
+        "q10": 0.166,
+        "median": 0.166,
+        "q90": 0.368508,
+        "max": 0.897253
+      },
+      "transitionCells": 2858
+    },
+    {
+      "mode": "landscape",
+      "size": 200,
+      "structure": "continent",
+      "seed": 42,
+      "profile": {
+        "structure": "continent",
+        "baseBiome": "mountains",
+        "biomes": [
+          {
+            "id": "forest-west",
+            "type": "forest",
+            "percent": 20
+          },
+          {
+            "id": "meadows",
+            "type": "meadow",
+            "percent": 20
+          },
+          {
+            "id": "wetlands",
+            "type": "swamp",
+            "percent": 10
+          },
+          {
+            "id": "snowlands",
+            "type": "snow",
+            "percent": 10
+          },
+          {
+            "id": "forest-east",
+            "type": "forest",
+            "percent": 5
+          }
+        ]
+      },
+      "generateMs": 8116,
+      "validateMs": 2168,
+      "checksum": "3d3b6c82",
+      "valid": true,
+      "groups": [
+        16949
+      ],
+      "biomes": {
+        "ocean": 23051,
+        "beach": 997,
+        "wetland": 471,
+        "foothills": 3044,
+        "floodplain": 865,
+        "taiga": 2208,
+        "forest": 1026,
+        "plains": 1600,
+        "tundra": 972,
+        "alpine": 3374,
+        "lake": 194,
+        "snow": 1898,
+        "savanna": 2,
+        "gravel-shore": 7,
+        "river": 287,
+        "rainforest": 4
+      },
+      "water": {
+        "sea": 23051,
+        "none": 16468,
+        "lake": 194,
+        "river": 287
+      },
+      "dryCells": 16468,
+      "height": {
+        "min": 0.166,
+        "q10": 0.172807,
+        "median": 0.33149,
+        "q90": 0.778159,
+        "max": 0.965
+      },
+      "transitionCells": 9980
+    },
+    {
+      "mode": "landscape",
+      "size": 300,
+      "structure": "land",
+      "seed": 42,
+      "profile": {
+        "structure": "land",
+        "baseBiome": "mountains",
+        "biomes": [
+          {
+            "id": "forest-west",
+            "type": "forest",
+            "percent": 18
+          },
+          {
+            "id": "meadows",
+            "type": "meadow",
+            "percent": 12
+          },
+          {
+            "id": "wetlands",
+            "type": "swamp",
+            "percent": 8
+          },
+          {
+            "id": "forest-east",
+            "type": "forest",
+            "percent": 7
+          }
+        ]
+      },
+      "generateMs": 5544,
+      "validateMs": 3055,
+      "checksum": "1207f783",
+      "valid": true,
+      "groups": [
+        90000
+      ],
+      "biomes": {
+        "plains": 5728,
+        "foothills": 13328,
+        "wetland": 4924,
+        "floodplain": 3295,
+        "forest": 5458,
+        "river": 2133,
+        "alpine": 25978,
+        "rainforest": 835,
+        "snow": 7888,
+        "tundra": 1445,
+        "lake": 11700,
+        "taiga": 6485,
+        "savanna": 803
+      },
+      "water": {
+        "none": 76167,
+        "river": 2133,
+        "lake": 11700
+      },
+      "dryCells": 76167,
+      "height": {
+        "min": 0.385,
+        "q10": 0.612422,
+        "median": 0.739494,
+        "q90": 0.851923,
+        "max": 0.965
+      },
+      "transitionCells": 38391
+    },
+    {
+      "mode": "landscape",
+      "size": 300,
+      "structure": "coast",
+      "seed": 42,
+      "profile": {
+        "structure": "coast",
+        "baseBiome": "forest",
+        "biomes": [
+          {
+            "id": "meadows",
+            "type": "meadow",
+            "percent": 25
+          },
+          {
+            "id": "wetlands",
+            "type": "swamp",
+            "percent": 10
+          },
+          {
+            "id": "drylands",
+            "type": "desert",
+            "percent": 8
+          },
+          {
+            "id": "forest-east",
+            "type": "forest",
+            "percent": 5
+          }
+        ]
+      },
+      "generateMs": 6129,
+      "validateMs": 2124,
+      "checksum": "85e23ce3",
+      "valid": true,
+      "groups": [
+        50533
+      ],
+      "biomes": {
+        "forest": 11550,
+        "plains": 9563,
+        "tundra": 1019,
+        "taiga": 9978,
+        "cold-desert": 215,
+        "desert": 2381,
+        "savanna": 3574,
+        "rainforest": 1702,
+        "river": 1663,
+        "lake": 3071,
+        "floodplain": 2559,
+        "wetland": 2550,
+        "beach": 708,
+        "ocean": 39467
+      },
+      "water": {
+        "none": 45799,
+        "river": 1663,
+        "lake": 3071,
+        "sea": 39467
+      },
+      "dryCells": 45799,
+      "height": {
+        "min": 0.166,
+        "q10": 0.224824,
+        "median": 0.473961,
+        "q90": 0.730193,
+        "max": 0.902166
+      },
+      "transitionCells": 26130
+    },
+    {
+      "mode": "landscape",
+      "size": 300,
+      "structure": "islands",
+      "seed": 42,
+      "profile": {
+        "structure": "islands",
+        "baseBiome": "meadow",
+        "biomes": [
+          {
+            "id": "forest-west",
+            "type": "forest",
+            "percent": 25
+          },
+          {
+            "id": "highlands",
+            "type": "mountains",
+            "percent": 18
+          },
+          {
+            "id": "wetlands",
+            "type": "swamp",
+            "percent": 7
+          },
+          {
+            "id": "forest-east",
+            "type": "forest",
+            "percent": 10
+          }
+        ]
+      },
+      "generateMs": 11721,
+      "validateMs": 3727,
+      "checksum": "40edfaf3",
+      "valid": true,
+      "groups": [
+        3779,
+        2810,
+        2531
+      ],
+      "biomes": {
+        "ocean": 80880,
+        "beach": 634,
+        "wetland": 119,
+        "floodplain": 379,
+        "taiga": 202,
+        "plains": 1976,
+        "gravel-shore": 442,
+        "forest": 1140,
+        "river": 292,
+        "savanna": 713,
+        "tundra": 33,
+        "foothills": 1123,
+        "lake": 5,
+        "alpine": 1103,
+        "rainforest": 927,
+        "rocky-coast": 32
+      },
+      "water": {
+        "sea": 80880,
+        "none": 8823,
+        "river": 292,
+        "lake": 5
+      },
+      "dryCells": 8823,
+      "height": {
+        "min": 0.166,
+        "q10": 0.166,
+        "median": 0.166,
+        "q90": 0.36555,
+        "max": 0.833737
+      },
+      "transitionCells": 6666
+    },
+    {
+      "mode": "landscape",
+      "size": 300,
+      "structure": "continent",
+      "seed": 42,
+      "profile": {
+        "structure": "continent",
+        "baseBiome": "mountains",
+        "biomes": [
+          {
+            "id": "forest-west",
+            "type": "forest",
+            "percent": 20
+          },
+          {
+            "id": "meadows",
+            "type": "meadow",
+            "percent": 20
+          },
+          {
+            "id": "wetlands",
+            "type": "swamp",
+            "percent": 10
+          },
+          {
+            "id": "snowlands",
+            "type": "snow",
+            "percent": 10
+          },
+          {
+            "id": "forest-east",
+            "type": "forest",
+            "percent": 5
+          }
+        ]
+      },
+      "generateMs": 15208,
+      "validateMs": 4736,
+      "checksum": "5fa0e736",
+      "valid": true,
+      "groups": [
+        38135
+      ],
+      "biomes": {
+        "ocean": 51865,
+        "beach": 1503,
+        "wetland": 1154,
+        "floodplain": 1982,
+        "foothills": 7563,
+        "plains": 4211,
+        "forest": 3107,
+        "taiga": 2269,
+        "river": 1552,
+        "savanna": 271,
+        "alpine": 6877,
+        "tundra": 734,
+        "snow": 4447,
+        "lake": 1640,
+        "rainforest": 825
+      },
+      "water": {
+        "sea": 51865,
+        "none": 34943,
+        "river": 1552,
+        "lake": 1640
+      },
+      "dryCells": 34943,
+      "height": {
+        "min": 0.166,
+        "q10": 0.166,
+        "median": 0.32897,
+        "q90": 0.780727,
+        "max": 0.965
+      },
+      "transitionCells": 21701
+    },
+    {
+      "mode": "hexlandscape",
+      "size": 50,
+      "structure": "land",
+      "seed": 42,
+      "profile": {
+        "structure": "land",
+        "baseBiome": "mountains",
+        "biomes": [
+          {
+            "id": "forest-west",
+            "type": "forest",
+            "percent": 18
+          },
+          {
+            "id": "meadows",
+            "type": "meadow",
+            "percent": 12
+          },
+          {
+            "id": "wetlands",
+            "type": "swamp",
+            "percent": 8
+          },
+          {
+            "id": "forest-east",
+            "type": "forest",
+            "percent": 7
+          }
+        ]
+      },
+      "generateMs": 258,
+      "validateMs": 94,
+      "checksum": "5f0a1edc",
+      "valid": true,
+      "groups": [
+        2500
+      ],
+      "biomes": {
+        "foothills": 667,
+        "forest": 164,
+        "taiga": 268,
+        "wetland": 121,
+        "floodplain": 41,
+        "plains": 279,
+        "tundra": 47,
+        "lake": 167,
+        "snow": 180,
+        "river": 9,
+        "alpine": 557
+      },
+      "water": {
+        "none": 2324,
+        "lake": 167,
+        "river": 9
+      },
+      "dryCells": 2324,
+      "height": {
+        "min": 0.385,
+        "q10": 0.537053,
+        "median": 0.700326,
+        "q90": 0.851365,
+        "max": 0.965
+      },
+      "transitionCells": 1759
+    },
+    {
+      "mode": "hexlandscape",
+      "size": 50,
+      "structure": "coast",
+      "seed": 42,
+      "profile": {
+        "structure": "coast",
+        "baseBiome": "forest",
+        "biomes": [
+          {
+            "id": "meadows",
+            "type": "meadow",
+            "percent": 25
+          },
+          {
+            "id": "wetlands",
+            "type": "swamp",
+            "percent": 10
+          },
+          {
+            "id": "drylands",
+            "type": "desert",
+            "percent": 8
+          },
+          {
+            "id": "forest-east",
+            "type": "forest",
+            "percent": 5
+          }
+        ]
+      },
+      "generateMs": 213,
+      "validateMs": 62,
+      "checksum": "70db53d0",
+      "valid": true,
+      "groups": [
+        1326
+      ],
+      "biomes": {
+        "forest": 312,
+        "river": 77,
+        "taiga": 177,
+        "cold-desert": 43,
+        "desert": 66,
+        "savanna": 105,
+        "plains": 381,
+        "floodplain": 66,
+        "wetland": 29,
+        "beach": 36,
+        "ocean": 1174,
+        "gravel-shore": 28,
+        "rocky-coast": 2,
+        "tundra": 4
+      },
+      "water": {
+        "none": 1249,
+        "river": 77,
+        "sea": 1174
+      },
+      "dryCells": 1249,
+      "height": {
+        "min": 0.166,
+        "q10": 0.20922,
+        "median": 0.384096,
+        "q90": 0.677653,
+        "max": 0.838946
+      },
+      "transitionCells": 1061
+    },
+    {
+      "mode": "hexlandscape",
+      "size": 50,
+      "structure": "islands",
+      "seed": 42,
+      "profile": {
+        "structure": "islands",
+        "baseBiome": "meadow",
+        "biomes": [
+          {
+            "id": "forest-west",
+            "type": "forest",
+            "percent": 25
+          },
+          {
+            "id": "highlands",
+            "type": "mountains",
+            "percent": 18
+          },
+          {
+            "id": "wetlands",
+            "type": "swamp",
+            "percent": 7
+          },
+          {
+            "id": "forest-east",
+            "type": "forest",
+            "percent": 10
+          }
+        ]
+      },
+      "generateMs": 231,
+      "validateMs": 82,
+      "checksum": "c1cef9a6",
+      "valid": true,
+      "groups": [
+        116,
+        101,
+        47
+      ],
+      "biomes": {
+        "ocean": 2236,
+        "rocky-coast": 47,
+        "cliffs": 50,
+        "gravel-shore": 3,
+        "wetland": 11,
+        "foothills": 77,
+        "forest": 35,
+        "alpine": 8,
+        "plains": 21,
+        "river": 12
+      },
+      "water": {
+        "sea": 2236,
+        "none": 252,
+        "river": 12
+      },
+      "dryCells": 252,
+      "height": {
+        "min": 0.166,
+        "q10": 0.166,
+        "median": 0.166,
+        "q90": 0.37059,
+        "max": 0.699771
+      },
+      "transitionCells": 142
+    },
+    {
+      "mode": "hexlandscape",
+      "size": 50,
+      "structure": "continent",
+      "seed": 42,
+      "profile": {
+        "structure": "continent",
+        "baseBiome": "mountains",
+        "biomes": [
+          {
+            "id": "forest-west",
+            "type": "forest",
+            "percent": 20
+          },
+          {
+            "id": "meadows",
+            "type": "meadow",
+            "percent": 20
+          },
+          {
+            "id": "wetlands",
+            "type": "swamp",
+            "percent": 10
+          },
+          {
+            "id": "snowlands",
+            "type": "snow",
+            "percent": 10
+          },
+          {
+            "id": "forest-east",
+            "type": "forest",
+            "percent": 5
+          }
+        ]
+      },
+      "generateMs": 140,
+      "validateMs": 75,
+      "checksum": "4ae0fa52",
+      "valid": true,
+      "groups": [
+        1059
+      ],
+      "biomes": {
+        "ocean": 1441,
+        "beach": 17,
+        "gravel-shore": 45,
+        "foothills": 204,
+        "rocky-coast": 51,
+        "wetland": 22,
+        "plains": 205,
+        "forest": 102,
+        "alpine": 140,
+        "floodplain": 12,
+        "lake": 88,
+        "taiga": 43,
+        "river": 7,
+        "tundra": 17,
+        "snow": 96,
+        "cliffs": 10
+      },
+      "water": {
+        "sea": 1441,
+        "none": 964,
+        "lake": 88,
+        "river": 7
+      },
+      "dryCells": 964,
+      "height": {
+        "min": 0.166,
+        "q10": 0.221111,
+        "median": 0.33388,
+        "q90": 0.674714,
+        "max": 0.806853
+      },
+      "transitionCells": 779
+    },
+    {
+      "mode": "hexlandscape",
+      "size": 100,
+      "structure": "land",
+      "seed": 42,
+      "profile": {
+        "structure": "land",
+        "baseBiome": "mountains",
+        "biomes": [
+          {
+            "id": "forest-west",
+            "type": "forest",
+            "percent": 18
+          },
+          {
+            "id": "meadows",
+            "type": "meadow",
+            "percent": 12
+          },
+          {
+            "id": "wetlands",
+            "type": "swamp",
+            "percent": 8
+          },
+          {
+            "id": "forest-east",
+            "type": "forest",
+            "percent": 7
+          }
+        ]
+      },
+      "generateMs": 559,
+      "validateMs": 314,
+      "checksum": "67e59a89",
+      "valid": true,
+      "groups": [
+        10000
+      ],
+      "biomes": {
+        "alpine": 2255,
+        "foothills": 2442,
+        "plains": 624,
+        "wetland": 519,
+        "river": 794,
+        "floodplain": 279,
+        "taiga": 1080,
+        "forest": 588,
+        "lake": 454,
+        "rainforest": 1,
+        "tundra": 234,
+        "snow": 730
+      },
+      "water": {
+        "none": 8752,
+        "river": 794,
+        "lake": 454
+      },
+      "dryCells": 8752,
+      "height": {
+        "min": 0.385,
+        "q10": 0.552173,
+        "median": 0.685381,
+        "q90": 0.828362,
+        "max": 0.965
+      },
+      "transitionCells": 6044
+    },
+    {
+      "mode": "hexlandscape",
+      "size": 100,
+      "structure": "coast",
+      "seed": 42,
+      "profile": {
+        "structure": "coast",
+        "baseBiome": "forest",
+        "biomes": [
+          {
+            "id": "meadows",
+            "type": "meadow",
+            "percent": 25
+          },
+          {
+            "id": "wetlands",
+            "type": "swamp",
+            "percent": 10
+          },
+          {
+            "id": "drylands",
+            "type": "desert",
+            "percent": 8
+          },
+          {
+            "id": "forest-east",
+            "type": "forest",
+            "percent": 5
+          }
+        ]
+      },
+      "generateMs": 1242,
+      "validateMs": 268,
+      "checksum": "c518768f",
+      "valid": true,
+      "groups": [
+        5365
+      ],
+      "biomes": {
+        "forest": 1667,
+        "taiga": 596,
+        "cold-desert": 25,
+        "desert": 259,
+        "savanna": 216,
+        "plains": 779,
+        "tundra": 296,
+        "river": 431,
+        "lake": 355,
+        "rainforest": 46,
+        "floodplain": 383,
+        "wetland": 45,
+        "beach": 257,
+        "ocean": 4635,
+        "gravel-shore": 10
+      },
+      "water": {
+        "none": 4579,
+        "river": 431,
+        "lake": 355,
+        "sea": 4635
+      },
+      "dryCells": 4579,
+      "height": {
+        "min": 0.166,
+        "q10": 0.21648,
+        "median": 0.400385,
+        "q90": 0.655331,
+        "max": 0.878625
+      },
+      "transitionCells": 2919
+    },
+    {
+      "mode": "hexlandscape",
+      "size": 100,
+      "structure": "islands",
+      "seed": 42,
+      "profile": {
+        "structure": "islands",
+        "baseBiome": "meadow",
+        "biomes": [
+          {
+            "id": "forest-west",
+            "type": "forest",
+            "percent": 25
+          },
+          {
+            "id": "highlands",
+            "type": "mountains",
+            "percent": 18
+          },
+          {
+            "id": "wetlands",
+            "type": "swamp",
+            "percent": 7
+          },
+          {
+            "id": "forest-east",
+            "type": "forest",
+            "percent": 10
+          }
+        ]
+      },
+      "generateMs": 669,
+      "validateMs": 203,
+      "checksum": "ffc6f693",
+      "valid": true,
+      "groups": [
+        446,
+        377,
+        214
+      ],
+      "biomes": {
+        "ocean": 8963,
+        "rocky-coast": 83,
+        "beach": 2,
+        "gravel-shore": 86,
+        "plains": 176,
+        "wetland": 25,
+        "foothills": 241,
+        "floodplain": 23,
+        "forest": 108,
+        "rainforest": 13,
+        "alpine": 84,
+        "river": 45,
+        "tundra": 27,
+        "cliffs": 85,
+        "taiga": 39
+      },
+      "water": {
+        "sea": 8963,
+        "none": 992,
+        "river": 45
+      },
+      "dryCells": 992,
+      "height": {
+        "min": 0.166,
+        "q10": 0.166,
+        "median": 0.166,
+        "q90": 0.368637,
+        "max": 0.815439
+      },
+      "transitionCells": 822
+    },
+    {
+      "mode": "hexlandscape",
+      "size": 100,
+      "structure": "continent",
+      "seed": 42,
+      "profile": {
+        "structure": "continent",
+        "baseBiome": "mountains",
+        "biomes": [
+          {
+            "id": "forest-west",
+            "type": "forest",
+            "percent": 20
+          },
+          {
+            "id": "meadows",
+            "type": "meadow",
+            "percent": 20
+          },
+          {
+            "id": "wetlands",
+            "type": "swamp",
+            "percent": 10
+          },
+          {
+            "id": "snowlands",
+            "type": "snow",
+            "percent": 10
+          },
+          {
+            "id": "forest-east",
+            "type": "forest",
+            "percent": 5
+          }
+        ]
+      },
+      "generateMs": 736,
+      "validateMs": 255,
+      "checksum": "692079c9",
+      "valid": true,
+      "groups": [
+        4237
+      ],
+      "biomes": {
+        "ocean": 5763,
+        "beach": 255,
+        "gravel-shore": 183,
+        "foothills": 1172,
+        "wetland": 43,
+        "forest": 309,
+        "floodplain": 87,
+        "alpine": 556,
+        "plains": 322,
+        "rainforest": 14,
+        "tundra": 326,
+        "snow": 444,
+        "taiga": 321,
+        "lake": 17,
+        "river": 184,
+        "rocky-coast": 4
+      },
+      "water": {
+        "sea": 5763,
+        "none": 4036,
+        "lake": 17,
+        "river": 184
+      },
+      "dryCells": 4036,
+      "height": {
+        "min": 0.166,
+        "q10": 0.20337,
+        "median": 0.333785,
+        "q90": 0.744422,
+        "max": 0.965
+      },
+      "transitionCells": 3265
+    },
+    {
+      "mode": "hexlandscape",
+      "size": 200,
+      "structure": "land",
+      "seed": 42,
+      "profile": {
+        "structure": "land",
+        "baseBiome": "mountains",
+        "biomes": [
+          {
+            "id": "forest-west",
+            "type": "forest",
+            "percent": 18
+          },
+          {
+            "id": "meadows",
+            "type": "meadow",
+            "percent": 12
+          },
+          {
+            "id": "wetlands",
+            "type": "swamp",
+            "percent": 8
+          },
+          {
+            "id": "forest-east",
+            "type": "forest",
+            "percent": 7
+          }
+        ]
+      },
+      "generateMs": 1544,
+      "validateMs": 892,
+      "checksum": "94ff0df5",
+      "valid": true,
+      "groups": [
+        40000
+      ],
+      "biomes": {
+        "plains": 2710,
+        "foothills": 6216,
+        "wetland": 1958,
+        "floodplain": 1463,
+        "taiga": 3013,
+        "forest": 2683,
+        "river": 1578,
+        "alpine": 11265,
+        "rainforest": 332,
+        "savanna": 109,
+        "tundra": 1041,
+        "lake": 3790,
+        "snow": 3842
+      },
+      "water": {
+        "none": 34632,
+        "river": 1578,
+        "lake": 3790
+      },
+      "dryCells": 34632,
+      "height": {
+        "min": 0.385,
+        "q10": 0.58304,
+        "median": 0.742286,
+        "q90": 0.849045,
+        "max": 0.965
+      },
+      "transitionCells": 18305
+    },
+    {
+      "mode": "hexlandscape",
+      "size": 200,
+      "structure": "coast",
+      "seed": 42,
+      "profile": {
+        "structure": "coast",
+        "baseBiome": "forest",
+        "biomes": [
+          {
+            "id": "meadows",
+            "type": "meadow",
+            "percent": 25
+          },
+          {
+            "id": "wetlands",
+            "type": "swamp",
+            "percent": 10
+          },
+          {
+            "id": "drylands",
+            "type": "desert",
+            "percent": 8
+          },
+          {
+            "id": "forest-east",
+            "type": "forest",
+            "percent": 5
+          }
+        ]
+      },
+      "generateMs": 2678,
+      "validateMs": 956,
+      "checksum": "e9e051c0",
+      "valid": true,
+      "groups": [
+        20750
+      ],
+      "biomes": {
+        "forest": 4748,
+        "plains": 3630,
+        "tundra": 823,
+        "taiga": 3818,
+        "river": 1110,
+        "floodplain": 1256,
+        "desert": 1213,
+        "savanna": 1229,
+        "rainforest": 889,
+        "lake": 664,
+        "wetland": 801,
+        "cold-desert": 82,
+        "beach": 487,
+        "ocean": 19250
+      },
+      "water": {
+        "none": 18976,
+        "river": 1110,
+        "lake": 664,
+        "sea": 19250
+      },
+      "dryCells": 18976,
+      "height": {
+        "min": 0.166,
+        "q10": 0.209303,
+        "median": 0.378354,
+        "q90": 0.694418,
+        "max": 0.838472
+      },
+      "transitionCells": 12602
+    },
+    {
+      "mode": "hexlandscape",
+      "size": 200,
+      "structure": "islands",
+      "seed": 42,
+      "profile": {
+        "structure": "islands",
+        "baseBiome": "meadow",
+        "biomes": [
+          {
+            "id": "forest-west",
+            "type": "forest",
+            "percent": 25
+          },
+          {
+            "id": "highlands",
+            "type": "mountains",
+            "percent": 18
+          },
+          {
+            "id": "wetlands",
+            "type": "swamp",
+            "percent": 7
+          },
+          {
+            "id": "forest-east",
+            "type": "forest",
+            "percent": 10
+          }
+        ]
+      },
+      "generateMs": 3346,
+      "validateMs": 1072,
+      "checksum": "1cc2a355",
+      "valid": true,
+      "groups": [
+        1672,
+        1353,
+        1094
+      ],
+      "biomes": {
+        "ocean": 35881,
+        "beach": 125,
+        "gravel-shore": 256,
+        "floodplain": 148,
+        "wetland": 34,
+        "forest": 160,
+        "taiga": 402,
+        "rocky-coast": 173,
+        "plains": 1079,
+        "tundra": 239,
+        "river": 193,
+        "savanna": 2,
+        "foothills": 534,
+        "alpine": 376,
+        "snow": 193,
+        "cliffs": 205
+      },
+      "water": {
+        "sea": 35881,
+        "none": 3926,
+        "river": 193
+      },
+      "dryCells": 3926,
+      "height": {
+        "min": 0.166,
+        "q10": 0.166,
+        "median": 0.166,
+        "q90": 0.36711,
+        "max": 0.897331
+      },
+      "transitionCells": 2757
+    },
+    {
+      "mode": "hexlandscape",
+      "size": 200,
+      "structure": "continent",
+      "seed": 42,
+      "profile": {
+        "structure": "continent",
+        "baseBiome": "mountains",
+        "biomes": [
+          {
+            "id": "forest-west",
+            "type": "forest",
+            "percent": 20
+          },
+          {
+            "id": "meadows",
+            "type": "meadow",
+            "percent": 20
+          },
+          {
+            "id": "wetlands",
+            "type": "swamp",
+            "percent": 10
+          },
+          {
+            "id": "snowlands",
+            "type": "snow",
+            "percent": 10
+          },
+          {
+            "id": "forest-east",
+            "type": "forest",
+            "percent": 5
+          }
+        ]
+      },
+      "generateMs": 3908,
+      "validateMs": 1369,
+      "checksum": "fa304342",
+      "valid": true,
+      "groups": [
+        16949
+      ],
+      "biomes": {
+        "ocean": 23051,
+        "beach": 1069,
+        "wetland": 409,
+        "foothills": 3261,
+        "floodplain": 774,
+        "taiga": 2137,
+        "plains": 1567,
+        "forest": 1042,
+        "tundra": 918,
+        "alpine": 3275,
+        "lake": 182,
+        "snow": 1889,
+        "gravel-shore": 34,
+        "river": 380,
+        "rainforest": 12
+      },
+      "water": {
+        "sea": 23051,
+        "none": 16387,
+        "lake": 182,
+        "river": 380
+      },
+      "dryCells": 16387,
+      "height": {
+        "min": 0.166,
+        "q10": 0.172971,
+        "median": 0.331585,
+        "q90": 0.778194,
+        "max": 0.965
+      },
+      "transitionCells": 10623
+    },
+    {
+      "mode": "hexlandscape",
+      "size": 300,
+      "structure": "land",
+      "seed": 42,
+      "profile": {
+        "structure": "land",
+        "baseBiome": "mountains",
+        "biomes": [
+          {
+            "id": "forest-west",
+            "type": "forest",
+            "percent": 18
+          },
+          {
+            "id": "meadows",
+            "type": "meadow",
+            "percent": 12
+          },
+          {
+            "id": "wetlands",
+            "type": "swamp",
+            "percent": 8
+          },
+          {
+            "id": "forest-east",
+            "type": "forest",
+            "percent": 7
+          }
+        ]
+      },
+      "generateMs": 3610,
+      "validateMs": 1979,
+      "checksum": "b4b9be08",
+      "valid": true,
+      "groups": [
+        90000
+      ],
+      "biomes": {
+        "plains": 5636,
+        "floodplain": 3277,
+        "foothills": 13886,
+        "wetland": 4681,
+        "forest": 5956,
+        "river": 2158,
+        "rainforest": 884,
+        "alpine": 24771,
+        "snow": 7982,
+        "lake": 11644,
+        "tundra": 1325,
+        "taiga": 6960,
+        "savanna": 840
+      },
+      "water": {
+        "none": 76198,
+        "river": 2158,
+        "lake": 11644
+      },
+      "dryCells": 76198,
+      "height": {
+        "min": 0.385,
+        "q10": 0.612447,
+        "median": 0.739471,
+        "q90": 0.851904,
+        "max": 0.965
+      },
+      "transitionCells": 41862
+    },
+    {
+      "mode": "hexlandscape",
+      "size": 300,
+      "structure": "coast",
+      "seed": 42,
+      "profile": {
+        "structure": "coast",
+        "baseBiome": "forest",
+        "biomes": [
+          {
+            "id": "meadows",
+            "type": "meadow",
+            "percent": 25
+          },
+          {
+            "id": "wetlands",
+            "type": "swamp",
+            "percent": 10
+          },
+          {
+            "id": "drylands",
+            "type": "desert",
+            "percent": 8
+          },
+          {
+            "id": "forest-east",
+            "type": "forest",
+            "percent": 5
+          }
+        ]
+      },
+      "generateMs": 6203,
+      "validateMs": 2223,
+      "checksum": "15c42027",
+      "valid": true,
+      "groups": [
+        50533
+      ],
+      "biomes": {
+        "forest": 11471,
+        "plains": 9479,
+        "tundra": 918,
+        "cold-desert": 252,
+        "desert": 2902,
+        "river": 1021,
+        "floodplain": 3162,
+        "savanna": 3507,
+        "taiga": 10040,
+        "rainforest": 1740,
+        "lake": 3007,
+        "wetland": 2181,
+        "beach": 853,
+        "ocean": 39467
+      },
+      "water": {
+        "none": 46505,
+        "river": 1021,
+        "lake": 3007,
+        "sea": 39467
+      },
+      "dryCells": 46505,
+      "height": {
+        "min": 0.166,
+        "q10": 0.224807,
+        "median": 0.474043,
+        "q90": 0.730227,
+        "max": 0.902166
+      },
+      "transitionCells": 29257
+    },
+    {
+      "mode": "hexlandscape",
+      "size": 300,
+      "structure": "islands",
+      "seed": 42,
+      "profile": {
+        "structure": "islands",
+        "baseBiome": "meadow",
+        "biomes": [
+          {
+            "id": "forest-west",
+            "type": "forest",
+            "percent": 25
+          },
+          {
+            "id": "highlands",
+            "type": "mountains",
+            "percent": 18
+          },
+          {
+            "id": "wetlands",
+            "type": "swamp",
+            "percent": 7
+          },
+          {
+            "id": "forest-east",
+            "type": "forest",
+            "percent": 10
+          }
+        ]
+      },
+      "generateMs": 13547,
+      "validateMs": 4149,
+      "checksum": "2ee6bf7e",
+      "valid": true,
+      "groups": [
+        3781,
+        2817,
+        2533
+      ],
+      "biomes": {
+        "ocean": 80869,
+        "beach": 522,
+        "wetland": 99,
+        "floodplain": 296,
+        "gravel-shore": 568,
+        "taiga": 191,
+        "plains": 1958,
+        "forest": 1074,
+        "river": 341,
+        "savanna": 721,
+        "tundra": 27,
+        "foothills": 1275,
+        "alpine": 1033,
+        "rainforest": 939,
+        "rocky-coast": 62,
+        "cliffs": 25
+      },
+      "water": {
+        "sea": 80869,
+        "none": 8790,
+        "river": 341
+      },
+      "dryCells": 8790,
+      "height": {
+        "min": 0.166,
+        "q10": 0.166,
+        "median": 0.166,
+        "q90": 0.365769,
+        "max": 0.837541
+      },
+      "transitionCells": 6840
+    },
+    {
+      "mode": "hexlandscape",
+      "size": 300,
+      "structure": "continent",
+      "seed": 42,
+      "profile": {
+        "structure": "continent",
+        "baseBiome": "mountains",
+        "biomes": [
+          {
+            "id": "forest-west",
+            "type": "forest",
+            "percent": 20
+          },
+          {
+            "id": "meadows",
+            "type": "meadow",
+            "percent": 20
+          },
+          {
+            "id": "wetlands",
+            "type": "swamp",
+            "percent": 10
+          },
+          {
+            "id": "snowlands",
+            "type": "snow",
+            "percent": 10
+          },
+          {
+            "id": "forest-east",
+            "type": "forest",
+            "percent": 5
+          }
+        ]
+      },
+      "generateMs": 13426,
+      "validateMs": 5508,
+      "checksum": "99f1cd04",
+      "valid": true,
+      "groups": [
+        38135
+      ],
+      "biomes": {
+        "ocean": 51865,
+        "beach": 1688,
+        "wetland": 941,
+        "floodplain": 2048,
+        "foothills": 7185,
+        "plains": 4807,
+        "forest": 2889,
+        "taiga": 2225,
+        "river": 1770,
+        "savanna": 327,
+        "tundra": 928,
+        "alpine": 6460,
+        "snow": 4420,
+        "lake": 1611,
+        "rainforest": 836
+      },
+      "water": {
+        "sea": 51865,
+        "none": 34754,
+        "river": 1770,
+        "lake": 1611
+      },
+      "dryCells": 34754,
+      "height": {
+        "min": 0.166,
+        "q10": 0.166,
+        "median": 0.328932,
+        "q90": 0.780603,
+        "max": 0.965
+      },
+      "transitionCells": 22943
+    }
+  ],
+  "interfaces": [
+    {
+      "mode": "landscape",
+      "size": 50,
+      "jsHttpCliExact": true,
+      "llmContext": true,
+      "runtime": true,
+      "rebuild": true
+    },
+    {
+      "mode": "landscape",
+      "size": 300,
+      "jsHttpCliExact": true,
+      "llmContext": true,
+      "runtime": true,
+      "rebuild": true
+    },
+    {
+      "mode": "hexlandscape",
+      "size": 50,
+      "jsHttpCliExact": true,
+      "llmContext": true,
+      "runtime": true,
+      "rebuild": true
+    },
+    {
+      "mode": "hexlandscape",
+      "size": 300,
+      "jsHttpCliExact": true,
+      "llmContext": true,
+      "runtime": true,
+      "rebuild": true
+    }
+  ],
+  "artifacts": [
+    {
+      "mode": "landscape",
+      "size": 50,
+      "structure": "land",
+      "channel": "biome",
+      "file": "landscape-surface-landscape-50-land-biome.png",
+      "bytes": 40168
+    },
+    {
+      "mode": "landscape",
+      "size": 50,
+      "structure": "coast",
+      "channel": "biome",
+      "file": "landscape-surface-landscape-50-coast-biome.png",
+      "bytes": 40168
+    },
+    {
+      "mode": "landscape",
+      "size": 50,
+      "structure": "islands",
+      "channel": "biome",
+      "file": "landscape-surface-landscape-50-islands-biome.png",
+      "bytes": 40168
+    },
+    {
+      "mode": "landscape",
+      "size": 50,
+      "structure": "continent",
+      "channel": "biome",
+      "file": "landscape-surface-landscape-50-continent-biome.png",
+      "bytes": 40168
+    },
+    {
+      "mode": "landscape",
+      "size": 100,
+      "structure": "land",
+      "channel": "elevation",
+      "file": "landscape-surface-landscape-100-land-elevation.png",
+      "bytes": 160278
+    },
+    {
+      "mode": "landscape",
+      "size": 300,
+      "structure": "land",
+      "channel": "biome",
+      "file": "landscape-surface-landscape-300-land-biome.png",
+      "bytes": 1440773
+    },
+    {
+      "mode": "landscape",
+      "size": 300,
+      "structure": "coast",
+      "channel": "biome",
+      "file": "landscape-surface-landscape-300-coast-biome.png",
+      "bytes": 1440773
+    },
+    {
+      "mode": "landscape",
+      "size": 300,
+      "structure": "islands",
+      "channel": "biome",
+      "file": "landscape-surface-landscape-300-islands-biome.png",
+      "bytes": 1440773
+    },
+    {
+      "mode": "landscape",
+      "size": 300,
+      "structure": "continent",
+      "channel": "biome",
+      "file": "landscape-surface-landscape-300-continent-biome.png",
+      "bytes": 1440773
+    },
+    {
+      "mode": "hexlandscape",
+      "size": 50,
+      "structure": "land",
+      "channel": "biome",
+      "file": "landscape-surface-hexlandscape-50-land-biome.png",
+      "bytes": 105924
+    },
+    {
+      "mode": "hexlandscape",
+      "size": 50,
+      "structure": "coast",
+      "channel": "biome",
+      "file": "landscape-surface-hexlandscape-50-coast-biome.png",
+      "bytes": 105924
+    },
+    {
+      "mode": "hexlandscape",
+      "size": 50,
+      "structure": "islands",
+      "channel": "biome",
+      "file": "landscape-surface-hexlandscape-50-islands-biome.png",
+      "bytes": 105924
+    },
+    {
+      "mode": "hexlandscape",
+      "size": 50,
+      "structure": "continent",
+      "channel": "biome",
+      "file": "landscape-surface-hexlandscape-50-continent-biome.png",
+      "bytes": 105924
+    },
+    {
+      "mode": "hexlandscape",
+      "size": 100,
+      "structure": "land",
+      "channel": "elevation",
+      "file": "landscape-surface-hexlandscape-100-land-elevation.png",
+      "bytes": 420595
+    },
+    {
+      "mode": "hexlandscape",
+      "size": 300,
+      "structure": "land",
+      "channel": "biome",
+      "file": "landscape-surface-hexlandscape-300-land-biome.png",
+      "bytes": 3753018
+    },
+    {
+      "mode": "hexlandscape",
+      "size": 300,
+      "structure": "coast",
+      "channel": "biome",
+      "file": "landscape-surface-hexlandscape-300-coast-biome.png",
+      "bytes": 3753018
+    },
+    {
+      "mode": "hexlandscape",
+      "size": 300,
+      "structure": "islands",
+      "channel": "biome",
+      "file": "landscape-surface-hexlandscape-300-islands-biome.png",
+      "bytes": 3753018
+    },
+    {
+      "mode": "hexlandscape",
+      "size": 300,
+      "structure": "continent",
+      "channel": "biome",
+      "file": "landscape-surface-hexlandscape-300-continent-biome.png",
+      "bytes": 3753018
+    }
+  ]
+}

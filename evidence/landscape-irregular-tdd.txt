@@ -1,0 +1,151 @@
+✖ landscape additional biomes normalize strictly, immutably and in canonical enum order (0.7171ms)
+✖ explicit local landscape biome identity retains water and steep-slope exceptions (0.6703ms)
+✖ seed42 has a resolved sea-connected bay at 50 and 300 on square and hex landmasses (403.8824ms)
+ℹ [{"size":50,"kind":"square","structure":"islands","elapsedMs":11,"parts":[{"cells":158,"bayDepth":0.4160251471689218,"hullDeficit":0.05671641791044779,"aspect":0.8666666666666667},{"cells":201,"bayDepth":0.31622776601683794,"hullDeficit":0.06728538283062646,"aspect":0.8823529411764706},{"cells":158,"bayDepth":0.31622776601683794,"hullDeficit":0.0650887573964497,"aspect":0.8666666666666667}]},{"size":50,"kind":"square","structure":"continent","elapsedMs":6,"parts":[{"cells":1099,"bayDepth":1.131370849898476,"hullDeficit":0.05746140651801024,"aspect":0.9024390243902439}]},{"size":50,"kind":"hex","structure":"islands","elapsedMs":8,"parts":[{"cells":157,"bayDepth":0.23570226039551498,"hullDeficit":0.05326633165829098,"aspect":0.9},{"cells":206,"bayDepth":0.24759378423607023,"hullDeficit":0.05432287681713743,"aspect":0.9117647058823529},{"cells":157,"bayDepth":0.36629483719650174,"hullDeficit":0.06732673267326694,"aspect":0.9}]},{"size":50,"kind":"hex","structure":"continent","elapsedMs":3,"parts":[{"cells":1099,"bayDepth":0.9287013775293231,"hullDeficit":0.04573082489146152,"aspect":0.925}]},{"size":300,"kind":"square","structure":"islands","elapsedMs":129,"parts":[{"cells":6566,"bayDepth":0.5965587590013045,"hullDeficit":0.017874504524717727,"aspect":0.84},{"cells":7781,"bayDepth":0.6324555320336758,"hullDeficit":0.014876242324492028,"aspect":0.9117647058823529},{"cells":6398,"bayDepth":0.6181225377691005,"hullDeficit":0.0173552449700507,"aspect":0.9042553191489362}]},{"size":300,"kind":"square","structure":"continent","elapsedMs":75,"parts":[{"cells":39556,"bayDepth":5.141114829778641,"hullDeficit":0.026002166847237218,"aspect":0.8795180722891566}]},{"size":300,"kind":"hex","structure":"islands","elapsedMs":90,"parts":[{"cells":6587,"bayDepth":0.44844852933087676,"hullDeficit":0.014929837242341648,"aspect":0.845},{"cells":7723,"bayDepth":0.545259155314525,"hullDeficit":0.016575054648867438,"aspect":0.9215686274509803},{"cells":6412,"bayDepth":0.6410159650938729,"hullDeficit":0.016338114596916697,"aspect":0.9148936170212766}]},{"size":300,"kind":"hex","structure":"continent","elapsedMs":80,"parts":[{"cells":39556,"bayDepth":5.351344219516466,"hullDeficit":0.024969804530552753,"aspect":0.8870967741935484}]}]
+✔ irregular shapes preserve topology, determinism and bounded 300 preparation for all requested scales (541.2471ms)
+ℹ [{"size":50,"kind":"square","structure":"islands","elapsedMs":2},{"size":50,"kind":"square","structure":"continent","elapsedMs":1},{"size":50,"kind":"square","structure":"coast","elapsedMs":2},{"size":50,"kind":"hex","structure":"islands","elapsedMs":2},{"size":50,"kind":"hex","structure":"continent","elapsedMs":1},{"size":50,"kind":"hex","structure":"coast","elapsedMs":2},{"size":100,"kind":"square","structure":"islands","elapsedMs":7},{"size":100,"kind":"square","structure":"continent","elapsedMs":5},{"size":100,"kind":"square","structure":"coast","elapsedMs":6},{"size":100,"kind":"hex","structure":"islands","elapsedMs":7},{"size":100,"kind":"hex","structure":"continent","elapsedMs":5},{"size":100,"kind":"hex","structure":"coast","elapsedMs":4},{"size":200,"kind":"square","structure":"islands","elapsedMs":28},{"size":200,"kind":"square","structure":"continent","elapsedMs":23},{"size":200,"kind":"square","structure":"coast","elapsedMs":15},{"size":200,"kind":"hex","structure":"islands","elapsedMs":33},{"size":200,"kind":"hex","structure":"continent","elapsedMs":20},{"size":200,"kind":"hex","structure":"coast","elapsedMs":12},{"size":300,"kind":"square","structure":"islands","elapsedMs":63},{"size":300,"kind":"square","structure":"continent","elapsedMs":45},{"size":300,"kind":"square","structure":"coast","elapsedMs":26},{"size":300,"kind":"hex","structure":"islands","elapsedMs":67},{"size":300,"kind":"hex","structure":"continent","elapsedMs":55},{"size":300,"kind":"hex","structure":"coast","elapsedMs":27}]
+ℹ tests 4
+ℹ suites 0
+ℹ pass 1
+ℹ fail 3
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1035.2672
+
+✖ failing tests:
+
+test at tests\landscape-irregular.test.mjs:24:1
+✖ landscape additional biomes normalize strictly, immutably and in canonical enum order (0.7171ms)
+  Error: Ландшафт: выберите structure и baseBiome из обязательных списков.
+      at normalizeLandscapeProfile (file:///C:/Vibecoding/Games/VlandGenerator/engine/core/landscape-profile.mjs:25:9)
+      at TestContext.<anonymous> (file:///C:/Vibecoding/Games/VlandGenerator/tests/landscape-irregular.test.mjs:26:19)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.start (node:internal/test_runner/test:1262:17)
+      at startSubtestAfterBootstrap (node:internal/test_runner/harness:387:17)
+
+test at tests\landscape-irregular.test.mjs:30:1
+✖ explicit local landscape biome identity retains water and steep-slope exceptions (0.6703ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  'plains' !== 'desert'
+  
+      at TestContext.<anonymous> (file:///C:/Vibecoding/Games/VlandGenerator/tests/landscape-irregular.test.mjs:31:101)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 'plains',
+    expected: 'desert',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests\landscape-irregular.test.mjs:34:1
+✖ seed42 has a resolved sea-connected bay at 50 and 300 on square and hex landmasses (403.8824ms)
+  AssertionError [ERR_ASSERTION]: {"size":50,"kind":"square","structure":"islands","elapsedMs":11,"parts":[{"cells":158,"bayDepth":0.4160251471689218,"hullDeficit":0.05671641791044779,"aspect":0.8666666666666667},{"cells":201,"bayDepth":0.31622776601683794,"hullDeficit":0.06728538283062646,"aspect":0.8823529411764706},{"cells":158,"bayDepth":0.31622776601683794,"hullDeficit":0.0650887573964497,"aspect":0.8666666666666667}]} sea-connected bay depth at least2/12 cells
+      at TestContext.<anonymous> (file:///C:/Vibecoding/Games/VlandGenerator/tests/landscape-irregular.test.mjs:38:66)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }
+✖ landscape additional biomes normalize strictly, immutably and in canonical enum order (1.6339ms)
+ℹ tests 1
+ℹ suites 0
+ℹ pass 0
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 76.7286
+
+✖ failing tests:
+
+test at tests\landscape-irregular.test.mjs:24:1
+✖ landscape additional biomes normalize strictly, immutably and in canonical enum order (1.6339ms)
+  AssertionError [ERR_ASSERTION]: Missing expected exception.
+      at TestContext.<anonymous> (file:///C:/Vibecoding/Games/VlandGenerator/tests/landscape-irregular.test.mjs:27:144)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.start (node:internal/test_runner/test:1262:17)
+      at startSubtestAfterBootstrap (node:internal/test_runner/harness:387:17) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: undefined,
+    operator: 'throws',
+    diff: 'simple'
+  }
+✖ seed42 has a resolved sea-connected bay at 50 and 300 on square and hex landmasses (586.2694ms)
+ℹ [{"size":50,"kind":"square","structure":"islands","elapsedMs":21,"parts":[{"cells":51,"bayDepth":1.5,"hullDeficit":0.203125,"aspect":0.8},{"cells":60,"bayDepth":2.1213203435596424,"hullDeficit":0.2682926829268293,"aspect":0.9090909090909091},{"cells":47,"bayDepth":1.3719886811400708,"hullDeficit":0.25396825396825395,"aspect":0.75}]},{"size":50,"kind":"square","structure":"continent","elapsedMs":10,"parts":[{"cells":1099,"bayDepth":3.7014380687543635,"hullDeficit":0.08720930232558144,"aspect":0.8125}]},{"size":50,"kind":"hex","structure":"islands","elapsedMs":94,"parts":[{"cells":49,"bayDepth":1.4470719035407655,"hullDeficit":0.23636363636363555,"aspect":0.85},{"cells":63,"bayDepth":2.232407566287835,"hullDeficit":0.2544378698224852,"aspect":0.9545454545454546},{"cells":49,"bayDepth":1.092309227358722,"hullDeficit":0.2263157894736847,"aspect":0.8333333333333334}]},{"size":50,"kind":"hex","structure":"continent","elapsedMs":10,"parts":[{"cells":1099,"bayDepth":2.9983347209374642,"hullDeficit":0.07008884501480794,"aspect":0.8229166666666666}]},{"size":300,"kind":"square","structure":"islands","elapsedMs":128,"parts":[{"cells":1944,"bayDepth":19.02008158893213,"hullDeficit":0.3996294008647313,"aspect":1.046875},{"cells":2186,"bayDepth":18.88379095879876,"hullDeficit":0.3642576704958558,"aspect":1.0769230769230769},{"cells":1819,"bayDepth":13.021102479908714,"hullDeficit":0.3620901280028055,"aspect":0.9054054054054054}]},{"size":300,"kind":"square","structure":"continent","elapsedMs":106,"parts":[{"cells":39556,"bayDepth":30.26344306788287,"hullDeficit":0.11097126546574221,"aspect":0.8469750889679716}]},{"size":300,"kind":"hex","structure":"islands","elapsedMs":105,"parts":[{"cells":1951,"bayDepth":18.502366402057085,"hullDeficit":0.40309010249349864,"aspect":1.046875},{"cells":2167,"bayDepth":18.690317027597512,"hullDeficit":0.3683443451224261,"aspect":1.0769230769230769},{"cells":1817,"bayDepth":12.206910141903423,"hullDeficit":0.3483562462641966,"aspect":0.910958904109589}]},{"size":300,"kind":"hex","structure":"continent","elapsedMs":110,"parts":[{"cells":39556,"bayDepth":29.88646138990538,"hullDeficit":0.1091659785301401,"aspect":0.8505338078291815}]}]
+ℹ tests 1
+ℹ suites 0
+ℹ pass 0
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 669.009
+
+✖ failing tests:
+
+test at tests\landscape-irregular.test.mjs:34:1
+✖ seed42 has a resolved sea-connected bay at 50 and 300 on square and hex landmasses (586.2694ms)
+  AssertionError [ERR_ASSERTION]: {"size":50,"kind":"square","structure":"islands","elapsedMs":21,"parts":[{"cells":51,"bayDepth":1.5,"hullDeficit":0.203125,"aspect":0.8},{"cells":60,"bayDepth":2.1213203435596424,"hullDeficit":0.2682926829268293,"aspect":0.9090909090909091},{"cells":47,"bayDepth":1.3719886811400708,"hullDeficit":0.25396825396825395,"aspect":0.75}]} sufficient land remains for selected biome regions
+      at TestContext.<anonymous> (file:///C:/Vibecoding/Games/VlandGenerator/tests/landscape-irregular.test.mjs:38:231)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.start (node:internal/test_runner/test:1262:17)
+      at startSubtestAfterBootstrap (node:internal/test_runner/harness:387:17) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }
+
+ROOT OBSERVED VISUAL FAIL: evidence/landscape-rework-forms.png seed42 at300 shows pointed star/arrow islands and near-periodic triangular coast teeth. Numerical284/root+portable PASS did not establish visual acceptance. Accepted follow-up: smooth positive skeleton penalty, curved/asymmetric limbs, non-periodic inlet layout and restrained multi-frequency detail. Existing witness/area/connectivity assertions remain unchanged.
+
+ROOT VISUAL REVIEW: curved caps accepted; remaining coast hard-clamp plateau is observed visualFAIL. Follow-up limited to smooth .7*tanh(rawShore/.7) for detail>0, preserving <=50 contour. No geometry test thresholds are relaxed.
+✖ actual app seeds include an elongated island instead of three similar radial silhouettes (642.6193ms)
+ℹ [{"mode":"landscape","seed":42,"shapeSeed":93344066,"elongation":[1.1562587723757132,1.2385661084519977,1.5432215279454]},{"mode":"hexlandscape","seed":42,"shapeSeed":93344066,"elongation":[1.1593521872012285,1.2404544057284332,1.5423400559605898]},{"mode":"landscape","seed":7,"shapeSeed":1683744565,"elongation":[1.9385046371069845,1.3345506482233815,2.4115278900347326]},{"mode":"hexlandscape","seed":7,"shapeSeed":1683744565,"elongation":[1.9413488355440633,1.3377424447163981,2.418186673587457]}]
+✔ final island-only revision preserves small islands, coast and continent contours exactly (385.2495ms)
+ℹ tests 2
+ℹ suites 0
+ℹ pass 1
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1142.6367
+
+✖ failing tests:
+
+test at tests\landscape-irregular.test.mjs:57:1
+✖ actual app seeds include an elongated island instead of three similar radial silhouettes (642.6193ms)
+  AssertionError [ERR_ASSERTION]: {"mode":"landscape","seed":42,"shapeSeed":93344066,"elongation":[1.1562587723757132,1.2385661084519977,1.5432215279454]} at least one major/minor spread ratio >=2; visual acceptance remains separate
+      at TestContext.<anonymous> (file:///C:/Vibecoding/Games/VlandGenerator/tests/landscape-irregular.test.mjs:62:66)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }

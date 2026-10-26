@@ -1,0 +1,278 @@
+{
+  "status": "complete",
+  "scope": "Compact contextual map toolbar and guarded keyboard shortcuts; schema and save rules unchanged",
+  "protectedFiles": {
+    "examples/automatic-access-project.json": "5f50cdb61c424c001a85b98d8e68cf5489e7dbdf88b6182df150cdbe8f0deb3b",
+    "examples/automatic-access-recipe.json": "997ef51db3a0dbf0d6abe14a4b562319b8b7df93ef3b72c075de5e517da27608",
+    "examples/automatic-access-runtime.json": "6881f2ccd0e92c5985e858e583dc0ec6563d210fb438173e90cf929e79de5212",
+    "examples/automatic-access-validation.json": "66c69c3c025c0f9f79e24660d63e79f398607ef173d7859b30452e58c9b66888",
+    "examples/automatic-transports.mjs": "e50cc330c8ecdd94961318808d985d21329c511dc7ebb727cfff6412a959eb23",
+    "examples/caves.json": "a3ebb4b93be8eb56b807a2a5f06d124661a5b84836f9677c4900268de3759b93",
+    "examples/content-demo-plan.json": "460e0d0bff0df913e9ee5ecb3514b37a5e142087d3c1a9884cff4683a293fa30",
+    "examples/content-demo-project.json": "e7a257756e176e0469972c0a4d39481fc9248cc252e2456f4fa0b5bb668d848f",
+    "examples/content-demo-runtime.json": "c4e213ad83166570925b4d845384dd31f85a7a71e4b47569a67c85497d6008df",
+    "examples/content-demo-state.json": "236e06419af5f360a72508e5071a9be1201c8445b3915d5789fb5a44eafd06be",
+    "examples/content-workflow.mjs": "d4bc62b9fa8f36ffe78a26de4eb33963719dd0f038280fb396ae169961722785",
+    "examples/dungeon.json": "3949138b57cf43b43eb14326fc3e372621c4ae4e703e5ae5ce8899b638b2561f",
+    "examples/isolated-dungeon.json": "175b9524865d0fc1f1d45cf8d687be7086bb05917f8c2fa5881cbaa392749b33",
+    "examples/landscape.json": "3d428710d928c96ef1a5690289896eb7190b9a090aa71c99a39c2725b1193108",
+    "examples/linked-transports.mjs": "f7551a376e57a727fe6cc6c20d03ab149ecdb5b252a2332ca6212296a2160123",
+    "examples/settlements.json": "51a0b08293b935de4493d5ac4accf81444cff0df53c19062df921c62466cd48d",
+    "examples/sideview.json": "ffc8389c9bea43418b47bdbd2ed55a9307ad438adf08364877ee238cf9c1fcc1",
+    "examples/tiers.json": "52bf3df3858759a7647086cb5f91182ed5dc2aafd49ceb6c453bd25504e06e56",
+    ".run/working-session.json": "29c5931f9504d3b43d9bdf7ebac48745ea19bfb0bd2e2124e9a3e76880613089",
+    ".run/server.json": "4ed63cecd750240a8f17bba8fc08c32f6acae2d3a8aafe56de132a250f75b6ba",
+    ".run/server.log": "7091a204bf36cac0206382b6a60d5a9459c467ccd801b6793d7d5b0b575cee25",
+    ".run/error.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "verification": {
+    "unitTests": {
+      "passed": 137,
+      "failed": 0,
+      "log": "evidence/quick-edit-tests.txt"
+    },
+    "content": {
+      "maps": 18,
+      "sourceOperations": 216,
+      "passed": true,
+      "log": "evidence/quick-edit-content.txt"
+    },
+    "portable": {
+      "ok": true,
+      "files": 302,
+      "syntaxModules": 184,
+      "relativeImports": 646,
+      "httpFiles": 261,
+      "cli": true,
+      "cliSourceWorkflow": true,
+      "cliTransitions": true,
+      "httpTransitions": true,
+      "rasterCli": true,
+      "rasterHttp": true,
+      "diagnosticsCli": true,
+      "diagnosticsHttp": true,
+      "automaticAccessCli": true,
+      "automaticAccessHttp": true,
+      "isolatedContentModule": true,
+      "httpModes": 6,
+      "copyRemovedAfterCheck": true,
+      "testsPassed": 137,
+      "testsFailed": 0,
+      "productionFilesMatchFinal": true,
+      "qaHarnessAfterPortable": "Only qa-drawing.mjs received RAF/session-settle fixes; syntax and final quick-escape browser matrix passed separately"
+    },
+    "browserMatrix": {
+      "ok": true,
+      "complete": true,
+      "cases": [
+        {
+          "width": 1100,
+          "topology": "square",
+          "toolbarHeight": 100.5,
+          "toolbarWidth": 760,
+          "noOverflow": true,
+          "nextToMap": true,
+          "notCoveredByHeader": true,
+          "geometryBrush": true,
+          "sourceBrush": true,
+          "polygonFinish": true,
+          "paletteAndToolSync": true,
+          "undoRedoButtons": true,
+          "undoRedoKeys": true,
+          "textInputProtected": true,
+          "modalProtected": true,
+          "readonlyProtected": true,
+          "workerProtected": true,
+          "namedSaveOpen": true,
+          "trustedKeys": 24,
+          "trustedPointers": 5,
+          "escapeDialogRecovery": true
+        },
+        {
+          "width": 1100,
+          "topology": "hex",
+          "toolbarHeight": 100.69445037841797,
+          "toolbarWidth": 758.1250610351562,
+          "noOverflow": true,
+          "nextToMap": true,
+          "notCoveredByHeader": true,
+          "geometryBrush": true,
+          "sourceBrush": true,
+          "polygonFinish": true,
+          "paletteAndToolSync": true,
+          "undoRedoButtons": true,
+          "undoRedoKeys": true,
+          "textInputProtected": true,
+          "modalProtected": true,
+          "readonlyProtected": true,
+          "workerProtected": true,
+          "namedSaveOpen": true,
+          "trustedKeys": 24,
+          "trustedPointers": 5,
+          "escapeDialogRecovery": true
+        },
+        {
+          "width": 360,
+          "topology": "square",
+          "toolbarHeight": 154.6354217529297,
+          "toolbarWidth": 321.1111145019531,
+          "noOverflow": true,
+          "nextToMap": true,
+          "notCoveredByHeader": true,
+          "geometryBrush": true,
+          "sourceBrush": true,
+          "polygonFinish": true,
+          "paletteAndToolSync": true,
+          "undoRedoButtons": true,
+          "undoRedoKeys": true,
+          "textInputProtected": true,
+          "modalProtected": true,
+          "readonlyProtected": true,
+          "workerProtected": true,
+          "namedSaveOpen": true,
+          "trustedKeys": 24,
+          "trustedPointers": 5,
+          "escapeDialogRecovery": true
+        },
+        {
+          "width": 360,
+          "topology": "hex",
+          "toolbarHeight": 154.6354217529297,
+          "toolbarWidth": 321.1111145019531,
+          "noOverflow": true,
+          "nextToMap": true,
+          "notCoveredByHeader": true,
+          "geometryBrush": true,
+          "sourceBrush": true,
+          "polygonFinish": true,
+          "paletteAndToolSync": true,
+          "undoRedoButtons": true,
+          "undoRedoKeys": true,
+          "textInputProtected": true,
+          "modalProtected": true,
+          "readonlyProtected": true,
+          "workerProtected": true,
+          "namedSaveOpen": true,
+          "trustedKeys": 24,
+          "trustedPointers": 5,
+          "escapeDialogRecovery": true
+        }
+      ],
+      "trustedKeyboardEvents": 96,
+      "trustedPointerGestures": 20,
+      "allTrusted": true,
+      "errors": [],
+      "rawReport": "evidence/quick-edit-browser.json"
+    },
+    "protectedFilesUnchanged": 22,
+    "coreAndSchemaBaselineUnchanged": 182,
+    "allModeSmoke": {
+      "cases": 12,
+      "widths": [
+        1100,
+        360
+      ],
+      "modes": [
+        "dungeon",
+        "tiers",
+        "sideview",
+        "caves",
+        "landscape",
+        "settlements"
+      ],
+      "generationOnDesktop": true,
+      "restoreAt360": true,
+      "quickSelectAndKeyboard": true,
+      "allVisible": true,
+      "noOverflow": true
+    },
+    "browserToolDiagnostics": {
+      "knownExternalMutationObserverMessages": 4,
+      "reference": "evidence/browser-diagnostics.json",
+      "otherMessages": 0
+    },
+    "escapeMatrix": {
+      "ok": true,
+      "complete": true,
+      "cases": [
+        {
+          "width": 1100,
+          "topology": "square",
+          "polygonEscape": true,
+          "transitionEscape": true,
+          "projectUnchanged": true,
+          "trustedKeys": 3,
+          "trustedPointers": 1,
+          "allTrusted": true
+        },
+        {
+          "width": 1100,
+          "topology": "hex",
+          "polygonEscape": true,
+          "transitionEscape": true,
+          "projectUnchanged": true,
+          "trustedKeys": 3,
+          "trustedPointers": 1,
+          "allTrusted": true
+        },
+        {
+          "width": 360,
+          "topology": "square",
+          "polygonEscape": true,
+          "transitionEscape": true,
+          "projectUnchanged": true,
+          "trustedKeys": 3,
+          "trustedPointers": 1,
+          "allTrusted": true
+        },
+        {
+          "width": 360,
+          "topology": "hex",
+          "polygonEscape": true,
+          "transitionEscape": true,
+          "projectUnchanged": true,
+          "trustedKeys": 3,
+          "trustedPointers": 1,
+          "allTrusted": true
+        }
+      ],
+      "errors": []
+    },
+    "totalTrustedActions": 132,
+    "totalTrustedKeyboardEvents": 108,
+    "totalTrustedPointerGestures": 24
+  },
+  "findings": [
+    {
+      "issue": "Quick select options lagged after switching from diagnostic to editable channel",
+      "fix": "Synchronous quick refresh in existing channel onchange",
+      "verified": true
+    },
+    {
+      "issue": "QA reused previous iframe document when opening the same mode again",
+      "fix": "Await new Document identity and completed restore",
+      "verified": true
+    },
+    {
+      "issue": "Sticky page header could cover tools when scrolling to the map on360px",
+      "fix": "Toolbar sticks beneath actual header height; canvas scroll margin includes toolbar and header",
+      "verified": true
+    },
+    {
+      "issue": "Closing a modal with Escape left quick controls disabled until another click",
+      "fix": "Refresh on dialog close and after native Escape handlers; matrix requires immediate toolbar reactivation",
+      "verified": true
+    },
+    {
+      "issue": "Escape cancelled transition placement but toolbar refreshed before the native handler updated state",
+      "fix": "Refresh at the end of the existing Escape handler; verified polygon and transition cancellation with no project mutation",
+      "verified": true
+    }
+  ],
+  "verifiedAt": "2026-10-19T22:20:42.923Z",
+  "cleanup": {
+    "temporaryCopyRemoved": true,
+    "temporaryBrowserTabClosed": true,
+    "viewportReset": true
+  }
+}

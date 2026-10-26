@@ -1,0 +1,1075 @@
+{
+  "ok": true,
+  "seed": 42,
+  "channel": "biome",
+  "generatedFrom": "app.generateBase + app.materialize",
+  "maps": 8,
+  "headless": true,
+  "userTabsTouched": false,
+  "browserImagesLoaded": true,
+  "mobileWidth360NoOverflow": true,
+  "cases": [
+    {
+      "structure": "coast",
+      "mode": "landscape",
+      "size": 100,
+      "name": "shallow-water-coast-landscape-100.png",
+      "seed": 42,
+      "generation": {
+        "width": 100,
+        "height": 100,
+        "layers": {
+          "above": 0,
+          "underground": 0
+        },
+        "terrain": {
+          "relief": 0.6,
+          "warp": 0.65,
+          "blur": 1,
+          "erosion": 4
+        },
+        "hydrology": {
+          "rivers": 0.55,
+          "lakes": 0.6,
+          "riverWidth": 2,
+          "minLakeArea": 4,
+          "floodplainWidth": 2
+        },
+        "topology": {
+          "kind": "square"
+        },
+        "biomes": {
+          "transitionWidth": 3,
+          "coastWidth": 2,
+          "foothillWidth": 3
+        },
+        "autoTransports": {
+          "enabled": true,
+          "connectRegions": true,
+          "crossLayerRegions": true,
+          "minRegionArea": 32,
+          "maxLinks": 128,
+          "landingSize": 1,
+          "travelCost": 2,
+          "types": {
+            "teleport": 1,
+            "lift": 1,
+            "stairs": 1
+          }
+        },
+        "caves": {
+          "style": "mixed",
+          "openness": 0.45,
+          "connectivity": 0.7,
+          "aquifers": 0.28,
+          "lavaDepth": 3,
+          "tunnelRadius": 1.6,
+          "branching": 0.5,
+          "smoothing": 2
+        },
+        "landscape": {
+          "structure": "coast",
+          "baseBiome": "meadow",
+          "biomes": [],
+          "landPercent": 75,
+          "coastErosion": 50,
+          "uniformity": 50
+        }
+      },
+      "fingerprint": "98e3ecb0",
+      "seaCells": 2500,
+      "shallowCells": 850,
+      "shallowPercentOfSea": 34,
+      "geologicalLandPercent": 75,
+      "landComponents": 1,
+      "shallowColor": "#65b7bd",
+      "legend": [
+        {
+          "channel": "biome",
+          "id": "beach",
+          "name": "Песчаный берег",
+          "color": "#d5bf87"
+        },
+        {
+          "channel": "biome",
+          "id": "floodplain",
+          "name": "Речная пойма",
+          "color": "#8d8563"
+        },
+        {
+          "channel": "biome",
+          "id": "ocean",
+          "name": "Море",
+          "color": "#234b72"
+        },
+        {
+          "channel": "biome",
+          "id": "lake",
+          "name": "Озеро",
+          "color": "#397b9b"
+        },
+        {
+          "channel": "biome",
+          "id": "river",
+          "name": "Река",
+          "color": "#559fb0"
+        },
+        {
+          "channel": "biome",
+          "id": "plains",
+          "name": "Луга",
+          "color": "#78955c"
+        },
+        {
+          "channel": "biome",
+          "id": "shallow-water",
+          "name": "Мелководье",
+          "color": "#65b7bd"
+        }
+      ],
+      "raster": {
+        "width": 600,
+        "height": 600
+      }
+    },
+    {
+      "structure": "coast",
+      "mode": "landscape",
+      "size": 300,
+      "name": "shallow-water-coast-landscape-300.png",
+      "seed": 42,
+      "generation": {
+        "width": 300,
+        "height": 300,
+        "layers": {
+          "above": 0,
+          "underground": 0
+        },
+        "terrain": {
+          "relief": 0.6,
+          "warp": 0.65,
+          "blur": 1,
+          "erosion": 4
+        },
+        "hydrology": {
+          "rivers": 0.55,
+          "lakes": 0.6,
+          "riverWidth": 2,
+          "minLakeArea": 4,
+          "floodplainWidth": 2
+        },
+        "topology": {
+          "kind": "square"
+        },
+        "biomes": {
+          "transitionWidth": 3,
+          "coastWidth": 2,
+          "foothillWidth": 3
+        },
+        "autoTransports": {
+          "enabled": true,
+          "connectRegions": true,
+          "crossLayerRegions": true,
+          "minRegionArea": 32,
+          "maxLinks": 128,
+          "landingSize": 1,
+          "travelCost": 2,
+          "types": {
+            "teleport": 1,
+            "lift": 1,
+            "stairs": 1
+          }
+        },
+        "caves": {
+          "style": "mixed",
+          "openness": 0.45,
+          "connectivity": 0.7,
+          "aquifers": 0.28,
+          "lavaDepth": 3,
+          "tunnelRadius": 1.6,
+          "branching": 0.5,
+          "smoothing": 2
+        },
+        "landscape": {
+          "structure": "coast",
+          "baseBiome": "meadow",
+          "biomes": [],
+          "landPercent": 75,
+          "coastErosion": 50,
+          "uniformity": 50
+        }
+      },
+      "fingerprint": "a8c4d868",
+      "seaCells": 22500,
+      "shallowCells": 7828,
+      "shallowPercentOfSea": 34.8,
+      "geologicalLandPercent": 75,
+      "landComponents": 1,
+      "shallowColor": "#65b7bd",
+      "legend": [
+        {
+          "channel": "biome",
+          "id": "beach",
+          "name": "Песчаный берег",
+          "color": "#d5bf87"
+        },
+        {
+          "channel": "biome",
+          "id": "floodplain",
+          "name": "Речная пойма",
+          "color": "#8d8563"
+        },
+        {
+          "channel": "biome",
+          "id": "ocean",
+          "name": "Море",
+          "color": "#234b72"
+        },
+        {
+          "channel": "biome",
+          "id": "lake",
+          "name": "Озеро",
+          "color": "#397b9b"
+        },
+        {
+          "channel": "biome",
+          "id": "river",
+          "name": "Река",
+          "color": "#559fb0"
+        },
+        {
+          "channel": "biome",
+          "id": "plains",
+          "name": "Луга",
+          "color": "#78955c"
+        },
+        {
+          "channel": "biome",
+          "id": "shallow-water",
+          "name": "Мелководье",
+          "color": "#65b7bd"
+        }
+      ],
+      "raster": {
+        "width": 600,
+        "height": 600
+      }
+    },
+    {
+      "structure": "coast",
+      "mode": "hexlandscape",
+      "size": 100,
+      "name": "shallow-water-coast-hexlandscape-100.png",
+      "seed": 42,
+      "generation": {
+        "width": 100,
+        "height": 100,
+        "layers": {
+          "above": 0,
+          "underground": 0
+        },
+        "terrain": {
+          "relief": 0.6,
+          "warp": 0.65,
+          "blur": 1,
+          "erosion": 4
+        },
+        "hydrology": {
+          "rivers": 0.55,
+          "lakes": 0.6,
+          "riverWidth": 2,
+          "minLakeArea": 4,
+          "floodplainWidth": 2
+        },
+        "topology": {
+          "kind": "hex"
+        },
+        "biomes": {
+          "transitionWidth": 3,
+          "coastWidth": 2,
+          "foothillWidth": 3
+        },
+        "autoTransports": {
+          "enabled": true,
+          "connectRegions": true,
+          "crossLayerRegions": true,
+          "minRegionArea": 32,
+          "maxLinks": 128,
+          "landingSize": 1,
+          "travelCost": 2,
+          "types": {
+            "teleport": 1,
+            "lift": 1,
+            "stairs": 1
+          }
+        },
+        "caves": {
+          "style": "mixed",
+          "openness": 0.45,
+          "connectivity": 0.7,
+          "aquifers": 0.28,
+          "lavaDepth": 3,
+          "tunnelRadius": 1.6,
+          "branching": 0.5,
+          "smoothing": 2
+        },
+        "landscape": {
+          "structure": "coast",
+          "baseBiome": "meadow",
+          "biomes": [],
+          "landPercent": 75,
+          "coastErosion": 50,
+          "uniformity": 50
+        }
+      },
+      "fingerprint": "63af9dfc",
+      "seaCells": 2500,
+      "shallowCells": 863,
+      "shallowPercentOfSea": 34.5,
+      "geologicalLandPercent": 75,
+      "landComponents": 1,
+      "shallowColor": "#65b7bd",
+      "legend": [
+        {
+          "channel": "biome",
+          "id": "beach",
+          "name": "Песчаный берег",
+          "color": "#d5bf87"
+        },
+        {
+          "channel": "biome",
+          "id": "gravel-shore",
+          "name": "Галечный берег",
+          "color": "#a7a18b"
+        },
+        {
+          "channel": "biome",
+          "id": "floodplain",
+          "name": "Речная пойма",
+          "color": "#8d8563"
+        },
+        {
+          "channel": "biome",
+          "id": "ocean",
+          "name": "Море",
+          "color": "#234b72"
+        },
+        {
+          "channel": "biome",
+          "id": "lake",
+          "name": "Озеро",
+          "color": "#397b9b"
+        },
+        {
+          "channel": "biome",
+          "id": "river",
+          "name": "Река",
+          "color": "#559fb0"
+        },
+        {
+          "channel": "biome",
+          "id": "plains",
+          "name": "Луга",
+          "color": "#78955c"
+        },
+        {
+          "channel": "biome",
+          "id": "shallow-water",
+          "name": "Мелководье",
+          "color": "#65b7bd"
+        }
+      ],
+      "raster": {
+        "width": 697,
+        "height": 602
+      }
+    },
+    {
+      "structure": "coast",
+      "mode": "hexlandscape",
+      "size": 300,
+      "name": "shallow-water-coast-hexlandscape-300.png",
+      "seed": 42,
+      "generation": {
+        "width": 300,
+        "height": 300,
+        "layers": {
+          "above": 0,
+          "underground": 0
+        },
+        "terrain": {
+          "relief": 0.6,
+          "warp": 0.65,
+          "blur": 1,
+          "erosion": 4
+        },
+        "hydrology": {
+          "rivers": 0.55,
+          "lakes": 0.6,
+          "riverWidth": 2,
+          "minLakeArea": 4,
+          "floodplainWidth": 2
+        },
+        "topology": {
+          "kind": "hex"
+        },
+        "biomes": {
+          "transitionWidth": 3,
+          "coastWidth": 2,
+          "foothillWidth": 3
+        },
+        "autoTransports": {
+          "enabled": true,
+          "connectRegions": true,
+          "crossLayerRegions": true,
+          "minRegionArea": 32,
+          "maxLinks": 128,
+          "landingSize": 1,
+          "travelCost": 2,
+          "types": {
+            "teleport": 1,
+            "lift": 1,
+            "stairs": 1
+          }
+        },
+        "caves": {
+          "style": "mixed",
+          "openness": 0.45,
+          "connectivity": 0.7,
+          "aquifers": 0.28,
+          "lavaDepth": 3,
+          "tunnelRadius": 1.6,
+          "branching": 0.5,
+          "smoothing": 2
+        },
+        "landscape": {
+          "structure": "coast",
+          "baseBiome": "meadow",
+          "biomes": [],
+          "landPercent": 75,
+          "coastErosion": 50,
+          "uniformity": 50
+        }
+      },
+      "fingerprint": "a78d2a80",
+      "seaCells": 22500,
+      "shallowCells": 7981,
+      "shallowPercentOfSea": 35.5,
+      "geologicalLandPercent": 75,
+      "landComponents": 1,
+      "shallowColor": "#65b7bd",
+      "legend": [
+        {
+          "channel": "biome",
+          "id": "beach",
+          "name": "Песчаный берег",
+          "color": "#d5bf87"
+        },
+        {
+          "channel": "biome",
+          "id": "floodplain",
+          "name": "Речная пойма",
+          "color": "#8d8563"
+        },
+        {
+          "channel": "biome",
+          "id": "ocean",
+          "name": "Море",
+          "color": "#234b72"
+        },
+        {
+          "channel": "biome",
+          "id": "lake",
+          "name": "Озеро",
+          "color": "#397b9b"
+        },
+        {
+          "channel": "biome",
+          "id": "river",
+          "name": "Река",
+          "color": "#559fb0"
+        },
+        {
+          "channel": "biome",
+          "id": "plains",
+          "name": "Луга",
+          "color": "#78955c"
+        },
+        {
+          "channel": "biome",
+          "id": "shallow-water",
+          "name": "Мелководье",
+          "color": "#65b7bd"
+        }
+      ],
+      "raster": {
+        "width": 1041,
+        "height": 901
+      }
+    },
+    {
+      "structure": "islands",
+      "mode": "landscape",
+      "size": 100,
+      "name": "shallow-water-islands-landscape-100.png",
+      "seed": 42,
+      "generation": {
+        "width": 100,
+        "height": 100,
+        "layers": {
+          "above": 0,
+          "underground": 0
+        },
+        "terrain": {
+          "relief": 0.6,
+          "warp": 0.65,
+          "blur": 1,
+          "erosion": 4
+        },
+        "hydrology": {
+          "rivers": 0.55,
+          "lakes": 0.6,
+          "riverWidth": 2,
+          "minLakeArea": 4,
+          "floodplainWidth": 2
+        },
+        "topology": {
+          "kind": "square"
+        },
+        "biomes": {
+          "transitionWidth": 3,
+          "coastWidth": 2,
+          "foothillWidth": 3
+        },
+        "autoTransports": {
+          "enabled": true,
+          "connectRegions": true,
+          "crossLayerRegions": true,
+          "minRegionArea": 32,
+          "maxLinks": 128,
+          "landingSize": 1,
+          "travelCost": 2,
+          "types": {
+            "teleport": 1,
+            "lift": 1,
+            "stairs": 1
+          }
+        },
+        "caves": {
+          "style": "mixed",
+          "openness": 0.45,
+          "connectivity": 0.7,
+          "aquifers": 0.28,
+          "lavaDepth": 3,
+          "tunnelRadius": 1.6,
+          "branching": 0.5,
+          "smoothing": 2
+        },
+        "landscape": {
+          "structure": "islands",
+          "baseBiome": "meadow",
+          "biomes": [],
+          "landPercent": 75,
+          "coastErosion": 50,
+          "uniformity": 50
+        }
+      },
+      "fingerprint": "e6a6b5d0",
+      "seaCells": 2500,
+      "shallowCells": 1342,
+      "shallowPercentOfSea": 53.7,
+      "geologicalLandPercent": 75,
+      "landComponents": 3,
+      "shallowColor": "#65b7bd",
+      "legend": [
+        {
+          "channel": "biome",
+          "id": "beach",
+          "name": "Песчаный берег",
+          "color": "#d5bf87"
+        },
+        {
+          "channel": "biome",
+          "id": "rocky-coast",
+          "name": "Скалистый берег",
+          "color": "#838c89"
+        },
+        {
+          "channel": "biome",
+          "id": "gravel-shore",
+          "name": "Галечный берег",
+          "color": "#a7a18b"
+        },
+        {
+          "channel": "biome",
+          "id": "floodplain",
+          "name": "Речная пойма",
+          "color": "#8d8563"
+        },
+        {
+          "channel": "biome",
+          "id": "ocean",
+          "name": "Море",
+          "color": "#234b72"
+        },
+        {
+          "channel": "biome",
+          "id": "lake",
+          "name": "Озеро",
+          "color": "#397b9b"
+        },
+        {
+          "channel": "biome",
+          "id": "river",
+          "name": "Река",
+          "color": "#559fb0"
+        },
+        {
+          "channel": "biome",
+          "id": "plains",
+          "name": "Луга",
+          "color": "#78955c"
+        },
+        {
+          "channel": "biome",
+          "id": "shallow-water",
+          "name": "Мелководье",
+          "color": "#65b7bd"
+        },
+        {
+          "channel": "biome",
+          "id": "cliffs",
+          "name": "Скалы и утёсы",
+          "color": "#7c8081"
+        }
+      ],
+      "raster": {
+        "width": 600,
+        "height": 600
+      }
+    },
+    {
+      "structure": "islands",
+      "mode": "landscape",
+      "size": 300,
+      "name": "shallow-water-islands-landscape-300.png",
+      "seed": 42,
+      "generation": {
+        "width": 300,
+        "height": 300,
+        "layers": {
+          "above": 0,
+          "underground": 0
+        },
+        "terrain": {
+          "relief": 0.6,
+          "warp": 0.65,
+          "blur": 1,
+          "erosion": 4
+        },
+        "hydrology": {
+          "rivers": 0.55,
+          "lakes": 0.6,
+          "riverWidth": 2,
+          "minLakeArea": 4,
+          "floodplainWidth": 2
+        },
+        "topology": {
+          "kind": "square"
+        },
+        "biomes": {
+          "transitionWidth": 3,
+          "coastWidth": 2,
+          "foothillWidth": 3
+        },
+        "autoTransports": {
+          "enabled": true,
+          "connectRegions": true,
+          "crossLayerRegions": true,
+          "minRegionArea": 32,
+          "maxLinks": 128,
+          "landingSize": 1,
+          "travelCost": 2,
+          "types": {
+            "teleport": 1,
+            "lift": 1,
+            "stairs": 1
+          }
+        },
+        "caves": {
+          "style": "mixed",
+          "openness": 0.45,
+          "connectivity": 0.7,
+          "aquifers": 0.28,
+          "lavaDepth": 3,
+          "tunnelRadius": 1.6,
+          "branching": 0.5,
+          "smoothing": 2
+        },
+        "landscape": {
+          "structure": "islands",
+          "baseBiome": "meadow",
+          "biomes": [],
+          "landPercent": 75,
+          "coastErosion": 50,
+          "uniformity": 50
+        }
+      },
+      "fingerprint": "5cc590cc",
+      "seaCells": 22500,
+      "shallowCells": 12564,
+      "shallowPercentOfSea": 55.8,
+      "geologicalLandPercent": 75,
+      "landComponents": 3,
+      "shallowColor": "#65b7bd",
+      "legend": [
+        {
+          "channel": "biome",
+          "id": "beach",
+          "name": "Песчаный берег",
+          "color": "#d5bf87"
+        },
+        {
+          "channel": "biome",
+          "id": "rocky-coast",
+          "name": "Скалистый берег",
+          "color": "#838c89"
+        },
+        {
+          "channel": "biome",
+          "id": "gravel-shore",
+          "name": "Галечный берег",
+          "color": "#a7a18b"
+        },
+        {
+          "channel": "biome",
+          "id": "floodplain",
+          "name": "Речная пойма",
+          "color": "#8d8563"
+        },
+        {
+          "channel": "biome",
+          "id": "ocean",
+          "name": "Море",
+          "color": "#234b72"
+        },
+        {
+          "channel": "biome",
+          "id": "lake",
+          "name": "Озеро",
+          "color": "#397b9b"
+        },
+        {
+          "channel": "biome",
+          "id": "river",
+          "name": "Река",
+          "color": "#559fb0"
+        },
+        {
+          "channel": "biome",
+          "id": "plains",
+          "name": "Луга",
+          "color": "#78955c"
+        },
+        {
+          "channel": "biome",
+          "id": "shallow-water",
+          "name": "Мелководье",
+          "color": "#65b7bd"
+        },
+        {
+          "channel": "biome",
+          "id": "cliffs",
+          "name": "Скалы и утёсы",
+          "color": "#7c8081"
+        }
+      ],
+      "raster": {
+        "width": 600,
+        "height": 600
+      }
+    },
+    {
+      "structure": "islands",
+      "mode": "hexlandscape",
+      "size": 100,
+      "name": "shallow-water-islands-hexlandscape-100.png",
+      "seed": 42,
+      "generation": {
+        "width": 100,
+        "height": 100,
+        "layers": {
+          "above": 0,
+          "underground": 0
+        },
+        "terrain": {
+          "relief": 0.6,
+          "warp": 0.65,
+          "blur": 1,
+          "erosion": 4
+        },
+        "hydrology": {
+          "rivers": 0.55,
+          "lakes": 0.6,
+          "riverWidth": 2,
+          "minLakeArea": 4,
+          "floodplainWidth": 2
+        },
+        "topology": {
+          "kind": "hex"
+        },
+        "biomes": {
+          "transitionWidth": 3,
+          "coastWidth": 2,
+          "foothillWidth": 3
+        },
+        "autoTransports": {
+          "enabled": true,
+          "connectRegions": true,
+          "crossLayerRegions": true,
+          "minRegionArea": 32,
+          "maxLinks": 128,
+          "landingSize": 1,
+          "travelCost": 2,
+          "types": {
+            "teleport": 1,
+            "lift": 1,
+            "stairs": 1
+          }
+        },
+        "caves": {
+          "style": "mixed",
+          "openness": 0.45,
+          "connectivity": 0.7,
+          "aquifers": 0.28,
+          "lavaDepth": 3,
+          "tunnelRadius": 1.6,
+          "branching": 0.5,
+          "smoothing": 2
+        },
+        "landscape": {
+          "structure": "islands",
+          "baseBiome": "meadow",
+          "biomes": [],
+          "landPercent": 75,
+          "coastErosion": 50,
+          "uniformity": 50
+        }
+      },
+      "fingerprint": "b312020a",
+      "seaCells": 2500,
+      "shallowCells": 1363,
+      "shallowPercentOfSea": 54.5,
+      "geologicalLandPercent": 75,
+      "landComponents": 3,
+      "shallowColor": "#65b7bd",
+      "legend": [
+        {
+          "channel": "biome",
+          "id": "beach",
+          "name": "Песчаный берег",
+          "color": "#d5bf87"
+        },
+        {
+          "channel": "biome",
+          "id": "rocky-coast",
+          "name": "Скалистый берег",
+          "color": "#838c89"
+        },
+        {
+          "channel": "biome",
+          "id": "gravel-shore",
+          "name": "Галечный берег",
+          "color": "#a7a18b"
+        },
+        {
+          "channel": "biome",
+          "id": "floodplain",
+          "name": "Речная пойма",
+          "color": "#8d8563"
+        },
+        {
+          "channel": "biome",
+          "id": "ocean",
+          "name": "Море",
+          "color": "#234b72"
+        },
+        {
+          "channel": "biome",
+          "id": "lake",
+          "name": "Озеро",
+          "color": "#397b9b"
+        },
+        {
+          "channel": "biome",
+          "id": "river",
+          "name": "Река",
+          "color": "#559fb0"
+        },
+        {
+          "channel": "biome",
+          "id": "plains",
+          "name": "Луга",
+          "color": "#78955c"
+        },
+        {
+          "channel": "biome",
+          "id": "shallow-water",
+          "name": "Мелководье",
+          "color": "#65b7bd"
+        },
+        {
+          "channel": "biome",
+          "id": "cliffs",
+          "name": "Скалы и утёсы",
+          "color": "#7c8081"
+        }
+      ],
+      "raster": {
+        "width": 697,
+        "height": 602
+      }
+    },
+    {
+      "structure": "islands",
+      "mode": "hexlandscape",
+      "size": 300,
+      "name": "shallow-water-islands-hexlandscape-300.png",
+      "seed": 42,
+      "generation": {
+        "width": 300,
+        "height": 300,
+        "layers": {
+          "above": 0,
+          "underground": 0
+        },
+        "terrain": {
+          "relief": 0.6,
+          "warp": 0.65,
+          "blur": 1,
+          "erosion": 4
+        },
+        "hydrology": {
+          "rivers": 0.55,
+          "lakes": 0.6,
+          "riverWidth": 2,
+          "minLakeArea": 4,
+          "floodplainWidth": 2
+        },
+        "topology": {
+          "kind": "hex"
+        },
+        "biomes": {
+          "transitionWidth": 3,
+          "coastWidth": 2,
+          "foothillWidth": 3
+        },
+        "autoTransports": {
+          "enabled": true,
+          "connectRegions": true,
+          "crossLayerRegions": true,
+          "minRegionArea": 32,
+          "maxLinks": 128,
+          "landingSize": 1,
+          "travelCost": 2,
+          "types": {
+            "teleport": 1,
+            "lift": 1,
+            "stairs": 1
+          }
+        },
+        "caves": {
+          "style": "mixed",
+          "openness": 0.45,
+          "connectivity": 0.7,
+          "aquifers": 0.28,
+          "lavaDepth": 3,
+          "tunnelRadius": 1.6,
+          "branching": 0.5,
+          "smoothing": 2
+        },
+        "landscape": {
+          "structure": "islands",
+          "baseBiome": "meadow",
+          "biomes": [],
+          "landPercent": 75,
+          "coastErosion": 50,
+          "uniformity": 50
+        }
+      },
+      "fingerprint": "5b9a0def",
+      "seaCells": 22500,
+      "shallowCells": 12767,
+      "shallowPercentOfSea": 56.7,
+      "geologicalLandPercent": 75,
+      "landComponents": 3,
+      "shallowColor": "#65b7bd",
+      "legend": [
+        {
+          "channel": "biome",
+          "id": "beach",
+          "name": "Песчаный берег",
+          "color": "#d5bf87"
+        },
+        {
+          "channel": "biome",
+          "id": "rocky-coast",
+          "name": "Скалистый берег",
+          "color": "#838c89"
+        },
+        {
+          "channel": "biome",
+          "id": "gravel-shore",
+          "name": "Галечный берег",
+          "color": "#a7a18b"
+        },
+        {
+          "channel": "biome",
+          "id": "floodplain",
+          "name": "Речная пойма",
+          "color": "#8d8563"
+        },
+        {
+          "channel": "biome",
+          "id": "ocean",
+          "name": "Море",
+          "color": "#234b72"
+        },
+        {
+          "channel": "biome",
+          "id": "lake",
+          "name": "Озеро",
+          "color": "#397b9b"
+        },
+        {
+          "channel": "biome",
+          "id": "river",
+          "name": "Река",
+          "color": "#559fb0"
+        },
+        {
+          "channel": "biome",
+          "id": "plains",
+          "name": "Луга",
+          "color": "#78955c"
+        },
+        {
+          "channel": "biome",
+          "id": "shallow-water",
+          "name": "Мелководье",
+          "color": "#65b7bd"
+        },
+        {
+          "channel": "biome",
+          "id": "cliffs",
+          "name": "Скалы и утёсы",
+          "color": "#7c8081"
+        }
+      ],
+      "raster": {
+        "width": 1041,
+        "height": 901
+      }
+    }
+  ]
+}

@@ -1,0 +1,80 @@
+{
+  "ok": true,
+  "startedAt": "2026-10-23T19:42:47.959Z",
+  "node": "v24.21.0",
+  "phases": [
+    {
+      "name": "fresh-copy",
+      "ok": true,
+      "elapsedMs": 290,
+      "outsideProject": true,
+      "excludedConfirmed": true
+    },
+    {
+      "name": "node-full-suite",
+      "ok": true,
+      "elapsedMs": 53450,
+      "tests": 373,
+      "pass": 373,
+      "fail": 0
+    },
+    {
+      "name": "production-js-and-imports",
+      "ok": true,
+      "elapsedMs": 2276,
+      "syntaxModules": 211,
+      "relativeImports": 740,
+      "authoredExamplesAndFixturesRead": false
+    },
+    {
+      "name": "synthetic-js-cli-http-square-hex",
+      "ok": true,
+      "elapsedMs": 4826,
+      "ephemeralPort": 4425,
+      "health": 200,
+      "home": 200,
+      "cases": [
+        {
+          "mode": "landscape",
+          "size": 50,
+          "topology": "square",
+          "repeatedCards": true,
+          "decimalShare": true,
+          "generateExact": true,
+          "rebuildExact": true,
+          "validationJsCliHttp": true,
+          "contextParity": true,
+          "elapsedMs": 2382
+        },
+        {
+          "mode": "hexlandscape",
+          "size": 50,
+          "topology": "hex",
+          "repeatedCards": true,
+          "decimalShare": true,
+          "generateExact": true,
+          "rebuildExact": true,
+          "validationJsCliHttp": true,
+          "contextParity": true,
+          "elapsedMs": 2356
+        }
+      ],
+      "liveSessionApiUsed": false,
+      "namedProjectApiUsed": false
+    }
+  ],
+  "sourceAudit": "No hashes or content audits of authored examples/fixtures; standard tests may use their static fixtures.",
+  "excluded": [
+    "projects",
+    ".run",
+    "evidence",
+    ".git"
+  ],
+  "syntheticOnly": true,
+  "cleanup": {
+    "attempted": true,
+    "removed": true
+  },
+  "copy": "C:\\Users\\vaveMain\\AppData\\Local\\Temp\\Vland-Coast-portable-KIAjE6\\VlandGenerator",
+  "finishedAt": "2026-10-23T19:43:48.893Z"
+}

@@ -1,0 +1,19 @@
+import {SURFACES,SURFACE_TRAITS} from './catalog.mjs';
+import {VlandError,checkKeys,checkNumber} from './contracts.mjs';
+const numeric=['elevation','fertility','waterDepth'];
+export function checkTerrainField(field,value){
+ if(numeric.includes(field))checkNumber(value,0,1,field);
+ else if(field==='water'){if(!['none','sea','river','lake','groundwater','lava'].includes(value))throw new VlandError('INVALID_FIELD','Неизвестный вид воды.');}
+ else if(field!=='biome'||typeof value!=='string'||!value.length||value.length>64)throw new VlandError('INVALID_FIELD','Поле карты: biome, water, elevation, fertility, waterDepth.');
+}
+export function applyTerrainField(l,field,value,i){
+ checkTerrainField(field,value);if(field==='water'){l.water[i]=value;l.material[i]=value==='none'?'soil':value==='lava'?'lava':value==='sea'?'sea':'water';l.solid[i]=0;if(l.sourceFields){l.sourceFields.material[i]=l.material[i];l.sourceFields.obstacle[i]=0;l.sourceFields.bridge[i]=0;l.sourceFields.frozen[i]=0;l.sourceFields.waterType[i]=value;l.sourceFields.waterDepth[i]=value==='none'?0:value==='river'?.08:.3;l.sourceFields.support[i]=1;}}
+ else if(field==='waterDepth'){if(!l.sourceFields)throw new VlandError('INVALID_FIELD','Глубина воды доступна природным картам.');l.sourceFields.waterDepth[i]=value;if(!value){l.water[i]='none';l.sourceFields.waterType[i]='none';}else if(l.water[i]==='none'){l.water[i]='lake';l.sourceFields.waterType[i]='lake';}}
+ else{l[field][i]=value;if(l.sourceFields?.[field])l.sourceFields[field][i]=value;if(field==='biome'&&l.sourceFields){if(l.sourceFields.secondaryBiome)l.sourceFields.secondaryBiome[i]='';if(l.sourceFields.transitionStrength)l.sourceFields.transitionStrength[i]=0;}}
+}
+export function surfaceFields(l,i,surface,trait='normal'){if(!l.sourceFields)return;const f=l.sourceFields;f.material[i]=l.material[i];f.obstacle[i]=l.solid[i];f.waterType[i]=l.water[i];f.waterDepth[i]=l.water[i]==='none'?0:l.water[i]==='river'?.08:.3;f.bridge[i]=0;f.support[i]=surface==='air'?0:1;f.frozen[i]=surface==='ice'||trait==='frozen'?1:0;f.fertility[i]=l.fertility[i];}
+export function terrainStroke(p,op,scene){
+ checkKeys(op,['type','layerId','field','value','trait','cells'],'terrain.stroke');const l=scene.map.layers.find(l=>l.id===op.layerId);if(!l)throw new VlandError('UNKNOWN_LAYER','Неизвестный слой.');if(!Array.isArray(op.cells)||!op.cells.length||op.cells.length>16000)throw new VlandError('INVALID_STROKE','Штрих: 1–16000 клеток.');if(op.trait!==undefined&&(op.field!=='material'||!Object.hasOwn(SURFACE_TRAITS,op.trait)))throw new VlandError('INVALID_TRAIT','Свойство поверхности применяется только к материалу.');if(op.field==='material'){if(!Object.hasOwn(SURFACES,op.value))throw new VlandError('INVALID_SURFACE','Неизвестный материал.');}else checkTerrainField(op.field,op.value);const used=new Set(),edits=[];
+ for(const point of op.cells){checkKeys(point,['x','y'],'cell');checkNumber(point.x,0,l.width-1,'x',true);checkNumber(point.y,0,l.height-1,'y',true);const i=point.y*l.width+point.x;if(used.has(i))continue;used.add(i);if(!['biome','fertility'].includes(op.field)&&(l.reserved[i]||scene.map.fixtures.some(f=>{const d=scene.catalog.find(d=>d.id===f.catalogId);return f.layerId===l.id&&point.x>=f.x&&point.y>=f.y&&point.x<f.x+d.footprint.width&&point.y<f.y+d.footprint.height;})))throw new VlandError('PROTECTED_ROUTE','Штрих касается защищённого маршрута или перехода. Весь штрих отменён.');edits.push(op.field==='material'?{layerId:l.id,...point,surface:op.value,trait:op.trait??'normal'}:{layerId:l.id,...point,field:op.field,value:op.value});}
+ const category=op.field==='material'?'surface':op.field,keep=p.edits.filter(e=>e.layerId!==l.id||!used.has(e.y*l.width+e.x)||(e.field??'surface')!==category);if(keep.length+edits.length>32000)throw new VlandError('TOO_LARGE','Не более 32000 правок.');return keep.concat(edits);
+}

@@ -1,0 +1,93 @@
+{
+  "ok": true,
+  "cases": [
+    {
+      "mode": "landscape",
+      "landPercent": 75,
+      "uniformity": 50,
+      "jsHttpExact": true,
+      "currentFormula": true,
+      "landCells": 1875,
+      "valid": true
+    },
+    {
+      "mode": "landscape",
+      "landPercent": 60,
+      "uniformity": 0,
+      "jsHttpExact": true,
+      "currentFormula": true,
+      "landCells": 1500,
+      "valid": true
+    },
+    {
+      "mode": "landscape",
+      "landPercent": 60,
+      "uniformity": 100,
+      "jsHttpExact": true,
+      "currentFormula": true,
+      "landCells": 1500,
+      "valid": true
+    },
+    {
+      "mode": "hexlandscape",
+      "landPercent": 75,
+      "uniformity": 50,
+      "jsHttpExact": true,
+      "currentFormula": true,
+      "landCells": 1875,
+      "valid": true
+    },
+    {
+      "mode": "hexlandscape",
+      "landPercent": 60,
+      "uniformity": 0,
+      "jsHttpExact": true,
+      "currentFormula": true,
+      "landCells": 1500,
+      "valid": true
+    },
+    {
+      "mode": "hexlandscape",
+      "landPercent": 60,
+      "uniformity": 100,
+      "jsHttpExact": true,
+      "currentFormula": true,
+      "landCells": 1500,
+      "valid": true
+    }
+  ],
+  "static": [
+    {
+      "file": "Web/HTML/landscape.html",
+      "current": true
+    },
+    {
+      "file": "Web/HTML/hexlandscape.html",
+      "current": true
+    },
+    {
+      "file": "Web/HTML/ui/controls.mjs",
+      "current": true
+    },
+    {
+      "file": "Web/HTML/ui/terrain-editor.mjs",
+      "current": true
+    },
+    {
+      "file": "app/raster.mjs",
+      "current": true
+    },
+    {
+      "file": "app/display-colors.mjs",
+      "current": true
+    },
+    {
+      "file": "engine/core/landscape-regions.mjs",
+      "current": true
+    }
+  ],
+  "sessionUntouched": true,
+  "restart": false,
+  "checkedAt": "2026-10-24T08:41:52.045Z",
+  "rasterExportCurrentColors": true
+}

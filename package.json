@@ -1,0 +1,19 @@
+{
+  "name": "vlandgenerator",
+  "version": "4.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Standalone modular map generator and content editor",
+  "engines": {
+    "node": ">=20"
+  },
+  "exports": {
+    ".": "./app/index.mjs",
+    "./engine": "./engine/api/index.mjs",
+    "./content": "./content/index.mjs"
+  },
+  "scripts": {
+    "start": "node server.mjs",
+    "test": "node --test"
+  }
+}

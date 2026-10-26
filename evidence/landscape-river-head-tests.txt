@@ -1,0 +1,20 @@
+✔ profile streams reach their dry boundary outlet on both grids without changing the flow graph (58.9973ms)
+✔ removing undersized lakes retains strong river channels, rather than a dry gap or a restored lake (64.0929ms)
+✔ profile width one is exactly the strong river core, without an automatic extra bank (2.2897ms)
+✔ profile widening stays within width minus one neighbor layers and never replaces sea or retained lakes (13.0093ms)
+✔ profile rivers zero stays river free through lake filtering and widening, retaining ocean and large lakes (6.2768ms)
+✔ native requests without a landscape profile retain their observed water output exactly (5.2867ms)
+✔ real profile river corrections preserve native navigation and access in both workspaces (317.0761ms)
+✔ profile freshwater fills to a shared conditioned head while retaining sea, masks, flow and width (3.308ms)
+✔ profile water levels do not rise along wet flow through widened rivers, lake exits or sea contacts (1.9211ms)
+✔ profile flat bed one retains a positive freshwater depth without capping its internal head at one (2.4286ms)
+✔ normalized profile matrix keeps final wet flow levels monotone, depths bounded and navigation accessible (3807.6593ms)
+✔ generated bridge water level uses the immutable bed rather than its navigation deck elevation (14.1508ms)
+ℹ tests 12
+ℹ suites 0
+ℹ pass 12
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 4416.5726

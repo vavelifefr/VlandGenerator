@@ -1,0 +1,153 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://vland.invalid/schemas/generation-settlements.schema.json",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "width": {
+      "type": "integer",
+      "minimum": 32,
+      "maximum": 300
+    },
+    "height": {
+      "type": "integer",
+      "minimum": 32,
+      "maximum": 300
+    },
+    "type": {
+      "enum": [
+        "town",
+        "village"
+      ]
+    },
+    "pattern": {
+      "enum": [
+        "organic",
+        "grid",
+        "radial",
+        "ribbon"
+      ]
+    },
+    "blockSize": {
+      "type": "integer",
+      "minimum": 8,
+      "maximum": 24
+    },
+    "streetWidth": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 4
+    },
+    "cityPercent": {
+      "type": "integer",
+      "minimum": 5,
+      "maximum": 100,
+      "default": 60,
+      "description": "Площадь габарита городского плана от внутренней области карты; вода и скалы не застраиваются."
+    },
+    "buildingDensity": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1,
+      "default": 0,
+      "description": "План без домов; поле не размещает застройку."
+    },
+    "neighborhoods": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "minArea": {
+          "type": "integer",
+          "minimum": 4,
+          "maximum": 25600
+        },
+        "maxArea": {
+          "type": "integer",
+          "minimum": 4,
+          "maximum": 25600
+        }
+      },
+      "required": []
+    },
+    "quarters": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "minArea": {
+          "type": "integer",
+          "minimum": 4,
+          "maximum": 25600
+        },
+        "maxArea": {
+          "type": "integer",
+          "minimum": 4,
+          "maximum": 25600
+        }
+      },
+      "required": []
+    },
+    "terrain": {
+      "type": "object",
+      "properties": {
+        "scale": {
+          "type": "number",
+          "minimum": 8,
+          "maximum": 160
+        },
+        "water": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 0.8
+        },
+        "relief": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "warp": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "octaves": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 6
+        },
+        "persistence": {
+          "type": "number",
+          "minimum": 0.1,
+          "maximum": 0.9
+        },
+        "blur": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 3
+        },
+        "erosion": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 16
+        },
+        "terraces": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 12
+        }
+      },
+      "required": [],
+      "additionalProperties": false
+    },
+    "autoTransports": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "enabled": {
+          "const": false
+        }
+      },
+      "required": []
+    }
+  },
+  "required": []
+}

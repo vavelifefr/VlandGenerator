@@ -1,0 +1,102 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://vland.invalid/schemas/runtime.schema.json",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "schema": {
+      "const": "vland.runtime"
+    },
+    "schemaVersion": {
+      "const": 4
+    },
+    "version": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 64
+    },
+    "mode": {
+      "enum": [
+        "dungeon",
+        "tiers",
+        "sideview",
+        "caves",
+        "landscape",
+        "hexlandscape",
+        "settlements",
+        "relief"
+      ]
+    },
+    "seed": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 4294967295
+    },
+    "projectChecksum": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 64
+    },
+    "scene": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "map": {
+          "$ref": "content-map.schema.json"
+        },
+        "catalog": {
+          "$ref": "catalog.schema.json"
+        },
+        "sources": {
+          "type": "array",
+          "items": {
+            "$ref": "source.schema.json"
+          },
+          "maxItems": 256
+        }
+      },
+      "required": [
+        "map",
+        "catalog",
+        "sources"
+      ]
+    },
+    "initialState": {
+      "$ref": "spawn-state.schema.json"
+    },
+    "links": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      },
+      "maxItems": 256
+    },
+    "navigation": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      },
+      "maxItems": 16
+    },
+    "validation": {
+      "type": "object"
+    },
+    "note": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "schema",
+    "schemaVersion",
+    "version",
+    "mode",
+    "seed",
+    "projectChecksum",
+    "scene",
+    "initialState",
+    "links",
+    "navigation",
+    "validation",
+    "note"
+  ]
+}

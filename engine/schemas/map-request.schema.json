@@ -1,0 +1,600 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://vland.invalid/engine/schemas/map-request.schema.json",
+  "title": "VlandGenerator map-request v1",
+  "oneOf": [
+    {
+      "$ref": "request.schema.json"
+    },
+    {
+      "$ref": "world-request.schema.json"
+    },
+    {
+      "$ref": "regions-request.schema.json"
+    },
+    {
+      "$ref": "terrain-request.schema.json"
+    },
+    {
+      "type": "object",
+      "properties": {
+        "schema": {
+          "const": "vland.encounters.request"
+        },
+        "schemaVersion": {
+          "const": 1
+        },
+        "request": {
+          "anyOf": [
+            {
+              "$ref": "request.schema.json"
+            },
+            {
+              "$ref": "recipe.schema.json"
+            }
+          ]
+        },
+        "settings": {
+          "type": "object",
+          "properties": {
+            "seed": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 4294967295
+            },
+            "types": {
+              "type": "array",
+              "items": {
+                "enum": [
+                  "crossfire",
+                  "flanking",
+                  "holdout",
+                  "hazard-bait",
+                  "guardian-cache",
+                  "ambush"
+                ]
+              },
+              "maxItems": 6,
+              "minItems": 1
+            },
+            "roomIds": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 96
+              },
+              "maxItems": 120,
+              "minItems": 0
+            },
+            "budget": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 100
+            },
+            "maxActors": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 12
+            },
+            "roleProfiles": {
+              "type": "object",
+              "properties": {
+                "frontline": {
+                  "$ref": "movement-profile.schema.json"
+                },
+                "ranged": {
+                  "$ref": "movement-profile.schema.json"
+                },
+                "flanker": {
+                  "$ref": "movement-profile.schema.json"
+                },
+                "support": {
+                  "$ref": "movement-profile.schema.json"
+                },
+                "heavy": {
+                  "$ref": "movement-profile.schema.json"
+                },
+                "ambusher": {
+                  "$ref": "movement-profile.schema.json"
+                },
+                "neutral": {
+                  "$ref": "movement-profile.schema.json"
+                }
+              },
+              "additionalProperties": false
+            }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false,
+      "required": [
+        "schema",
+        "schemaVersion"
+      ]
+    },
+    {
+      "type": "object",
+      "properties": {
+        "schema": {
+          "const": "vland.batch.request"
+        },
+        "schemaVersion": {
+          "const": 1
+        },
+        "request": {
+          "anyOf": [
+            {
+              "$ref": "request.schema.json"
+            },
+            {
+              "$ref": "recipe.schema.json"
+            }
+          ]
+        },
+        "count": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 50
+        },
+        "startSeed": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 4294967295
+        }
+      },
+      "additionalProperties": false,
+      "required": [
+        "schema",
+        "schemaVersion"
+      ]
+    },
+    {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "seed": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 4294967295
+        },
+        "profile": {
+          "enum": [
+            "balanced",
+            "exploration",
+            "tactical",
+            "raid"
+          ]
+        },
+        "candidates": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 9
+        },
+        "generator": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "roomCount": {
+              "type": "integer",
+              "minimum": 2,
+              "maximum": 120
+            },
+            "preset": {
+              "enum": [
+                "compact",
+                "rings",
+                "branches",
+                "sectors"
+              ]
+            },
+            "roomMin": {
+              "type": "integer",
+              "minimum": 8,
+              "maximum": 24
+            },
+            "roomMax": {
+              "type": "integer",
+              "minimum": 8,
+              "maximum": 24
+            },
+            "loopChance": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1
+            },
+            "largeRoomChance": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1
+            },
+            "featureDensity": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 2
+            },
+            "destructibleRatio": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1
+            },
+            "dependencyMode": {
+              "enum": [
+                "local",
+                "progressive"
+              ]
+            },
+            "shapeWeights": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "rectangle": {
+                  "type": "number",
+                  "minimum": 0,
+                  "maximum": 100
+                },
+                "beveled": {
+                  "type": "number",
+                  "minimum": 0,
+                  "maximum": 100
+                },
+                "rounded": {
+                  "type": "number",
+                  "minimum": 0,
+                  "maximum": 100
+                },
+                "L": {
+                  "type": "number",
+                  "minimum": 0,
+                  "maximum": 100
+                },
+                "T": {
+                  "type": "number",
+                  "minimum": 0,
+                  "maximum": 100
+                },
+                "cross": {
+                  "type": "number",
+                  "minimum": 0,
+                  "maximum": 100
+                },
+                "stepped": {
+                  "type": "number",
+                  "minimum": 0,
+                  "maximum": 100
+                },
+                "courtyard": {
+                  "type": "number",
+                  "minimum": 0,
+                  "maximum": 100
+                },
+                "S": {
+                  "type": "number",
+                  "minimum": 0,
+                  "maximum": 100
+                },
+                "Z": {
+                  "type": "number",
+                  "minimum": 0,
+                  "maximum": 100
+                },
+                "U": {
+                  "type": "number",
+                  "minimum": 0,
+                  "maximum": 100
+                },
+                "H": {
+                  "type": "number",
+                  "minimum": 0,
+                  "maximum": 100
+                },
+                "P": {
+                  "type": "number",
+                  "minimum": 0,
+                  "maximum": 100
+                },
+                "I": {
+                  "type": "number",
+                  "minimum": 0,
+                  "maximum": 100
+                },
+                "X": {
+                  "type": "number",
+                  "minimum": 0,
+                  "maximum": 100
+                },
+                "O": {
+                  "type": "number",
+                  "minimum": 0,
+                  "maximum": 100
+                },
+                "Pi": {
+                  "type": "number",
+                  "minimum": 0,
+                  "maximum": 100
+                },
+                "G": {
+                  "type": "number",
+                  "minimum": 0,
+                  "maximum": 100
+                },
+                "N": {
+                  "type": "number",
+                  "minimum": 0,
+                  "maximum": 100,
+                  "deprecated": true,
+                  "description": "Legacy alias of Z; N/Z weights merge with max, not sum."
+                },
+                "E": {
+                  "type": "number",
+                  "minimum": 0,
+                  "maximum": 100
+                }
+              }
+            },
+            "locks": {
+              "type": "boolean"
+            },
+            "districts": {
+              "type": "boolean"
+            },
+            "compositions": {
+              "type": "boolean"
+            },
+            "interlocking": {
+              "type": "boolean"
+            },
+            "packing": {
+              "enum": [
+                "growth",
+                "contact"
+              ]
+            },
+            "routePatterns": {
+              "type": "boolean"
+            },
+            "roomAreaMin": {
+              "type": "integer",
+              "minimum": 9,
+              "maximum": 65536
+            },
+            "roomAreaMax": {
+              "type": "integer",
+              "minimum": 9,
+              "maximum": 65536
+            },
+            "roomTemplateWeights": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "scattered": {
+                  "type": "number",
+                  "minimum": 0,
+                  "maximum": 100
+                },
+                "colonnade": {
+                  "type": "number",
+                  "minimum": 0,
+                  "maximum": 100
+                },
+                "pool": {
+                  "type": "number",
+                  "minimum": 0,
+                  "maximum": 100
+                },
+                "lake": {
+                  "type": "number",
+                  "minimum": 0,
+                  "maximum": 100
+                },
+                "mazeEasy": {
+                  "type": "number",
+                  "minimum": 0,
+                  "maximum": 100
+                },
+                "mazeHard": {
+                  "type": "number",
+                  "minimum": 0,
+                  "maximum": 100
+                }
+              }
+            },
+            "shapeSelection": {
+              "enum": [
+                "weighted",
+                "balanced"
+              ]
+            },
+            "rareLetters": {
+              "type": "boolean"
+            },
+            "shapeStyle": {
+              "enum": [
+                "architectural",
+                "catalog"
+              ]
+            },
+            "specialShapeChance": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1
+            },
+            "contourVariation": {
+              "type": "boolean"
+            }
+          }
+        },
+        "content": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "intensity": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1
+            },
+            "restEvery": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 10
+            },
+            "maxSpawnsPerRoom": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 24
+            },
+            "trapDensity": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1
+            },
+            "lootDensity": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1
+            },
+            "lightSpacing": {
+              "type": "integer",
+              "minimum": 3,
+              "maximum": 12
+            },
+            "genre": {
+              "enum": [
+                "turn-based",
+                "metroidvania",
+                "fps",
+                "bullet-hell"
+              ]
+            },
+            "theme": {
+              "enum": [
+                "sci-fi",
+                "ruins",
+                "caverns",
+                "fantasy",
+                "abstract"
+              ]
+            },
+            "propDensity": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 2
+            },
+            "floodFrequency": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1
+            },
+            "timedFrequency": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1
+            },
+            "abilityFrequency": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1
+            },
+            "population": {
+              "$ref": "population.schema.json#/$defs/config"
+            },
+            "environment": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "enabled": {
+                  "type": "boolean"
+                },
+                "mediaFrequency": {
+                  "type": "number",
+                  "minimum": 0,
+                  "maximum": 1
+                },
+                "powerFrequency": {
+                  "type": "number",
+                  "minimum": 0,
+                  "maximum": 1
+                },
+                "wallPreference": {
+                  "type": "number",
+                  "minimum": 0,
+                  "maximum": 1
+                },
+                "ceilingMinArea": {
+                  "type": "integer",
+                  "minimum": 36,
+                  "maximum": 65536
+                },
+                "lightTypes": {
+                  "type": "array",
+                  "items": {
+                    "enum": [
+                      "wall-torch",
+                      "wall-projector",
+                      "window",
+                      "ceiling-lamp",
+                      "chandelier"
+                    ]
+                  },
+                  "minItems": 1,
+                  "maxItems": 5,
+                  "uniqueItems": true
+                }
+              }
+            }
+          }
+        },
+        "requirements": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "minLoops": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 120
+            },
+            "minMainRooms": {
+              "type": "integer",
+              "minimum": 2,
+              "maximum": 120
+            },
+            "minShapes": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 16
+            },
+            "maxDeadEnds": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 120
+            }
+          }
+        },
+        "selection": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "mode": {
+              "enum": [
+                "quality",
+                "diverse"
+              ]
+            },
+            "qualityWeight": {
+              "type": "number",
+              "minimum": 0.5,
+              "maximum": 1
+            }
+          }
+        }
+      }
+    },
+    {
+      "$ref": "atlas-request.schema.json"
+    },
+    {
+      "$ref": "platformer-request.schema.json"
+    }
+  ]
+}

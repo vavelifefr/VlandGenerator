@@ -1,0 +1,223 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://vland.invalid/engine/schemas/bundle.schema.json",
+  "title": "VlandGenerator bundle v1",
+  "type": "object",
+  "required": [
+    "schema",
+    "schemaVersion",
+    "apiVersion",
+    "generatorVersion",
+    "recipe",
+    "level",
+    "content",
+    "analysis",
+    "selection",
+    "fingerprint"
+  ],
+  "properties": {
+    "schema": {
+      "const": "vland"
+    },
+    "schemaVersion": {
+      "const": 1
+    },
+    "apiVersion": {
+      "const": 1
+    },
+    "generatorVersion": {
+      "type": "string"
+    },
+    "recipe": {
+      "$ref": "recipe.schema.json",
+      "required": [
+        "seed",
+        "profile",
+        "candidates",
+        "generator",
+        "content",
+        "requirements"
+      ]
+    },
+    "level": {
+      "$ref": "level.schema.json"
+    },
+    "content": {
+      "type": "object",
+      "required": [
+        "version",
+        "rooms",
+        "hints"
+      ],
+      "properties": {
+        "version": {
+          "const": 1
+        },
+        "rooms": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "roomId",
+              "purpose",
+              "budget"
+            ],
+            "properties": {
+              "roomId": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 96
+              },
+              "purpose": {
+                "enum": [
+                  "start",
+                  "exit",
+                  "boss",
+                  "combat",
+                  "rest",
+                  "reward",
+                  "event"
+                ]
+              }
+            }
+          },
+          "maxItems": 120
+        },
+        "hints": {
+          "type": "array",
+          "items": {
+            "allOf": [
+              {
+                "type": "object",
+                "required": [
+                  "x",
+                  "y"
+                ],
+                "properties": {
+                  "x": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 4095
+                  },
+                  "y": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 4095
+                  }
+                }
+              },
+              {
+                "type": "object",
+                "required": [
+                  "id",
+                  "kind",
+                  "roomId"
+                ],
+                "properties": {
+                  "id": {
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 96
+                  },
+                  "roomId": {
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 96
+                  },
+                  "kind": {
+                    "enum": [
+                      "enemy",
+                      "loot",
+                      "trap",
+                      "light",
+                      "spawner"
+                    ]
+                  }
+                }
+              }
+            ]
+          },
+          "maxItems": 12000
+        },
+        "setpieces": {
+          "$ref": "setpieces.schema.json"
+        },
+        "population": {
+          "$ref": "population.schema.json"
+        },
+        "environment": {
+          "$ref": "environment.schema.json"
+        },
+        "encounters": {
+          "$ref": "encounters.schema.json"
+        }
+      }
+    },
+    "analysis": {
+      "type": "object",
+      "required": [
+        "score",
+        "criteria",
+        "metrics"
+      ],
+      "properties": {
+        "score": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 100
+        }
+      }
+    },
+    "selection": {
+      "type": "object",
+      "required": [
+        "baseSeed",
+        "selectedSeed",
+        "selectedIndex",
+        "candidateCount",
+        "candidates"
+      ],
+      "properties": {
+        "baseSeed": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 4294967295
+        },
+        "selectedSeed": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 4294967295
+        },
+        "selectedIndex": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 8
+        },
+        "candidateCount": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 9
+        },
+        "candidates": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "index",
+              "seed",
+              "valid"
+            ]
+          },
+          "maxItems": 9
+        }
+      }
+    },
+    "fingerprint": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{8}$"
+    },
+    "sourceRequest": {
+      "$ref": "map-request.schema.json"
+    }
+  }
+}

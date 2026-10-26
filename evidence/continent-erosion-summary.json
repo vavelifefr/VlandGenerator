@@ -1,0 +1,99 @@
+{
+  "ok": true,
+  "completedAt": "2026-10-24T18:07:53.055657+00:00",
+  "scope": "Continent coastErosion 0..100/default50; legend/visibility/access/transitions order; bounded committed numeric settings; valid cross-layer automatic transport",
+  "mapSizes": [
+    100,
+    300
+  ],
+  "topologies": [
+    "square",
+    "hex"
+  ],
+  "geometry": {
+    "actualMaps": 14,
+    "controls": 6,
+    "deterministicRepeats": 2,
+    "images": 56,
+    "landPercent": 75,
+    "connectivity": true,
+    "seaMaskIndependentFromCardsAndUniformity": true
+  },
+  "browser": {
+    "erosionCases": 8,
+    "widths": [
+      1100,
+      360
+    ],
+    "authorPairsCases": 18,
+    "trustedPointerClicks": 36,
+    "accessSettingsCases": 2,
+    "pageErrors": 0,
+    "realNumericTyping": "100 and0.5 preserved; commit clamps min/max/step"
+  },
+  "access": {
+    "actualMaps100": 14,
+    "negativeRejected": 6,
+    "totalLinks": 103,
+    "isolatedRegionLinks": 79,
+    "crossLayerTeleportsRejected": true,
+    "accessAndReturn": true
+  },
+  "portable": {
+    "boundedTests": 31,
+    "passed": 31,
+    "failed": 0,
+    "syntaxModules": 230,
+    "relativeImports": 778,
+    "jsHttpCliCases": 4,
+    "generateRebuildValidateContextExact": true,
+    "schemaDocuments": 16,
+    "schemaNegativeControls": 16,
+    "schemas": 60,
+    "copyRemoved": true
+  },
+  "main": {
+    "healthAtActivation": 200,
+    "currentFiles": 9,
+    "exactGenerationCases100": 2,
+    "exactContextCases": 2,
+    "restart": false,
+    "liveSessionUsed": false
+  },
+  "reports": [
+    "evidence/continent-erosion-matrix.json",
+    "evidence/coast-erosion-browser.json",
+    "evidence/continent-access.json",
+    "evidence/continent-access-browser.json",
+    "evidence/continent-erosion-portable.json",
+    "evidence/continent-erosion-portable-schema.json",
+    "evidence/continent-erosion-main.json",
+    "evidence/coast-erosion-number-typing.json",
+    "evidence/continent-erosion-targeted.txt",
+    "evidence/continent-prior-shape-gate-green.txt",
+    "evidence/continent-native-provider-100.txt",
+    "evidence/continent-erosion-docs-check.json"
+  ],
+  "comparison": "evidence/continent-erosion-comparison.html",
+  "testScope": "No old full-suite map generation or broad50/128/200/256 matrix was repeated; new actual QA restricted to100x100/300x300. Static fixtures and normalization inputs are not generated maps.",
+  "cleanupRestriction": {
+    "target": "C:/Users/vaveMain/AppData/Local/Temp/Vland-Continent-Access-js01Er",
+    "deletionRejected": true,
+    "leftUntouched": true,
+    "bypassAttempted": false
+  },
+  "visualReview": [
+    "continent-erosion-candidate-seed42.png",
+    "continent-erosion-candidate-seed7.png",
+    "continent-erosion-landscape-300-seed42-erosion100-material.png",
+    "coast-erosion-ui-hexlandscape-300-360-map.png"
+  ],
+  "finalOpen": {
+    "probe": "evidence/continent-erosion-final-open.json",
+    "health": 200,
+    "comparison": 200,
+    "landscape": 200,
+    "codexRequests": "queued",
+    "visibilityConfirmed": false
+  }
+}

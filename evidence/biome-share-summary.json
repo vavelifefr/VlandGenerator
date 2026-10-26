@@ -1,0 +1,89 @@
+{
+  "status": "implemented_verified",
+  "ok": true,
+  "implementationVerified": true,
+  "updatedAt": "2026-10-25T22:06:58.198977+00:00",
+  "change": "Committing the percentage of an existing biome immediately applies its share and invokes existing generation on both grids. Typing is a draft until native change/blur or Enter; unconfirmed cards still require Add. Pending type changes are preserved without applying them.",
+  "productionFiles": [
+    "Web/HTML/ui/controls.mjs"
+  ],
+  "commentUpdated": [
+    "Web/HTML/ui/biome-card-drafts.mjs"
+  ],
+  "node": {
+    "tests": 57,
+    "pass": 57,
+    "fail": 0,
+    "focusedTests": 31,
+    "report": "evidence/biome-share-tests.txt",
+    "tddRed": "evidence/biome-share-red.txt",
+    "tddGreen": "evidence/biome-share-green.txt",
+    "controlCoverage": "Both grids and all4 structures, decimal/zero/empty/clamped shares, repeated commits, pending type and card budgets"
+  },
+  "browser": {
+    "report": "evidence/biome-share-browser.json",
+    "cases": 8,
+    "widths": [
+      1100,
+      360
+    ],
+    "sizes": [
+      100,
+      300
+    ],
+    "modes": [
+      "landscape",
+      "hexlandscape"
+    ],
+    "automaticGenerations": 40,
+    "shareCommits": 32,
+    "shares": [
+      35,
+      37.5,
+      87.5,
+      0
+    ],
+    "nativeBlurAndEnter": true,
+    "inputDoesNotGenerate": true,
+    "duplicateCommitDoesNotGenerate": true,
+    "emptyInputDoesNotGenerate": true,
+    "pendingTypeNotApplied": true,
+    "pendingCardPreserved": true,
+    "remainingBudgetCap": 87.5,
+    "navigationAndAccess": true,
+    "seaAndLandQuotaUnchanged": true,
+    "pageErrors": [],
+    "ownUnrelatedCopy": true,
+    "copyRemovedIndependentlyVerified": true,
+    "headless": true
+  },
+  "interfaces": {
+    "report": "evidence/biome-share-interfaces.json",
+    "defaultsJsHttpCliExactCases": 2,
+    "currentMainFiles": 6,
+    "restart": false,
+    "generationEngineChanged": false
+  },
+  "documentation": {
+    "ok": true,
+    "utf8Files": 6,
+    "balancedFences": 6,
+    "localLinks": 58,
+    "brokenLinks": []
+  },
+  "resolvedQaIssue": {
+    "report": "evidence/biome-share-browser-first-error.json",
+    "reason": "QA attempted input before expanding the active card",
+    "resolution": "Added a native summary click; production code unchanged after that QA correction",
+    "firstCopyAbsent": true
+  },
+  "scope": "UI event handling only. Prior complete portable engine/schema checks remain historical; current browser verification uses a new independent copy. No backend/schema changes.",
+  "protected": {
+    "liveSessionUsed": false,
+    "authoredDataModified": false,
+    "desktopControlled": false,
+    "userTabsControlled": false,
+    "dependenciesInstalled": false,
+    "commitsCreated": false
+  }
+}

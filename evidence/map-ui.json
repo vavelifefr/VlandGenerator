@@ -1,0 +1,139 @@
+{
+  "status": "complete",
+  "protectedFiles": {
+    "examples/automatic-access-project.json": "5f50cdb61c424c001a85b98d8e68cf5489e7dbdf88b6182df150cdbe8f0deb3b",
+    "examples/automatic-access-recipe.json": "997ef51db3a0dbf0d6abe14a4b562319b8b7df93ef3b72c075de5e517da27608",
+    "examples/automatic-access-runtime.json": "6881f2ccd0e92c5985e858e583dc0ec6563d210fb438173e90cf929e79de5212",
+    "examples/automatic-access-validation.json": "66c69c3c025c0f9f79e24660d63e79f398607ef173d7859b30452e58c9b66888",
+    "examples/automatic-transports.mjs": "e50cc330c8ecdd94961318808d985d21329c511dc7ebb727cfff6412a959eb23",
+    "examples/caves.json": "a3ebb4b93be8eb56b807a2a5f06d124661a5b84836f9677c4900268de3759b93",
+    "examples/content-demo-plan.json": "460e0d0bff0df913e9ee5ecb3514b37a5e142087d3c1a9884cff4683a293fa30",
+    "examples/content-demo-project.json": "e7a257756e176e0469972c0a4d39481fc9248cc252e2456f4fa0b5bb668d848f",
+    "examples/content-demo-runtime.json": "c4e213ad83166570925b4d845384dd31f85a7a71e4b47569a67c85497d6008df",
+    "examples/content-demo-state.json": "236e06419af5f360a72508e5071a9be1201c8445b3915d5789fb5a44eafd06be",
+    "examples/content-workflow.mjs": "d4bc62b9fa8f36ffe78a26de4eb33963719dd0f038280fb396ae169961722785",
+    "examples/dungeon.json": "3949138b57cf43b43eb14326fc3e372621c4ae4e703e5ae5ce8899b638b2561f",
+    "examples/isolated-dungeon.json": "175b9524865d0fc1f1d45cf8d687be7086bb05917f8c2fa5881cbaa392749b33",
+    "examples/landscape.json": "3d428710d928c96ef1a5690289896eb7190b9a090aa71c99a39c2725b1193108",
+    "examples/linked-transports.mjs": "f7551a376e57a727fe6cc6c20d03ab149ecdb5b252a2332ca6212296a2160123",
+    "examples/settlements.json": "51a0b08293b935de4493d5ac4accf81444cff0df53c19062df921c62466cd48d",
+    "examples/sideview.json": "ffc8389c9bea43418b47bdbd2ed55a9307ad438adf08364877ee238cf9c1fcc1",
+    "examples/tiers.json": "52bf3df3858759a7647086cb5f91182ed5dc2aafd49ceb6c453bd25504e06e56"
+  },
+  "scope": "Read-only cell popup and browser-wide legend palette; preserve authored content and project format",
+  "verification": {
+    "unitTests": {
+      "passed": 140,
+      "failed": 0,
+      "log": "evidence/map-ui-tests.txt"
+    },
+    "layoutTests": {
+      "passed": 3,
+      "failed": 0,
+      "log": "evidence/map-ui-layout-tests.txt"
+    },
+    "content": {
+      "maps": 18,
+      "sourceOperations": 216,
+      "ok": true,
+      "log": "evidence/map-ui-content.txt"
+    },
+    "portable": {
+      "ok": true,
+      "files": 311,
+      "syntaxModules": 190,
+      "relativeImports": 671,
+      "httpFiles": 269,
+      "cli": true,
+      "cliSourceWorkflow": true,
+      "cliTransitions": true,
+      "httpTransitions": true,
+      "rasterCli": true,
+      "rasterHttp": true,
+      "diagnosticsCli": true,
+      "diagnosticsHttp": true,
+      "automaticAccessCli": true,
+      "automaticAccessHttp": true,
+      "isolatedContentModule": true,
+      "httpModes": 6,
+      "copyRemovedAfterCheck": true,
+      "testsPassed": 140,
+      "testsFailed": 0,
+      "log": "evidence/map-ui-portable.txt"
+    },
+    "finalCopy": {
+      "productionModulesAndStylesMatch": 133,
+      "finalCssServedOverHttp": true,
+      "finalCssVisual": "Native hue track replaced with visible continuous color strip; mobile popup can scroll independently of canvas",
+      "note": "Final CSS improvements followed portable snapshot; verified in the unrelated running QA copy and final browser inspection"
+    },
+    "browser": {
+      "report": "evidence/map-ui-browser.json",
+      "cases": 14,
+      "widths": [
+        1100,
+        360
+      ],
+      "modes": 6,
+      "squareAndHex": true,
+      "trustedPointers": 42,
+      "actualCanvasPixels": true,
+      "paletteAndRasterAgree": true,
+      "projectJsonUnchanged": true,
+      "noOverflow": true
+    },
+    "additionalUi": {
+      "nativeElementSelection": true,
+      "hsvSlidersHex": "#008000",
+      "resetAndSave": true,
+      "crossModeStorageEvent": {
+        "from": "settlements",
+        "to": "landscape",
+        "hex": "#224466",
+        "passed": true
+      }
+    },
+    "httpCli": {
+      "ok": true,
+      "httpCliExact": true,
+      "pngFiles": 1,
+      "invalidPaletteRejected": 400
+    },
+    "protectedFilesUnchanged": 18,
+    "screenshot": "evidence/map-display-360.png"
+  },
+  "findings": [
+    {
+      "issue": "QA attempted caves with zero underground layers",
+      "resolution": "Use valid minimum1; product validation correctly refused invalid input"
+    },
+    {
+      "issue": "QA expected project restoration after closing the last live app page",
+      "resolution": "Generate each case independently; session reset is intended behavior"
+    },
+    {
+      "issue": "New QA page absent from fixed page inventory test",
+      "resolution": "Added qa-map-display to page list and reran layout and portable tests"
+    },
+    {
+      "issue": "Native range track hid the hue gradient",
+      "resolution": "Styled hue track/thumb; final browser confirms continuous visible spectrum"
+    }
+  ],
+  "scopeDecisions": {
+    "colors": "browser-wide localStorage preference vland.legend-colors for same origin",
+    "exports": "User allowed export changes; optional explicit palette added to JS/HTTP/CLI PNG",
+    "projectFormat": "schema4 unchanged; no compatibility aliases or migrations",
+    "desktop": "No active user desktop/tab control; isolated hidden QA only"
+  },
+  "verifiedAt": "2026-10-19T22:40:30.054Z",
+  "cleanup": {
+    "qaServerStopped": true,
+    "qaCopyRemoved": false,
+    "qaCopy": "C:/Users/vaveMain/AppData/Local/Temp/Vland map UI QA bSRPeO",
+    "qaBrowserTabsClosed": 2,
+    "viewportReset": true,
+    "mainServerLeftRunning": "http://127.0.0.1:9670/",
+    "limitation": "Automatic approval review rejected Remove-Item of verified QA temporary copy: blocked by policy. No deletion retry performed."
+  }
+}

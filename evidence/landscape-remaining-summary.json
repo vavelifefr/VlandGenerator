@@ -1,0 +1,96 @@
+{
+  "testsOk": true,
+  "verifiedAt": "2026-10-26T16:40:39.405177+00:00",
+  "scope": "Test expectations and synthetic test inputs only; no production algorithms or settings changed",
+  "changedTests": [
+    "tests/landscape-biome-cards.test.mjs",
+    "tests/landscape-irregular.test.mjs",
+    "tests/landscape-rivers.test.mjs"
+  ],
+  "targeted": {
+    "tests": 24,
+    "pass": 24,
+    "fail": 0
+  },
+  "fullNode": {
+    "tests": 459,
+    "pass": 459,
+    "fail": 0
+  },
+  "observedRed": "evidence/landscape-remaining-red.log",
+  "green": "evidence/landscape-remaining-green.log",
+  "fullLog": "evidence/landscape-remaining-full.log",
+  "corrections": [
+    {
+      "test": "biome Add budget",
+      "correction": "Two25percent drafts reserve a total50percent; editing the first to95 caps it at75. Empty drafts retain the confirmed recipe and do not disable Create."
+    },
+    {
+      "test": "UI restore and active shares",
+      "correction": "An unchanged restored field emits nothing. A changed active share commits on change/sync without Add. Pending type edits still require Add."
+    },
+    {
+      "test": "sea-connected bay",
+      "correction": "Compare requested erosion0/100; keep the original resolved bay depth2/12 cells at maximum erosion, exact area and component counts."
+    },
+    {
+      "test": "island arrangement",
+      "correction": "Use the accepted non-collinear centroid triangle area>0.08 for public seeds42/7 on both grids, instead of mandatory elongation>=2 in every seed."
+    },
+    {
+      "test": "deterministic masks",
+      "correction": "Refresh six stale island/coast hashes after accepted shape corrections; preserve the two continent hashes and independently verify land quotas and component counts."
+    },
+    {
+      "test": "bridge water head",
+      "correction": "Use fixed synthetic two-layer cases on square seed6/hex seed2 with real raised decks. Verify original bed/depth, physical navigation/access and downstream water head independently of deck elevation."
+    }
+  ],
+  "isolatedVerification": {
+    "checksPassed": true,
+    "browserCases": 6,
+    "browserWidths": [
+      1100,
+      360
+    ],
+    "pageErrors": 0,
+    "modes": [
+      "settlements",
+      "landscape",
+      "hexlandscape"
+    ],
+    "jsHttpCliExact": true,
+    "runtimeExact": true,
+    "schemaDefinitions": 60,
+    "schemaDocuments": 10,
+    "schemaNegativeControls": 9,
+    "maximum": {
+      "width": 300,
+      "height": 300,
+      "cityPercent": 25,
+      "fingerprint": "2d9fc7ab",
+      "districts": 138
+    },
+    "copyRemoved": true,
+    "copyAbsentVerified": true,
+    "sourceReport": "evidence/map-surface-verification.json",
+    "sourceReportOverallOk": false,
+    "lastPhase": "main server request"
+  },
+  "content": {
+    "ok": true,
+    "maps": 24,
+    "modes": 8,
+    "sourceOperations": 288
+  },
+  "mainServer": {
+    "checked": true,
+    "available": false,
+    "url": "http://127.0.0.1:9670",
+    "error": "ECONNREFUSED",
+    "listenerObserved": false,
+    "restarted": false,
+    "limitation": "Current main-server activation is not verified; isolated HTTP/browser checks passed."
+  },
+  "userTabsTouched": false
+}

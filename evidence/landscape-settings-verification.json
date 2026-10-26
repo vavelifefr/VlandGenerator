@@ -1,0 +1,186 @@
+{
+  "implementationVerified": true,
+  "deliveryVerified": false,
+  "complete": false,
+  "updatedAt": "2026-10-24T02:11:42.716829+00:00",
+  "scope": "Land percentage75, joint geographic uniformity, defaults128, draft-only settings, seam-free hex terrain rendering",
+  "acceptedDefaults": {
+    "width": 128,
+    "height": 128,
+    "landPercent": 75,
+    "uniformity": 50
+  },
+  "node": {
+    "rootPassed": 387,
+    "portablePassed": 387
+  },
+  "geometry": {
+    "connectedQuotaCases": 324,
+    "actualMaps": 84,
+    "riversOffControls": 4,
+    "deterministicRepeats": 6,
+    "pngFiles": 96,
+    "sizes": [
+      50,
+      100,
+      128,
+      200,
+      300
+    ],
+    "forms": [
+      "land",
+      "coast",
+      "islands",
+      "continent"
+    ],
+    "grids": [
+      "square",
+      "hex"
+    ]
+  },
+  "interfaces": {
+    "actualMaps": 12,
+    "exactJsHttpCliGenerateRebuild": 4,
+    "invalidHttpRequests": 12,
+    "real300SchemaDocuments": 16,
+    "real300SchemaNegativeControls": 16
+  },
+  "schemas": {
+    "schemas": 60,
+    "allModeDocuments": 381,
+    "allModeNegativeControls": 348
+  },
+  "content": {
+    "maps": 24,
+    "sourceOperations": 288
+  },
+  "browser": {
+    "cases": 4,
+    "generations": 28,
+    "explicitDraftCreates": 8,
+    "pageErrors": 0,
+    "widths": [
+      1100,
+      360
+    ],
+    "note": "Settings/layout workflow suite passed before the subsequent isolated hex terrain-render patch; post-patch pixels/cache/real maps and fresh portable suite passed separately."
+  },
+  "hexRenderer": {
+    "pixelCases": 12,
+    "cacheChecks": 72,
+    "actualMaps": 2,
+    "maxInteriorColorDeviation": 0,
+    "maxWarmPanMs": 19.5,
+    "initialRed": "hex-render-seams-before.json (honest transcription of original failure; overwritten original report)"
+  },
+  "portable": {
+    "phases": [
+      {
+        "name": "fresh-copy",
+        "ok": true,
+        "elapsedMs": 318,
+        "outsideProject": true,
+        "excludedConfirmed": true
+      },
+      {
+        "name": "node-full-suite",
+        "ok": true,
+        "elapsedMs": 40846,
+        "tests": 387,
+        "pass": 387,
+        "fail": 0
+      },
+      {
+        "name": "production-js-and-imports",
+        "ok": true,
+        "elapsedMs": 2020,
+        "syntaxModules": 215,
+        "relativeImports": 749,
+        "authoredExamplesAndFixturesRead": false
+      },
+      {
+        "name": "synthetic-js-cli-http-square-hex",
+        "ok": true,
+        "elapsedMs": 4531,
+        "ephemeralPort": 11088,
+        "health": 200,
+        "home": 200,
+        "cases": [
+          {
+            "mode": "landscape",
+            "size": 50,
+            "topology": "square",
+            "repeatedCards": true,
+            "decimalShare": true,
+            "generateExact": true,
+            "rebuildExact": true,
+            "validationJsCliHttp": true,
+            "contextParity": true,
+            "landPercent75to60": true,
+            "uniformity15to85": true,
+            "elapsedMs": 2297
+          },
+          {
+            "mode": "hexlandscape",
+            "size": 50,
+            "topology": "hex",
+            "repeatedCards": true,
+            "decimalShare": true,
+            "generateExact": true,
+            "rebuildExact": true,
+            "validationJsCliHttp": true,
+            "contextParity": true,
+            "landPercent75to60": true,
+            "uniformity15to85": true,
+            "elapsedMs": 2143
+          }
+        ],
+        "liveSessionApiUsed": false,
+        "namedProjectApiUsed": false
+      }
+    ],
+    "ownCopyRemoved": true
+  },
+  "delivery": {
+    "main9670": {
+      "ok": false,
+      "started": "2026-10-24T02:09:42.678Z",
+      "static": [],
+      "cases": [],
+      "sessionApiUsed": false,
+      "namedProjectsUsed": false,
+      "restart": false,
+      "error": "fetch failed",
+      "finished": "2026-10-24T02:09:42.732Z"
+    },
+    "review": "evidence/landscape-settings-comparison.html",
+    "openInCodex": "queued",
+    "requiredAction": "Manual Web/start.cmd; earlier automatic launch rejected, no workaround attempted."
+  },
+  "automation": {
+    "id": "vland",
+    "status": "DELETED",
+    "reason": "Authorized implementation and independent QA complete; main-server activation requires manual action."
+  },
+  "restrictions": {
+    "noCommits": true,
+    "userProjectsAndLiveSessionUntouched": true,
+    "noNewDependencies": true,
+    "noExternalAi": true,
+    "rejectedTargetsNotRetried": true,
+    "canonicalCheckpointWriteNotRetried": true
+  },
+  "reports": [
+    "landscape-settings-node-final.txt",
+    "coverage-geometry-matrix.json",
+    "landscape-settings-matrix.json",
+    "landscape-settings-interfaces.json",
+    "landscape-settings-real-schemas.json",
+    "schema-instances.json",
+    "landscape-settings-browser.json",
+    "hex-render-seams.json",
+    "landscape-settings-portable.json",
+    "content-verification.json",
+    "coastline-server.json"
+  ]
+}

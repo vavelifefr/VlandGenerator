@@ -1,0 +1,162 @@
+✖ landscape recipes default to independent empty additional-biome arrays (8.3814ms)
+✖ optional biome selections normalize as an immutable canonical set and reject malformed selections (0.3399ms)
+✖ atlas sides 50,100,200,300 are accepted while side 301 and oversized physical stacks are rejected (1.6731ms)
+✖ published request/context schemas describe optional unique selections and exclude the main biome (4.1004ms)
+✖ native output schemas cover a 300-square cell index and the no-sea distance sentinel (0.8844ms)
+✖ recipe/native/context preserve the same selected set and reordering is not a stale generation (1.0234ms)
+✖ inline biome selection uses one expandable checklist, excludes the main choice and updates its draft summary (5.2619ms)
+ℹ tests 7
+ℹ suites 0
+ℹ pass 0
+ℹ fail 7
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 122.2192
+
+✖ failing tests:
+
+test at tests\landscape-rework-contract.test.mjs:15:1
+✖ landscape recipes default to independent empty additional-biome arrays (8.3814ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:
+  + actual - expected
+  
+    {
+  -   additionalBiomes: [],
+      baseBiome: 'meadow',
+      structure: 'land'
+    }
+  
+      at TestContext.<anonymous> (file:///C:/Vibecoding/Games/VlandGenerator/tests/landscape-rework-contract.test.mjs:16:67)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: { structure: 'land', baseBiome: 'meadow' },
+    expected: { structure: 'land', baseBiome: 'meadow', additionalBiomes: [] },
+    operator: 'deepStrictEqual',
+    diff: 'simple'
+  }
+
+test at tests\landscape-rework-contract.test.mjs:19:1
+✖ optional biome selections normalize as an immutable canonical set and reject malformed selections (0.3399ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:
+  + actual - expected
+  
+    {
+  -   additionalBiomes: [],
+      baseBiome: 'meadow',
+      structure: 'land'
+    }
+  
+      at TestContext.<anonymous> (file:///C:/Vibecoding/Games/VlandGenerator/tests/landscape-rework-contract.test.mjs:20:9)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: { structure: 'land', baseBiome: 'meadow' },
+    expected: { structure: 'land', baseBiome: 'meadow', additionalBiomes: [] },
+    operator: 'deepStrictEqual',
+    diff: 'simple'
+  }
+
+test at tests\landscape-rework-contract.test.mjs:26:1
+✖ atlas sides 50,100,200,300 are accepted while side 301 and oversized physical stacks are rejected (1.6731ms)
+  Error [LabError]: Seed uint32, стороны16–256 и известный пресет обязательны.
+      at normalizeAtlasRequest (file:///C:/Vibecoding/Games/VlandGenerator/engine/api/atlas-catalog.mjs:98:139)
+      at TestContext.<anonymous> (file:///C:/Vibecoding/Games/VlandGenerator/tests/landscape-rework-contract.test.mjs:27:81)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    code: 'INVALID_ATLAS',
+    details: null
+  }
+
+test at tests\landscape-rework-contract.test.mjs:33:1
+✖ published request/context schemas describe optional unique selections and exclude the main biome (4.1004ms)
+  AssertionError [ERR_ASSERTION]: engine/schemas/atlas-request.schema.json
+      at TestContext.<anonymous> (file:///C:/Vibecoding/Games/VlandGenerator/tests/landscape-rework-contract.test.mjs:34:349)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }
+
+test at tests\landscape-rework-contract.test.mjs:38:1
+✖ native output schemas cover a 300-square cell index and the no-sea distance sentinel (0.8844ms)
+  AssertionError [ERR_ASSERTION]: engine/schemas/atlas.schema.json elevation
+      at TestContext.<anonymous> (file:///C:/Vibecoding/Games/VlandGenerator/tests/landscape-rework-contract.test.mjs:39:229)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }
+
+test at tests\landscape-rework-contract.test.mjs:42:1
+✖ recipe/native/context preserve the same selected set and reordering is not a stale generation (1.0234ms)
+  Error [ContentError]: Ландшафт: выберите structure и baseBiome из обязательных списков.
+      at normalizeRecipe (file:///C:/Vibecoding/Games/VlandGenerator/app/project.mjs:23:1098)
+      at generateBase (file:///C:/Vibecoding/Games/VlandGenerator/app/project.mjs:24:56)
+      at TestContext.<anonymous> (file:///C:/Vibecoding/Games/VlandGenerator/tests/landscape-rework-contract.test.mjs:43:233)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    code: 'INVALID_GENERATION',
+    details: []
+  }
+
+test at tests\landscape-rework-contract.test.mjs:62:1
+✖ inline biome selection uses one expandable checklist, excludes the main choice and updates its draft summary (5.2619ms)
+  AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:
+  
+    assert.ok(button)
+  
+      at TestContext.<anonymous> (file:///C:/Vibecoding/Games/VlandGenerator/tests/landscape-rework-contract.test.mjs:63:509)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: null,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }
+✖ native output schemas cover a 300-square cell index and the no-sea distance sentinel (3.4711ms)
+ℹ tests 1
+ℹ suites 0
+ℹ pass 0
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 101.344
+
+✖ failing tests:
+
+test at tests\landscape-rework-contract.test.mjs:38:1
+✖ native output schemas cover a 300-square cell index and the no-sea distance sentinel (3.4711ms)
+  AssertionError [ERR_ASSERTION]: engine/schemas/atlas.schema.json routeCells
+      at TestContext.<anonymous> (file:///C:/Vibecoding/Games/VlandGenerator/tests/landscape-rework-contract.test.mjs:39:218)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }

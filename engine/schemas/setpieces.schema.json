@@ -1,0 +1,346 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://vland.invalid/engine/schemas/setpieces.schema.json",
+  "title": "VlandGenerator semantic setpieces v1",
+  "type": "object",
+  "required": [
+    "version",
+    "genre",
+    "theme",
+    "slots",
+    "zones",
+    "challenges"
+  ],
+  "properties": {
+    "version": {
+      "const": 1
+    },
+    "genre": {
+      "enum": [
+        "turn-based",
+        "metroidvania",
+        "fps",
+        "bullet-hell"
+      ]
+    },
+    "theme": {
+      "enum": [
+        "sci-fi",
+        "ruins",
+        "caverns",
+        "fantasy",
+        "abstract"
+      ]
+    },
+    "slots": {
+      "type": "array",
+      "maxItems": 1500,
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "roomId",
+          "typeId",
+          "category",
+          "name",
+          "material",
+          "anchor",
+          "cells",
+          "footprint",
+          "approach",
+          "placement",
+          "collision",
+          "destructible",
+          "interaction"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 96
+          },
+          "roomId": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 96
+          },
+          "typeId": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 96
+          },
+          "category": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 96
+          },
+          "material": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 96
+          },
+          "interaction": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 96
+          },
+          "name": {
+            "type": "string",
+            "maxLength": 512
+          },
+          "anchor": {
+            "$ref": "#/$defs/point"
+          },
+          "cells": {
+            "type": "array",
+            "maxItems": 64,
+            "items": {
+              "$ref": "#/$defs/point"
+            },
+            "minItems": 1
+          },
+          "approach": {
+            "type": "array",
+            "maxItems": 4,
+            "items": {
+              "$ref": "#/$defs/point"
+            },
+            "minItems": 1
+          },
+          "footprint": {
+            "type": "object",
+            "required": [
+              "width",
+              "height"
+            ],
+            "properties": {
+              "width": {
+                "type": "integer",
+                "minimum": 1,
+                "maximum": 8
+              },
+              "height": {
+                "type": "integer",
+                "minimum": 1,
+                "maximum": 8
+              }
+            }
+          },
+          "collision": {
+            "const": "soft"
+          },
+          "placement": {
+            "const": "floor"
+          },
+          "destructible": {
+            "type": "boolean"
+          },
+          "controlsZoneId": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 96
+          },
+          "grantCapability": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 32
+          }
+        }
+      }
+    },
+    "zones": {
+      "type": "array",
+      "maxItems": 120,
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "roomId",
+          "type",
+          "cells",
+          "controllerId",
+          "requiredFlag",
+          "bypassCapability",
+          "blocksMovement",
+          "optional"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 96
+          },
+          "roomId": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 96
+          },
+          "controllerId": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 96
+          },
+          "requiredFlag": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 96
+          },
+          "bypassCapability": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 96
+          },
+          "type": {
+            "enum": [
+              "flood",
+              "ability-seal"
+            ]
+          },
+          "cells": {
+            "type": "array",
+            "maxItems": 250000,
+            "items": {
+              "$ref": "#/$defs/point"
+            },
+            "minItems": 1
+          },
+          "blocksMovement": {
+            "const": true
+          },
+          "optional": {
+            "const": true
+          }
+        }
+      }
+    },
+    "challenges": {
+      "type": "array",
+      "maxItems": 120,
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "roomId",
+          "type",
+          "entry",
+          "goal",
+          "route",
+          "obstacles",
+          "clock",
+          "minimumActions",
+          "errorAllowance",
+          "cellsPerSecond",
+          "reactionSeconds",
+          "budget",
+          "onSuccess",
+          "onFailure",
+          "retry",
+          "blocksExit"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 96
+          },
+          "roomId": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 96
+          },
+          "type": {
+            "const": "timed-crossing"
+          },
+          "entry": {
+            "$ref": "#/$defs/point"
+          },
+          "goal": {
+            "$ref": "#/$defs/point"
+          },
+          "route": {
+            "type": "array",
+            "maxItems": 250000,
+            "items": {
+              "$ref": "#/$defs/point"
+            },
+            "minItems": 3
+          },
+          "obstacles": {
+            "type": "array",
+            "maxItems": 250000,
+            "items": {
+              "$ref": "#/$defs/point"
+            }
+          },
+          "clock": {
+            "enum": [
+              "actions",
+              "seconds"
+            ]
+          },
+          "minimumActions": {
+            "type": "integer",
+            "minimum": 2,
+            "maximum": 250000
+          },
+          "errorAllowance": {
+            "enum": [
+              2,
+              3
+            ]
+          },
+          "cellsPerSecond": {
+            "enum": [
+              1,
+              2,
+              3
+            ]
+          },
+          "reactionSeconds": {
+            "const": 2
+          },
+          "budget": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 250003
+          },
+          "onSuccess": {
+            "const": "reward"
+          },
+          "onFailure": {
+            "const": "alarm"
+          },
+          "retry": {
+            "const": true
+          },
+          "blocksExit": {
+            "const": false
+          }
+        }
+      }
+    }
+  },
+  "$defs": {
+    "point": {
+      "type": "object",
+      "required": [
+        "x",
+        "y"
+      ],
+      "properties": {
+        "x": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 4095
+        },
+        "y": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 4095
+        }
+      }
+    }
+  }
+}

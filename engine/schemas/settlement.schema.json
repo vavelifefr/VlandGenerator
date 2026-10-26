@@ -1,0 +1,589 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://vland.invalid/engine/schemas/settlement.schema.json",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "schema": {
+      "const": "vland.settlement"
+    },
+    "schemaVersion": {
+      "const": 1
+    },
+    "seed": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 4294967295
+    },
+    "request": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "width": {
+          "type": "integer",
+          "minimum": 32,
+          "maximum": 300
+        },
+        "height": {
+          "type": "integer",
+          "minimum": 32,
+          "maximum": 300
+        },
+        "type": {
+          "enum": [
+            "town",
+            "village"
+          ]
+        },
+        "pattern": {
+          "enum": [
+            "organic",
+            "grid",
+            "radial",
+            "ribbon"
+          ]
+        },
+        "blockSize": {
+          "type": "integer",
+          "minimum": 8,
+          "maximum": 24
+        },
+        "streetWidth": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 4
+        },
+        "cityPercent": {
+          "type": "integer",
+          "minimum": 5,
+          "maximum": 100,
+          "default": 60,
+          "description": "Площадь габарита городского плана от внутренней области карты; вода и скалы не застраиваются."
+        },
+        "buildingDensity": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1,
+          "default": 0,
+          "description": "План без домов; поле не размещает застройку."
+        },
+        "neighborhoods": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "minArea": {
+              "type": "integer",
+              "minimum": 4,
+              "maximum": 25600
+            },
+            "maxArea": {
+              "type": "integer",
+              "minimum": 4,
+              "maximum": 25600
+            }
+          },
+          "required": []
+        },
+        "quarters": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "minArea": {
+              "type": "integer",
+              "minimum": 4,
+              "maximum": 25600
+            },
+            "maxArea": {
+              "type": "integer",
+              "minimum": 4,
+              "maximum": 25600
+            }
+          },
+          "required": []
+        },
+        "terrain": {
+          "type": "object",
+          "properties": {
+            "scale": {
+              "type": "number",
+              "minimum": 8,
+              "maximum": 160
+            },
+            "water": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 0.8
+            },
+            "relief": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1
+            },
+            "warp": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1
+            },
+            "octaves": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 6
+            },
+            "persistence": {
+              "type": "number",
+              "minimum": 0.1,
+              "maximum": 0.9
+            },
+            "blur": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 3
+            },
+            "erosion": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 16
+            },
+            "terraces": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 12
+            }
+          },
+          "required": [],
+          "additionalProperties": false
+        },
+        "autoTransports": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "enabled": {
+              "const": false
+            }
+          },
+          "required": []
+        },
+        "seed": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 4294967295
+        }
+      },
+      "required": []
+    },
+    "atlas": {
+      "$ref": "atlas.schema.json"
+    },
+    "streets": {
+      "type": "array",
+      "maxItems": 720000,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "rank": {
+            "enum": [
+              "primary",
+              "secondary",
+              "access",
+              "alley",
+              "pier"
+            ]
+          },
+          "from": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "x": {
+                "type": "integer",
+                "minimum": 1,
+                "maximum": 298
+              },
+              "y": {
+                "type": "integer",
+                "minimum": 1,
+                "maximum": 298
+              }
+            },
+            "required": [
+              "x",
+              "y"
+            ]
+          },
+          "to": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "x": {
+                "type": "integer",
+                "minimum": 1,
+                "maximum": 298
+              },
+              "y": {
+                "type": "integer",
+                "minimum": 1,
+                "maximum": 298
+              }
+            },
+            "required": [
+              "x",
+              "y"
+            ]
+          },
+          "width": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 4
+          },
+          "path": {
+            "type": "array",
+            "minItems": 2,
+            "maxItems": 90000,
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "x": {
+                  "type": "integer",
+                  "minimum": 1,
+                  "maximum": 298
+                },
+                "y": {
+                  "type": "integer",
+                  "minimum": 1,
+                  "maximum": 298
+                }
+              },
+              "required": [
+                "x",
+                "y"
+              ]
+            }
+          }
+        },
+        "required": [
+          "id",
+          "rank",
+          "from",
+          "to",
+          "width",
+          "path"
+        ]
+      }
+    },
+    "parcels": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "neighborhoods": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "area": {
+            "type": "integer",
+            "minimum": 4,
+            "maximum": 25600
+          },
+          "cells": {
+            "type": "array",
+            "items": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 89999
+            },
+            "minItems": 1,
+            "maxItems": 90000,
+            "uniqueItems": true
+          },
+          "bounds": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "x": {
+                "type": "integer",
+                "minimum": 1,
+                "maximum": 298
+              },
+              "y": {
+                "type": "integer",
+                "minimum": 1,
+                "maximum": 298
+              },
+              "width": {
+                "type": "integer",
+                "minimum": 1,
+                "maximum": 298
+              },
+              "height": {
+                "type": "integer",
+                "minimum": 1,
+                "maximum": 298
+              }
+            },
+            "required": [
+              "x",
+              "y",
+              "width",
+              "height"
+            ]
+          }
+        },
+        "required": [
+          "id",
+          "area",
+          "cells",
+          "bounds"
+        ]
+      },
+      "maxItems": 22500
+    },
+    "quarters": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "area": {
+            "type": "integer",
+            "minimum": 8,
+            "maximum": 25600
+          },
+          "neighborhoodIds": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "minItems": 2,
+            "maxItems": 22500,
+            "uniqueItems": true
+          }
+        },
+        "required": [
+          "id",
+          "area",
+          "neighborhoodIds"
+        ]
+      },
+      "maxItems": 11250
+    },
+    "planning": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "areaUnit": {
+          "const": "land-cells-without-streets"
+        },
+        "unassigned": {
+          "type": "array",
+          "maxItems": 90000,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "reason": {
+                "enum": [
+                  "below-minimum",
+                  "above-maximum"
+                ]
+              },
+              "area": {
+                "type": "integer",
+                "minimum": 1,
+                "maximum": 90000
+              },
+              "cells": {
+                "type": "array",
+                "items": {
+                  "type": "integer",
+                  "minimum": 0,
+                  "maximum": 89999
+                },
+                "minItems": 1,
+                "maxItems": 90000,
+                "uniqueItems": true
+              }
+            },
+            "required": [
+              "reason",
+              "area",
+              "cells"
+            ]
+          }
+        },
+        "ungroupedNeighborhoodIds": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "maxItems": 22500,
+          "uniqueItems": true
+        }
+      },
+      "required": [
+        "areaUnit",
+        "unassigned",
+        "ungroupedNeighborhoodIds"
+      ]
+    },
+    "links": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "maxLength": 96
+          },
+          "kind": {
+            "enum": [
+              "stairs",
+              "climb",
+              "lift",
+              "teleport"
+            ]
+          },
+          "from": {
+            "type": "object",
+            "properties": {
+              "x": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 4095
+              },
+              "y": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 4095
+              },
+              "layerId": {
+                "type": "string",
+                "maxLength": 48
+              }
+            },
+            "required": [
+              "x",
+              "y",
+              "layerId"
+            ],
+            "additionalProperties": false
+          },
+          "to": {
+            "type": "object",
+            "properties": {
+              "x": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 4095
+              },
+              "y": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 4095
+              },
+              "layerId": {
+                "type": "string",
+                "maxLength": 48
+              }
+            },
+            "required": [
+              "x",
+              "y",
+              "layerId"
+            ],
+            "additionalProperties": false
+          },
+          "footprint": {
+            "type": "object",
+            "properties": {
+              "width": {
+                "type": "integer",
+                "minimum": 1,
+                "maximum": 8
+              },
+              "height": {
+                "type": "integer",
+                "minimum": 1,
+                "maximum": 8
+              }
+            },
+            "required": [
+              "width",
+              "height"
+            ],
+            "additionalProperties": false
+          },
+          "clearance": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 8
+          },
+          "travelCost": {
+            "type": "number",
+            "minimum": 1,
+            "maximum": 100
+          },
+          "automatic": {
+            "type": "boolean"
+          },
+          "bidirectional": {
+            "type": "boolean"
+          },
+          "reason": {
+            "enum": [
+              "layer-chain",
+              "isolated-region"
+            ]
+          }
+        },
+        "required": [
+          "id",
+          "kind",
+          "from",
+          "to",
+          "footprint",
+          "clearance",
+          "travelCost"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "spawn": {
+      "type": "object"
+    },
+    "exit": {
+      "type": "object"
+    },
+    "fingerprint": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "schema",
+    "schemaVersion",
+    "seed",
+    "request",
+    "atlas",
+    "streets",
+    "parcels",
+    "neighborhoods",
+    "quarters",
+    "planning",
+    "links",
+    "spawn",
+    "exit",
+    "fingerprint"
+  ]
+}

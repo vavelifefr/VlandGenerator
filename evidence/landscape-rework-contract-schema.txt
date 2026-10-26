@@ -1,0 +1,2 @@
+{"ok": true, "schemas": 59, "schemaDocuments": 108, "negativeControls": 272, "offlineRegistry": true, "scope": "24 size requests plus optional profile inputs/context profile fragment; not complete project or browser acceptance"}
+{"ok": true, "scope": "native output schema field/index fragments; not generated 300 map", "positive": 13, "negative": 13}

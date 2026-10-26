@@ -1,0 +1,876 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://vland.invalid/engine/schemas/map-tiles.schema.json",
+  "title": "VlandGenerator map-tiles v1",
+  "oneOf": [
+    {
+      "$ref": "tiles.schema.json"
+    },
+    {
+      "type": "object",
+      "properties": {
+        "schema": {
+          "const": "vland.terrain.tiles"
+        },
+        "schemaVersion": {
+          "const": 1
+        },
+        "sourceFingerprint": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 8,
+          "pattern": "^[0-9a-f]{8}$"
+        },
+        "width": {
+          "type": "integer",
+          "minimum": 16,
+          "maximum": 192
+        },
+        "height": {
+          "type": "integer",
+          "minimum": 16,
+          "maximum": 192
+        },
+        "origin": {
+          "type": "object",
+          "properties": {
+            "x": {
+              "type": "integer",
+              "minimum": -1000000,
+              "maximum": 1000000
+            },
+            "y": {
+              "type": "integer",
+              "minimum": -1000000,
+              "maximum": 1000000
+            }
+          },
+          "additionalProperties": false,
+          "required": [
+            "x",
+            "y"
+          ]
+        },
+        "spawn": {
+          "type": "object",
+          "properties": {
+            "x": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 4095
+            },
+            "y": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 4095
+            }
+          },
+          "additionalProperties": false,
+          "required": [
+            "x",
+            "y"
+          ]
+        },
+        "exit": {
+          "type": "object",
+          "properties": {
+            "x": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 4095
+            },
+            "y": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 4095
+            }
+          },
+          "additionalProperties": false,
+          "required": [
+            "x",
+            "y"
+          ]
+        },
+        "profile": {
+          "$ref": "movement-profile.schema.json"
+        },
+        "layers": {
+          "type": "object",
+          "properties": {
+            "elevation": {
+              "type": "array",
+              "items": {
+                "type": "number",
+                "minimum": 0,
+                "maximum": 1
+              },
+              "maxItems": 32768,
+              "minItems": 0
+            },
+            "humidity": {
+              "type": "array",
+              "items": {
+                "type": "number",
+                "minimum": 0,
+                "maximum": 1
+              },
+              "maxItems": 32768,
+              "minItems": 0
+            },
+            "temperature": {
+              "type": "array",
+              "items": {
+                "type": "number",
+                "minimum": 0,
+                "maximum": 1
+              },
+              "maxItems": 32768,
+              "minItems": 0
+            },
+            "waterDepth": {
+              "type": "array",
+              "items": {
+                "type": "number",
+                "minimum": 0,
+                "maximum": 1
+              },
+              "maxItems": 32768,
+              "minItems": 0
+            },
+            "obstacle": {
+              "type": "array",
+              "items": {
+                "enum": [
+                  0,
+                  1
+                ]
+              },
+              "maxItems": 32768,
+              "minItems": 0
+            },
+            "biome": {
+              "type": "array",
+              "items": {
+                "enum": [
+                  "water",
+                  "river",
+                  "grassland",
+                  "forest",
+                  "swamp",
+                  "desert",
+                  "tundra",
+                  "snow",
+                  "highland",
+                  "mountain",
+                  "cave-floor",
+                  "cave-wall"
+                ]
+              },
+              "maxItems": 32768,
+              "minItems": 0
+            },
+            "material": {
+              "type": "array",
+              "items": {
+                "enum": [
+                  "water",
+                  "grass",
+                  "mud",
+                  "sand",
+                  "dirt",
+                  "snow",
+                  "stone",
+                  "rock"
+                ]
+              },
+              "maxItems": 32768,
+              "minItems": 0
+            },
+            "flowTo": {
+              "type": "array",
+              "items": {
+                "type": "integer",
+                "minimum": -1,
+                "maximum": 32767
+              },
+              "maxItems": 32768,
+              "minItems": 0
+            },
+            "drainage": {
+              "type": "array",
+              "items": {
+                "type": "integer",
+                "minimum": 1,
+                "maximum": 32768
+              },
+              "maxItems": 32768,
+              "minItems": 0
+            },
+            "walkable": {
+              "type": "array",
+              "items": {
+                "enum": [
+                  0,
+                  1
+                ]
+              },
+              "maxItems": 32768,
+              "minItems": 0
+            },
+            "clearance": {
+              "type": "array",
+              "items": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 4096
+              },
+              "maxItems": 32768,
+              "minItems": 0
+            }
+          },
+          "additionalProperties": true,
+          "required": [
+            "elevation",
+            "humidity",
+            "temperature",
+            "waterDepth",
+            "obstacle",
+            "biome",
+            "material",
+            "flowTo",
+            "drainage",
+            "walkable",
+            "clearance"
+          ]
+        },
+        "legend": {
+          "type": "object"
+        }
+      },
+      "additionalProperties": true,
+      "required": [
+        "schema",
+        "schemaVersion",
+        "sourceFingerprint",
+        "width",
+        "height",
+        "origin",
+        "spawn",
+        "exit",
+        "profile",
+        "layers",
+        "legend"
+      ]
+    },
+    {
+      "type": "object",
+      "properties": {
+        "schema": {
+          "const": "vland.world.tiles"
+        },
+        "schemaVersion": {
+          "const": 1
+        },
+        "sourceFingerprint": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 8,
+          "pattern": "^[0-9a-f]{8}$"
+        },
+        "spawn": {
+          "type": "object",
+          "properties": {
+            "layerId": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 48,
+              "pattern": "^(?!__proto__$|constructor$|prototype$)[a-zA-Z0-9_-]+$"
+            },
+            "x": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 4095
+            },
+            "y": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 4095
+            }
+          },
+          "additionalProperties": false,
+          "required": [
+            "layerId",
+            "x",
+            "y"
+          ]
+        },
+        "exit": {
+          "type": "object",
+          "properties": {
+            "layerId": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 48,
+              "pattern": "^(?!__proto__$|constructor$|prototype$)[a-zA-Z0-9_-]+$"
+            },
+            "x": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 4095
+            },
+            "y": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 4095
+            }
+          },
+          "additionalProperties": false,
+          "required": [
+            "layerId",
+            "x",
+            "y"
+          ]
+        },
+        "layers": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 48,
+                "pattern": "^(?!__proto__$|constructor$|prototype$)[a-zA-Z0-9_-]+$"
+              },
+              "elevation": {
+                "type": "number",
+                "minimum": -256,
+                "maximum": 256
+              },
+              "headroom": {
+                "type": "number",
+                "minimum": 1,
+                "maximum": 32
+              },
+              "tiles": {
+                "$ref": "tiles.schema.json"
+              },
+              "reservations": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "string",
+                      "minLength": 1,
+                      "maxLength": 96
+                    },
+                    "roomId": {
+                      "type": "string",
+                      "minLength": 1,
+                      "maxLength": 96
+                    },
+                    "anchor": {
+                      "type": "object",
+                      "properties": {
+                        "x": {
+                          "type": "integer",
+                          "minimum": 0,
+                          "maximum": 4095
+                        },
+                        "y": {
+                          "type": "integer",
+                          "minimum": 0,
+                          "maximum": 4095
+                        }
+                      },
+                      "additionalProperties": false,
+                      "required": [
+                        "x",
+                        "y"
+                      ]
+                    },
+                    "footprint": {
+                      "type": "object",
+                      "properties": {
+                        "width": {
+                          "type": "integer",
+                          "minimum": 1,
+                          "maximum": 3
+                        },
+                        "height": {
+                          "type": "integer",
+                          "minimum": 1,
+                          "maximum": 3
+                        }
+                      },
+                      "additionalProperties": false,
+                      "required": [
+                        "width",
+                        "height"
+                      ]
+                    },
+                    "cells": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "x": {
+                            "type": "integer",
+                            "minimum": 0,
+                            "maximum": 4095
+                          },
+                          "y": {
+                            "type": "integer",
+                            "minimum": 0,
+                            "maximum": 4095
+                          }
+                        },
+                        "additionalProperties": false,
+                        "required": [
+                          "x",
+                          "y"
+                        ]
+                      },
+                      "maxItems": 9,
+                      "minItems": 1
+                    }
+                  },
+                  "additionalProperties": false,
+                  "required": [
+                    "id",
+                    "roomId",
+                    "anchor",
+                    "footprint",
+                    "cells"
+                  ]
+                },
+                "maxItems": 48,
+                "minItems": 0
+              }
+            },
+            "additionalProperties": false,
+            "required": [
+              "id",
+              "elevation",
+              "headroom",
+              "tiles",
+              "reservations"
+            ]
+          },
+          "maxItems": 8,
+          "minItems": 1
+        },
+        "verticalLinks": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 48,
+                "pattern": "^(?!__proto__$|constructor$|prototype$)[a-zA-Z0-9_-]+$"
+              },
+              "from": {
+                "type": "object",
+                "properties": {
+                  "layerId": {
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 48,
+                    "pattern": "^(?!__proto__$|constructor$|prototype$)[a-zA-Z0-9_-]+$"
+                  },
+                  "roomId": {
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 96
+                  },
+                  "anchor": {
+                    "type": "object",
+                    "properties": {
+                      "x": {
+                        "type": "integer",
+                        "minimum": 0,
+                        "maximum": 4095
+                      },
+                      "y": {
+                        "type": "integer",
+                        "minimum": 0,
+                        "maximum": 4095
+                      }
+                    },
+                    "additionalProperties": false,
+                    "required": [
+                      "x",
+                      "y"
+                    ]
+                  },
+                  "reservationId": {
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 96
+                  }
+                },
+                "additionalProperties": false,
+                "required": [
+                  "layerId",
+                  "roomId",
+                  "anchor",
+                  "reservationId"
+                ]
+              },
+              "to": {
+                "type": "object",
+                "properties": {
+                  "layerId": {
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 48,
+                    "pattern": "^(?!__proto__$|constructor$|prototype$)[a-zA-Z0-9_-]+$"
+                  },
+                  "roomId": {
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 96
+                  },
+                  "anchor": {
+                    "type": "object",
+                    "properties": {
+                      "x": {
+                        "type": "integer",
+                        "minimum": 0,
+                        "maximum": 4095
+                      },
+                      "y": {
+                        "type": "integer",
+                        "minimum": 0,
+                        "maximum": 4095
+                      }
+                    },
+                    "additionalProperties": false,
+                    "required": [
+                      "x",
+                      "y"
+                    ]
+                  },
+                  "reservationId": {
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 96
+                  }
+                },
+                "additionalProperties": false,
+                "required": [
+                  "layerId",
+                  "roomId",
+                  "anchor",
+                  "reservationId"
+                ]
+              },
+              "kind": {
+                "enum": [
+                  "stairs",
+                  "lift",
+                  "drop"
+                ]
+              },
+              "direction": {
+                "enum": [
+                  "both",
+                  "forward"
+                ]
+              },
+              "footprint": {
+                "type": "object",
+                "properties": {
+                  "width": {
+                    "type": "integer",
+                    "minimum": 1,
+                    "maximum": 3
+                  },
+                  "height": {
+                    "type": "integer",
+                    "minimum": 1,
+                    "maximum": 3
+                  }
+                },
+                "additionalProperties": false,
+                "required": [
+                  "width",
+                  "height"
+                ]
+              },
+              "clearance": {
+                "type": "number",
+                "minimum": 1,
+                "maximum": 8
+              },
+              "requirements": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 32,
+                  "pattern": "^[a-z][a-z0-9-]*$"
+                },
+                "maxItems": 16,
+                "minItems": 0
+              },
+              "travelCost": {
+                "type": "number",
+                "minimum": 0,
+                "maximum": 1000,
+                "exclusiveMinimum": 0
+              }
+            },
+            "additionalProperties": false,
+            "required": [
+              "id",
+              "kind",
+              "direction",
+              "footprint",
+              "clearance",
+              "requirements",
+              "travelCost",
+              "from",
+              "to"
+            ]
+          },
+          "maxItems": 24,
+          "minItems": 0
+        },
+        "grants": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 48,
+                "pattern": "^(?!__proto__$|constructor$|prototype$)[a-zA-Z0-9_-]+$"
+              },
+              "layerId": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 48,
+                "pattern": "^(?!__proto__$|constructor$|prototype$)[a-zA-Z0-9_-]+$"
+              },
+              "roomId": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 96
+              },
+              "capability": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 32,
+                "pattern": "^[a-z][a-z0-9-]*$"
+              },
+              "position": {
+                "type": "object",
+                "properties": {
+                  "x": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 4095
+                  },
+                  "y": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 4095
+                  }
+                },
+                "additionalProperties": false,
+                "required": [
+                  "x",
+                  "y"
+                ]
+              }
+            },
+            "additionalProperties": false,
+            "required": [
+              "id",
+              "layerId",
+              "roomId",
+              "capability",
+              "position"
+            ]
+          },
+          "maxItems": 16,
+          "minItems": 0
+        }
+      },
+      "additionalProperties": true,
+      "required": [
+        "schema",
+        "schemaVersion",
+        "sourceFingerprint",
+        "spawn",
+        "exit",
+        "layers",
+        "verticalLinks",
+        "grants"
+      ]
+    },
+    {
+      "type": "object",
+      "properties": {
+        "schema": {
+          "const": "vland.regions.tiles"
+        },
+        "schemaVersion": {
+          "const": 1
+        },
+        "sourceFingerprint": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 8,
+          "pattern": "^[0-9a-f]{8}$"
+        },
+        "regions": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 48,
+                "pattern": "^(?!__proto__$|constructor$|prototype$)[a-zA-Z0-9_-]+$"
+              },
+              "boundary": {
+                "type": "object"
+              },
+              "loaded": {
+                "type": "boolean"
+              },
+              "visited": {
+                "type": "boolean"
+              },
+              "tiles": {
+                "$ref": "tiles.schema.json"
+              }
+            },
+            "additionalProperties": false,
+            "required": [
+              "id",
+              "boundary",
+              "loaded",
+              "visited",
+              "tiles"
+            ]
+          },
+          "maxItems": 12,
+          "minItems": 1
+        },
+        "connections": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 48,
+                "pattern": "^(?!__proto__$|constructor$|prototype$)[a-zA-Z0-9_-]+$"
+              },
+              "from": {
+                "type": "object",
+                "properties": {
+                  "regionId": {
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 48,
+                    "pattern": "^(?!__proto__$|constructor$|prototype$)[a-zA-Z0-9_-]+$"
+                  },
+                  "port": {
+                    "enum": [
+                      "entry",
+                      "exit"
+                    ]
+                  }
+                },
+                "additionalProperties": false,
+                "required": [
+                  "regionId",
+                  "port"
+                ]
+              },
+              "to": {
+                "type": "object",
+                "properties": {
+                  "regionId": {
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 48,
+                    "pattern": "^(?!__proto__$|constructor$|prototype$)[a-zA-Z0-9_-]+$"
+                  },
+                  "port": {
+                    "enum": [
+                      "entry",
+                      "exit"
+                    ]
+                  }
+                },
+                "additionalProperties": false,
+                "required": [
+                  "regionId",
+                  "port"
+                ]
+              },
+              "direction": {
+                "enum": [
+                  "both",
+                  "forward"
+                ]
+              },
+              "kind": {
+                "const": "portal"
+              }
+            },
+            "additionalProperties": false,
+            "required": [
+              "id",
+              "from",
+              "to",
+              "kind",
+              "direction"
+            ]
+          },
+          "maxItems": 32,
+          "minItems": 0
+        },
+        "entryRegionId": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 48,
+          "pattern": "^(?!__proto__$|constructor$|prototype$)[a-zA-Z0-9_-]+$"
+        },
+        "exitRegionId": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 48,
+          "pattern": "^(?!__proto__$|constructor$|prototype$)[a-zA-Z0-9_-]+$"
+        }
+      },
+      "additionalProperties": true,
+      "required": [
+        "schema",
+        "schemaVersion",
+        "sourceFingerprint",
+        "regions",
+        "connections",
+        "entryRegionId",
+        "exitRegionId"
+      ]
+    },
+    {
+      "$ref": "atlas-tiles.schema.json"
+    },
+    {
+      "$ref": "platformer-tiles.schema.json"
+    }
+  ]
+}

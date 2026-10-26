@@ -1,0 +1,33 @@
+import {corridorSettings} from './corridors.mjs';
+import {findTilePath} from './validation.mjs';
+import {graphDistances} from './districts.mjs';
+import {roomAt} from './space.mjs';
+import {ROOM_SHAPES,SHAPE_MIN_SIZE,defaultShapeWeight} from './shapes.mjs';
+const clamp=n=>Math.max(0,Math.min(1,n)),rounded=n=>Math.round(n*100)/100;
+export function evaluateLevelQuality(level,options=level.options??{}){
+ const validation=level.validation??level.generationValidation,errors=[...(validation?.errors??[])],rooms=level.rooms,plan=level.plan,final=rooms.find(r=>r.id===plan.finalId);
+ const route=final?findTilePath(level,level.spawn,final.core,{blocked:(level.devices??[]).filter(d=>!d.walkable)}):null;
+ const maxPassage=Math.max(0,...level.connections.map(c=>c.cells.length));if(maxPassage>corridorSettings(level?.options?.corridors).maxLength||level.connections.some(c=>!c.cells.length))errors.push('Переходы должны занимать1–3клетки.');if(!route)errors.push('Нет открытого основного пути.');
+ const ordinary=rooms.filter(r=>!['start','final','boss'].includes(r.role)),shapes=new Set(ordinary.map(r=>r.shape)),dimensions=new Set(ordinary.map(r=>r.width+'×'+r.height)),degrees=new Map(rooms.map(r=>[r.id,plan.edges.filter(e=>e.from===r.id||e.to===r.id).length]));
+ const routeRooms=[...new Set((route??[]).map(p=>roomAt(rooms,p)?.id).filter(Boolean))],mainCoverage=routeRooms.length/rooms.length,loops=plan.edges.length-rooms.length+1;
+ const deadEnds=ordinary.filter(r=>degrees.get(r.id)===1&&!['branch'].includes(r.role)&&!['antechamber','vault','arsenal','secret','bonus'].includes(r.purpose)),junctions=ordinary.filter(r=>degrees.get(r.id)>=3).length;
+ const usefulLoops=plan.edges.filter(e=>{const reduced={...plan,edges:plan.edges.filter(x=>x!==e)},distance=graphDistances(reduced,e.from).get(e.to);return distance!==undefined&&distance>=3;}).length;
+ const minX=Math.min(...rooms.map(r=>r.x)),minY=Math.min(...rooms.map(r=>r.y)),spanW=Math.max(...rooms.map(r=>r.x+r.width))-minX,spanH=Math.max(...rooms.map(r=>r.y+r.height))-minY,roomArea=rooms.reduce((n,r)=>n+(r.floorArea??(r.width-2)*(r.height-2)),0),fill=roomArea/(spanW*spanH);
+ const balanced=options.shapeSelection==='balanced',declaredShapes=ROOM_SHAPES.filter(id=>(options.shapeWeights?.[id]??defaultShapeWeight(id))>0&&(!balanced||SHAPE_MIN_SIZE[id]<=(options.roomMax??24))).length,targetShapes=Math.max(1,Math.min(options.shapeStyle==='architectural'?(level.shapeDistribution?.diversityTarget??6):balanced?(level.shapeDistribution?.activeShapes?.length??ROOM_SHAPES.length):5,declaredShapes,ordinary.length)),fixedSize=Number.isInteger(options.roomMin)&&options.roomMin===options.roomMax,targetDimensions=fixedSize&&options.largeRoomChance===0?1:Math.max(1,Math.min(6,ordinary.length));
+ const routeScore=rooms.length<=3?1:mainCoverage<.55?mainCoverage/.55:mainCoverage>.8?Math.max(.4,1-(mainCoverage-.8)*2):1;
+ const desiredLoops=rooms.length<=3||options.loopChance===0?0:rooms.length/({branches:12,rings:5,compact:7,sectors:8}[plan.preset]??7),loopScore=desiredLoops?clamp(loops/desiredLoops):1;
+ const topologyScore=clamp(.2+.35*clamp(junctions/Math.max(1,rooms.length/4))+.25*loopScore+.2*(1-deadEnds.length/Math.max(1,ordinary.length)));
+ const varietyScore=ordinary.length?(.6*clamp(shapes.size/targetShapes)+.4*clamp(dimensions.size/targetDimensions)):1;
+ const densityTarget=plan.preset==='branches'?.35:.5,packingScore=clamp(fill/densityTarget),districtSizes=(plan.districts??[]).map(d=>d.roomIds.length),mean=rooms.length/Math.max(1,districtSizes.length);
+ const districtBalance=options.districts===false||rooms.length<5?1:districtSizes.length?clamp(1-Math.sqrt(districtSizes.reduce((n,s)=>n+(s-mean)**2,0)/districtSizes.length)/mean*.5):0;
+ const compositionCoverage=(plan.compositions??[]).reduce((n,c)=>n+c.roomIds.length,0)/Math.max(1,ordinary.length),groupingScore=(districtBalance+(options.compositions===false||ordinary.length<2?1:clamp(compositionCoverage/.7)))/2;
+ const components=[['route','Основной маршрут',25,routeScore],['topology','Выбор маршрутов',20,topologyScore],['variety','Формы и размеры',20,varietyScore],['packing','Плотность компоновки',20,packingScore],['structure','Районы и комплексы',15,groupingScore]].map(([id,name,weight,value])=>({id,name,weight,score:Math.round(value*100),contribution:rounded(value*weight)}));
+ const warnings=[];
+ if(rooms.length>5&&mainCoverage<.3)warnings.push({code:'short-main',message:'Основной маршрут посещает меньше30%комнат: часть этажа легко пропустить.',roomIds:routeRooms});
+ if(deadEnds.length)warnings.push({code:'unmarked-dead-ends',message:`Открытых тупиков без обозначенной комнатной награды: ${deadEnds.length}.`,roomIds:deadEnds.map(r=>r.id)});
+ if(ordinary.length>=6&&shapes.size<Math.min(3,targetShapes))warnings.push({code:'repeated-shapes',message:'Формы залов часто повторяются.',roomIds:[]});
+ if(fill<.22)warnings.push({code:'sparse',message:'Много пространства занято промежутками и оболочкой; стоит сравнить более плотный seed.',roomIds:[]});
+ const pressure=rooms.filter(r=>{const media=new Set((level.surfaces??[]).filter(s=>s.roomId===r.id).map(s=>s.type)),traps=(level.devices??[]).filter(d=>d.roomId===r.id&&d.kind==='trap').length,enemies=(level.encounters??[]).filter(e=>e.roomId===r.id).length;return media.size&&traps&&enemies>=4;});
+ if(pressure.length)warnings.push({code:'stacked-hazards',message:`Среды, ловушки и плотная группа врагов совмещены в ${pressure.length} комнатах.`,roomIds:pressure.map(r=>r.id)});
+ return{version:1,valid:!errors.length&&validation?.ok!==false,score:errors.length?0:Math.round(components.reduce((n,c)=>n+c.contribution,0)),components,warnings,errors:[...new Set(errors)],metrics:{mainSteps:Math.max(0,(route?.length??1)-1),mainRooms:routeRooms.length,totalRooms:rooms.length,mainCoverage:rounded(mainCoverage),junctions,loops,usefulLoopEdges:usefulLoops,unmarkedDeadEnds:deadEnds.length,shapeTypes:shapes.size,sizeTypes:dimensions.size,fillRatio:rounded(fill),districts:plan.districts?.length??0,compositions:plan.compositions?.length??0,nestedRooms:rooms.filter(r=>r.nestedIn).length,maxPassage},note:'Оценка структуры по открытым критериям. Сложность боя и предпочтения игрока оцениваются отдельно.'};
+}

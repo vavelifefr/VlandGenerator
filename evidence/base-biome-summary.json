@@ -1,0 +1,76 @@
+{
+  "status": "implemented_verified",
+  "ok": true,
+  "implementationVerified": true,
+  "updatedAt": "2026-10-25T21:50:34.183617+00:00",
+  "change": "Selecting landscape.baseBiome immediately invokes existing generate() on both grids, including the first map. Confirmed biome cards and UI-only drafts are preserved. Other geometry settings remain drafts.",
+  "productionFiles": [
+    "Web/HTML/ui/generation-draft.mjs"
+  ],
+  "node": {
+    "tests": 55,
+    "pass": 55,
+    "fail": 0,
+    "focusedTests": 29,
+    "report": "evidence/base-biome-tests.txt",
+    "tddRed": "evidence/base-biome-red.txt",
+    "tddGreen": "evidence/base-biome-green.txt",
+    "controlCases": "Both grids, all4 structures and all7 base biome options"
+  },
+  "browser": {
+    "report": "evidence/base-biome-browser.json",
+    "cases": 8,
+    "widths": [
+      1100,
+      360
+    ],
+    "sizes": [
+      100,
+      300
+    ],
+    "modes": [
+      "landscape",
+      "hexlandscape"
+    ],
+    "automaticGenerations": 32,
+    "baseSelections": 24,
+    "baseBiomes": [
+      "forest",
+      "desert",
+      "meadow"
+    ],
+    "firstMapFromBaseSelection": true,
+    "confirmedCardsPreserved": true,
+    "unconfirmedDraftPreserved": true,
+    "otherSettingsRemainDrafts": true,
+    "navigationAndAccess": true,
+    "seaAndLandQuotaUnchanged": true,
+    "pageErrors": [],
+    "ownUnrelatedCopy": true,
+    "copyRemovedIndependentlyVerified": true,
+    "headless": true
+  },
+  "interfaces": {
+    "report": "evidence/base-biome-interfaces.json",
+    "defaultsJsHttpCliExactCases": 2,
+    "currentMainFiles": 5,
+    "restart": false,
+    "generationEngineChanged": false
+  },
+  "documentation": {
+    "ok": true,
+    "utf8Files": 6,
+    "balancedFences": 6,
+    "localLinks": 57,
+    "brokenLinks": []
+  },
+  "scope": "UI action routing only. Earlier complete portable engine/schema results remain historical; current browser checks use a new independent copy. No schema or backend changes.",
+  "protected": {
+    "liveSessionUsed": false,
+    "authoredDataModified": false,
+    "desktopControlled": false,
+    "userTabsControlled": false,
+    "dependenciesInstalled": false,
+    "commitsCreated": false
+  }
+}

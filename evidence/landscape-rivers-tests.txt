@@ -1,0 +1,15 @@
+✔ profile streams reach their dry boundary outlet on both grids without changing the flow graph (62.9598ms)
+✔ removing undersized lakes retains strong river channels, rather than a dry gap or a restored lake (72.5827ms)
+✔ profile width one is exactly the strong river core, without an automatic extra bank (4.6954ms)
+✔ profile widening stays within width minus one neighbor layers and never replaces sea or retained lakes (12.3567ms)
+✔ profile rivers zero stays river free through lake filtering and widening, retaining ocean and large lakes (6.5072ms)
+✔ native requests without a landscape profile retain their observed water output exactly (6.0417ms)
+✔ real profile river corrections preserve native navigation and access in both workspaces (319.478ms)
+ℹ tests 7
+ℹ suites 0
+ℹ pass 7
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 594.0598

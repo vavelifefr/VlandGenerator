@@ -1,0 +1,14 @@
+{
+  "ok": false,
+  "started": "2026-10-24T07:14:03.699Z",
+  "cases": [],
+  "static": [],
+  "userSessionUntouched": true,
+  "namedProjectsUsed": false,
+  "restart": false,
+  "error": {
+    "message": "fetch failed",
+    "stack": "TypeError: fetch failed"
+  },
+  "finished": "2026-10-24T07:14:03.721Z"
+}

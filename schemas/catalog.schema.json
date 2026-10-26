@@ -1,0 +1,128 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://vland.invalid/schemas/catalog.schema.json",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "id": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 64,
+        "pattern": "^[a-zA-Z][a-zA-Z0-9_-]{0,63}$",
+        "not": {
+          "enum": [
+            "__proto__",
+            "prototype",
+            "constructor"
+          ]
+        }
+      },
+      "name": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 100
+      },
+      "category": {
+        "enum": [
+          "resources",
+          "flora",
+          "fauna",
+          "objects",
+          "items",
+          "events"
+        ]
+      },
+      "type": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 64,
+        "pattern": "^[a-zA-Z][a-zA-Z0-9_-]{0,63}$",
+        "not": {
+          "enum": [
+            "__proto__",
+            "prototype",
+            "constructor"
+          ]
+        }
+      },
+      "subtype": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 64,
+        "pattern": "^[a-zA-Z][a-zA-Z0-9_-]{0,63}$",
+        "not": {
+          "enum": [
+            "__proto__",
+            "prototype",
+            "constructor"
+          ]
+        }
+      },
+      "channel": {
+        "enum": [
+          "solid",
+          "prop",
+          "actor",
+          "cover",
+          "subsurface",
+          "air",
+          "trigger"
+        ]
+      },
+      "color": {
+        "type": "string",
+        "pattern": "^#[a-fA-F0-9]{6}$"
+      },
+      "glyph": {
+        "type": "string",
+        "maxLength": 4
+      },
+      "footprint": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "width": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 8
+          },
+          "height": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 8
+          }
+        },
+        "required": [
+          "width",
+          "height"
+        ]
+      },
+      "blocking": {
+        "type": "boolean"
+      },
+      "constraints": {
+        "$ref": "constraints.schema.json"
+      },
+      "properties": {
+        "type": "object"
+      }
+    },
+    "required": [
+      "id",
+      "name",
+      "category",
+      "type",
+      "subtype",
+      "channel",
+      "color",
+      "glyph",
+      "footprint",
+      "blocking",
+      "constraints",
+      "properties"
+    ]
+  },
+  "maxItems": 256
+}

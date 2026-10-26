@@ -1,0 +1,148 @@
+✔ repeatable biome rows remain drafts until per-card Add, then retain repeated types and IDs (27.8245ms)
+✖ per-card Add validates the confirmed budget atomically while invalid drafts do not block Create (2.3706ms)
+✔ request and context schemas expose repeatable percentage cards with bounded IDs (15.333ms)
+✔ landscape rebuild request requires both source project and full recipe (1.3848ms)
+✖ restoring ten independent UI fields never changes confirmed recipe cards until Add (6.2224ms)
+✔ compact biome settings retain add action and cards without explanatory paragraphs (5.6617ms)
+✔ landscape biome cards normalize strictly, immutably and preserve stable repeated-card order (1.9338ms)
+✔ explicit local landscape biome identity retains water and steep-slope exceptions (0.2465ms)
+✖ seed42 has a resolved sea-connected bay at 50 and 300 on square and hex landmasses (1208.9783ms)
+ℹ [{"size":50,"kind":"square","structure":"islands","elapsedMs":33,"parts":[{"cells":211,"bayDepth":0.5266851623825876,"hullDeficit":0.09051724137931039,"aspect":0.9444444444444444,"elongation":1.0861454100479817},{"cells":131,"bayDepth":0.5,"hullDeficit":0.06428571428571428,"aspect":0.8571428571428571,"elongation":1.2088540429917933},{"cells":283,"bayDepth":1.8407159732336889,"hullDeficit":0.15396113602391626,"aspect":2.5384615384615383,"elongation":3.028432596458968}]},{"size":50,"kind":"square","structure":"continent","elapsedMs":25,"parts":[{"cells":1125,"bayDepth":5.5,"hullDeficit":0.1207502930832356,"aspect":1.1111111111111112,"elongation":1.1538259849780048}]},{"size":50,"kind":"hex","structure":"islands","elapsedMs":21,"parts":[{"cells":209,"bayDepth":0.43386091563731255,"hullDeficit":0.06557377049180335,"aspect":0.9722222222222222,"elongation":1.0990338979517424},{"cells":135,"bayDepth":0.33167906340332975,"hullDeficit":0.07322654462242573,"aspect":0.9285714285714286,"elongation":1.2148514750037787},{"cells":281,"bayDepth":1.4738435096602045,"hullDeficit":0.13671274961597513,"aspect":2.75,"elongation":3.1197280114438226}]},{"size":50,"kind":"hex","structure":"continent","elapsedMs":14,"parts":[{"cells":1125,"bayDepth":6.265413709208044,"hullDeficit":0.13261372397841176,"aspect":1.1527777777777777,"elongation":1.1623189239523708}]},{"size":300,"kind":"square","structure":"islands","elapsedMs":394,"parts":[{"cells":7544,"bayDepth":3.1126336497510705,"hullDeficit":0.03529411764705881,"aspect":0.9902912621359223,"elongation":1.0526633026909065},{"cells":4669,"bayDepth":3.626447793020826,"hullDeficit":0.0465591178272412,"aspect":0.9285714285714286,"elongation":1.1711448550257477},{"cells":10287,"bayDepth":12.490202486549222,"hullDeficit":0.13032083527074434,"aspect":2.5454545454545454,"elongation":3.0754533850252908}]},{"size":300,"kind":"square","structure":"continent","elapsedMs":292,"parts":[{"cells":40500,"bayDepth":40.063274680025785,"hullDeficit":0.11968960907697823,"aspect":1.128440366972477,"elongation":1.1776123520638675}]},{"size":300,"kind":"hex","structure":"islands","elapsedMs":170,"parts":[{"cells":7555,"bayDepth":2.870785707666995,"hullDeficit":0.032588513989372236,"aspect":0.9951456310679612,"elongation":1.0516366728582256},{"cells":4667,"bayDepth":3.8239667359958167,"hullDeficit":0.04583091968514563,"aspect":0.9176470588235294,"elongation":1.170660356237188},{"cells":10278,"bayDepth":12.640754089144464,"hullDeficit":0.13092251754559048,"aspect":2.5454545454545454,"elongation":3.080364954203081}]},{"size":300,"kind":"hex","structure":"continent","elapsedMs":256,"parts":[{"cells":40500,"bayDepth":41.02131064766966,"hullDeficit":0.12036517514868683,"aspect":1.1382488479262673,"elongation":1.1809614244166835}]}]
+✔ irregular shapes preserve topology, determinism and bounded 300 preparation for all requested scales (1791.9781ms)
+ℹ [{"size":50,"kind":"square","structure":"islands","elapsedMs":14},{"size":50,"kind":"square","structure":"continent","elapsedMs":10},{"size":50,"kind":"square","structure":"coast","elapsedMs":8},{"size":50,"kind":"hex","structure":"islands","elapsedMs":12},{"size":50,"kind":"hex","structure":"continent","elapsedMs":6},{"size":50,"kind":"hex","structure":"coast","elapsedMs":8},{"size":100,"kind":"square","structure":"islands","elapsedMs":28},{"size":100,"kind":"square","structure":"continent","elapsedMs":21},{"size":100,"kind":"square","structure":"coast","elapsedMs":11},{"size":100,"kind":"hex","structure":"islands","elapsedMs":24},{"size":100,"kind":"hex","structure":"continent","elapsedMs":27},{"size":100,"kind":"hex","structure":"coast","elapsedMs":14},{"size":200,"kind":"square","structure":"islands","elapsedMs":103},{"size":200,"kind":"square","structure":"continent","elapsedMs":87},{"size":200,"kind":"square","structure":"coast","elapsedMs":41},{"size":200,"kind":"hex","structure":"islands","elapsedMs":79},{"size":200,"kind":"hex","structure":"continent","elapsedMs":89},{"size":200,"kind":"hex","structure":"coast","elapsedMs":67},{"size":300,"kind":"square","structure":"islands","elapsedMs":166},{"size":300,"kind":"square","structure":"continent","elapsedMs":174},{"size":300,"kind":"square","structure":"coast","elapsedMs":113},{"size":300,"kind":"hex","structure":"islands","elapsedMs":182},{"size":300,"kind":"hex","structure":"continent","elapsedMs":193},{"size":300,"kind":"hex","structure":"coast","elapsedMs":145}]
+✖ actual app seeds include an elongated island instead of three similar radial silhouettes (961.7926ms)
+ℹ [{"mode":"landscape","seed":42,"shapeSeed":93344066,"elongation":[1.3038630847212802,1.1874575076601437,1.8543472390474094]},{"mode":"hexlandscape","seed":42,"shapeSeed":93344066,"elongation":[1.3084844883467865,1.1847312857058212,1.8553895704931496]},{"mode":"landscape","seed":7,"shapeSeed":1683744565,"elongation":[1.4033492573863788,1.701715437953051,1.8186199128083709]},{"mode":"hexlandscape","seed":7,"shapeSeed":1683744565,"elongation":[1.4085196342961326,1.709770906009413,1.8184457607400644]}]
+✖ coastline silhouettes stay deterministic under explicit coverage, including feasible16-cell islands (50.0008ms)
+✔ profile streams reach their dry boundary outlet on both grids without changing the flow graph (113.3081ms)
+✔ removing undersized lakes retains strong river channels, rather than a dry gap or a restored lake (226.9129ms)
+✔ profile width one is exactly the strong river core, without an automatic extra bank (3.7577ms)
+✔ profile widening stays within width minus one neighbor layers and never replaces sea or retained lakes (11.9613ms)
+✔ profile rivers zero stays river free through lake filtering and widening, retaining ocean and large lakes (6.8598ms)
+✔ native requests without a landscape profile retain their observed water output exactly (6.9332ms)
+✔ real profile river corrections preserve native navigation and access in both workspaces (541.0776ms)
+✔ profile freshwater fills to a shared conditioned head while retaining sea, masks, flow and width (5.6048ms)
+✔ profile water levels do not rise along wet flow through widened rivers, lake exits or sea contacts (3.6597ms)
+✔ profile flat bed one retains a positive freshwater depth without capping its internal head at one (2.8186ms)
+✔ normalized profile matrix keeps final wet flow levels monotone, depths bounded and navigation accessible (5329.1762ms)
+✖ generated bridge water level uses the immutable bed rather than its navigation deck elevation (15.8671ms)
+ℹ tests 24
+ℹ suites 0
+ℹ pass 18
+ℹ fail 6
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 6469.5799
+
+✖ failing tests:
+
+test at tests\landscape-biome-cards.test.mjs:26:1
+✖ per-card Add validates the confirmed budget atomically while invalid drafts do not block Create (2.3706ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  75 !== 95
+  
+      at TestContext.<anonymous> (file:///C:/Vibecoding/Games/VlandGenerator/tests/landscape-biome-cards.test.mjs:26:591)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 75,
+    expected: 95,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests\landscape-biome-cards.test.mjs:31:1
+✖ restoring ten independent UI fields never changes confirmed recipe cards until Add (6.2224ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  3.5 !== 0.5
+  
+      at TestContext.<anonymous> (file:///C:/Vibecoding/Games/VlandGenerator/tests/landscape-biome-cards.test.mjs:31:1018)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 3.5,
+    expected: 0.5,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests\landscape-irregular.test.mjs:39:1
+✖ seed42 has a resolved sea-connected bay at 50 and 300 on square and hex landmasses (1208.9783ms)
+  AssertionError [ERR_ASSERTION]: {"size":50,"kind":"square","structure":"islands","elapsedMs":33,"parts":[{"cells":211,"bayDepth":0.5266851623825876,"hullDeficit":0.09051724137931039,"aspect":0.9444444444444444,"elongation":1.0861454100479817},{"cells":131,"bayDepth":0.5,"hullDeficit":0.06428571428571428,"aspect":0.8571428571428571,"elongation":1.2088540429917933},{"cells":283,"bayDepth":1.8407159732336889,"hullDeficit":0.15396113602391626,"aspect":2.5384615384615383,"elongation":3.028432596458968}]} sea-connected bay depth at least2/12 cells
+      at TestContext.<anonymous> (file:///C:/Vibecoding/Games/VlandGenerator/tests/landscape-irregular.test.mjs:43:67)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }
+
+test at tests\landscape-irregular.test.mjs:56:1
+✖ actual app seeds include an elongated island instead of three similar radial silhouettes (961.7926ms)
+  AssertionError [ERR_ASSERTION]: {"mode":"landscape","seed":42,"shapeSeed":93344066,"elongation":[1.3038630847212802,1.1874575076601437,1.8543472390474094]} at least one major/minor spread ratio >=2; visual acceptance remains separate
+      at TestContext.<anonymous> (file:///C:/Vibecoding/Games/VlandGenerator/tests/landscape-irregular.test.mjs:61:66)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }
+
+test at tests\landscape-irregular.test.mjs:64:1
+✖ coastline silhouettes stay deterministic under explicit coverage, including feasible16-cell islands (50.0008ms)
+  AssertionError [ERR_ASSERTION]: square/islands/16
+  + actual - expected
+  
+  + '6e0152459a0293ae008aa8fe60fd3e840907b2023c205fedee773adf36cd29b9'
+  - '98eaa8dd40159fd8fcce7f53382f72e7e9521c99f9840d315605056de4fa6cda'
+  
+      at TestContext.<anonymous> (file:///C:/Vibecoding/Games/VlandGenerator/tests/landscape-irregular.test.mjs:66:315)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: '6e0152459a0293ae008aa8fe60fd3e840907b2023c205fedee773adf36cd29b9',
+    expected: '98eaa8dd40159fd8fcce7f53382f72e7e9521c99f9840d315605056de4fa6cda',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests\landscape-rivers.test.mjs:67:1
+✖ generated bridge water level uses the immutable bed rather than its navigation deck elevation (15.8671ms)
+  AssertionError [ERR_ASSERTION]: fixture contains real raised decks
+      at TestContext.<anonymous> (file:///C:/Vibecoding/Games/VlandGenerator/tests/landscape-rivers.test.mjs:68:401)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }

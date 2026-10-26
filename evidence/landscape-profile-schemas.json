@@ -1,0 +1,507 @@
+{
+  "ok": true,
+  "validator": "jsonschema",
+  "version": "4.26.0",
+  "draft": "2020-12",
+  "offlineRegistry": true,
+  "schemas": 59,
+  "documents": 98,
+  "negativeControls": 98,
+  "modes": [
+    "landscape",
+    "hexlandscape"
+  ],
+  "failures": [],
+  "checks": [
+    {
+      "document": "landscape land meadow recipe",
+      "schema": "schemas/recipe.schema.json",
+      "ok": true
+    },
+    {
+      "document": "landscape land meadow project",
+      "schema": "schemas/project.schema.json",
+      "ok": true
+    },
+    {
+      "document": "landscape land meadow runtime",
+      "schema": "schemas/runtime.schema.json",
+      "ok": true
+    },
+    {
+      "document": "landscape land meadow context",
+      "schema": "schemas/project-context.schema.json",
+      "ok": true
+    },
+    {
+      "document": "landscape land forest recipe",
+      "schema": "schemas/recipe.schema.json",
+      "ok": true
+    },
+    {
+      "document": "landscape land swamp recipe",
+      "schema": "schemas/recipe.schema.json",
+      "ok": true
+    },
+    {
+      "document": "landscape land desert recipe",
+      "schema": "schemas/recipe.schema.json",
+      "ok": true
+    },
+    {
+      "document": "landscape land snow recipe",
+      "schema": "schemas/recipe.schema.json",
+      "ok": true
+    },
+    {
+      "document": "landscape land snow project",
+      "schema": "schemas/project.schema.json",
+      "ok": true
+    },
+    {
+      "document": "landscape land snow runtime",
+      "schema": "schemas/runtime.schema.json",
+      "ok": true
+    },
+    {
+      "document": "landscape land snow context",
+      "schema": "schemas/project-context.schema.json",
+      "ok": true
+    },
+    {
+      "document": "landscape land mountains recipe",
+      "schema": "schemas/recipe.schema.json",
+      "ok": true
+    },
+    {
+      "document": "landscape land volcanic recipe",
+      "schema": "schemas/recipe.schema.json",
+      "ok": true
+    },
+    {
+      "document": "landscape coast meadow recipe",
+      "schema": "schemas/recipe.schema.json",
+      "ok": true
+    },
+    {
+      "document": "landscape coast forest recipe",
+      "schema": "schemas/recipe.schema.json",
+      "ok": true
+    },
+    {
+      "document": "landscape coast forest project",
+      "schema": "schemas/project.schema.json",
+      "ok": true
+    },
+    {
+      "document": "landscape coast forest runtime",
+      "schema": "schemas/runtime.schema.json",
+      "ok": true
+    },
+    {
+      "document": "landscape coast forest context",
+      "schema": "schemas/project-context.schema.json",
+      "ok": true
+    },
+    {
+      "document": "landscape coast swamp recipe",
+      "schema": "schemas/recipe.schema.json",
+      "ok": true
+    },
+    {
+      "document": "landscape coast desert recipe",
+      "schema": "schemas/recipe.schema.json",
+      "ok": true
+    },
+    {
+      "document": "landscape coast snow recipe",
+      "schema": "schemas/recipe.schema.json",
+      "ok": true
+    },
+    {
+      "document": "landscape coast mountains recipe",
+      "schema": "schemas/recipe.schema.json",
+      "ok": true
+    },
+    {
+      "document": "landscape coast mountains project",
+      "schema": "schemas/project.schema.json",
+      "ok": true
+    },
+    {
+      "document": "landscape coast mountains runtime",
+      "schema": "schemas/runtime.schema.json",
+      "ok": true
+    },
+    {
+      "document": "landscape coast mountains context",
+      "schema": "schemas/project-context.schema.json",
+      "ok": true
+    },
+    {
+      "document": "landscape coast volcanic recipe",
+      "schema": "schemas/recipe.schema.json",
+      "ok": true
+    },
+    {
+      "document": "landscape islands meadow recipe",
+      "schema": "schemas/recipe.schema.json",
+      "ok": true
+    },
+    {
+      "document": "landscape islands forest recipe",
+      "schema": "schemas/recipe.schema.json",
+      "ok": true
+    },
+    {
+      "document": "landscape islands swamp recipe",
+      "schema": "schemas/recipe.schema.json",
+      "ok": true
+    },
+    {
+      "document": "landscape islands swamp project",
+      "schema": "schemas/project.schema.json",
+      "ok": true
+    },
+    {
+      "document": "landscape islands swamp runtime",
+      "schema": "schemas/runtime.schema.json",
+      "ok": true
+    },
+    {
+      "document": "landscape islands swamp context",
+      "schema": "schemas/project-context.schema.json",
+      "ok": true
+    },
+    {
+      "document": "landscape islands desert recipe",
+      "schema": "schemas/recipe.schema.json",
+      "ok": true
+    },
+    {
+      "document": "landscape islands snow recipe",
+      "schema": "schemas/recipe.schema.json",
+      "ok": true
+    },
+    {
+      "document": "landscape islands mountains recipe",
+      "schema": "schemas/recipe.schema.json",
+      "ok": true
+    },
+    {
+      "document": "landscape islands volcanic recipe",
+      "schema": "schemas/recipe.schema.json",
+      "ok": true
+    },
+    {
+      "document": "landscape islands volcanic project",
+      "schema": "schemas/project.schema.json",
+      "ok": true
+    },
+    {
+      "document": "landscape islands volcanic runtime",
+      "schema": "schemas/runtime.schema.json",
+      "ok": true
+    },
+    {
+      "document": "landscape islands volcanic context",
+      "schema": "schemas/project-context.schema.json",
+      "ok": true
+    },
+    {
+      "document": "landscape continent meadow recipe",
+      "schema": "schemas/recipe.schema.json",
+      "ok": true
+    },
+    {
+      "document": "landscape continent forest recipe",
+      "schema": "schemas/recipe.schema.json",
+      "ok": true
+    },
+    {
+      "document": "landscape continent swamp recipe",
+      "schema": "schemas/recipe.schema.json",
+      "ok": true
+    },
+    {
+      "document": "landscape continent desert recipe",
+      "schema": "schemas/recipe.schema.json",
+      "ok": true
+    },
+    {
+      "document": "landscape continent desert project",
+      "schema": "schemas/project.schema.json",
+      "ok": true
+    },
+    {
+      "document": "landscape continent desert runtime",
+      "schema": "schemas/runtime.schema.json",
+      "ok": true
+    },
+    {
+      "document": "landscape continent desert context",
+      "schema": "schemas/project-context.schema.json",
+      "ok": true
+    },
+    {
+      "document": "landscape continent snow recipe",
+      "schema": "schemas/recipe.schema.json",
+      "ok": true
+    },
+    {
+      "document": "landscape continent mountains recipe",
+      "schema": "schemas/recipe.schema.json",
+      "ok": true
+    },
+    {
+      "document": "landscape continent volcanic recipe",
+      "schema": "schemas/recipe.schema.json",
+      "ok": true
+    },
+    {
+      "document": "hexlandscape land meadow recipe",
+      "schema": "schemas/recipe.schema.json",
+      "ok": true
+    },
+    {
+      "document": "hexlandscape land meadow project",
+      "schema": "schemas/project.schema.json",
+      "ok": true
+    },
+    {
+      "document": "hexlandscape land meadow runtime",
+      "schema": "schemas/runtime.schema.json",
+      "ok": true
+    },
+    {
+      "document": "hexlandscape land meadow context",
+      "schema": "schemas/project-context.schema.json",
+      "ok": true
+    },
+    {
+      "document": "hexlandscape land forest recipe",
+      "schema": "schemas/recipe.schema.json",
+      "ok": true
+    },
+    {
+      "document": "hexlandscape land swamp recipe",
+      "schema": "schemas/recipe.schema.json",
+      "ok": true
+    },
+    {
+      "document": "hexlandscape land desert recipe",
+      "schema": "schemas/recipe.schema.json",
+      "ok": true
+    },
+    {
+      "document": "hexlandscape land snow recipe",
+      "schema": "schemas/recipe.schema.json",
+      "ok": true
+    },
+    {
+      "document": "hexlandscape land snow project",
+      "schema": "schemas/project.schema.json",
+      "ok": true
+    },
+    {
+      "document": "hexlandscape land snow runtime",
+      "schema": "schemas/runtime.schema.json",
+      "ok": true
+    },
+    {
+      "document": "hexlandscape land snow context",
+      "schema": "schemas/project-context.schema.json",
+      "ok": true
+    },
+    {
+      "document": "hexlandscape land mountains recipe",
+      "schema": "schemas/recipe.schema.json",
+      "ok": true
+    },
+    {
+      "document": "hexlandscape land volcanic recipe",
+      "schema": "schemas/recipe.schema.json",
+      "ok": true
+    },
+    {
+      "document": "hexlandscape coast meadow recipe",
+      "schema": "schemas/recipe.schema.json",
+      "ok": true
+    },
+    {
+      "document": "hexlandscape coast forest recipe",
+      "schema": "schemas/recipe.schema.json",
+      "ok": true
+    },
+    {
+      "document": "hexlandscape coast forest project",
+      "schema": "schemas/project.schema.json",
+      "ok": true
+    },
+    {
+      "document": "hexlandscape coast forest runtime",
+      "schema": "schemas/runtime.schema.json",
+      "ok": true
+    },
+    {
+      "document": "hexlandscape coast forest context",
+      "schema": "schemas/project-context.schema.json",
+      "ok": true
+    },
+    {
+      "document": "hexlandscape coast swamp recipe",
+      "schema": "schemas/recipe.schema.json",
+      "ok": true
+    },
+    {
+      "document": "hexlandscape coast desert recipe",
+      "schema": "schemas/recipe.schema.json",
+      "ok": true
+    },
+    {
+      "document": "hexlandscape coast snow recipe",
+      "schema": "schemas/recipe.schema.json",
+      "ok": true
+    },
+    {
+      "document": "hexlandscape coast mountains recipe",
+      "schema": "schemas/recipe.schema.json",
+      "ok": true
+    },
+    {
+      "document": "hexlandscape coast mountains project",
+      "schema": "schemas/project.schema.json",
+      "ok": true
+    },
+    {
+      "document": "hexlandscape coast mountains runtime",
+      "schema": "schemas/runtime.schema.json",
+      "ok": true
+    },
+    {
+      "document": "hexlandscape coast mountains context",
+      "schema": "schemas/project-context.schema.json",
+      "ok": true
+    },
+    {
+      "document": "hexlandscape coast volcanic recipe",
+      "schema": "schemas/recipe.schema.json",
+      "ok": true
+    },
+    {
+      "document": "hexlandscape islands meadow recipe",
+      "schema": "schemas/recipe.schema.json",
+      "ok": true
+    },
+    {
+      "document": "hexlandscape islands forest recipe",
+      "schema": "schemas/recipe.schema.json",
+      "ok": true
+    },
+    {
+      "document": "hexlandscape islands swamp recipe",
+      "schema": "schemas/recipe.schema.json",
+      "ok": true
+    },
+    {
+      "document": "hexlandscape islands swamp project",
+      "schema": "schemas/project.schema.json",
+      "ok": true
+    },
+    {
+      "document": "hexlandscape islands swamp runtime",
+      "schema": "schemas/runtime.schema.json",
+      "ok": true
+    },
+    {
+      "document": "hexlandscape islands swamp context",
+      "schema": "schemas/project-context.schema.json",
+      "ok": true
+    },
+    {
+      "document": "hexlandscape islands desert recipe",
+      "schema": "schemas/recipe.schema.json",
+      "ok": true
+    },
+    {
+      "document": "hexlandscape islands snow recipe",
+      "schema": "schemas/recipe.schema.json",
+      "ok": true
+    },
+    {
+      "document": "hexlandscape islands mountains recipe",
+      "schema": "schemas/recipe.schema.json",
+      "ok": true
+    },
+    {
+      "document": "hexlandscape islands volcanic recipe",
+      "schema": "schemas/recipe.schema.json",
+      "ok": true
+    },
+    {
+      "document": "hexlandscape islands volcanic project",
+      "schema": "schemas/project.schema.json",
+      "ok": true
+    },
+    {
+      "document": "hexlandscape islands volcanic runtime",
+      "schema": "schemas/runtime.schema.json",
+      "ok": true
+    },
+    {
+      "document": "hexlandscape islands volcanic context",
+      "schema": "schemas/project-context.schema.json",
+      "ok": true
+    },
+    {
+      "document": "hexlandscape continent meadow recipe",
+      "schema": "schemas/recipe.schema.json",
+      "ok": true
+    },
+    {
+      "document": "hexlandscape continent forest recipe",
+      "schema": "schemas/recipe.schema.json",
+      "ok": true
+    },
+    {
+      "document": "hexlandscape continent swamp recipe",
+      "schema": "schemas/recipe.schema.json",
+      "ok": true
+    },
+    {
+      "document": "hexlandscape continent desert recipe",
+      "schema": "schemas/recipe.schema.json",
+      "ok": true
+    },
+    {
+      "document": "hexlandscape continent desert project",
+      "schema": "schemas/project.schema.json",
+      "ok": true
+    },
+    {
+      "document": "hexlandscape continent desert runtime",
+      "schema": "schemas/runtime.schema.json",
+      "ok": true
+    },
+    {
+      "document": "hexlandscape continent desert context",
+      "schema": "schemas/project-context.schema.json",
+      "ok": true
+    },
+    {
+      "document": "hexlandscape continent snow recipe",
+      "schema": "schemas/recipe.schema.json",
+      "ok": true
+    },
+    {
+      "document": "hexlandscape continent mountains recipe",
+      "schema": "schemas/recipe.schema.json",
+      "ok": true
+    },
+    {
+      "document": "hexlandscape continent volcanic recipe",
+      "schema": "schemas/recipe.schema.json",
+      "ok": true
+    }
+  ]
+}

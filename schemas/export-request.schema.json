@@ -1,0 +1,74 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://vland.invalid/schemas/export-request.schema.json",
+  "oneOf": [
+    {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "project": {
+          "$ref": "project.schema.json"
+        },
+        "format": {
+          "enum": [
+            "project",
+            "recipe",
+            "runtime"
+          ]
+        }
+      },
+      "required": [
+        "project",
+        "format"
+      ]
+    },
+    {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "project": {
+          "$ref": "project.schema.json"
+        },
+        "format": {
+          "const": "llm-context"
+        },
+        "options": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "layerIds": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "maxLength": 128
+              },
+              "maxItems": 16,
+              "minItems": 1,
+              "uniqueItems": true
+            },
+            "maxSources": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 256
+            },
+            "maxCatalog": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 256
+            },
+            "maxLinks": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 256
+            }
+          },
+          "required": []
+        }
+      },
+      "required": [
+        "project",
+        "format"
+      ]
+    }
+  ]
+}

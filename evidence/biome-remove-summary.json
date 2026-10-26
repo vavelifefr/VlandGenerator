@@ -1,0 +1,68 @@
+{
+  "status": "implemented_verified",
+  "ok": true,
+  "updatedAt": "2026-10-25T21:38:08.617518+00:00",
+  "change": "Deletion of a biome present in the canonical recipe immediately triggers the existing generation path on both grids, including a pending edit and the final card. UI-only draft deletion does not generate.",
+  "productionFiles": [
+    "Web/HTML/ui/controls.mjs"
+  ],
+  "node": {
+    "tests": 53,
+    "pass": 53,
+    "fail": 0,
+    "focusedTests": 27,
+    "report": "evidence/biome-remove-tests.txt",
+    "tddRed": "evidence/biome-remove-red.txt",
+    "tddGreen": "evidence/biome-remove-green.txt"
+  },
+  "browser": {
+    "report": "evidence/biome-remove-browser.json",
+    "cases": 8,
+    "widths": [
+      1100,
+      360
+    ],
+    "sizes": [
+      100,
+      300
+    ],
+    "modes": [
+      "landscape",
+      "hexlandscape"
+    ],
+    "automaticGenerations": 32,
+    "confirmedDeletions": 16,
+    "lastCardDeletionVerified": true,
+    "pendingEditDeletionVerified": true,
+    "unconfirmedDraftNoGenerationVerified": true,
+    "navigationAndAccess": true,
+    "seaUnchanged": true,
+    "pageErrors": [],
+    "ownUnrelatedCopy": true,
+    "copyRemovedIndependentlyVerified": true,
+    "headless": true
+  },
+  "interfaces": {
+    "report": "evidence/biome-remove-interfaces.json",
+    "defaultsJsHttpCliExactCases": 2,
+    "currentMainFiles": 5,
+    "restart": false,
+    "generationEngineChanged": false
+  },
+  "documentation": {
+    "ok": true,
+    "utf8Files": 6,
+    "balancedFences": 6,
+    "localLinks": 55,
+    "brokenLinks": []
+  },
+  "scope": "UI-only action flag. Earlier full portable engine/schema results remain historical; current browser checks use a new independent copy. No schema or backend changes.",
+  "protected": {
+    "liveSessionUsed": false,
+    "authoredDataModified": false,
+    "desktopControlled": false,
+    "userTabsControlled": false,
+    "dependenciesInstalled": false,
+    "commitsCreated": false
+  }
+}

@@ -1,0 +1,713 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://vland.invalid/schemas/generation-landscape.schema.json",
+  "type": "object",
+  "properties": {
+    "width": {
+      "type": "integer",
+      "minimum": 16,
+      "maximum": 300
+    },
+    "height": {
+      "type": "integer",
+      "minimum": 16,
+      "maximum": 300
+    },
+    "origin": {
+      "type": "object",
+      "properties": {
+        "x": {
+          "type": "integer",
+          "minimum": -1000000,
+          "maximum": 1000000
+        },
+        "y": {
+          "type": "integer",
+          "minimum": -1000000,
+          "maximum": 1000000
+        }
+      },
+      "required": [
+        "x",
+        "y"
+      ],
+      "additionalProperties": false
+    },
+    "preset": {
+      "enum": [
+        "temperate",
+        "continents",
+        "archipelago",
+        "highlands",
+        "desert",
+        "frozen",
+        "volcanic",
+        "caverns"
+      ]
+    },
+    "profile": {
+      "oneOf": [
+        {
+          "$ref": "../engine/schemas/movement-profile.schema.json"
+        },
+        {
+          "enum": [
+            "walker",
+            "large",
+            "flyer",
+            "swimmer"
+          ]
+        }
+      ]
+    },
+    "layers": {
+      "type": "object",
+      "properties": {
+        "above": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 2
+        },
+        "underground": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 6
+        },
+        "depthStep": {
+          "type": "integer",
+          "minimum": 8,
+          "maximum": 128
+        }
+      },
+      "required": [],
+      "additionalProperties": false
+    },
+    "terrain": {
+      "type": "object",
+      "properties": {
+        "scale": {
+          "type": "number",
+          "minimum": 8,
+          "maximum": 160
+        },
+        "water": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 0.8
+        },
+        "relief": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "warp": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "octaves": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 6
+        },
+        "persistence": {
+          "type": "number",
+          "minimum": 0.1,
+          "maximum": 0.9
+        },
+        "blur": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 3
+        },
+        "erosion": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 16
+        },
+        "terraces": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 12
+        }
+      },
+      "required": [],
+      "additionalProperties": false
+    },
+    "climate": {
+      "type": "object",
+      "properties": {
+        "temperature": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "moisture": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "scale": {
+          "type": "number",
+          "minimum": 8,
+          "maximum": 160
+        },
+        "latitude": {
+          "type": "number",
+          "minimum": -1,
+          "maximum": 1
+        },
+        "wind": {
+          "enum": [
+            "west",
+            "east",
+            "north",
+            "south"
+          ]
+        }
+      },
+      "required": [],
+      "additionalProperties": false
+    },
+    "hydrology": {
+      "type": "object",
+      "properties": {
+        "rivers": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "lakes": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "riverWidth": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 5
+        },
+        "minLakeArea": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 128
+        },
+        "floodplainWidth": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 8
+        }
+      },
+      "required": [],
+      "additionalProperties": false
+    },
+    "geology": {
+      "type": "object",
+      "properties": {
+        "scale": {
+          "type": "number",
+          "minimum": 8,
+          "maximum": 96
+        },
+        "rocks": {
+          "type": "array",
+          "items": {
+            "enum": [
+              "granite",
+              "basalt",
+              "limestone",
+              "sandstone",
+              "shale",
+              "slate",
+              "marble",
+              "gneiss",
+              "obsidian",
+              "halite"
+            ]
+          },
+          "maxItems": 10,
+          "minItems": 1,
+          "uniqueItems": true
+        }
+      },
+      "required": [],
+      "additionalProperties": false
+    },
+    "caves": {
+      "type": "object",
+      "properties": {
+        "style": {
+          "enum": [
+            "mixed",
+            "chambers",
+            "tunnels",
+            "karst",
+            "fractured",
+            "lava-tubes",
+            "shafts",
+            "water-carved"
+          ]
+        },
+        "openness": {
+          "type": "number",
+          "minimum": 0.2,
+          "maximum": 0.75
+        },
+        "connectivity": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "aquifers": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "lavaDepth": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 7
+        },
+        "tunnelRadius": {
+          "type": "number",
+          "minimum": 1,
+          "maximum": 4
+        },
+        "branching": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "smoothing": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 5
+        }
+      },
+      "required": [],
+      "additionalProperties": false
+    },
+    "resources": {
+      "type": "object",
+      "properties": {
+        "frequency": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 3
+        },
+        "size": {
+          "type": "number",
+          "minimum": 0.3,
+          "maximum": 3
+        },
+        "richness": {
+          "type": "number",
+          "minimum": 0.1,
+          "maximum": 5
+        },
+        "types": {
+          "type": "array",
+          "items": {
+            "enum": [
+              "iron",
+              "copper",
+              "coal",
+              "tin",
+              "quartz",
+              "salt",
+              "silver",
+              "gold",
+              "uranium",
+              "gems",
+              "sulfur",
+              "oil"
+            ]
+          },
+          "maxItems": 12,
+          "minItems": 0,
+          "uniqueItems": true
+        },
+        "starter": {
+          "type": "boolean"
+        }
+      },
+      "required": [],
+      "additionalProperties": false
+    },
+    "structures": {
+      "type": "object",
+      "properties": {
+        "density": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 2
+        },
+        "types": {
+          "type": "array",
+          "items": {
+            "enum": [
+              "ruins",
+              "tower",
+              "mine",
+              "camp",
+              "temple",
+              "outpost"
+            ]
+          },
+          "maxItems": 6,
+          "minItems": 0,
+          "uniqueItems": true
+        },
+        "trails": {
+          "type": "boolean"
+        }
+      },
+      "required": [],
+      "additionalProperties": false
+    },
+    "ecology": {
+      "type": "object",
+      "properties": {
+        "vegetation": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 2
+        },
+        "blockingTrees": {
+          "type": "boolean"
+        }
+      },
+      "required": [],
+      "additionalProperties": false
+    },
+    "events": {
+      "type": "object",
+      "properties": {
+        "density": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 2
+        },
+        "spawners": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 2
+        },
+        "threat": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        }
+      },
+      "required": [],
+      "additionalProperties": false
+    },
+    "playability": {
+      "type": "object",
+      "properties": {
+        "safeRadius": {
+          "type": "integer",
+          "minimum": 2,
+          "maximum": 12
+        },
+        "minRegion": {
+          "type": "integer",
+          "minimum": 4,
+          "maximum": 512
+        }
+      },
+      "required": [],
+      "additionalProperties": false
+    },
+    "topology": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "kind": {
+          "const": "square"
+        }
+      },
+      "required": [
+        "kind"
+      ]
+    },
+    "landforms": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "pattern": {
+          "enum": [
+            "natural",
+            "island",
+            "archipelago",
+            "ridge",
+            "plateau",
+            "basin"
+          ]
+        },
+        "direction": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 359
+        },
+        "strength": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "featureScale": {
+          "type": "number",
+          "minimum": 0.3,
+          "maximum": 4
+        },
+        "coastDetail": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        }
+      },
+      "required": []
+    },
+    "biomes": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "transitionWidth": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 12
+        },
+        "coastWidth": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 8
+        },
+        "foothillWidth": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 8
+        }
+      },
+      "required": []
+    },
+    "autoTransports": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "enabled": {
+          "type": "boolean"
+        },
+        "connectRegions": {
+          "type": "boolean"
+        },
+        "crossLayerRegions": {
+          "type": "boolean"
+        },
+        "minRegionArea": {
+          "type": "integer",
+          "minimum": 4,
+          "maximum": 4096
+        },
+        "maxLinks": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 128
+        },
+        "landingSize": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 3
+        },
+        "travelCost": {
+          "type": "number",
+          "minimum": 1,
+          "maximum": 1000
+        },
+        "types": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "teleport": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 100
+            },
+            "lift": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 100
+            },
+            "stairs": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 100
+            }
+          },
+          "required": []
+        }
+      },
+      "required": []
+    },
+    "layerSettings": {
+      "type": "object",
+      "maxProperties": 6,
+      "additionalProperties": false,
+      "patternProperties": {
+        "^cave-[1-6]$": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "depth": {
+              "type": "integer",
+              "minimum": 8,
+              "maximum": 768
+            },
+            "caves": {
+              "type": "object",
+              "properties": {
+                "style": {
+                  "enum": [
+                    "mixed",
+                    "chambers",
+                    "tunnels",
+                    "karst",
+                    "fractured",
+                    "lava-tubes",
+                    "shafts",
+                    "water-carved"
+                  ]
+                },
+                "openness": {
+                  "type": "number",
+                  "minimum": 0.2,
+                  "maximum": 0.75
+                },
+                "connectivity": {
+                  "type": "number",
+                  "minimum": 0,
+                  "maximum": 1
+                },
+                "aquifers": {
+                  "type": "number",
+                  "minimum": 0,
+                  "maximum": 1
+                },
+                "lavaDepth": {
+                  "type": "integer",
+                  "minimum": 1,
+                  "maximum": 7
+                },
+                "tunnelRadius": {
+                  "type": "number",
+                  "minimum": 1,
+                  "maximum": 4
+                },
+                "branching": {
+                  "type": "number",
+                  "minimum": 0,
+                  "maximum": 1
+                },
+                "smoothing": {
+                  "type": "integer",
+                  "minimum": 0,
+                  "maximum": 5
+                }
+              },
+              "required": [],
+              "additionalProperties": false
+            }
+          },
+          "required": []
+        }
+      }
+    },
+    "landscape": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "coastErosion": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 100,
+          "default": 50
+        },
+        "landPercent": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 99,
+          "default": 75
+        },
+        "uniformity": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 100,
+          "default": 50
+        },
+        "structure": {
+          "enum": [
+            "land",
+            "coast",
+            "islands",
+            "continent"
+          ]
+        },
+        "baseBiome": {
+          "enum": [
+            "meadow",
+            "forest",
+            "swamp",
+            "desert",
+            "snow",
+            "mountains",
+            "volcanic"
+          ]
+        },
+        "biomes": {
+          "type": "array",
+          "maxItems": 64,
+          "default": [],
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "id": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 64
+              },
+              "type": {
+                "enum": [
+                  "meadow",
+                  "forest",
+                  "swamp",
+                  "desert",
+                  "snow",
+                  "mountains",
+                  "volcanic",
+                  "gravel"
+                ]
+              },
+              "percent": {
+                "type": "number",
+                "minimum": 0,
+                "maximum": 100,
+                "multipleOf": 0.1
+              }
+            },
+            "required": [
+              "id",
+              "type",
+              "percent"
+            ]
+          }
+        }
+      },
+      "required": [
+        "structure",
+        "baseBiome"
+      ]
+    }
+  },
+  "required": [],
+  "additionalProperties": false
+}

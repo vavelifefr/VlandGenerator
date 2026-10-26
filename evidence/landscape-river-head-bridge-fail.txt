@@ -1,0 +1,37 @@
+✔ profile streams reach their dry boundary outlet on both grids without changing the flow graph (60.8509ms)
+✔ removing undersized lakes retains strong river channels, rather than a dry gap or a restored lake (63.9418ms)
+✔ profile width one is exactly the strong river core, without an automatic extra bank (2.2131ms)
+✔ profile widening stays within width minus one neighbor layers and never replaces sea or retained lakes (13.5851ms)
+✔ profile rivers zero stays river free through lake filtering and widening, retaining ocean and large lakes (6.9378ms)
+✔ native requests without a landscape profile retain their observed water output exactly (6.8945ms)
+✔ real profile river corrections preserve native navigation and access in both workspaces (316.0624ms)
+✔ profile freshwater fills to a shared conditioned head while retaining sea, masks, flow and width (3.2806ms)
+✔ profile water levels do not rise along wet flow through widened rivers, lake exits or sea contacts (1.8856ms)
+✔ profile flat bed one retains a positive freshwater depth without capping its internal head at one (1.7487ms)
+✖ normalized profile matrix keeps final wet flow levels monotone, depths bounded and navigation accessible (219.6298ms)
+ℹ tests 11
+ℹ suites 0
+ℹ pass 10
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 806.4684
+
+✖ failing tests:
+
+test at tests\landscape-rivers.test.mjs:61:1
+✖ normalized profile matrix keeps final wet flow levels monotone, depths bounded and navigation accessible (219.6298ms)
+  AssertionError [ERR_ASSERTION]: {"mode":"landscape","size":16,"structure":"islands","baseBiome":"mountains"} wet uphill 104>120
+      at TestContext.<anonymous> (file:///C:/Vibecoding/Games/VlandGenerator/tests/landscape-rivers.test.mjs:63:751)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }
+
+Additional bounded read-only matrix:112 maps, raw wet uphill0, final elevation+depth uphill18, nonbridge uphill0, maxDepth.234, depth>1=0, navigation/access112/112PASS. First104->120 bridge/bridge in landscape16 islands/mountains seed42. Root verified elevation is bridge deck plane; generated hydrology datum is immutable heightmap. This initial failure documents an incorrect test datum; no navigation or depth workaround was applied.

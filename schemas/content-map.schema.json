@@ -1,0 +1,296 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://vland.invalid/schemas/content-map.schema.json",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "schema": {
+      "const": "vland.content.map"
+    },
+    "schemaVersion": {
+      "const": 4
+    },
+    "layers": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 64,
+            "pattern": "^[a-zA-Z][a-zA-Z0-9_-]{0,63}$",
+            "not": {
+              "enum": [
+                "__proto__",
+                "prototype",
+                "constructor"
+              ]
+            }
+          },
+          "kind": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 64
+          },
+          "z": {
+            "type": "number",
+            "minimum": -100000,
+            "maximum": 100000
+          },
+          "depth": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 100000
+          },
+          "gravity": {
+            "enum": [
+              "none",
+              "down"
+            ]
+          },
+          "width": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 4096
+          },
+          "height": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 4096
+          },
+          "solid": {
+            "type": "array",
+            "items": {
+              "enum": [
+                0,
+                1
+              ]
+            },
+            "maxItems": 250000
+          },
+          "material": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "maxItems": 250000
+          },
+          "water": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "maxItems": 250000
+          },
+          "biome": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "maxItems": 250000
+          },
+          "rock": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "maxItems": 250000
+          },
+          "support": {
+            "type": "array",
+            "items": {
+              "enum": [
+                0,
+                1
+              ]
+            },
+            "maxItems": 250000
+          },
+          "reserved": {
+            "type": "array",
+            "items": {
+              "enum": [
+                0,
+                1
+              ]
+            },
+            "maxItems": 250000
+          },
+          "frozen": {
+            "type": "array",
+            "items": {
+              "enum": [
+                0,
+                1
+              ]
+            },
+            "maxItems": 250000
+          },
+          "metrics": {
+            "type": "object",
+            "maxProperties": 32,
+            "propertyNames": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 64,
+              "pattern": "^[a-zA-Z][a-zA-Z0-9_-]{0,63}$",
+              "not": {
+                "enum": [
+                  "__proto__",
+                  "prototype",
+                  "constructor"
+                ]
+              }
+            },
+            "additionalProperties": {
+              "type": "array",
+              "items": {
+                "type": "number"
+              },
+              "maxItems": 250000
+            }
+          },
+          "topology": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "kind": {
+                "enum": [
+                  "square",
+                  "hex"
+                ]
+              }
+            },
+            "required": [
+              "kind"
+            ]
+          },
+          "bridge": {
+            "type": "array",
+            "items": {
+              "enum": [
+                0,
+                1
+              ]
+            },
+            "maxItems": 250000
+          },
+          "traits": {
+            "type": "array",
+            "maxItems": 250000,
+            "items": {
+              "enum": [
+                "normal",
+                "fertile",
+                "poisoned",
+                "frozen",
+                "burnt"
+              ]
+            }
+          },
+          "secondaryBiome": {
+            "type": "array",
+            "maxItems": 250000,
+            "items": {
+              "type": "string"
+            }
+          },
+          "landform": {
+            "type": "array",
+            "maxItems": 250000,
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "required": [
+          "id",
+          "kind",
+          "z",
+          "depth",
+          "width",
+          "height",
+          "solid",
+          "material",
+          "water"
+        ]
+      },
+      "maxItems": 16,
+      "minItems": 1
+    },
+    "fixtures": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 256
+          },
+          "catalogId": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 64,
+            "pattern": "^[a-zA-Z][a-zA-Z0-9_-]{0,63}$",
+            "not": {
+              "enum": [
+                "__proto__",
+                "prototype",
+                "constructor"
+              ]
+            }
+          },
+          "layerId": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 64,
+            "pattern": "^[a-zA-Z][a-zA-Z0-9_-]{0,63}$",
+            "not": {
+              "enum": [
+                "__proto__",
+                "prototype",
+                "constructor"
+              ]
+            }
+          },
+          "x": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 4095
+          },
+          "y": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 4095
+          },
+          "properties": {
+            "type": "object"
+          },
+          "origin": {
+            "const": "source"
+          }
+        },
+        "required": [
+          "id",
+          "catalogId",
+          "layerId",
+          "x",
+          "y",
+          "properties",
+          "origin"
+        ]
+      },
+      "maxItems": 12000
+    }
+  },
+  "required": [
+    "schema",
+    "schemaVersion",
+    "layers",
+    "fixtures"
+  ]
+}

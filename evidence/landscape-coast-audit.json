@@ -1,0 +1,16 @@
+{
+  "ok": false,
+  "count": 768,
+  "failures": [
+    {
+      "kind": "hex",
+      "width": 16,
+      "height": 256,
+      "seed": 125,
+      "components": [
+        2042,
+        1
+      ]
+    }
+  ]
+}

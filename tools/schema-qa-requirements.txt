@@ -1,0 +1,2 @@
+# Optional development verification only. The application remains dependency-free.
+jsonschema==4.26.0

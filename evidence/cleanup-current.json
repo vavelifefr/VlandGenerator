@@ -1,0 +1,752 @@
+{
+  "status": "complete",
+  "scope": "Authorized removal of stale outputs and completed stage notes; no code or fixture changes",
+  "retention": "No rollback copies present; at most2 allowed. One current checkpoint, latest reports and necessary verification inputs retained.",
+  "files": [
+    {
+      "path": "evidence/auto-transports-browser-logs.json",
+      "bytes": 201,
+      "sha256": "298806e16394869fb5c28a7be1716f10df6588d19bc5aea2d600c78456880c15"
+    },
+    {
+      "path": "evidence/auto-transports-browser.json",
+      "bytes": 4586,
+      "sha256": "a3d07ccfee8a2be437ee0a58e0b397146f7923295623b5d343bbe52807e6c96b"
+    },
+    {
+      "path": "evidence/auto-transports-content-log.txt",
+      "bytes": 3381,
+      "sha256": "9b1f79bf55b5203b086b61188c53132c23ba32f64efbbc1b059825be107a8c39"
+    },
+    {
+      "path": "evidence/auto-transports-direct-browser-logs.json",
+      "bytes": 2,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "path": "evidence/auto-transports-dungeon-runtime.json",
+      "bytes": 432116,
+      "sha256": "14837393130b54e6ebc7518b969cf8f2269b5878a6f365a743c0fb4269037f4e"
+    },
+    {
+      "path": "evidence/auto-transports-editor.png",
+      "bytes": 61850,
+      "sha256": "0f9b8d7737857baa50f3be3402334820b5cef7d76020fe1ed2a412b4c3eca9fd"
+    },
+    {
+      "path": "evidence/auto-transports-http-cli.json",
+      "bytes": 890,
+      "sha256": "809191e0b72255ab5152323361ae41b1034966529b9cb5783131aec33e2a5426"
+    },
+    {
+      "path": "evidence/auto-transports-large-world.json",
+      "bytes": 139,
+      "sha256": "118d74aa29e6e2bae07f9102226a28784704cb9bf05bf9a870bde65c50d357b1"
+    },
+    {
+      "path": "evidence/auto-transports-lift-runtime.json",
+      "bytes": 620216,
+      "sha256": "f26d28137201d9b3519c970dd35237e6613369077c01637d1cf757ad8f60a1d2"
+    },
+    {
+      "path": "evidence/auto-transports-mixed-runtime.json",
+      "bytes": 618988,
+      "sha256": "7aa98d76adb4adbc62f68274a4f5bde0264a3732f16fed12e57d3dcc8b319c17"
+    },
+    {
+      "path": "evidence/auto-transports-portability.txt",
+      "bytes": 356,
+      "sha256": "8b442291d6e7a6f14dab83be154f626411cd88d904ddd8e697b39ee5103e6827"
+    },
+    {
+      "path": "evidence/auto-transports-schemas.json",
+      "bytes": 6705,
+      "sha256": "d6e592c1b1b79d1d2105bffa46fc6036f1fe8b9cade22917d61a473612f885e9"
+    },
+    {
+      "path": "evidence/auto-transports-stairs-runtime.json",
+      "bytes": 620258,
+      "sha256": "bbc98e3a13c0258eb0e28203a4e18dbe25c39eea6355b7ff403834a889f0f0d6"
+    },
+    {
+      "path": "evidence/auto-transports-stress-log.txt",
+      "bytes": 79,
+      "sha256": "459c32c5030eb584d069d1c9e661d9561a9972842505f2e4857b2abe2c3e340d"
+    },
+    {
+      "path": "evidence/auto-transports-teleport-runtime.json",
+      "bytes": 618370,
+      "sha256": "ded3e1bd2cb2d8b8be7ef5b4eac5346e3e303351d9499548423ccaa67901902e"
+    },
+    {
+      "path": "evidence/auto-transports-tests.txt",
+      "bytes": 11328,
+      "sha256": "8f19aa9c86262ff9576eb5f28e9033583c73e81f53275e4a20dc939f7bdc93da"
+    },
+    {
+      "path": "evidence/auto-transports-unit.txt",
+      "bytes": 1128,
+      "sha256": "b23947be5df4b7aea7df45332175010f1ee90b8787a299df81be5460b8d35077"
+    },
+    {
+      "path": "evidence/cleanup.json",
+      "bytes": 69580,
+      "sha256": "0668fb507d9c1c78c5c22a7cbce68231633a03bf243b793750c3d8d134e4e3b6"
+    },
+    {
+      "path": "evidence/connection-category-browser-logs.json",
+      "bytes": 201,
+      "sha256": "be52b8e708fb3c9c448ed997ad5b7fc8b09f2a19967df3dcd3879c18cb6eac82"
+    },
+    {
+      "path": "evidence/connection-category-browser.json",
+      "bytes": 17757,
+      "sha256": "287c042add38ff3f65f5b136645ec5c263a94e57355983c671ad21bfffd8c8fd"
+    },
+    {
+      "path": "evidence/connection-category-content.txt",
+      "bytes": 3210,
+      "sha256": "b0d3df62b2ecae9e12a18d6e8d9dc155a4db998ce8d327912ce3065b630830e0"
+    },
+    {
+      "path": "evidence/connection-category-editor.png",
+      "bytes": 63839,
+      "sha256": "6da6013d99b95a9dfefacb0ae06779f81217f23b7a3a5ba8408ad39822503e47"
+    },
+    {
+      "path": "evidence/connection-category-portability.txt",
+      "bytes": 257,
+      "sha256": "de2d6e353f94e212c5c074daa33c0e6c6bd12511830e8074c2471578a9619b8f"
+    },
+    {
+      "path": "evidence/connection-category-schemas.json",
+      "bytes": 5138,
+      "sha256": "ecf72fce6c4b1e3390494c02380dd6b8e26613a8d13ad4cd241fe6577a2cf4e3"
+    },
+    {
+      "path": "evidence/connection-category-tests.txt",
+      "bytes": 9681,
+      "sha256": "229e21b80b6c95d4955aaf760e25f12be3eb8518cfc7204740b44643f8488e22"
+    },
+    {
+      "path": "evidence/connection-direct-browser-logs.json",
+      "bytes": 2,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "path": "evidence/connection-http.json",
+      "bytes": 209,
+      "sha256": "83643bc232ad0b7e19737be384e6f76cbdc10888db36c87a37cb8b387f3401aa"
+    },
+    {
+      "path": "evidence/connection-stress.json",
+      "bytes": 18341,
+      "sha256": "b0f249c7047f1ce528b914c934effde8e14ca4398ffda2f191b7be22477d482f"
+    },
+    {
+      "path": "evidence/connection-transport-form.png",
+      "bytes": 47553,
+      "sha256": "8e8d3208f1c255868746b7df0d23434125b25eaa64e48ef7a3042199f5f5aebe"
+    },
+    {
+      "path": "evidence/connection-transports-browser.json",
+      "bytes": 1495,
+      "sha256": "1e17ccba08066335d1add88f4804ee6378573e5ccc11070be0cf968732479ed7"
+    },
+    {
+      "path": "evidence/content-browser-logs.json",
+      "bytes": 40,
+      "sha256": "87f969ed8d25477f8c2dd763bb6b452cde8695eb152fdaf1708817306b7de700"
+    },
+    {
+      "path": "evidence/content-browser-project-schema-data.json",
+      "bytes": 419339,
+      "sha256": "dd31fd7fe5f029cc6e0db552c52c73bff6496192f95943528f93f7a83de86d4f"
+    },
+    {
+      "path": "evidence/content-browser-runtime-schema-data.json",
+      "bytes": 1933801,
+      "sha256": "b3946c3143d85d8707ef5dfe4c3a3124c546e97afbce73dd74b3bdff8cc459a1"
+    },
+    {
+      "path": "evidence/content-delta-schema-data.json",
+      "bytes": 6781,
+      "sha256": "81d2ed0d47efd49c577afad6c6144fbc3dcc861a1022577f90c6c481023e7e1c"
+    },
+    {
+      "path": "evidence/content-demo-project-schema-data.json",
+      "bytes": 422165,
+      "sha256": "5bf5e5a36594efa1fd1966788de0213fad40be70ec30c5a683bd77cec905ed09"
+    },
+    {
+      "path": "evidence/content-demo-runtime-schema-data.json",
+      "bytes": 632408,
+      "sha256": "0baca33676f5d2968151a2e309f9125314ddeb3a467f182b7eb370084c5534d4"
+    },
+    {
+      "path": "evidence/content-demo-scene-schema-data.json",
+      "bytes": 236801,
+      "sha256": "46d9a6df972c61b0446a4bf0eea07f71a9c1119abb4c7190c60ea64f749a7630"
+    },
+    {
+      "path": "evidence/content-desktop.png",
+      "bytes": 75589,
+      "sha256": "3d35ad87176f8b2653945258cfe361b984ee264e516758361499434f17254f6d"
+    },
+    {
+      "path": "evidence/content-mobile-layout.json",
+      "bytes": 408,
+      "sha256": "3b1f3331abb9dcadf947cb1d91bbf35b4cadb9c9c55a1400391e3ae74a9fb047"
+    },
+    {
+      "path": "evidence/content-mobile.png",
+      "bytes": 41967,
+      "sha256": "f65cbf68b305736d14f4bac18ed415fa8d406dcf68fbe3ff6071728cf11d048f"
+    },
+    {
+      "path": "evidence/content-pages-layout.json",
+      "bytes": 5249,
+      "sha256": "5239a394bf3a08b44bfba3ec925636455121bc66ab21922e29da87723be077ad"
+    },
+    {
+      "path": "evidence/content-preview-schema-data.json",
+      "bytes": 7253,
+      "sha256": "ed7c754cc215e78bcd8179ac177a9217aa601385cf1df76014bb6080700577c6"
+    },
+    {
+      "path": "evidence/content-schema-verification.json",
+      "bytes": 1249,
+      "sha256": "9857c425f3e8e5be2374093dde1fda83653a00ce33b31b22e76ced0bc4f9efdf"
+    },
+    {
+      "path": "evidence/content-simulation.txt",
+      "bytes": 3214,
+      "sha256": "1be3ca518650a458f68e08a6d0bfba0e1b658ac4c9930d3d7aa4824b5dd8aff1"
+    },
+    {
+      "path": "evidence/content-tests.txt",
+      "bytes": 7945,
+      "sha256": "14bac63a012ddd4b66af42210561d670756c6950d369ea00f7742f5b30deea41"
+    },
+    {
+      "path": "evidence/content-verification-log.txt",
+      "bytes": 4006,
+      "sha256": "f5eb4048446629e01d9235685bded6c4f85c05d78520e9654a137e14de57e5a5"
+    },
+    {
+      "path": "evidence/drawing-ux-content.txt",
+      "bytes": 4006,
+      "sha256": "f5eb4048446629e01d9235685bded6c4f85c05d78520e9654a137e14de57e5a5"
+    },
+    {
+      "path": "evidence/drawing-ux-portable.txt",
+      "bytes": 369,
+      "sha256": "c1ddededa7ce5ed521d704d7a9d42133fd5b77a0fddcd71f05399e4ae1009d7b"
+    },
+    {
+      "path": "evidence/drawing-ux-tests.txt",
+      "bytes": 14357,
+      "sha256": "785402093a79d56cb06bd643ceb80034140abb6de1e8ab3ca4ece6e0f5c69509"
+    },
+    {
+      "path": "evidence/drawing-ux.json",
+      "bytes": 7706,
+      "sha256": "4d2d00471da43f16d8d01b90e80dfadbe9c0be8a8659f52970a8d4925cc5e9f7"
+    },
+    {
+      "path": "evidence/evolution-live-server.json",
+      "bytes": 373,
+      "sha256": "296b12efa826cdff51b436ab976367b5b194cc8e1e4efed17e832d53cfcdc857"
+    },
+    {
+      "path": "evidence/evolution-stress-log.txt",
+      "bytes": 1375,
+      "sha256": "4082c82a27578fec145bb8120424727c124d52308eed378c85218ab16bfaa814"
+    },
+    {
+      "path": "evidence/evolution-tests.txt",
+      "bytes": 13695,
+      "sha256": "2bc04fa547c8b7731bc5b117b861640e6880fdf7a0868d09ca7dbd34e5e62474"
+    },
+    {
+      "path": "evidence/linked-transports-hop.json",
+      "bytes": 799,
+      "sha256": "1f10dc8502bf986966e561506572b28c4688b770f21655401b3008a4cce2c558"
+    },
+    {
+      "path": "evidence/linked-transports-project.json",
+      "bytes": 586879,
+      "sha256": "339a6d63d44b7015201c35d1c625b2c53b4802bac0bc6c775f4a9b7370bebcf2"
+    },
+    {
+      "path": "evidence/linked-transports-runtime.json",
+      "bytes": 641691,
+      "sha256": "99fe80fcb0ab0fe0e1e07a22c91e72bb9b4ff3e34e0fb8c4a34828136fd2751e"
+    },
+    {
+      "path": "evidence/linked-transports-state.json",
+      "bytes": 1320,
+      "sha256": "241f954793c711124595e3156827904bff577b86bb4ae9158125ba314b22baba"
+    },
+    {
+      "path": "evidence/map-linking-browser-logs.json",
+      "bytes": 201,
+      "sha256": "2544a6c6d019e99a32050c752529edc393cb161ec13d31b69b364d272750ef7b"
+    },
+    {
+      "path": "evidence/map-linking-caves-project.json",
+      "bytes": 332385,
+      "sha256": "c3a59e348eeaa81e83b45bd0be40c5c5d48c1fa53424b8bed97fd5bf35ae95f4"
+    },
+    {
+      "path": "evidence/map-linking-caves-runtime.json",
+      "bytes": 189554,
+      "sha256": "557d2faed5acebc436b989ed6d788958bafae23953fe6aae12186e1559926046"
+    },
+    {
+      "path": "evidence/map-linking-direct-browser-logs.json",
+      "bytes": 2,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "path": "evidence/map-linking-dungeon-project.json",
+      "bytes": 96290,
+      "sha256": "32ea0331ce804be97f08ceae15d742edafb4fb83d4f1a969b4326098c0fe4821"
+    },
+    {
+      "path": "evidence/map-linking-dungeon-runtime.json",
+      "bytes": 93469,
+      "sha256": "4ff6516775deb3091561f55015bdae7720808338fb91c9f1fbbf8e806387e60d"
+    },
+    {
+      "path": "evidence/map-linking-editor.png",
+      "bytes": 65110,
+      "sha256": "5b4014d3367128bb97f6a69753114ee227d469a04ceda1e6d77a40862d87958b"
+    },
+    {
+      "path": "evidence/map-linking-http-cli.json",
+      "bytes": 1786,
+      "sha256": "ab3ca993c4db24752c72c7d11e869fd4cf604b7f62772a19c7943c72cafdbbed"
+    },
+    {
+      "path": "evidence/map-linking-landscape-project.json",
+      "bytes": 333671,
+      "sha256": "3a6a6ecc03bbf1b913bbe95fb273ebd9a9d08ec175c0ae51da853923178df5e2"
+    },
+    {
+      "path": "evidence/map-linking-landscape-runtime.json",
+      "bytes": 189060,
+      "sha256": "8707df5e1dbc1585c880ad42575c227e8a5336ff15197514fc82bbefa62afd2b"
+    },
+    {
+      "path": "evidence/map-linking-negative-browser.json",
+      "bytes": 175,
+      "sha256": "0fb7ddf65deb1df0b1b0b3b2c925d9626410b21be8f4374628b933e1b0faef83"
+    },
+    {
+      "path": "evidence/map-linking-portability-final.txt",
+      "bytes": 303,
+      "sha256": "087d1514df8f856e8bdd6516e9db466f82e1e8e136a9dba8441e2454a1639e73"
+    },
+    {
+      "path": "evidence/map-linking-portability.txt",
+      "bytes": 258,
+      "sha256": "656d0aabe366e3ff8a62a91a2351d1e18d8611ed782e3818df3fc58575ec82a4"
+    },
+    {
+      "path": "evidence/map-linking-schemas.json",
+      "bytes": 6084,
+      "sha256": "34d57e76fed623bf7ea3273b5b63ccbc8a3664d0a2bfe32b53bbbc5c17fa1136"
+    },
+    {
+      "path": "evidence/map-linking-sideview-project.json",
+      "bytes": 191080,
+      "sha256": "744350eb4a3370ab71f06f44c84e5b205a5659f46002c79af69366a77eedf8fb"
+    },
+    {
+      "path": "evidence/map-linking-sideview-runtime.json",
+      "bytes": 227616,
+      "sha256": "abaf162563e907a3715a9e9822cef868f24018a14a22179342483d98644fdcc9"
+    },
+    {
+      "path": "evidence/map-linking-tests.txt",
+      "bytes": 10341,
+      "sha256": "95700d8c3e5e5964773489e72a752ebb923a48b7a00cb4103b7521cc135e9326"
+    },
+    {
+      "path": "evidence/map-linking-tiers-project.json",
+      "bytes": 168622,
+      "sha256": "b452d6c0e27232bba8856ac9248dd18e91f8a9cfbc36cf9b28d5377023a8cd0c"
+    },
+    {
+      "path": "evidence/map-linking-tiers-runtime.json",
+      "bytes": 178204,
+      "sha256": "93769694f64ddc05a60f5b570fee156ea6372a42f768d40e02652d1c245a9fcc"
+    },
+    {
+      "path": "evidence/navigation-session-direct-logs.json",
+      "bytes": 31,
+      "sha256": "b35822e2502d9d058608dd25e5e20f0dbcbae4c465cde4687179f174f740f1b9"
+    },
+    {
+      "path": "evidence/navigation-session-editor.png",
+      "bytes": 73051,
+      "sha256": "92bc2dd66510d77bc5b777033159fe3ee090b987d560a020e05e025da8949f80"
+    },
+    {
+      "path": "evidence/navigation-session-final-logs.json",
+      "bytes": 3,
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+    },
+    {
+      "path": "evidence/navigation-session-narrow.png",
+      "bytes": 51719,
+      "sha256": "f860558a52e6f877b10472295bd3b389bd695c5f2b36e6c42384bdf52890a4d2"
+    },
+    {
+      "path": "evidence/quick-edit-content.txt",
+      "bytes": 4006,
+      "sha256": "f5eb4048446629e01d9235685bded6c4f85c05d78520e9654a137e14de57e5a5"
+    },
+    {
+      "path": "evidence/quick-edit-portable.txt",
+      "bytes": 369,
+      "sha256": "6a3d2cc1c552b6767c1bd737b25f46bf12cd316a7aa15e381b0407550e3c702d"
+    },
+    {
+      "path": "evidence/quick-edit-tests.txt",
+      "bytes": 14708,
+      "sha256": "e626cad9769497d957aae22efd4770a85f0c8f76ed0044ffeeef2afec593a5fb"
+    },
+    {
+      "path": "evidence/session-cleanup.json",
+      "bytes": 873,
+      "sha256": "d4e78bc99a5bc6fe5e9ecb24f54ecbbeb7efb0ae2fcee8d6f8ca66509da2489b"
+    },
+    {
+      "path": "evidence/web-layout.json",
+      "bytes": 23546,
+      "sha256": "879dad7a54169d33f10acb78ea3e8dee5608d68ed3be7f7c0b1a0893b879c60b"
+    },
+    {
+      "path": "work/BROWSER_DIAGNOSTICS_STATE.md",
+      "bytes": 4896,
+      "sha256": "8812c82d7a49c8d78fda361db74c3c99286b18db8a0d08499c877df14a41cd0c"
+    },
+    {
+      "path": "work/DRAWING_UX_STATE.md",
+      "bytes": 8362,
+      "sha256": "8d561743833b55cca3ae68bb6bc314eb21e55913ec122ffaecb4d554902a8555"
+    },
+    {
+      "path": "work/WEB_LAYOUT_STATE.md",
+      "bytes": 6650,
+      "sha256": "05e2704ae3289d3cb29588c0dc04a79f9dfa5aa874caaaa59e590a377c04e65e"
+    },
+    {
+      "path": "work/QUICK_EDIT_STATE.md",
+      "bytes": 4400,
+      "sha256": "d84b7820e7cd87b815d79cfbc16e5a431b5422f2b12bd3abff003ec646a332a3"
+    },
+    {
+      "path": "work/MAP_UI_STATE.md",
+      "bytes": 4657,
+      "sha256": "ecdc39aa9d5d4609f58b38720feb93b05fb3cf043aa4db894c394760ebdead73"
+    }
+  ],
+  "protectedFiles": {
+    "app/catalog.mjs": "d9331bf0681392407fc6bd9e098770d753d33945e769e1deb4c391429a3b51eb",
+    "app/contracts.mjs": "3e9dc5851c5c0a45fe2b69ce14d78f7d1992fda3cee15ec3a12ce564a7eed556",
+    "app/diagnostics.mjs": "bbd7d1e77e496feb8a057175940c00ec85b7144eeac3b96219639c8e9c9143a4",
+    "app/display-colors.mjs": "7bd68a1115d3319ad56253e585ffd5774951d3b36e42b808e3fbd83ed889d06e",
+    "app/generation-settings.mjs": "b68212fcbdf4a62600015be46e9579a0c202dd52b632d492bd1bdd4a18a503b1",
+    "app/index.mjs": "b26f14c4ac5d97498c18d301fe9bce9e3481cda66fdfe5f92ecd34e80aad8a0e",
+    "app/modes/caves.mjs": "d2c6b30b1d11528c679ec8a218a77f8deb6af290219fe6636f90ccd0e8022683",
+    "app/modes/dungeon.mjs": "bb9fbeb756de15dd786b1bd9aa3f6ea145a1068e732e7b2cf4bc931a1bf603db",
+    "app/modes/landscape.mjs": "428298312cbc4043ca06b0bbeb95741c5e7a1f904795fd0a286f3efdb4658b22",
+    "app/modes/settlements.mjs": "c44ee2fa524313987fc32f59d97c3a115a31bdedd90b90d86fb9d9081c92ef9a",
+    "app/modes/sideview.mjs": "f3f4df3b290c8193a4fcab3b57bed88d9c88f1270ce7ad08e20121ccdcc69615",
+    "app/modes/tiers.mjs": "5e49b168e2e43c42a86ad58a7d41f71aee1ba407142d1b3dbc3f3642b5219969",
+    "app/navigation.mjs": "fb087ca54940bd0c33c64767b55bba3f994224284c79212fef761843b8687268",
+    "app/project.mjs": "984ce1b2701746fdabe3c98d3fdbaa833ad1b7f2aa9d257d10b6d0f9068f80ea",
+    "app/raster-export.mjs": "35da224b989e941dcc753cf098c9fb73ebeaecfdca3a824ded10ebae8782eea9",
+    "app/raster.mjs": "a4aac1bf63dad39b25831bc272bf2a61f1f17496393e5352b930d3dbfd841cfd",
+    "app/stages.mjs": "be7cb3294fea39fb946bab56a8c694409db809c300889c7cd84b92c9cbc98b30",
+    "app/terrain-edit.mjs": "89a1cd950dbec9f9b3aff8a84519d84287f753c6f2862b0d0e6d0175699ff6aa",
+    "app/transition-navigation.mjs": "a4b2d61597ccc0ccc0fa105746a9648a68cf85c735371825af8b4447c0b546ee",
+    "app/transition-runtime.mjs": "c827d239fcc73d40afb2a2b7fd5f43b1307a4b2fb0dad9bdb47a2d650908e985",
+    "app/transitions.mjs": "429f5047533058af1f81d303ab23d418ee3433493cd4a8568e7f335c39aa2d4f",
+    "app/views.mjs": "24e19fffe0b260fdc2a2a3959d50cc0c4645500a7c64d7369417a5ab628341c5",
+    "content/common.mjs": "9db3cea21d36ab83e606a6552b11ef7521c091e4ce1ec691abf56d785bfee91e",
+    "content/distribution.mjs": "476143520812b2bee45d00703032eefb09624729f0925f646ea2b47cda02f1f4",
+    "content/generate.mjs": "92ef0049e6f2075f78575289e3d1591b1922240fd79805096fc2018c99b56084",
+    "content/index.mjs": "895efef232c4619215d1c22486bfe0f010615470af1e7a0167623875889bb0e0",
+    "content/json.mjs": "0ba7b66d42381650d5991ca9a9ffea3db7f52c77478efa439cd761beee55cb14",
+    "content/map.mjs": "26d1686fb675147b02dcc86a1478502d2ed9d1bacffb958d11c7ca1eb6a6640b",
+    "content/masks.mjs": "eb6764d04de99898d77b0f5f58abd38628da9747b9b604b53bed11a5af9fc4ac",
+    "content/registry.mjs": "d4fe04b0006e58c15c135f38cc3fece54f962ec9ad48f43fdb49e3b6d89d8dd5",
+    "content/runtime.mjs": "38231b5ffeabc47c1bff680fcb25389e368c87535190ff670d69cabbb9ce2087",
+    "content/sources.mjs": "964aa18c9730738f894c7b5eb4201cac4060a95893bed22b189c4b660bf38dec",
+    "content/taxonomy.mjs": "4f432e07d8570f3a9e4fd2dd69ab3ff681744f03eb499d5f4bb488431d5abfd8",
+    "content/topology.mjs": "93c3e0b1da6104f03ddb00a511413a3c9913238557747eb9d4f286b9f73dca88",
+    "content/validation.mjs": "534d5b355fe9b9d74d8ba3accd1979bca6bca7d0f1a80217365557e8f617215d",
+    "engine/api/analysis-tools.mjs": "2735199e619c59be7a3288f78b599478b2926aa511cbb4e1feb2c90f601d7106",
+    "engine/api/atlas-catalog.mjs": "1215a9a87041c5417daf5c30c76786a4369e2c908ba70a3ccce7322266667308",
+    "engine/api/atlas-navigation.mjs": "5cd47fe1530f21db6553acdfc836c6b171755348b8e3ff5833b8696f88b6037f",
+    "engine/api/atlas-runtime.mjs": "8fff8ea614270d01131807b466631c83066ecbd16c561ecc58eca90ad0540ab8",
+    "engine/api/atlas-transports.mjs": "ed660f7d97f71f1a3088f88605f53417e446d9c87b071350d21cb49fb73ee35d",
+    "engine/api/atlas.mjs": "d510556bd2ab80a5ecdf87ad17673394b113af698ca736df244e2ddaa2eaa36f",
+    "engine/api/batch-report.mjs": "762b3875e2de337b37b2309e74df3ff125bbe233bafae1d1c66881740b32de05",
+    "engine/api/client.mjs": "f754a463b0362dd13a579db9a59a49f3adc22c77ee7dec9dc7b811e8363e5ef4",
+    "engine/api/config.mjs": "366ee7b25703a515416b666a6243ba72c669fd12671f9f61c3c7479bc9bc4c38",
+    "engine/api/content-catalog.mjs": "06e9d08f32f0e1a1423f99b5193e6a5ad2c9afe279bb643640d6fc521f804648",
+    "engine/api/content-runtime.mjs": "f854a2d1f80024ce4b9c442a557904fdb648560a107f97aabf9e351d8d8a8884",
+    "engine/api/content.mjs": "48bcfc670c23a460a0a546ccc435b4ce8567d328f484bf41e1fa786a1f04029e",
+    "engine/api/diagnostics.mjs": "cbab1571c2f6da006a1df5676a143cd436b8dd4a7fc56070e0c66b6c4ee584bf",
+    "engine/api/encounters.mjs": "3579973b74bd3030cd04857b3b792e4afa1c6a648617b366cd2e341d26c7ab9a",
+    "engine/api/environment-catalog.mjs": "677098e096f4cf3c41c8d9f389cb8bf4dd6c8da9237189c8afeb6d4d36359106",
+    "engine/api/environment.mjs": "36b8cabdb2c98a2abb06185b6351b0b8b386e1c94bb52fce69a5a51b34443a70",
+    "engine/api/generate.mjs": "8fe22ca7622958da9dce6427ab4274e6b83d795fb6deacd77188f15b18882b50",
+    "engine/api/identity.mjs": "22121b2ba0e9c83c3aafbc55641ba089a66026a8ffc08bf6409892d34c6c7aa1",
+    "engine/api/index.mjs": "7c01d09aa881a756e2f899030170d246709009bbea079ba6a9d17f512996a51d",
+    "engine/api/maps.mjs": "c2408f47ce77593d00874f0e5ef82b101602faa7f8447220c354b9cc54a7574e",
+    "engine/api/movement.mjs": "7aeb3e726c3ef7a37b3607f8c70641ad307e847fe2f33b579e9fe0b98acf094d",
+    "engine/api/navigation.mjs": "d74dcaba54abed659aa3ff96507454f2886709cc0098029d4ee3d674b4844c2d",
+    "engine/api/operations.mjs": "1ce6cd6d4f677683c3682cad7a0f0306b359d37e1d783902be26743c834456a1",
+    "engine/api/platformer-v1.mjs": "1eb25106b587846147aa25772e91675ab93fd1d22163ddca31b1515ae35eae9d",
+    "engine/api/platformer.mjs": "643986496ae22f2d37c0a2b9b1e8ffe7f8a96fc37aeed87d5f9955c0a2e69dfd",
+    "engine/api/population.mjs": "844a7c464570e194e50fcc16d16f8aa45b04aa80cbb62ad99caa7ef72f6f47bb",
+    "engine/api/regions.mjs": "939a528bfae54a13cd397b08a2a13b353a099a5f6ba99f4f91d59eafe879b7c7",
+    "engine/api/request.mjs": "3a5da88175728b270b12bad37b0b3a29633710d076d54fc23dd39feedc17da56",
+    "engine/api/serialization.mjs": "8bb5fb789541517e0103325d96b3f01eb884207b8fa73cddba199da867fc5a7d",
+    "engine/api/setpieces.mjs": "840325ab24ebed4de0977ad35a6f6002cbad838b33b5bdfc2ace122af984c868",
+    "engine/api/settlements.mjs": "c1fa96f7484ad19b321d681253419561fee7aa14d67f69ec7d484e10b91e2fad",
+    "engine/api/spawner-program.mjs": "71ea15dfadc94a222865290c628bc19f95bae8501ed1e935de314116465cd684",
+    "engine/api/spawners.mjs": "75fff93fcda3a6523fa56719e59d1d5a8030890d0f31c628d2860967b68d7f43",
+    "engine/api/terrain.mjs": "3de6e49ec1c8ef23ea88d0f86f0f74591ac9ad6bdd9cfad6d185dd9cfbb5b066",
+    "engine/api/tiles.mjs": "6ef3832df154d639101011ac578ae3cd9a8bb47dca0d9622019da937c4b5ef32",
+    "engine/api/world-navigation.mjs": "588bee74eb0b1e04e813d901e632af85c5dc943b2031a28a38cefafc2029268a",
+    "engine/api/world-transports.mjs": "db97b19bbd54f263085f214e711f334c24d8b8e06128cf2c80ddb7e77e10935e",
+    "engine/api/world.mjs": "40a6aa79f96bc59d4fbeada05167f79ef7e87375301c83335ec6aec9b3990783",
+    "engine/core/area.mjs": "b6dd699569147d658c64bc592de174b06e957dd1a770fedc75363cbed09d092d",
+    "engine/core/atlas-biomes.mjs": "6ccb83582d437c66c7d4b7ec03a0ee9d50b6ebee14e66f35ca2cf1ebb3bac67a",
+    "engine/core/atlas-content.mjs": "c8362889217f09090e537f34b0278293899d3247bdf9f58ab64c172aa207ba8e",
+    "engine/core/atlas-landforms.mjs": "3c03aa129a37d32c9452637d3983ffe82f958906bfc8df92a2d06a6f409305a1",
+    "engine/core/atlas-math.mjs": "733165c8d1dba2d57d06195590ffa5a275dee8d2b9791e408024a51af1c3aec9",
+    "engine/core/atlas-shaping.mjs": "b285ee76c734d35b0ec99d45d80e24e496fafe438ae8c55120d16401c23ed5c9",
+    "engine/core/atlas-water.mjs": "fdae256f26b23ada186db5ee8547d174510ec622b5462e936bb2739f9e68e86d",
+    "engine/core/compositions.mjs": "19be3fcdb462c9f696d69cee81058948269480722d24a9a21107847f1456bbce",
+    "engine/core/corridors.mjs": "bce74547b09e20193b7553c2c763f2d305c69394c512c9a37e22ad3ff234021b",
+    "engine/core/districts.mjs": "b5da783fc157dd8b8b2c72da2985813f138a2b1a8a18e6b8ffbfbcbe79357fc2",
+    "engine/core/geometry.mjs": "fb4ae30c6e96422b711b2ae50405b4aa68df15f1c796fb7880298b102bf3af52",
+    "engine/core/growth.mjs": "41e106668149ce1b65ff7624ee6dae29e587d3be1e204768b4259d9ba38a620f",
+    "engine/core/index.mjs": "7f13d35388c45dee31c6ca85ac2c02903b9d179e0923fe51f4470884ade30b80",
+    "engine/core/interlocking.mjs": "7e0c188097adb6ec4770381c1faf66f10ae52d1c3ac5c86d3d496baa74f5f005",
+    "engine/core/packing.mjs": "9196e79545353756a010b39f2c07e9261d77f72be0daf5f784fe66fea3625285",
+    "engine/core/planner.mjs": "7c0c4119b618ce810a542afc0370b1ea47c367bc4b100b108b76cc381f157f79",
+    "engine/core/platformer-physics.mjs": "7935ba77a90804c140e8889ce31a42802a161aa731cc47a9b8de9bfc42a25280",
+    "engine/core/ports.mjs": "d00e08a9ace825ae2f723c88a12dbfefba8835f5bf1fb11ab281210e29cbcb0c",
+    "engine/core/preview.mjs": "2d63797df12581845ba332ccc04ec77f15f7084a3eea99f871f79c91b4fb9368",
+    "engine/core/priority-queue.mjs": "1d9c1783b193b41db5ed28b402ec58ad31b459657e17c9761c09a46dc7fdebce",
+    "engine/core/quality.mjs": "b6ad5b884390ef0a233934d280dbf3e6f5177287131ffef4fb18facd27c79706",
+    "engine/core/random.mjs": "98a58d606a52264b7c104c35369ab79ec0d87f7127174ceb8b6886dd5faf10cc",
+    "engine/core/route-patterns.mjs": "b20d094eec2fb389ab7fbcfaf463821217e71dc888675ba7f28b5f60019cc9e9",
+    "engine/core/selection.mjs": "70adb5967922437a6b8e67864b217f7cd498fe68dc65263ba8b3b61e2898987a",
+    "engine/core/shape-distribution.mjs": "17ec6f7fdce2a721562c8c10145df92dfaafa69c63d9e2b3812af877db056ac8",
+    "engine/core/shape-style.mjs": "e5625e313494fdf1e2c52a03e574a02ac5249037b5c2ae5b74a9ebace30bd5a9",
+    "engine/core/shapes.mjs": "a0c477dbaaa9f2c92eb77ed499e63ba50a0ef83377a74ecda25966536c3b1d73",
+    "engine/core/space.mjs": "176c936de63f492e4132a885430aa9081641e23ff8fba79d493181e5761afbf4",
+    "engine/core/streams.mjs": "849513725dd58e6866534f8188329657e97c7e218bed296a6ad5922413add685",
+    "engine/core/templates.mjs": "2526e14d207b362999add265a4353523c920de221b8eeab10ecfff6884f46d14",
+    "engine/core/topology.mjs": "1e92440c693c4a1a52f40c3ef9aa3b50f472b86558419f8b78d77be8d9a95317",
+    "engine/core/transport-settings.mjs": "c181f7a135f6ff11f40865a29d90a2f4e1056b55a62d234dc14df21a8b1daf81",
+    "engine/core/transports.mjs": "8ee0c6f0092095481905be76f319b79f210dd8c199555690192c35930cee8032",
+    "engine/core/validation.mjs": "3ceac6be82ccc0931db85bd3a0deb9281f0bc671f242afb1d5c0d6052574c682",
+    "engine/schemas/atlas-request.schema.json": "5a7fa4a139c07cd30e547e48cd4b359ed819b2bf97a5f50e4942a55c60b1c432",
+    "engine/schemas/atlas-tiles.schema.json": "08a378fd2e1765205ccb01dc6ac8a47051cb288c2355e00de539873668b79176",
+    "engine/schemas/atlas.schema.json": "56567d26327ff798b475d171a2c8a95225caf887426eabd24e66f044159a22a1",
+    "engine/schemas/bundle.schema.json": "5422242b13f5eee4ba18dbcaf4f12ba323bfcf47a3ce16ea4a8bd221a0196878",
+    "engine/schemas/encounters.schema.json": "640cf0ce7e678c84de8e87170816466b7fde5e24946402ccbaeddaf2dda1a203",
+    "engine/schemas/environment.schema.json": "5db3de0e3d20109236859923911f42a01d6e9e10b2b53a6627eab9dc9542f816",
+    "engine/schemas/level.schema.json": "e797fb1c518f985b0f373cd07f7cf2d048363a8c6f618026c8dbdb78884e8258",
+    "engine/schemas/map-request.schema.json": "b70ee489b5dfe62f8e8199407086d1b0a09a097ac32240eddf9a67f8b4f51462",
+    "engine/schemas/map-tiles.schema.json": "b90908499107f53023b30e5b4f0b2e3e80e091f2fe32b757aecd0cbf67fb7d8c",
+    "engine/schemas/map.schema.json": "f1cca91dd2bb1a1b5c4c2f821a1aeb51fc45e3af1eeda1b9aeef1c7a99a0a428",
+    "engine/schemas/movement-profile.schema.json": "51553c4f3a440e0380bb7ed0c3e0493317ebf6838ef5a91e7de223a965a2ea2f",
+    "engine/schemas/platformer-request.schema.json": "be1586e332703cde64e64c355a6019487ab870d6f809d7dd2e720306f3b8e2e5",
+    "engine/schemas/platformer-tiles.schema.json": "192f19d0c18bded149c4ff4d40c4d17ea119c7c8f7d7bc34cd15327188d17af7",
+    "engine/schemas/platformer.schema.json": "52d6994ea9a4214980006ded107489705406b66ee9a5a9926df5915e975e2c3f",
+    "engine/schemas/population.schema.json": "1b557ab08d5ca0a677fab69be6784a1ca026144eb6d1228dc82778a4b74ab2e1",
+    "engine/schemas/recipe.schema.json": "e94f78ce36237c08d87cefee83f35ec64e56a78f70a1a0a8300d24c78cbb6673",
+    "engine/schemas/region-state.schema.json": "f8bc8efc6cd5e231801c1ef11ad37ad2278c18cd09e08ac2e3401891590968a4",
+    "engine/schemas/regions-request.schema.json": "61a890e4b0d1e2484f25d93047dcc8c23cf3b7fddb3ba3a8eedc66a20be418eb",
+    "engine/schemas/regions.schema.json": "4d6beeabe16e3b9417f6aac2cc2f388359cf3bfadf032eb2ff3840a41984fbf0",
+    "engine/schemas/request.schema.json": "8bef145025c9b6b6b9639c6df389dd1beedaff6ebd2fbb5cb2f1b64fb27cf48e",
+    "engine/schemas/setpieces.schema.json": "e560cb8745c1a41108b119748ed46c33162ff5e4836742aafb7ae58407ab8bbb",
+    "engine/schemas/settlement.schema.json": "d0d3fee2026ef550077a337d4a310b1fd11baad6a93b5f64b3d31ec09631048c",
+    "engine/schemas/terrain-request.schema.json": "91f114271034543f2b69c1a2cc72c28ed3e65f9f749b2979a43e87f4ace6cb4c",
+    "engine/schemas/terrain.schema.json": "253cc29009559545580aa7669db6f6fd1840d4122ecc77dd489dc177d8c49fcb",
+    "engine/schemas/tiles.schema.json": "b690f242d04b7c1820d13a0df1730b3a6be360b385c9005aa3f8e0239859c756",
+    "engine/schemas/transport-settings.schema.json": "b2141d3fbf4ba4cc4d45ceeacff9f365e487bb777c68e68fadabee379eed9891",
+    "engine/schemas/world-request.schema.json": "c98eac8540545d21e50f309ce6fc8f68aa1851f5c58f84e38be67152a3fc506d",
+    "engine/schemas/world.schema.json": "5ebba94021ecba97f959fef2795a2acc95199815cab94fa1a9b30d52bce3d8e8",
+    "examples/automatic-access-project.json": "5f50cdb61c424c001a85b98d8e68cf5489e7dbdf88b6182df150cdbe8f0deb3b",
+    "examples/automatic-access-recipe.json": "997ef51db3a0dbf0d6abe14a4b562319b8b7df93ef3b72c075de5e517da27608",
+    "examples/automatic-access-runtime.json": "6881f2ccd0e92c5985e858e583dc0ec6563d210fb438173e90cf929e79de5212",
+    "examples/automatic-access-validation.json": "66c69c3c025c0f9f79e24660d63e79f398607ef173d7859b30452e58c9b66888",
+    "examples/automatic-transports.mjs": "e50cc330c8ecdd94961318808d985d21329c511dc7ebb727cfff6412a959eb23",
+    "examples/caves.json": "a3ebb4b93be8eb56b807a2a5f06d124661a5b84836f9677c4900268de3759b93",
+    "examples/content-demo-plan.json": "460e0d0bff0df913e9ee5ecb3514b37a5e142087d3c1a9884cff4683a293fa30",
+    "examples/content-demo-project.json": "e7a257756e176e0469972c0a4d39481fc9248cc252e2456f4fa0b5bb668d848f",
+    "examples/content-demo-runtime.json": "c4e213ad83166570925b4d845384dd31f85a7a71e4b47569a67c85497d6008df",
+    "examples/content-demo-state.json": "236e06419af5f360a72508e5071a9be1201c8445b3915d5789fb5a44eafd06be",
+    "examples/content-workflow.mjs": "d4bc62b9fa8f36ffe78a26de4eb33963719dd0f038280fb396ae169961722785",
+    "examples/dungeon.json": "3949138b57cf43b43eb14326fc3e372621c4ae4e703e5ae5ce8899b638b2561f",
+    "examples/isolated-dungeon.json": "175b9524865d0fc1f1d45cf8d687be7086bb05917f8c2fa5881cbaa392749b33",
+    "examples/landscape.json": "3d428710d928c96ef1a5690289896eb7190b9a090aa71c99a39c2725b1193108",
+    "examples/linked-transports.mjs": "f7551a376e57a727fe6cc6c20d03ab149ecdb5b252a2332ca6212296a2160123",
+    "examples/settlements.json": "51a0b08293b935de4493d5ac4accf81444cff0df53c19062df921c62466cd48d",
+    "examples/sideview.json": "ffc8389c9bea43418b47bdbd2ed55a9307ad438adf08364877ee238cf9c1fcc1",
+    "examples/tiers.json": "52bf3df3858759a7647086cb5f91182ed5dc2aafd49ceb6c453bd25504e06e56",
+    "schemas/catalog.schema.json": "29a9e711ea2459fc4705001e37004fced6a855fd193a471d0f4518fa1c70623c",
+    "schemas/constraints.schema.json": "1b7961151b6743393e0eed9ee033354d4ecee457ae6987d74fd953c5e8672406",
+    "schemas/content-map.schema.json": "e4cb6d86c961dcc3e28cdaee0f967beac2dc6edfacd824c8a9702e6fc541c0bf",
+    "schemas/content-scene.schema.json": "08f56e9879f13317e038fc73874d502c2ccebfa249a41d4414aab8f442349e92",
+    "schemas/display-palette.schema.json": "95a009ac8985cba3d528a50f1cee32a551721f7b0412afe63df9eba2ce89ea31",
+    "schemas/distribution-delta.schema.json": "d2758d088356209c32c6e5427533ddea7171cf11ed23510d04326e6ff8e78a5b",
+    "schemas/distribution-preview.schema.json": "e7c64956c5b8070745f11df52221bde4b9c2234e9c4c5e09659a22d53f1c15a5",
+    "schemas/distribution-request.schema.json": "7bad6abb3b107a6cdaff3971fa54b9a9284f3ade577398a1cf5a07f9d78f5e4e",
+    "schemas/emission.schema.json": "a9344944dff0515fbb95d4dce881fe03aafde72d70042698d1f88192e9944d00",
+    "schemas/generation-caves.schema.json": "fca54405182832b15e5afdb0d6058cbc3e2a7d8c46f4c9e20b84698d3aa8348e",
+    "schemas/generation-dungeon.schema.json": "b16c16fabbdec92af61668d406d682b25a409f9de52a8382e017ef0bf40f9f27",
+    "schemas/generation-landscape.schema.json": "b6cae07c6eca5ff290e076267e04386de4baf42beae797e0c3d8ab7fd47bca6d",
+    "schemas/generation-settlements.schema.json": "3c31073f653ced7fad042e674fd2cd082235ef470073447db71cdd263889ca48",
+    "schemas/generation-sideview.schema.json": "0f9e3eb1beb1d88b366af18919fd296c838e986a22e4183f7ddd27c825f66785",
+    "schemas/generation-tiers.schema.json": "c1cc345e4760ff502d40025aa5d7c51657dfa84ed61b6605f8036d01ed0555a8",
+    "schemas/mask.schema.json": "663ccd9298f2fa6fd6f809cd948278d062df9418b86e8204e5fddfc22808f918",
+    "schemas/project.schema.json": "d5e156557d9437eaeb4d6b3a707d4fe196e3c4736b5d76bdde3e8e040492dbc1",
+    "schemas/raster.schema.json": "b032bfa236146d5edc4ebfedd1600d59ea42809035f15bbce0c363437a3253b6",
+    "schemas/recipe.schema.json": "18d59b76d4beba867e22bc5d41d7a6c6834069969b9eb0422efee7ad662c9362",
+    "schemas/runtime.schema.json": "8e939f8c34b5205e717968ac7719680d17632294a80444ba71732e068aaea25a",
+    "schemas/source-preview.schema.json": "a5c736388be5770c6ee36141fea0aa6a3fdcd8a4e29069a82863ced6e6fd38ea",
+    "schemas/source-rule.schema.json": "fa9a6c038eeedbf1b8a78216cc0011cbc45315fba3ac79a81eef7688b646a039",
+    "schemas/source.schema.json": "05ad1d6395a6aadc7627f0575def420e582f3e2a1e2b36797defb0042ee54d3e",
+    "schemas/spawn-plan.schema.json": "5c3a4d5bcf0124c7922e9ec62f3e1af184a6760682f7a82db7b021c0dd2c83cd",
+    "schemas/spawn-state.schema.json": "263cce8f1968808dd8af77b35c681a6a75a401c11f8f16cb5a29489f2d2a3f1f",
+    "schemas/transition.schema.json": "69ff8f8f17d7d204efd2a683297a7e218dc708d84a84bcefec8b57740194773f",
+    "schemas/working-session.schema.json": "18b5dc7c7b13c192653e178b2f39720003478c11ae55cb340125856797ca1e58",
+    "tests/automatic-transports.test.mjs": "0cbb5058607b36ba1bf3434805b70231977bbe72556d250fc328dc926b89cfd4",
+    "tests/connection-category-actions.test.mjs": "e72a1f160184abbf1578516dba0968de9e00742fd7ffe58dd7f1d088eed65f46",
+    "tests/constraint-fields.test.mjs": "91026bcab44bf5dfbd061f02b62302a83d1bfa5795e4ae108be9238f94297fbc",
+    "tests/content-contract.test.mjs": "947f97f58a82b668c44c6ee6f772275db29f20cc2f941d8fbf530736c83cacfe",
+    "tests/content-generation.test.mjs": "5da8e88b6b59fbc03a6b7e1933417233dd43a5d8774545704e0b3ead906d54fa",
+    "tests/engine-atlas.test.mjs": "30122288fddc57e8c61d265587795864c48553191edcc8d828f0fb11f985f5a7",
+    "tests/engine-content.test.mjs": "a2f39d2c49bb0fc39366936bef855deb8e620b15e3a2e20a411fa9e0f5b2108c",
+    "tests/engine-platformer-abilities.test.mjs": "1696db8f686aec4763c5d20a658b36803cce3f447f6f9587fd35dea84f83b4f3",
+    "tests/engine-platformer.test.mjs": "a7df4d7566a81f452a175c572e3110a61607d26c13b95cf328b472561315263e",
+    "tests/engine-population.test.mjs": "fe7079e8b0a4f759af95e381e5fbc5210c7a0f03d1e86a7d93688649161122c5",
+    "tests/evolution.test.mjs": "8409b7af886d0d94690295403354ed559950a3bda52738808a4e180338ce2b2f",
+    "tests/helpers.mjs": "56dc994ec59f7a1ba2b4ee83e5f2b377887e313e151cf39a7c147875c13e911c",
+    "tests/map-display.test.mjs": "c3674049de9736968b1c1f1fe5c45015d14da0613836a0ef544e90780aa759e3",
+    "tests/map-links.test.mjs": "ebfc734312fc39a0e619d8c8269a374cb0a6bd7ee735829ac406513df3e6ec19",
+    "tests/project.test.mjs": "fd6d1d625cc7b391122b69abeab50f9a88bd3d0dc6dc860b3f834c9ba23cdb40",
+    "tests/qa-pointer.test.mjs": "aac3604e8d5e72681c1249a937a942cd2d08ef20c5885446c4fb47a886ede900",
+    "tests/quick-edit.test.mjs": "22c94b000ba759aac48f77e52a9624b6c4bdc2692a74583fd13fe848697fe594",
+    "tests/server.test.mjs": "9f0904786b60e68d7a6b9d8a8d87c478761b67808c03482b4e2f381f4a12d742",
+    "tests/session-presence.test.mjs": "f4f8e943a593a92125addc88b3edb7acadd2c1a39b19f4c609e73e4725911389",
+    "tests/session.test.mjs": "cca4601a692da72a8795b158a11a4fb053a47ace014d1f95aa1fe44683344d2c",
+    "tests/source-selection.test.mjs": "cc3b64331ec8da997417d93ede30daef8ea829ec80adac60030276470d5468f3",
+    "tests/stages.test.mjs": "c86ffa8d8c9c9b75ea4014cd4ae777422a60501904bc97c7f0670165eca5d898",
+    "tests/tier-drafts.test.mjs": "1cf93ba52e070c32f38e6ead96202d3f89beb72da665b397b4b4cccb69f0875d",
+    "tests/web-layout.test.mjs": "5352bc68158819934c6eaea1d6907364c9265d8955416782d8531d21be7e3a46",
+    "tools/api-worker.mjs": "f3e927702350813d7f1e3577185632c9d0b407f96ea25cf0feaafed027976760",
+    "tools/build-docs.mjs": "f8299fd1a4683b5f989ce04e9123a1e4b218680ac7f2aa95be3d114801678cc8",
+    "tools/build-evolution-schemas.mjs": "4a7db256a651ea00507ced4c45a52ebe56d03e6617a5ebd59bcff740e7ad8978",
+    "tools/build-pages.mjs": "587a12aa7c7f34fab0ec16c5d2c25cef13d18c0c476eae2d3fe6dc3586bcfd28",
+    "tools/build-schemas.mjs": "9976125830bbb9742b735ea4117d07a285b31b92a5301eada18dc3b2654f5032",
+    "tools/build-transport-schemas.mjs": "1ae898fa5d532d717985e1b6dc0bfb4f632e1e671c339134049e47c97eb715a7",
+    "tools/session-presence.mjs": "80ea60d208400b30cd2da5c557440b00c5d0e7eff88e903bad02fb8b63ec7202",
+    "tools/session-store.mjs": "ad8608930efed06956c9f9ec8e63879f5a05a41624b10d0c4adadee8efb55265",
+    "tools/verify-auto-transport-interfaces.mjs": "4a737f96a46daa6b58c8afb30f300f25b6d52b78ce633d50e8ef772dcdfc4301",
+    "tools/verify-auto-transports.mjs": "3eef30c69c55e44176752a8cf9ef7d60895a6db7bc71a634fa78b205fdc40ca7",
+    "tools/verify-connections.mjs": "c4930d66577f81c237f29a2cfdc2abe6b17715a4be23d73b8b6d97116b0f23bb",
+    "tools/verify-content.mjs": "0ba0bad2f7e5348ecc3a377df05106f465fe8de72c77fd074a06ab3f779cd8cf",
+    "tools/verify-evolution-schemas.py": "ea7f1d146ca2a307f115d206452dfc696517a7ffe9c9fc2736a18ac0c6c3fb80",
+    "tools/verify-evolution.mjs": "5a3a24aa481713e48adc877cd169c3aa24c70e99e3d9d0368580bb7ac79a3fc6",
+    "tools/verify-map-links.mjs": "f44e7318f8210ea75b6a651ad457402277816176c47c273ddc9720b6cc7aed27",
+    "tools/verify-portable.mjs": "b86afd356eb5e76200685ee2d6bb244d9ee13f75034ed9f8f30881d58b2d6319",
+    "tools/workspace-template.mjs": "7649d405e82459ba43944f449db42f20bfd627a43c6cbcdaae809d38d0dba424",
+    "Web/HTML/ui/canvas.mjs": "bd8518e0134900092ae912c9696e25f2001138be5503758079604a2c27d43bef",
+    "Web/HTML/ui/cell-details.mjs": "81e520e836c419fded5286db746575b0051eb413469138262543a0d253fa09e3",
+    "Web/HTML/ui/color-picker.mjs": "bad3a2965def8be3567f53bf701ebc5b23e77652c12d30382091e0de6776a5f1",
+    "Web/HTML/ui/constraint-editor.mjs": "db6c5ba1ee1659458ef03c0925d6977de020b070e1759e9b001458f4d6fb1b27",
+    "Web/HTML/ui/constraint-model.mjs": "3d136c99f7f170df0dabcdd5452bc9829a037d51832031133f37ea6fb5f14a22",
+    "Web/HTML/ui/content-editor.mjs": "40b36dd99321e92f43e16d711d504f194aafa2be84ac371d9138acd95970116c",
+    "Web/HTML/ui/controls.mjs": "4c6a88a59d03090a7e6e4f5902caaa6c9f7913f170fc12e0e6699b3d93ad8442",
+    "Web/HTML/ui/dom.mjs": "aa86bcc12ec775d9b57652ae50bb92e28d5b5e0d789d7458bcb258c9e362a9fe",
+    "Web/HTML/ui/gates.mjs": "8c6349f51a3ff675de8671b565bd62712a19ae66d7c2d71d898cb166e88f8e5e",
+    "Web/HTML/ui/hex-render.mjs": "285f3af1c9fff474813d23fcd0bd7c033f748af08fb0c0bbcbc4e9546c3773d8",
+    "Web/HTML/ui/legend-colors.mjs": "4ad2d6506158ea5c60bc8799e56f53305b1e31d45656b3015d270a1ffb3fed6f",
+    "Web/HTML/ui/map-transitions.mjs": "88314e9baec19a61ba30fd8ceab9935ef102a846ee6bbefa277cfe7439ac5eb9",
+    "Web/HTML/ui/paths.mjs": "b6ee8c89300743a5262a64f0dca866ed36df5525935634e77bf67bf662d08506",
+    "Web/HTML/ui/qa-auto-transports.mjs": "e803c4dc9d5ff67498dc760469f2e7eb79b05b7e24bdad8e8a5c1d1877696463",
+    "Web/HTML/ui/qa-category-actions.mjs": "1490faba3bd338b79faf9c7dd7030a5ac3a9691a935233ad8d6ae78efaea83e8",
+    "Web/HTML/ui/qa-compatibility.mjs": "e8a89c76ad7dcd7c7377aaf78ae21c5ccdf9b1e9f5d4f2200d66cc80222f2028",
+    "Web/HTML/ui/qa-content.css": "d679196be99b9f9b459a47c972eb15135f8dd297c01f4c60dde3bbb0e733c5a6",
+    "Web/HTML/ui/qa-content.mjs": "caf3b41530b22061f5b349cc6ccee91ad4c7342886466a6e354b5cabe934ad07",
+    "Web/HTML/ui/qa-drawing.mjs": "7618e106d3e83e3d9c6b30414afbad1212a656babf69883f20424529e72b5e87",
+    "Web/HTML/ui/qa-evolution.mjs": "b5660bed2e542363967bf182b45944cdba056e0820c20053ce7237884f4421bf",
+    "Web/HTML/ui/qa-layout.mjs": "19413eafd3667da6ab2cac3527f9dacffb9c448e3a6420b780fd89ca4b5ea265",
+    "Web/HTML/ui/qa-map-actions.mjs": "59a76d797d2c2b37294ef1d1ba04072b5549a68ee640f12a9c07b03cd450a24f",
+    "Web/HTML/ui/qa-map-display.mjs": "de3dad5dfdf7300ac16fd46ffb740dd6f44f4cfa753c2efbbdbae6090fdc09e8",
+    "Web/HTML/ui/qa-map-links.mjs": "8283cae64838ea9d4abed70f2bb25c38e348f367d8071c4223e09173eef25b97",
+    "Web/HTML/ui/qa-navigation.mjs": "28f430f96506e74b68d2cd54349f59802632c6b9f52ef77667315db66498c763",
+    "Web/HTML/ui/qa-pointer.mjs": "c30fa2ea74cbc5ac4ec7f64ee5e65e808aae35eff57bc95bd318cb4332d7f117",
+    "Web/HTML/ui/qa-transports.mjs": "d53b0828827cf9485917f84b149600a463ca1aaf00cd3dd301ae1546457dec85",
+    "Web/HTML/ui/quick-edit-keys.mjs": "2b42d67e671101cf6de8bf3e50b5b8bcef8933cd8d0200ac96c346e18ded3945",
+    "Web/HTML/ui/quick-edit.mjs": "af6f9540119e10c76b88b15df4c4d990879ff38aef17d2b235a7d82334a7707e",
+    "Web/HTML/ui/session.mjs": "9c0198bd5db96006fae82d300a73e47a24c65f35452be348180882bef37176ae",
+    "Web/HTML/ui/settings.mjs": "14b34bd9ed28a9c6d129b3961d731ee3f17be950afbffa824bd2ff8651139532",
+    "Web/HTML/ui/shell.mjs": "c871e11c96bf45f9774348bf4d1560abbccb836d5f32312fd63cd4d2adeede9a",
+    "Web/HTML/ui/source-selection.mjs": "b1c260b2a6f77eca94b4e0176c1d4c7bdbd6db1e1cc5b57f4748a5b4b25df5f5",
+    "Web/HTML/ui/style.css": "86dff34f78a6586d95ba4604cf4285b4c110c8a58226cf0b89f8e636bc3c1213",
+    "Web/HTML/ui/terrain-editor.mjs": "3aee6a01c70c98eb83ddb59ed9a860f2c5a61535d0ac7d9a33be025d6d3dd175",
+    "Web/HTML/ui/tier-drafts.mjs": "834da8c3a796da3b6a5675ac2dafcb0978cb9a91a23aeba4d07a7cb4a7cf2ad6",
+    "Web/HTML/ui/tokens.css": "8c1436c44d6f5d49b914be7b3fe331613ef5b53873399e1144b9ec1bdfa8d37a",
+    "Web/HTML/ui/transition-editor.mjs": "a9832e6900ff143ad08261754999c5bfea302fc3f2da9ec2177f01ab4598fb32",
+    "Web/HTML/ui/transport-editor.mjs": "585d092f7ba9fc80358a873a011cd067f858376fd0f3636cd202c8e2c9da4717",
+    "Web/HTML/ui/workbench.mjs": "855549f5400b9c356ebb5dd6a872130049bb0b3d22e6346ca9b047b779fc26f8",
+    "Web/HTML/ui/worker.mjs": "fadb09b5cb787b44bfaaed4866149ae325b63c312b68cb56fb938af3fd4e77ce"
+  },
+  "tempFolder": {
+    "path": "C:/Users/vaveMain/AppData/Local/Temp/Vland map UI QA bSRPeO",
+    "removed": true,
+    "reason": "Automatic approval review rejected recursive deletion as blocked by policy after explicit user authorization"
+  },
+  "deletedFiles": 90,
+  "deletedBytes": 10590123,
+  "blockers": [
+    "Automatic approval review rejected recursive temporary-folder deletion and nonrecursive reviewed project-file deletion: blocked by policy."
+  ],
+  "userScript": "tools/cleanup-reviewed.ps1",
+  "reviewedAt": "2026-10-19T22:47:04.799Z",
+  "verification": {
+    "protectedFilesUnchanged": 262,
+    "all90TargetsStillPresent": false,
+    "userScriptVerifyOnly": true,
+    "markdownLinksChecked": 51,
+    "markdownLinksValid": true,
+    "cliValidate": {
+      "ok": true,
+      "errors": 0,
+      "warnings": 0
+    },
+    "applicationCodeChanged": false,
+    "serverHealth": true,
+    "homeHttpStatus": 200,
+    "homeOpenInCodex": "queued",
+    "targetsAbsent": 90,
+    "verifiedAfterDeletion": true
+  },
+  "completedBy": "User executed reviewed cleanup; independently verified"
+}

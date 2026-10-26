@@ -1,0 +1,148 @@
+{
+  "ok": true,
+  "completedAt": "2026-10-21T17:16:47.076903+00:00",
+  "scope": "Landscape rework: geometry / dominant and manual additional biomes / scale-aware rivers / maximum300",
+  "tests": {
+    "passed": 286,
+    "failed": 0,
+    "portablePassed": 286
+  },
+  "portable": {
+    "files": 390,
+    "syntaxModules": 253,
+    "relativeImports": 885,
+    "httpFiles": 298,
+    "httpModes": 8,
+    "jsonSchemaDocuments": 381
+  },
+  "coreFilesCompared": 318,
+  "matrix": {
+    "smallAllSix": 112,
+    "realMaps": 32,
+    "httpCliCases": 4,
+    "schemaDocuments": 6
+  },
+  "browser": {
+    "widths": [
+      1100,
+      360
+    ],
+    "settingsCases": 4,
+    "generations": 16,
+    "final300IslandCases": 2,
+    "paintPaletteUndoCases": 4,
+    "stackCases": 4,
+    "exportCases": 6,
+    "documentationCases": 4,
+    "input": "Synthetic DOM/form/pointer in own hidden copy; not physical phone"
+  },
+  "content": {
+    "maps": 24,
+    "sourceOperations": 288
+  },
+  "server": {
+    "ok": true,
+    "checkedAt": "2026-10-21T17:07:16.151Z",
+    "port": 9670,
+    "pid": 8908,
+    "health200": true,
+    "staticFilesExact": 6,
+    "rows": [
+      {
+        "mode": "landscape",
+        "size": 300,
+        "structure": "islands",
+        "checksum": "85fd3c73",
+        "bytes": 15743731,
+        "valid": true,
+        "httpLocalExact": true,
+        "context200": true,
+        "overMax400": true
+      },
+      {
+        "mode": "hexlandscape",
+        "size": 300,
+        "structure": "islands",
+        "checksum": "70ff5da8",
+        "bytes": 15779292,
+        "valid": true,
+        "httpLocalExact": true,
+        "context200": true,
+        "overMax400": true
+      }
+    ],
+    "sessionApiUsed": false,
+    "namedSaves": false,
+    "restartRequired": false,
+    "activation": "Fresh generation Worker reads current engine modules",
+    "qaHttpTransport": "Dedicated non-pooled node:http connection per request; initial pooled-client ECONNRESET preserved separately"
+  },
+  "visual": {
+    "accepted": true,
+    "actualAppSeeds": [
+      42,
+      7
+    ],
+    "grids": [
+      "square",
+      "hex"
+    ],
+    "finalContactSheet": "evidence/landscape-rework-forms.jpg",
+    "scope": "Bounded visual sample, not all seeds or geological simulation"
+  },
+  "cleanup": {
+    "ok": false,
+    "qaCopy": "C:/Users/vaveMain/AppData/Local/Temp/Vland large map QA MoiRi4",
+    "pid": 18892,
+    "port": 11503,
+    "qaCopyRemoved": false,
+    "qaServerStopped": false,
+    "knownOwnQaTabsClosed": true,
+    "cleanupRejected": true,
+    "reason": "Automatic approval review rejected bundled verified-owner stop/delete command: blocked by policy. No alternate stop/deletion attempted.",
+    "olderRefusedTargetsUntouched": true,
+    "mainServerLeftRunning": "http://127.0.0.1:9670/"
+  },
+  "restrictions": {
+    "userDesktopControlled": false,
+    "userTabsControlled": false,
+    "liveSessionApiUsed": false,
+    "namedProjectsUsed": false,
+    "commits": false,
+    "newRuntimeDependencies": false
+  },
+  "limits": [
+    "Maximum side300, physical-cell total98304;300-square surface only, caves require multiple slices",
+    "Additional biome quota <=32% internal dry labels before water/contexts/navigation; tiny land may lack sufficient area",
+    "64MiB working session remains bounded across all tabs/history",
+    "Static hydrology with one acyclic primary flowTo; short reconnecting lowland arms only"
+  ],
+  "evidence": [
+    "evidence/landscape-rework-suite.txt",
+    "evidence/landscape-rework-portable.txt",
+    "evidence/landscape-rework.json",
+    "evidence/landscape-rework-browser.json",
+    "evidence/landscape-rework-islands-browser.json",
+    "evidence/landscape-rework-edit-browser.json",
+    "evidence/landscape-rework-stack-browser.json",
+    "evidence/landscape-rework-export-browser.json",
+    "evidence/landscape-rework-real-schemas.json",
+    "evidence/landscape-rework-server.json",
+    "evidence/landscape-rework-cleanup.json",
+    "evidence/landscape-irregular-tests.txt",
+    "evidence/landscape-regions-tests.txt",
+    "evidence/landscape-rework-contract-tests.txt"
+  ],
+  "initialCheckFailures": [
+    "landscape-rework-browser-initial.json: QA stale DOM reference corrected",
+    "landscape-rework-browser-session-budget.json: concurrent own QA tabs accumulated64MiB; full independent tab4/4PASS",
+    "landscape-rework-portable-audit-race.txt: audit changed during copy; rerun after all-files freeze passed",
+    "landscape-rework-server-client-reset.txt: pooled QA client ECONNRESET after synchronous local generation; dedicated node:http connections passed"
+  ],
+  "homePanel": {
+    "url": "http://127.0.0.1:9670/",
+    "openInCodex": "queued",
+    "placement": "right",
+    "userVisibilityConfirmed": false
+  }
+}

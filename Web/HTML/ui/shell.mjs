@@ -1,0 +1,10 @@
+import {webHref} from './paths.mjs';
+import {MODES,VERSION} from '../../../app/contracts.mjs';
+import {createWorkingSession} from './session.mjs';
+const path=location.pathname.split('/').pop()||'index.html';
+const nav=[...Object.entries(MODES).map(([id,m])=>[m.page,m.name]),['settings.html','Настройки'],['guide.html','Гайд'],['llm.html','LLM / API']];
+document.querySelector('[data-header]').innerHTML=`<div class="header-inner"><a class="brand" href="${webHref('index.html')}"><span>V</span>landGenerator</a><nav class="nav" aria-label="Главное меню">${nav.map(([href,name],i)=>`${i===Object.keys(MODES).length?'<span class="separator"></span>':''}<a href="${webHref(href)}" ${href===path?'aria-current="page"':''}>${name}</a>`).join('')}</nav><span class="version">v${VERSION} / LOCAL FIRST</span><span id="session-status" class="session-status" role="status">Подключаю сессию…</span></div>`;
+const stored=(()=>{try{return JSON.parse(localStorage.getItem('vland.settings')??'{}');}catch{return{};}})();
+if(stored.highContrast)document.documentElement.style.setProperty('--muted','#b4c6c7');
+export const settings={grid:stored.grid??true,confirmLeave:stored.confirmLeave??true};
+export const workingSession=createWorkingSession({mode:document.querySelector('main')?.dataset.mode??(path==='settings.html'?'settings':null),badge:document.querySelector('#session-status')});

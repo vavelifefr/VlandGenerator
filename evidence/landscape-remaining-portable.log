@@ -1,0 +1,9 @@
+PASS JS/HTTP/CLI, four reported seeds and300 city
+PASS browser settlements 1100
+PASS browser landscape 1100
+PASS browser hexlandscape 1100
+PASS browser settlements 360
+PASS browser landscape 360
+PASS browser hexlandscape 360
+PASS schemas
+{"ok":false,"browser":6,"schema":10,"copyRemoved":true,"error":"fetch failed"}

@@ -1,0 +1,6 @@
+export function normalizeTopology(input={kind:'square'}){if(!input||typeof input!=='object'||Array.isArray(input)||Object.keys(input).some(k=>!['kind'].includes(k))||!['square','hex'].includes(input.kind))throw new Error('topology: {kind:"square"|"hex"}; гексагоны pointy-top, odd-r.');return{kind:input.kind};}
+// Stable neighbor order is part of deterministic generation and path tie-breaking.
+const squareDirs=[[0,-1],[1,0],[0,1],[-1,0]],hexOddDirs=[[1,0],[-1,0],[0,-1],[1,-1],[0,1],[1,1]],hexEvenDirs=[[1,0],[-1,0],[-1,-1],[0,-1],[-1,1],[0,1]];
+export function gridNeighbors(i,width,height,topology={kind:'square'}){const x=i%width,y=Math.floor(i/width),dirs=topology.kind==='hex'?(y%2?hexOddDirs:hexEvenDirs):squareDirs,result=[];for(let k=0;k<dirs.length;k++){const xx=x+dirs[k][0],yy=y+dirs[k][1];if(xx>=0&&xx<width&&yy>=0&&yy<height)result.push(yy*width+xx);}return result;}
+export function gridPosition(x,y,topology={kind:'square'}){return topology.kind==='hex'?{x:x+(y%2)*.5,y:y*Math.sqrt(3)/2}:{x,y};}
+export function gridDistance(a,b,topology={kind:'square'}){if(topology.kind!=='hex')return Math.abs(a.x-b.x)+Math.abs(a.y-b.y);const aq=a.x-(a.y-(a.y&1))/2,bq=b.x-(b.y-(b.y&1))/2;return(Math.abs(aq-bq)+Math.abs(a.y-b.y)+Math.abs(aq+a.y-bq-b.y))/2;}

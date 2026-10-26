@@ -1,0 +1,20 @@
+✔ a secondary biome uses its saved legend color in the shared cell and PNG transition (2.8561ms)
+✔ an explicit primary biome color remains exact despite secondary blending and solid shading (0.3195ms)
+✔ landscape manual biome override clears only its derived band and preserves the immutable source (792.0295ms)
+✔ hexlandscape manual biome override clears only its derived band and preserves the immutable source (749.2653ms)
+✔ display overrides are validated, copied, exact and shared by cells and PNG without editing a layer (2.8486ms)
+✔ HSV picker round-trips saturated and neutral colors including endpoints (0.2877ms)
+✔ cell details are informational, bounds-checked and localized for every physical layer kind (0.4149ms)
+✔ an oversized PNG is rejected before reading cells or constructing a raster (1.0913ms)
+✔ the full selected batch budget is checked before rendering its first otherwise valid layer (0.1693ms)
+✔ invalid palettes retain their validation error before the batch size check (0.1312ms)
+✔ successful square/hex PNG bytes, colors and transparency keep their previous hashes (3.7439ms)
+✔ raster layout predicts exact encoded byte lengths across stored-deflate boundaries (194.3317ms)
+ℹ tests 12
+ℹ suites 0
+ℹ pass 12
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1657.4965

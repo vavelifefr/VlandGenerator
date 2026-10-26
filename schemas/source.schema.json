@@ -1,0 +1,521 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://vland.invalid/schemas/source.schema.json",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "id": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 64,
+      "pattern": "^[a-zA-Z][a-zA-Z0-9_-]{0,63}$",
+      "not": {
+        "enum": [
+          "__proto__",
+          "prototype",
+          "constructor"
+        ]
+      }
+    },
+    "name": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 100
+    },
+    "kind": {
+      "enum": [
+        "zone",
+        "spawner"
+      ]
+    },
+    "category": {
+      "enum": [
+        "resources",
+        "flora",
+        "fauna",
+        "objects",
+        "items",
+        "events"
+      ]
+    },
+    "layerId": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 64,
+      "pattern": "^[a-zA-Z][a-zA-Z0-9_-]{0,63}$",
+      "not": {
+        "enum": [
+          "__proto__",
+          "prototype",
+          "constructor"
+        ]
+      }
+    },
+    "seed": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 4294967295
+    },
+    "priority": {
+      "type": "integer",
+      "minimum": -1000,
+      "maximum": 1000
+    },
+    "enabled": {
+      "type": "boolean"
+    },
+    "area": {
+      "oneOf": [
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "mask": {
+              "$ref": "mask.schema.json"
+            }
+          },
+          "required": [
+            "mask"
+          ]
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "x": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 4095
+            },
+            "y": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 4095
+            },
+            "radius": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 64
+            }
+          },
+          "required": [
+            "x",
+            "y",
+            "radius"
+          ]
+        }
+      ]
+    },
+    "rules": {
+      "type": "array",
+      "items": {
+        "$ref": "source-rule.schema.json"
+      },
+      "maxItems": 16,
+      "minItems": 1
+    },
+    "schedule": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "trigger": {
+          "enum": [
+            "load",
+            "enter",
+            "proximity",
+            "signal"
+          ]
+        },
+        "signalId": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 64,
+              "pattern": "^[a-zA-Z][a-zA-Z0-9_-]{0,63}$",
+              "not": {
+                "enum": [
+                  "__proto__",
+                  "prototype",
+                  "constructor"
+                ]
+              }
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "repeat": {
+          "enum": [
+            "once",
+            "cycle"
+          ]
+        },
+        "clock": {
+          "enum": [
+            "seconds",
+            "turns"
+          ]
+        },
+        "delay": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100000
+        },
+        "interval": {
+          "type": "number",
+          "minimum": 0.001,
+          "maximum": 100000
+        }
+      },
+      "required": [
+        "trigger",
+        "signalId",
+        "repeat",
+        "clock",
+        "delay",
+        "interval"
+      ]
+    },
+    "conditions": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "timeOfDay": {
+          "enum": [
+            "any",
+            "day",
+            "night"
+          ]
+        },
+        "flags": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "id": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 64,
+                "pattern": "^[a-zA-Z][a-zA-Z0-9_-]{0,63}$",
+                "not": {
+                  "enum": [
+                    "__proto__",
+                    "prototype",
+                    "constructor"
+                  ]
+                }
+              },
+              "value": {
+                "type": "boolean"
+              }
+            },
+            "required": [
+              "id",
+              "value"
+            ]
+          },
+          "maxItems": 16
+        }
+      },
+      "required": [
+        "timeOfDay",
+        "flags"
+      ]
+    },
+    "limits": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "maxAlive": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 12000
+        },
+        "batchSize": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 12000
+        },
+        "total": {
+          "anyOf": [
+            {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 1000000
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "populationId": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 64,
+              "pattern": "^[a-zA-Z][a-zA-Z0-9_-]{0,63}$",
+              "not": {
+                "enum": [
+                  "__proto__",
+                  "prototype",
+                  "constructor"
+                ]
+              }
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "required": [
+        "maxAlive",
+        "batchSize",
+        "total",
+        "populationId"
+      ]
+    },
+    "representation": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "visible": {
+          "type": "boolean"
+        },
+        "destructible": {
+          "type": "boolean"
+        },
+        "catalogId": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 64,
+              "pattern": "^[a-zA-Z][a-zA-Z0-9_-]{0,63}$",
+              "not": {
+                "enum": [
+                  "__proto__",
+                  "prototype",
+                  "constructor"
+                ]
+              }
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "required": [
+        "visible",
+        "destructible",
+        "catalogId"
+      ]
+    },
+    "origin": {
+      "oneOf": [
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "kind": {
+              "const": "manual"
+            }
+          },
+          "required": [
+            "kind"
+          ]
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "kind": {
+              "const": "automatic"
+            },
+            "groupId": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 64,
+              "pattern": "^[a-zA-Z][a-zA-Z0-9_-]{0,63}$",
+              "not": {
+                "enum": [
+                  "__proto__",
+                  "prototype",
+                  "constructor"
+                ]
+              }
+            }
+          },
+          "required": [
+            "kind",
+            "groupId"
+          ]
+        }
+      ]
+    }
+  },
+  "required": [
+    "id",
+    "name",
+    "kind",
+    "category",
+    "layerId",
+    "seed",
+    "priority",
+    "enabled",
+    "area",
+    "rules",
+    "schedule",
+    "conditions",
+    "limits",
+    "representation",
+    "origin"
+  ],
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "kind": {
+            "const": "zone"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "area": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "mask": {
+                "$ref": "mask.schema.json"
+              }
+            },
+            "required": [
+              "mask"
+            ]
+          },
+          "representation": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "visible": {
+                "const": false
+              },
+              "destructible": {
+                "const": false
+              },
+              "catalogId": {
+                "type": "null"
+              }
+            },
+            "required": [
+              "visible",
+              "destructible",
+              "catalogId"
+            ]
+          }
+        }
+      },
+      "else": {
+        "properties": {
+          "area": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "x": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 4095
+              },
+              "y": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 4095
+              },
+              "radius": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 64
+              }
+            },
+            "required": [
+              "x",
+              "y",
+              "radius"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "schedule": {
+            "properties": {
+              "trigger": {
+                "const": "signal"
+              }
+            }
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "schedule": {
+            "properties": {
+              "signalId": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 64,
+                "pattern": "^[a-zA-Z][a-zA-Z0-9_-]{0,63}$",
+                "not": {
+                  "enum": [
+                    "__proto__",
+                    "prototype",
+                    "constructor"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "schedule": {
+            "properties": {
+              "clock": {
+                "const": "turns"
+              }
+            }
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "schedule": {
+            "properties": {
+              "delay": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 100000
+              },
+              "interval": {
+                "type": "integer",
+                "minimum": 1,
+                "maximum": 100000
+              }
+            }
+          }
+        }
+      }
+    }
+  ]
+}

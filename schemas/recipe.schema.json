@@ -1,0 +1,250 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://vland.invalid/schemas/recipe.schema.json",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "schema": {
+      "const": "vland.recipe"
+    },
+    "schemaVersion": {
+      "const": 4
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 100
+    },
+    "mode": {
+      "enum": [
+        "dungeon",
+        "tiers",
+        "sideview",
+        "caves",
+        "landscape",
+        "hexlandscape",
+        "settlements",
+        "relief"
+      ]
+    },
+    "seed": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 4294967295
+    },
+    "generation": {
+      "type": "object",
+      "not": {
+        "anyOf": [
+          {
+            "required": [
+              "resources"
+            ]
+          },
+          {
+            "required": [
+              "ecology"
+            ]
+          },
+          {
+            "required": [
+              "structures"
+            ]
+          },
+          {
+            "required": [
+              "events"
+            ]
+          },
+          {
+            "required": [
+              "content"
+            ]
+          },
+          {
+            "required": [
+              "sources"
+            ]
+          },
+          {
+            "required": [
+              "population"
+            ]
+          },
+          {
+            "required": [
+              "placement"
+            ]
+          },
+          {
+            "required": [
+              "zones"
+            ]
+          },
+          {
+            "required": [
+              "instances"
+            ]
+          },
+          {
+            "required": [
+              "schema"
+            ]
+          },
+          {
+            "required": [
+              "schemaVersion"
+            ]
+          },
+          {
+            "required": [
+              "seed"
+            ]
+          }
+        ]
+      }
+    },
+    "catalog": {
+      "$ref": "catalog.schema.json"
+    }
+  },
+  "required": [
+    "schema",
+    "schemaVersion",
+    "title",
+    "mode",
+    "seed",
+    "generation",
+    "catalog"
+  ],
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "mode": {
+            "const": "dungeon"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "generation": {
+            "$ref": "generation-dungeon.schema.json"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "mode": {
+            "const": "tiers"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "generation": {
+            "$ref": "generation-tiers.schema.json"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "mode": {
+            "const": "sideview"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "generation": {
+            "$ref": "generation-sideview.schema.json"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "mode": {
+            "const": "caves"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "generation": {
+            "$ref": "generation-caves.schema.json"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "mode": {
+            "const": "landscape"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "generation": {
+            "$ref": "generation-landscape.schema.json"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "mode": {
+            "const": "hexlandscape"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "generation": {
+            "$ref": "generation-hexlandscape.schema.json"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "mode": {
+            "const": "settlements"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "generation": {
+            "$ref": "generation-settlements.schema.json"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "mode": {
+            "const": "relief"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "generation": {
+            "$ref": "generation-relief.schema.json"
+          }
+        }
+      }
+    }
+  ]
+}

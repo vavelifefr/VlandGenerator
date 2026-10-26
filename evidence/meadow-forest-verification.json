@@ -1,0 +1,572 @@
+{
+  "ok": true,
+  "actualMaps": [
+    {
+      "mode": "landscape",
+      "size": 50,
+      "baseBiome": "meadow",
+      "otherBiome": "forest",
+      "percent": 35,
+      "structure": "land",
+      "seed": 42,
+      "checksum": "32b5562b",
+      "dryCells": 2003,
+      "allocatedOtherCells": 701,
+      "landCells": 2500,
+      "oceanCells": 0,
+      "visibleBiomes": {
+        "forest": 434,
+        "river": 67,
+        "taiga": 171,
+        "plains": 1077,
+        "tundra": 321,
+        "lake": 430
+      },
+      "nav": true,
+      "deterministic": true,
+      "geometryUnaffectedByCards": true,
+      "images": [
+        "meadow-forest-landscape-50-meadow-material.png",
+        "meadow-forest-landscape-50-meadow-biome.png"
+      ]
+    },
+    {
+      "mode": "landscape",
+      "size": 50,
+      "baseBiome": "forest",
+      "otherBiome": "meadow",
+      "percent": 35,
+      "structure": "land",
+      "seed": 42,
+      "checksum": "9d460c91",
+      "dryCells": 1921,
+      "allocatedOtherCells": 672,
+      "landCells": 2500,
+      "oceanCells": 0,
+      "visibleBiomes": {
+        "forest": 654,
+        "river": 149,
+        "taiga": 466,
+        "plains": 597,
+        "tundra": 204,
+        "lake": 430
+      },
+      "nav": true,
+      "deterministic": true,
+      "geometryUnaffectedByCards": true,
+      "images": [
+        "meadow-forest-landscape-50-forest-material.png",
+        "meadow-forest-landscape-50-forest-biome.png"
+      ]
+    },
+    {
+      "mode": "landscape",
+      "size": 128,
+      "baseBiome": "meadow",
+      "otherBiome": "forest",
+      "percent": 35,
+      "structure": "coast",
+      "seed": 42,
+      "checksum": "cecd7bf2",
+      "dryCells": 11422,
+      "allocatedOtherCells": 3998,
+      "landCells": 12288,
+      "oceanCells": 4096,
+      "visibleBiomes": {
+        "plains": 5671,
+        "forest": 2447,
+        "tundra": 2038,
+        "river": 261,
+        "taiga": 933,
+        "rainforest": 76,
+        "lake": 605,
+        "savanna": 2,
+        "beach": 250,
+        "ocean": 4096,
+        "floodplain": 5
+      },
+      "nav": true,
+      "deterministic": true,
+      "geometryUnaffectedByCards": true,
+      "images": [
+        "meadow-forest-landscape-128-meadow-material.png",
+        "meadow-forest-landscape-128-meadow-biome.png"
+      ]
+    },
+    {
+      "mode": "landscape",
+      "size": 128,
+      "baseBiome": "forest",
+      "otherBiome": "meadow",
+      "percent": 35,
+      "structure": "coast",
+      "seed": 42,
+      "checksum": "5ca5b430",
+      "dryCells": 11408,
+      "allocatedOtherCells": 3993,
+      "landCells": 12288,
+      "oceanCells": 4096,
+      "visibleBiomes": {
+        "forest": 3724,
+        "taiga": 3057,
+        "plains": 3038,
+        "tundra": 1281,
+        "river": 275,
+        "lake": 605,
+        "rainforest": 53,
+        "beach": 250,
+        "ocean": 4096,
+        "floodplain": 5
+      },
+      "nav": true,
+      "deterministic": true,
+      "geometryUnaffectedByCards": true,
+      "images": [
+        "meadow-forest-landscape-128-forest-material.png",
+        "meadow-forest-landscape-128-forest-biome.png"
+      ]
+    },
+    {
+      "mode": "landscape",
+      "size": 300,
+      "baseBiome": "meadow",
+      "otherBiome": "forest",
+      "percent": 35,
+      "structure": "coast",
+      "seed": 42,
+      "checksum": "aec0da4c",
+      "dryCells": 57335,
+      "allocatedOtherCells": 20067,
+      "landCells": 67500,
+      "oceanCells": 22500,
+      "visibleBiomes": {
+        "plains": 29629,
+        "tundra": 5311,
+        "savanna": 3943,
+        "forest": 10402,
+        "taiga": 5397,
+        "rainforest": 1990,
+        "river": 2042,
+        "lake": 8123,
+        "beach": 592,
+        "ocean": 22500,
+        "floodplain": 71
+      },
+      "nav": true,
+      "deterministic": true,
+      "geometryUnaffectedByCards": true,
+      "images": [
+        "meadow-forest-landscape-300-meadow-material.png",
+        "meadow-forest-landscape-300-meadow-biome.png"
+      ]
+    },
+    {
+      "mode": "landscape",
+      "size": 300,
+      "baseBiome": "forest",
+      "otherBiome": "meadow",
+      "percent": 35,
+      "structure": "coast",
+      "seed": 42,
+      "checksum": "af176900",
+      "dryCells": 57249,
+      "allocatedOtherCells": 20037,
+      "landCells": 67500,
+      "oceanCells": 22500,
+      "visibleBiomes": {
+        "forest": 19009,
+        "taiga": 12519,
+        "plains": 16483,
+        "tundra": 3006,
+        "savanna": 2425,
+        "rainforest": 3144,
+        "river": 2128,
+        "lake": 8123,
+        "beach": 592,
+        "ocean": 22500,
+        "floodplain": 71
+      },
+      "nav": true,
+      "deterministic": true,
+      "geometryUnaffectedByCards": true,
+      "images": [
+        "meadow-forest-landscape-300-forest-material.png",
+        "meadow-forest-landscape-300-forest-biome.png"
+      ]
+    },
+    {
+      "mode": "hexlandscape",
+      "size": 50,
+      "baseBiome": "meadow",
+      "otherBiome": "forest",
+      "percent": 35,
+      "structure": "land",
+      "seed": 42,
+      "checksum": "5b9de40d",
+      "dryCells": 1944,
+      "allocatedOtherCells": 680,
+      "landCells": 2500,
+      "oceanCells": 0,
+      "visibleBiomes": {
+        "forest": 392,
+        "river": 136,
+        "taiga": 177,
+        "plains": 1068,
+        "tundra": 307,
+        "lake": 420
+      },
+      "nav": true,
+      "deterministic": true,
+      "geometryUnaffectedByCards": true,
+      "images": [
+        "meadow-forest-hexlandscape-50-meadow-material.png",
+        "meadow-forest-hexlandscape-50-meadow-biome.png"
+      ]
+    },
+    {
+      "mode": "hexlandscape",
+      "size": 50,
+      "baseBiome": "forest",
+      "otherBiome": "meadow",
+      "percent": 35,
+      "structure": "land",
+      "seed": 42,
+      "checksum": "ba319cfb",
+      "dryCells": 1999,
+      "allocatedOtherCells": 700,
+      "landCells": 2500,
+      "oceanCells": 0,
+      "visibleBiomes": {
+        "forest": 656,
+        "river": 81,
+        "taiga": 471,
+        "plains": 697,
+        "tundra": 175,
+        "lake": 420
+      },
+      "nav": true,
+      "deterministic": true,
+      "geometryUnaffectedByCards": true,
+      "images": [
+        "meadow-forest-hexlandscape-50-forest-material.png",
+        "meadow-forest-hexlandscape-50-forest-biome.png"
+      ]
+    },
+    {
+      "mode": "hexlandscape",
+      "size": 128,
+      "baseBiome": "meadow",
+      "otherBiome": "forest",
+      "percent": 35,
+      "structure": "coast",
+      "seed": 42,
+      "checksum": "ea9428c4",
+      "dryCells": 11357,
+      "allocatedOtherCells": 3975,
+      "landCells": 12288,
+      "oceanCells": 4096,
+      "visibleBiomes": {
+        "plains": 5697,
+        "forest": 2418,
+        "tundra": 1983,
+        "river": 327,
+        "taiga": 899,
+        "rainforest": 76,
+        "lake": 604,
+        "beach": 277,
+        "ocean": 4096,
+        "floodplain": 7
+      },
+      "nav": true,
+      "deterministic": true,
+      "geometryUnaffectedByCards": true,
+      "images": [
+        "meadow-forest-hexlandscape-128-meadow-material.png",
+        "meadow-forest-hexlandscape-128-meadow-biome.png"
+      ]
+    },
+    {
+      "mode": "hexlandscape",
+      "size": 128,
+      "baseBiome": "forest",
+      "otherBiome": "meadow",
+      "percent": 35,
+      "structure": "coast",
+      "seed": 42,
+      "checksum": "542ff702",
+      "dryCells": 11099,
+      "allocatedOtherCells": 3885,
+      "landCells": 12288,
+      "oceanCells": 4096,
+      "visibleBiomes": {
+        "forest": 3517,
+        "taiga": 3001,
+        "plains": 3007,
+        "tundra": 1238,
+        "river": 585,
+        "lake": 604,
+        "rainforest": 52,
+        "beach": 277,
+        "ocean": 4096,
+        "floodplain": 7
+      },
+      "nav": true,
+      "deterministic": true,
+      "geometryUnaffectedByCards": true,
+      "images": [
+        "meadow-forest-hexlandscape-128-forest-material.png",
+        "meadow-forest-hexlandscape-128-forest-biome.png"
+      ]
+    },
+    {
+      "mode": "hexlandscape",
+      "size": 300,
+      "baseBiome": "meadow",
+      "otherBiome": "forest",
+      "percent": 35,
+      "structure": "coast",
+      "seed": 42,
+      "checksum": "dd8602bf",
+      "dryCells": 57382,
+      "allocatedOtherCells": 20084,
+      "landCells": 67500,
+      "oceanCells": 22500,
+      "visibleBiomes": {
+        "plains": 29960,
+        "forest": 10066,
+        "tundra": 5217,
+        "savanna": 4057,
+        "taiga": 5375,
+        "rainforest": 1948,
+        "river": 2006,
+        "lake": 8112,
+        "floodplain": 90,
+        "beach": 669,
+        "ocean": 22500
+      },
+      "nav": true,
+      "deterministic": true,
+      "geometryUnaffectedByCards": true,
+      "images": [
+        "meadow-forest-hexlandscape-300-meadow-material.png",
+        "meadow-forest-hexlandscape-300-meadow-biome.png"
+      ]
+    },
+    {
+      "mode": "hexlandscape",
+      "size": 300,
+      "baseBiome": "forest",
+      "otherBiome": "meadow",
+      "percent": 35,
+      "structure": "coast",
+      "seed": 42,
+      "checksum": "c84882ba",
+      "dryCells": 57189,
+      "allocatedOtherCells": 20016,
+      "landCells": 67500,
+      "oceanCells": 22500,
+      "visibleBiomes": {
+        "forest": 18786,
+        "taiga": 12363,
+        "plains": 16757,
+        "tundra": 2874,
+        "savanna": 2580,
+        "rainforest": 3045,
+        "river": 2199,
+        "lake": 8112,
+        "floodplain": 121,
+        "beach": 663,
+        "ocean": 22500
+      },
+      "nav": true,
+      "deterministic": true,
+      "geometryUnaffectedByCards": true,
+      "images": [
+        "meadow-forest-hexlandscape-300-forest-material.png",
+        "meadow-forest-hexlandscape-300-forest-biome.png"
+      ]
+    }
+  ],
+  "images": [],
+  "browser": [
+    {
+      "mode": "landscape",
+      "width": 1100,
+      "checksum": "a2e23f1a",
+      "samples": [
+        {
+          "biome": "plains",
+          "expected": [
+            120,
+            149,
+            92
+          ],
+          "actual": [
+            120,
+            149,
+            92
+          ]
+        },
+        {
+          "biome": "forest",
+          "expected": [
+            70,
+            111,
+            73
+          ],
+          "actual": [
+            70,
+            111,
+            73
+          ]
+        }
+      ],
+      "legend": "ЗемляПесокПресная водаИлЛугаЛуга · СаваннаЛесЛес · ТайгаЛес · Тропический",
+      "manualDraft": true,
+      "noOverflow": true,
+      "nav": true,
+      "access": true,
+      "defaultChannel": "material"
+    },
+    {
+      "mode": "hexlandscape",
+      "width": 1100,
+      "checksum": "1b6c23c3",
+      "samples": [
+        {
+          "biome": "plains",
+          "expected": [
+            120,
+            149,
+            92
+          ],
+          "actual": [
+            120,
+            149,
+            92
+          ]
+        },
+        {
+          "biome": "forest",
+          "expected": [
+            70,
+            111,
+            73
+          ],
+          "actual": [
+            70,
+            111,
+            73
+          ]
+        }
+      ],
+      "legend": "ЗемляПесокПресная водаИлЛугаЛуга · СаваннаЛесЛес · ТайгаЛес · Тропический",
+      "manualDraft": true,
+      "noOverflow": true,
+      "nav": true,
+      "access": true,
+      "defaultChannel": "material"
+    },
+    {
+      "mode": "landscape",
+      "width": 360,
+      "checksum": "a2e23f1a",
+      "samples": [
+        {
+          "biome": "plains",
+          "expected": [
+            120,
+            149,
+            92
+          ],
+          "actual": [
+            120,
+            149,
+            92
+          ]
+        },
+        {
+          "biome": "forest",
+          "expected": [
+            70,
+            111,
+            73
+          ],
+          "actual": [
+            70,
+            111,
+            73
+          ]
+        }
+      ],
+      "legend": "ЗемляПесокПресная водаИлЛугаЛуга · СаваннаЛесЛес · ТайгаЛес · Тропический",
+      "manualDraft": true,
+      "noOverflow": true,
+      "nav": true,
+      "access": true,
+      "defaultChannel": "material"
+    },
+    {
+      "mode": "hexlandscape",
+      "width": 360,
+      "checksum": "1b6c23c3",
+      "samples": [
+        {
+          "biome": "plains",
+          "expected": [
+            120,
+            149,
+            92
+          ],
+          "actual": [
+            120,
+            149,
+            92
+          ]
+        },
+        {
+          "biome": "forest",
+          "expected": [
+            70,
+            111,
+            73
+          ],
+          "actual": [
+            70,
+            111,
+            73
+          ]
+        }
+      ],
+      "legend": "ЗемляПесокПресная водаИлЛугаЛуга · СаваннаЛесЛес · ТайгаЛес · Тропический",
+      "manualDraft": true,
+      "noOverflow": true,
+      "nav": true,
+      "access": true,
+      "defaultChannel": "material"
+    }
+  ],
+  "pageErrors": [],
+  "stackFixture": {
+    "fieldsSHA": "e9aba926e7e810e296740b5b14bf7ad69b523911675257006c8020b0d655bea9",
+    "files": [
+      "meadow-forest-stack-land300-woods25-material.png",
+      "meadow-forest-stack-land300-woods25-biome.png"
+    ]
+  },
+  "supplementary": {
+    "mode": "landscape",
+    "size": 300,
+    "baseBiome": "forest",
+    "otherBiome": "meadow",
+    "percent": 35,
+    "structure": "land",
+    "checksum": "aa72cf34",
+    "navigation": true,
+    "access": true,
+    "images": [
+      "meadow-forest-land300-forestbase-material.png",
+      "meadow-forest-land300-forestbase-biome.png"
+    ]
+  }
+}

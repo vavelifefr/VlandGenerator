@@ -1,0 +1,33 @@
+import {tileNeighbors,tileDistance} from './topology.mjs';
+import {ContentError,LIMITS,keys,id,number,jsonValue,hash,compare,roll,seedOf} from './common.mjs';
+import {validateMap} from './map.mjs';
+import {validateCatalog} from './registry.mjs';
+import {validateSources,sourceMask} from './sources.mjs';
+import {maskCells,maskFromCells} from './masks.mjs';
+import {checkPlacement,occupancyIndex,bodyCells,spacingFits,canShare} from './validation.mjs';
+export const sourceOrder=(a,b)=>b.priority-a.priority||compare(a.id,b.id);
+export const programFingerprint=scene=>hash({catalog:scene.catalog,sources:scene.sources,layers:scene.map.layers.map(l=>({id:l.id,width:l.width,height:l.height}))});
+export function validateScene(scene){
+ keys(scene,['map','catalog','sources'],'scene');validateMap(scene.map);validateCatalog(scene.catalog);validateSources(scene.sources,scene.map.layers,scene.catalog);const ids=new Set();
+ for(const f of scene.map.fixtures){keys(f,['id','catalogId','layerId','x','y','properties','origin'],'fixture');const e=scene.catalog.find(e=>e.id===f.catalogId),l=scene.map.layers.find(l=>l.id===f.layerId);if(!e||!l||typeof f.id!=='string'||!f.id.length||ids.has(f.id)||f.origin!=='source')throw new ContentError('INVALID_FIXTURE','Неверный обязательный элемент основы.');number(f.x,0,l.width-e.footprint.width,'fixture.x',true);number(f.y,0,l.height-e.footprint.height,'fixture.y',true);jsonValue(f.properties);ids.add(f.id);}return scene;
+}
+export const makeBudget=()=>{let count=0;return()=>{if(++count>2000000)throw new ContentError('CONTENT_BUDGET','Более 2 млн проверок. Уменьшите область или число типов.');};};
+export function eligiblePositions(scene,source,rule,budget=makeBudget()){
+ const layer=scene.map.layers.find(l=>l.id===source.layerId),mask=new Set(maskCells(sourceMask(source,layer),layer.width)),types=new Map(scene.catalog.map(e=>[e.id,e])),occupancy=occupancyIndex(layer,scene.catalog,scene.map.fixtures),positions=[],reasons={};
+ for(const i of mask){const p={x:i%layer.width,y:Math.floor(i/layer.width)},entries=[];for(const entry of rule.entries){budget();const problems=checkPlacement(layer,types.get(entry.catalogId),p,{mask:source.kind==='zone'?mask:null,filters:rule.filters,occupancy,avoidReserved:source.kind==='zone'||source.origin.kind==='automatic'});if(!problems.length)entries.push(entry);else for(const problem of problems)reasons[problem.code]=(reasons[problem.code]??0)+1;}if(entries.length)positions.push({...p,entries});}
+ return{layer,mask,positions,reasons};
+}
+export function analyzeSource(scene,sourceId){validateScene(scene);const source=scene.sources.find(s=>s.id===sourceId);if(!source)throw new ContentError('UNKNOWN_SOURCE','Источник не найден.');const budget=makeBudget(),layer=scene.map.layers.find(l=>l.id===source.layerId),cells=new Set(),rules=source.rules.map(r=>{const e=eligiblePositions(scene,source,r,budget);for(const p of e.positions)cells.add(p.y*layer.width+p.x);return{ruleId:r.id,eligibleCells:e.positions.length,reasons:e.reasons};});return{sourceId,layerId:layer.id,area:sourceMask(source,layer),eligibleMask:maskFromCells(cells,layer.width,layer.height),rules};}
+export const desiredCount=(source,rule,eligible)=>rule.quantity.mode==='density'?Math.max(rule.quantity.min,Math.min(rule.quantity.max,Math.round(eligible*rule.quantity.density/100))):rule.quantity.min+Math.floor(roll(source.seed,source.id,rule.id,'quota')*(rule.quantity.max-rule.quantity.min+1));
+const choose=(entries,value)=>{let n=value*entries.reduce((s,e)=>s+e.weight,0);for(const entry of entries){n-=entry.weight;if(n<0)return entry;}return entries.at(-1);};
+export function spawnRule(scene,source,rule,positions,{needed,limit,sequence,attempt,occupied,budget=makeBudget()}){
+ const layer=scene.map.layers.find(l=>l.id===source.layerId),types=new Map(scene.catalog.map(e=>[e.id,e])),mask=new Set(maskCells(sourceMask(source,layer),layer.width)),occupancy=occupancyIndex(layer,scene.catalog,[...scene.map.fixtures,...occupied]),additions=[],reasons={},seed=seedOf(source.seed,source.id,rule.id,attempt),ordered=positions.map(p=>({...p,score:roll(seed,p.x,p.y)})).sort((a,b)=>a.score-b.score||a.y-b.y||a.x-b.x);let center=null,inGroup=0,groupSize=0;
+ const reason=c=>reasons[c]=(reasons[c]??0)+1, fits=(p,e,depositId=null)=>{budget();const problems=checkPlacement(layer,e,p,{mask:source.kind==='zone'?mask:null,filters:rule.filters,occupancy,avoidReserved:source.kind==='zone'||source.origin.kind==='automatic'});if(problems.length){problems.forEach(p=>reason(p.code));return false;}for(const o of [...occupied.filter(o=>o.layerId===layer.id),...additions]){budget();const other=types.get(o.catalogId);if(other&&(other.category===e.category||!canShare(e,other))&&(!depositId||o.properties.depositId!==depositId)&&!spacingFits(p,e,o,other,rule.minDistance,layer.topology)){reason('SPACING');return false;}}return true;};
+ const insert=(p,e,properties={})=>{const index=sequence+additions.length,o={id:'spawn-'+hash([source.id,rule.id,index])+hash([rule.id,index,source.id]),catalogId:e.id,layerId:layer.id,x:p.x,y:p.y,properties,origin:{sourceId:source.id,ruleId:rule.id,index}};additions.push(o);for(const i of bodyCells(o,e,layer.width)){if(!occupancy.has(i))occupancy.set(i,[]);occupancy.get(i).push({instance:o,entity:e});}};
+ const remaining=new Set(ordered),target=Math.max(0,Math.min(needed,limit));
+ while(remaining.size&&additions.length<target){let p;if(rule.generator==='groups'&&center&&inGroup<groupSize)p=[...remaining].find(p=>tileDistance(p,center,layer.topology)<=rule.group.radius);if(!p){p=remaining.values().next().value;center=p;inGroup=0;groupSize=rule.group.min+Math.floor(roll(seed,'group',p.x,p.y)*(rule.group.max-rule.group.min+1));}remaining.delete(p);const entry=choose(p.entries,roll(seed,'type',p.x,p.y)),e=types.get(entry.catalogId);if(!fits(p,e))continue;
+  if(rule.generator==='deposits'){const d=rule.deposit,amount=Math.min(target-additions.length,d.minSize+Math.floor(roll(seed,'size',p.x,p.y)*(d.maxSize-d.minSize+1))),depositId='deposit-'+hash([source.id,rule.id,attempt,p.x,p.y]),queue=[p],seen=new Set([p.y*layer.width+p.x]),patch=[];for(let i=0;i<queue.length&&patch.length<amount;i++){const c=queue[i];if(!fits(c,e,depositId))continue;patch.push(c);for(const j of tileNeighbors(c.y*layer.width+c.x,layer.width,layer.height,layer.topology))if(mask.has(j)&&!seen.has(j)){seen.add(j);queue.push({x:j%layer.width,y:Math.floor(j/layer.width)});}}if(patch.length<d.minSize){reason('DEPOSIT_TOO_SMALL');continue;}for(const c of patch)insert(c,e,{depositId,amount:d.minAmount+Math.floor(roll(seed,'amount',c.x,c.y)*(d.maxAmount-d.minAmount+1))});
+  }else{insert(p,e);inGroup++;}
+ }
+ return{additions,reasons};
+}

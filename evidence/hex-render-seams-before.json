@@ -1,0 +1,17 @@
+{
+  "ok": false,
+  "phase": "observed-initial-failure",
+  "originalReportOverwritten": true,
+  "evidenceSource": "functions.exec unified exec chunk 87bda3, original call before production hex-render patch",
+  "note": "This is a transcription of the actual first failure output; the original structured report was overwritten by a subsequent green run. A later reconstruction of the former terrain path was removed and is not presented as the initial observation.",
+  "observed": {
+    "width": 360,
+    "dpr": 1,
+    "size": 300,
+    "colors": 235,
+    "maxDeviation": 29,
+    "expectedMaxDeviation": 0
+  },
+  "assertion": "Uniform sea must have no internal background seams at 360px DPR1: 235 colors",
+  "exitCode": 1
+}

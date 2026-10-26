@@ -1,0 +1,109 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://vland.invalid/engine/schemas/tiles.schema.json",
+  "title": "VlandGenerator row-major tile grid v1",
+  "type": "object",
+  "required": [
+    "schema",
+    "schemaVersion",
+    "width",
+    "height",
+    "terrain",
+    "walkable",
+    "roomIds",
+    "spawn",
+    "exit",
+    "gates",
+    "mechanisms"
+  ],
+  "properties": {
+    "schema": {
+      "const": "vland.tiles"
+    },
+    "schemaVersion": {
+      "const": 1
+    },
+    "width": {
+      "type": "integer",
+      "minimum": 5,
+      "maximum": 4096
+    },
+    "height": {
+      "type": "integer",
+      "minimum": 5,
+      "maximum": 4096
+    },
+    "order": {
+      "const": "row-major"
+    },
+    "terrain": {
+      "type": "array",
+      "items": {
+        "type": "integer",
+        "minimum": 0,
+        "maximum": 3
+      },
+      "maxItems": 250000
+    },
+    "walkable": {
+      "type": "array",
+      "items": {
+        "type": "integer",
+        "minimum": 0,
+        "maximum": 1
+      },
+      "maxItems": 250000
+    },
+    "roomIds": {
+      "type": "array",
+      "items": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "maxItems": 250000
+    },
+    "spawn": {
+      "type": "object",
+      "required": [
+        "x",
+        "y"
+      ],
+      "properties": {
+        "x": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 4095
+        },
+        "y": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 4095
+        }
+      }
+    },
+    "exit": {
+      "type": "object",
+      "required": [
+        "x",
+        "y"
+      ],
+      "properties": {
+        "x": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 4095
+        },
+        "y": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 4095
+        }
+      }
+    },
+    "transportLinks": {
+      "$ref": "level.schema.json#/properties/transportLinks"
+    }
+  }
+}

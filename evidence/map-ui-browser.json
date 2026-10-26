@@ -1,0 +1,399 @@
+{
+  "ok": true,
+  "complete": true,
+  "results": [
+    {
+      "mode": "dungeon",
+      "width": 1100,
+      "topology": "square",
+      "popupInsideMap": true,
+      "exactCell": true,
+      "hideOnBrush": true,
+      "closeReopen": true,
+      "fullColorFrame": true,
+      "saveAndCancel": true,
+      "paletteMapAndRasterSame": true,
+      "projectUnchanged": true,
+      "noOverflow": true,
+      "actions": [
+        {
+          "label": "Inspect cell",
+          "trusted": true
+        },
+        {
+          "label": "Inspect cell",
+          "trusted": true
+        },
+        {
+          "label": "HSV color plane",
+          "trusted": true
+        }
+      ]
+    },
+    {
+      "mode": "tiers",
+      "width": 1100,
+      "topology": "square",
+      "popupInsideMap": true,
+      "exactCell": true,
+      "hideOnBrush": true,
+      "closeReopen": true,
+      "fullColorFrame": true,
+      "saveAndCancel": true,
+      "paletteMapAndRasterSame": true,
+      "projectUnchanged": true,
+      "noOverflow": true,
+      "actions": [
+        {
+          "label": "Inspect cell",
+          "trusted": true
+        },
+        {
+          "label": "Inspect cell",
+          "trusted": true
+        },
+        {
+          "label": "HSV color plane",
+          "trusted": true
+        }
+      ]
+    },
+    {
+      "mode": "sideview",
+      "width": 1100,
+      "topology": "square",
+      "popupInsideMap": true,
+      "exactCell": true,
+      "hideOnBrush": true,
+      "closeReopen": true,
+      "fullColorFrame": true,
+      "saveAndCancel": true,
+      "paletteMapAndRasterSame": true,
+      "projectUnchanged": true,
+      "noOverflow": true,
+      "actions": [
+        {
+          "label": "Inspect cell",
+          "trusted": true
+        },
+        {
+          "label": "Inspect cell",
+          "trusted": true
+        },
+        {
+          "label": "HSV color plane",
+          "trusted": true
+        }
+      ]
+    },
+    {
+      "mode": "caves",
+      "width": 1100,
+      "topology": "square",
+      "popupInsideMap": true,
+      "exactCell": true,
+      "hideOnBrush": true,
+      "closeReopen": true,
+      "fullColorFrame": true,
+      "saveAndCancel": true,
+      "paletteMapAndRasterSame": true,
+      "projectUnchanged": true,
+      "noOverflow": true,
+      "actions": [
+        {
+          "label": "Inspect cell",
+          "trusted": true
+        },
+        {
+          "label": "Inspect cell",
+          "trusted": true
+        },
+        {
+          "label": "HSV color plane",
+          "trusted": true
+        }
+      ]
+    },
+    {
+      "mode": "landscape",
+      "width": 1100,
+      "topology": "square",
+      "popupInsideMap": true,
+      "exactCell": true,
+      "hideOnBrush": true,
+      "closeReopen": true,
+      "fullColorFrame": true,
+      "saveAndCancel": true,
+      "paletteMapAndRasterSame": true,
+      "projectUnchanged": true,
+      "noOverflow": true,
+      "actions": [
+        {
+          "label": "Inspect cell",
+          "trusted": true
+        },
+        {
+          "label": "Inspect cell",
+          "trusted": true
+        },
+        {
+          "label": "HSV color plane",
+          "trusted": true
+        }
+      ]
+    },
+    {
+      "mode": "settlements",
+      "width": 1100,
+      "topology": "square",
+      "popupInsideMap": true,
+      "exactCell": true,
+      "hideOnBrush": true,
+      "closeReopen": true,
+      "fullColorFrame": true,
+      "saveAndCancel": true,
+      "paletteMapAndRasterSame": true,
+      "projectUnchanged": true,
+      "noOverflow": true,
+      "actions": [
+        {
+          "label": "Inspect cell",
+          "trusted": true
+        },
+        {
+          "label": "Inspect cell",
+          "trusted": true
+        },
+        {
+          "label": "HSV color plane",
+          "trusted": true
+        }
+      ]
+    },
+    {
+      "mode": "dungeon",
+      "width": 360,
+      "topology": "square",
+      "popupInsideMap": true,
+      "exactCell": true,
+      "hideOnBrush": true,
+      "closeReopen": true,
+      "fullColorFrame": true,
+      "saveAndCancel": true,
+      "paletteMapAndRasterSame": true,
+      "projectUnchanged": true,
+      "noOverflow": true,
+      "actions": [
+        {
+          "label": "Inspect cell",
+          "trusted": true
+        },
+        {
+          "label": "Inspect cell",
+          "trusted": true
+        },
+        {
+          "label": "HSV color plane",
+          "trusted": true
+        }
+      ]
+    },
+    {
+      "mode": "tiers",
+      "width": 360,
+      "topology": "square",
+      "popupInsideMap": true,
+      "exactCell": true,
+      "hideOnBrush": true,
+      "closeReopen": true,
+      "fullColorFrame": true,
+      "saveAndCancel": true,
+      "paletteMapAndRasterSame": true,
+      "projectUnchanged": true,
+      "noOverflow": true,
+      "actions": [
+        {
+          "label": "Inspect cell",
+          "trusted": true
+        },
+        {
+          "label": "Inspect cell",
+          "trusted": true
+        },
+        {
+          "label": "HSV color plane",
+          "trusted": true
+        }
+      ]
+    },
+    {
+      "mode": "sideview",
+      "width": 360,
+      "topology": "square",
+      "popupInsideMap": true,
+      "exactCell": true,
+      "hideOnBrush": true,
+      "closeReopen": true,
+      "fullColorFrame": true,
+      "saveAndCancel": true,
+      "paletteMapAndRasterSame": true,
+      "projectUnchanged": true,
+      "noOverflow": true,
+      "actions": [
+        {
+          "label": "Inspect cell",
+          "trusted": true
+        },
+        {
+          "label": "Inspect cell",
+          "trusted": true
+        },
+        {
+          "label": "HSV color plane",
+          "trusted": true
+        }
+      ]
+    },
+    {
+      "mode": "caves",
+      "width": 360,
+      "topology": "square",
+      "popupInsideMap": true,
+      "exactCell": true,
+      "hideOnBrush": true,
+      "closeReopen": true,
+      "fullColorFrame": true,
+      "saveAndCancel": true,
+      "paletteMapAndRasterSame": true,
+      "projectUnchanged": true,
+      "noOverflow": true,
+      "actions": [
+        {
+          "label": "Inspect cell",
+          "trusted": true
+        },
+        {
+          "label": "Inspect cell",
+          "trusted": true
+        },
+        {
+          "label": "HSV color plane",
+          "trusted": true
+        }
+      ]
+    },
+    {
+      "mode": "landscape",
+      "width": 360,
+      "topology": "square",
+      "popupInsideMap": true,
+      "exactCell": true,
+      "hideOnBrush": true,
+      "closeReopen": true,
+      "fullColorFrame": true,
+      "saveAndCancel": true,
+      "paletteMapAndRasterSame": true,
+      "projectUnchanged": true,
+      "noOverflow": true,
+      "actions": [
+        {
+          "label": "Inspect cell",
+          "trusted": true
+        },
+        {
+          "label": "Inspect cell",
+          "trusted": true
+        },
+        {
+          "label": "HSV color plane",
+          "trusted": true
+        }
+      ]
+    },
+    {
+      "mode": "settlements",
+      "width": 360,
+      "topology": "square",
+      "popupInsideMap": true,
+      "exactCell": true,
+      "hideOnBrush": true,
+      "closeReopen": true,
+      "fullColorFrame": true,
+      "saveAndCancel": true,
+      "paletteMapAndRasterSame": true,
+      "projectUnchanged": true,
+      "noOverflow": true,
+      "actions": [
+        {
+          "label": "Inspect cell",
+          "trusted": true
+        },
+        {
+          "label": "Inspect cell",
+          "trusted": true
+        },
+        {
+          "label": "HSV color plane",
+          "trusted": true
+        }
+      ]
+    },
+    {
+      "mode": "landscape",
+      "width": 1100,
+      "topology": "hex",
+      "popupInsideMap": true,
+      "exactCell": true,
+      "hideOnBrush": true,
+      "closeReopen": true,
+      "fullColorFrame": true,
+      "saveAndCancel": true,
+      "paletteMapAndRasterSame": true,
+      "projectUnchanged": true,
+      "noOverflow": true,
+      "actions": [
+        {
+          "label": "Inspect cell",
+          "trusted": true
+        },
+        {
+          "label": "Inspect cell",
+          "trusted": true
+        },
+        {
+          "label": "HSV color plane",
+          "trusted": true
+        }
+      ]
+    },
+    {
+      "mode": "landscape",
+      "width": 360,
+      "topology": "hex",
+      "popupInsideMap": true,
+      "exactCell": true,
+      "hideOnBrush": true,
+      "closeReopen": true,
+      "fullColorFrame": true,
+      "saveAndCancel": true,
+      "paletteMapAndRasterSame": true,
+      "projectUnchanged": true,
+      "noOverflow": true,
+      "actions": [
+        {
+          "label": "Inspect cell",
+          "trusted": true
+        },
+        {
+          "label": "Inspect cell",
+          "trusted": true
+        },
+        {
+          "label": "HSV color plane",
+          "trusted": true
+        }
+      ]
+    }
+  ],
+  "errors": []
+}

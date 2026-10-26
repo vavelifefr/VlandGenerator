@@ -1,0 +1,110 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://vland.invalid/engine/schemas/terrain-request.schema.json",
+  "title": "VlandGenerator terrain-request v1",
+  "type": "object",
+  "properties": {
+    "schema": {
+      "const": "vland.terrain.request"
+    },
+    "schemaVersion": {
+      "const": 1
+    },
+    "seed": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 4294967295
+    },
+    "kind": {
+      "enum": [
+        "terrain",
+        "cave"
+      ]
+    },
+    "landform": {
+      "enum": [
+        "rolling",
+        "archipelago",
+        "highlands"
+      ]
+    },
+    "width": {
+      "type": "integer",
+      "minimum": 16,
+      "maximum": 192
+    },
+    "height": {
+      "type": "integer",
+      "minimum": 16,
+      "maximum": 192
+    },
+    "origin": {
+      "type": "object",
+      "properties": {
+        "x": {
+          "type": "integer",
+          "minimum": -1000000,
+          "maximum": 1000000
+        },
+        "y": {
+          "type": "integer",
+          "minimum": -1000000,
+          "maximum": 1000000
+        }
+      },
+      "additionalProperties": false,
+      "required": [
+        "x",
+        "y"
+      ]
+    },
+    "scale": {
+      "type": "number",
+      "minimum": 4,
+      "maximum": 256
+    },
+    "octaves": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 6
+    },
+    "persistence": {
+      "type": "number",
+      "minimum": 0.1,
+      "maximum": 0.9
+    },
+    "seaLevel": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 0.85
+    },
+    "rockThreshold": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "caveFill": {
+      "type": "number",
+      "minimum": 0.2,
+      "maximum": 0.8
+    },
+    "smoothing": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 8
+    },
+    "minRegion": {
+      "type": "integer",
+      "minimum": 4,
+      "maximum": 32768
+    },
+    "profile": {
+      "$ref": "movement-profile.schema.json"
+    }
+  },
+  "additionalProperties": false,
+  "required": [
+    "schema",
+    "schemaVersion"
+  ]
+}

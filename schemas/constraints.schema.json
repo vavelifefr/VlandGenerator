@@ -1,0 +1,137 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://vland.invalid/schemas/constraints.schema.json",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "allowedTerrain": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 64
+      },
+      "maxItems": 64,
+      "uniqueItems": true
+    },
+    "excludedTerrain": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 64
+      },
+      "maxItems": 64,
+      "uniqueItems": true
+    },
+    "allowedEnvironments": {
+      "type": "array",
+      "items": {
+        "enum": [
+          "land",
+          "underground",
+          "freshwater",
+          "saltwater",
+          "air"
+        ]
+      },
+      "maxItems": 64,
+      "uniqueItems": true
+    },
+    "allowedBiomes": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 64
+      },
+      "maxItems": 64,
+      "uniqueItems": true
+    },
+    "allowedLevels": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 64
+      },
+      "maxItems": 64,
+      "uniqueItems": true
+    },
+    "allowedLayerKinds": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 64
+      },
+      "maxItems": 64,
+      "uniqueItems": true
+    },
+    "allowedRocks": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 64
+      },
+      "maxItems": 64,
+      "uniqueItems": true
+    },
+    "minDepth": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 100000
+    },
+    "maxDepth": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 100000
+    },
+    "requiresWalkable": {
+      "type": "boolean"
+    },
+    "requiresEmptyTile": {
+      "type": "boolean"
+    },
+    "conditions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "field": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 64,
+            "pattern": "^[a-zA-Z][a-zA-Z0-9_-]{0,63}$",
+            "not": {
+              "enum": [
+                "__proto__",
+                "prototype",
+                "constructor"
+              ]
+            }
+          },
+          "min": {
+            "type": "number",
+            "minimum": -1000000000,
+            "maximum": 1000000000
+          },
+          "max": {
+            "type": "number",
+            "minimum": -1000000000,
+            "maximum": 1000000000
+          }
+        },
+        "required": [
+          "field",
+          "min",
+          "max"
+        ]
+      },
+      "maxItems": 16
+    }
+  },
+  "required": []
+}

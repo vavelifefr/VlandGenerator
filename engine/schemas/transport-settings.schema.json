@@ -1,0 +1,118 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://vland.invalid/engine/schemas/transport-settings.schema.json",
+  "title": "Automatic isolated-area access settings",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "maxGroups": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 4
+    },
+    "maxRoomsPerGroup": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 8
+    },
+    "chance": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "travelCost": {
+      "type": "number",
+      "minimum": 1,
+      "maximum": 1000
+    }
+  },
+  "required": [],
+  "$defs": {
+    "world": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "maxGroups": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 4
+        },
+        "maxRoomsPerGroup": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 8
+        },
+        "chance": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "travelCost": {
+          "type": "number",
+          "minimum": 1,
+          "maximum": 1000
+        },
+        "landingSize": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 3
+        },
+        "types": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "teleport": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 100
+            },
+            "lift": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 100
+            },
+            "stairs": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 100
+            }
+          },
+          "required": [],
+          "anyOf": [
+            {
+              "required": [
+                "teleport"
+              ],
+              "properties": {
+                "teleport": {
+                  "exclusiveMinimum": 0
+                }
+              }
+            },
+            {
+              "required": [
+                "lift"
+              ],
+              "properties": {
+                "lift": {
+                  "exclusiveMinimum": 0
+                }
+              }
+            },
+            {
+              "required": [
+                "stairs"
+              ],
+              "properties": {
+                "stairs": {
+                  "exclusiveMinimum": 0
+                }
+              }
+            }
+          ]
+        }
+      },
+      "required": []
+    }
+  }
+}

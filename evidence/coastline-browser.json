@@ -1,0 +1,340 @@
+{
+  "ok": true,
+  "complete": true,
+  "results": [
+    {
+      "mode": "landscape",
+      "width": 1100,
+      "generations": [
+        {
+          "size": 128,
+          "structure": "land",
+          "elapsedMs": 1867,
+          "checksum": "8349db27",
+          "geometryValid": true,
+          "nav": true,
+          "cardsPreserved": true
+        },
+        {
+          "size": 50,
+          "structure": "coast",
+          "elapsedMs": 720,
+          "checksum": "6eb03d52",
+          "geometryValid": true,
+          "nav": true,
+          "cardsPreserved": true
+        },
+        {
+          "size": 100,
+          "structure": "islands",
+          "elapsedMs": 1801,
+          "checksum": "a44a85c7",
+          "geometryValid": true,
+          "nav": true,
+          "cardsPreserved": true
+        },
+        {
+          "size": 200,
+          "structure": "continent",
+          "elapsedMs": 5397,
+          "checksum": "15b2c445",
+          "geometryValid": true,
+          "nav": true,
+          "cardsPreserved": true
+        },
+        {
+          "size": 300,
+          "structure": "coast",
+          "elapsedMs": 9492,
+          "checksum": "24a80155",
+          "geometryValid": true,
+          "nav": true,
+          "cardsPreserved": true
+        },
+        {
+          "size": 300,
+          "structure": "islands",
+          "elapsedMs": 11327,
+          "checksum": "6cd6431f",
+          "geometryValid": true,
+          "nav": true,
+          "cardsPreserved": true
+        },
+        {
+          "size": 300,
+          "structure": "continent",
+          "elapsedMs": 8415,
+          "checksum": "ae7282d0",
+          "geometryValid": true,
+          "nav": true,
+          "cardsPreserved": true
+        }
+      ],
+      "noOverflow": true,
+      "draftPreservesProject": true,
+      "compactSettings": true,
+      "dimensionsVisible": true,
+      "accessBelowMap": true,
+      "singleSurfaceUi": true,
+      "biomeDisclosureAfterCreate": true,
+      "manualBiomeDraft": true,
+      "areaUniformityDraft": true,
+      "exactSeaComplement": true,
+      "manualDraftGenerations": 2,
+      "addActionLast": true,
+      "input": "synthetic DOM/forms and intercepted project exports"
+    },
+    {
+      "mode": "hexlandscape",
+      "width": 1100,
+      "generations": [
+        {
+          "size": 128,
+          "structure": "land",
+          "elapsedMs": 2007,
+          "checksum": "865d9288",
+          "geometryValid": true,
+          "nav": true,
+          "cardsPreserved": true
+        },
+        {
+          "size": 50,
+          "structure": "coast",
+          "elapsedMs": 802,
+          "checksum": "93b1c100",
+          "geometryValid": true,
+          "nav": true,
+          "cardsPreserved": true
+        },
+        {
+          "size": 100,
+          "structure": "islands",
+          "elapsedMs": 1925,
+          "checksum": "3960f7ea",
+          "geometryValid": true,
+          "nav": true,
+          "cardsPreserved": true
+        },
+        {
+          "size": 200,
+          "structure": "continent",
+          "elapsedMs": 4419,
+          "checksum": "2d918aef",
+          "geometryValid": true,
+          "nav": true,
+          "cardsPreserved": true
+        },
+        {
+          "size": 300,
+          "structure": "coast",
+          "elapsedMs": 9985,
+          "checksum": "e772a4af",
+          "geometryValid": true,
+          "nav": true,
+          "cardsPreserved": true
+        },
+        {
+          "size": 300,
+          "structure": "islands",
+          "elapsedMs": 13647,
+          "checksum": "3cb91279",
+          "geometryValid": true,
+          "nav": true,
+          "cardsPreserved": true
+        },
+        {
+          "size": 300,
+          "structure": "continent",
+          "elapsedMs": 10225,
+          "checksum": "2cf2915e",
+          "geometryValid": true,
+          "nav": true,
+          "cardsPreserved": true
+        }
+      ],
+      "noOverflow": true,
+      "draftPreservesProject": true,
+      "compactSettings": true,
+      "dimensionsVisible": true,
+      "accessBelowMap": true,
+      "singleSurfaceUi": true,
+      "biomeDisclosureAfterCreate": true,
+      "manualBiomeDraft": true,
+      "areaUniformityDraft": true,
+      "exactSeaComplement": true,
+      "manualDraftGenerations": 2,
+      "addActionLast": true,
+      "input": "synthetic DOM/forms and intercepted project exports"
+    },
+    {
+      "mode": "landscape",
+      "width": 360,
+      "generations": [
+        {
+          "size": 128,
+          "structure": "land",
+          "elapsedMs": 3425,
+          "checksum": "8349db27",
+          "geometryValid": true,
+          "nav": true,
+          "cardsPreserved": true
+        },
+        {
+          "size": 50,
+          "structure": "coast",
+          "elapsedMs": 1348,
+          "checksum": "6eb03d52",
+          "geometryValid": true,
+          "nav": true,
+          "cardsPreserved": true
+        },
+        {
+          "size": 100,
+          "structure": "islands",
+          "elapsedMs": 3442,
+          "checksum": "a44a85c7",
+          "geometryValid": true,
+          "nav": true,
+          "cardsPreserved": true
+        },
+        {
+          "size": 200,
+          "structure": "continent",
+          "elapsedMs": 8775,
+          "checksum": "15b2c445",
+          "geometryValid": true,
+          "nav": true,
+          "cardsPreserved": true
+        },
+        {
+          "size": 300,
+          "structure": "coast",
+          "elapsedMs": 18413,
+          "checksum": "24a80155",
+          "geometryValid": true,
+          "nav": true,
+          "cardsPreserved": true
+        },
+        {
+          "size": 300,
+          "structure": "islands",
+          "elapsedMs": 13775,
+          "checksum": "6cd6431f",
+          "geometryValid": true,
+          "nav": true,
+          "cardsPreserved": true
+        },
+        {
+          "size": 300,
+          "structure": "continent",
+          "elapsedMs": 7907,
+          "checksum": "ae7282d0",
+          "geometryValid": true,
+          "nav": true,
+          "cardsPreserved": true
+        }
+      ],
+      "noOverflow": true,
+      "draftPreservesProject": true,
+      "compactSettings": true,
+      "dimensionsVisible": true,
+      "accessBelowMap": true,
+      "singleSurfaceUi": true,
+      "biomeDisclosureAfterCreate": true,
+      "manualBiomeDraft": true,
+      "areaUniformityDraft": true,
+      "exactSeaComplement": true,
+      "manualDraftGenerations": 2,
+      "addActionLast": true,
+      "input": "synthetic DOM/forms and intercepted project exports"
+    },
+    {
+      "mode": "hexlandscape",
+      "width": 360,
+      "generations": [
+        {
+          "size": 128,
+          "structure": "land",
+          "elapsedMs": 4318,
+          "checksum": "865d9288",
+          "geometryValid": true,
+          "nav": true,
+          "cardsPreserved": true
+        },
+        {
+          "size": 50,
+          "structure": "coast",
+          "elapsedMs": 1453,
+          "checksum": "93b1c100",
+          "geometryValid": true,
+          "nav": true,
+          "cardsPreserved": true
+        },
+        {
+          "size": 100,
+          "structure": "islands",
+          "elapsedMs": 3615,
+          "checksum": "3960f7ea",
+          "geometryValid": true,
+          "nav": true,
+          "cardsPreserved": true
+        },
+        {
+          "size": 200,
+          "structure": "continent",
+          "elapsedMs": 7760,
+          "checksum": "2d918aef",
+          "geometryValid": true,
+          "nav": true,
+          "cardsPreserved": true
+        },
+        {
+          "size": 300,
+          "structure": "coast",
+          "elapsedMs": 11324,
+          "checksum": "e772a4af",
+          "geometryValid": true,
+          "nav": true,
+          "cardsPreserved": true
+        },
+        {
+          "size": 300,
+          "structure": "islands",
+          "elapsedMs": 13713,
+          "checksum": "3cb91279",
+          "geometryValid": true,
+          "nav": true,
+          "cardsPreserved": true
+        },
+        {
+          "size": 300,
+          "structure": "continent",
+          "elapsedMs": 10697,
+          "checksum": "2cf2915e",
+          "geometryValid": true,
+          "nav": true,
+          "cardsPreserved": true
+        }
+      ],
+      "noOverflow": true,
+      "draftPreservesProject": true,
+      "compactSettings": true,
+      "dimensionsVisible": true,
+      "accessBelowMap": true,
+      "singleSurfaceUi": true,
+      "biomeDisclosureAfterCreate": true,
+      "manualBiomeDraft": true,
+      "areaUniformityDraft": true,
+      "exactSeaComplement": true,
+      "manualDraftGenerations": 2,
+      "addActionLast": true,
+      "input": "synthetic DOM/forms and intercepted project exports"
+    }
+  ],
+  "errors": [],
+  "pageErrors": [],
+  "headless": true,
+  "ownCopy": true,
+  "caseIsolation": true,
+  "userSessionUntouched": true
+}

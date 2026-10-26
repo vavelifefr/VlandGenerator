@@ -1,0 +1,114 @@
+{
+  "ok": true,
+  "errors": [],
+  "warnings": [],
+  "transitions": {
+    "ok": true,
+    "reports": [
+      {
+        "id": "auto-fcd37b5e",
+        "origin": "base",
+        "kind": "lift",
+        "from": {
+          "layerId": "upper",
+          "roomId": "room-7",
+          "anchor": {
+            "x": 62,
+            "y": 43
+          },
+          "reservationId": "auto-fcd37b5e-from",
+          "x": 62,
+          "y": 43,
+          "footprint": {
+            "width": 1,
+            "height": 1
+          }
+        },
+        "to": {
+          "layerId": "lower",
+          "roomId": "room-8",
+          "anchor": {
+            "x": 59,
+            "y": 20
+          },
+          "reservationId": "auto-fcd37b5e-to",
+          "x": 59,
+          "y": 20,
+          "footprint": {
+            "width": 1,
+            "height": 1
+          }
+        },
+        "bidirectional": true,
+        "ok": true,
+        "errors": []
+      },
+      {
+        "id": "lower-transport-edge-5",
+        "origin": "base",
+        "kind": "teleport",
+        "from": {
+          "roomId": "room-7",
+          "x": 26,
+          "y": 23,
+          "layerId": "lower",
+          "footprint": {
+            "width": 1,
+            "height": 1
+          }
+        },
+        "to": {
+          "roomId": "room-3",
+          "x": 27,
+          "y": 53,
+          "layerId": "lower",
+          "footprint": {
+            "width": 1,
+            "height": 1
+          }
+        },
+        "bidirectional": true,
+        "ok": true,
+        "errors": []
+      },
+      {
+        "id": "lower-transport-edge-1",
+        "origin": "base",
+        "kind": "teleport",
+        "from": {
+          "roomId": "room-3",
+          "x": 27,
+          "y": 52,
+          "layerId": "lower",
+          "footprint": {
+            "width": 1,
+            "height": 1
+          }
+        },
+        "to": {
+          "roomId": "room-2",
+          "x": 47,
+          "y": 65,
+          "layerId": "lower",
+          "footprint": {
+            "width": 1,
+            "height": 1
+          }
+        },
+        "bidirectional": true,
+        "ok": true,
+        "errors": []
+      }
+    ]
+  },
+  "source": {
+    "ok": true,
+    "errors": [],
+    "layers": 2,
+    "links": 2,
+    "statesChecked": 10
+  },
+  "layers": 2,
+  "sources": 0,
+  "note": "Проверены геометрия и программы появления. План конкретного срабатывания и физику приложения проверяйте перед подтверждением команд."
+}

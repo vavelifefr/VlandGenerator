@@ -1,0 +1,419 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://vland.invalid/engine/schemas/environment.schema.json",
+  "title": "VlandGenerator environment v1",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "version": {
+      "const": 1
+    },
+    "lights": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 96
+          },
+          "roomId": {
+            "type": "string"
+          },
+          "typeId": {
+            "enum": [
+              "wall-torch",
+              "wall-projector",
+              "window",
+              "ceiling-lamp",
+              "chandelier"
+            ]
+          },
+          "mount": {
+            "enum": [
+              "wall",
+              "ceiling"
+            ]
+          },
+          "anchor": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "x": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 4095
+              },
+              "y": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 4095
+              }
+            },
+            "required": [
+              "x",
+              "y"
+            ]
+          },
+          "height": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 32
+          },
+          "cone": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 360
+          },
+          "radius": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 32
+          },
+          "initiallyOn": {
+            "type": "boolean"
+          },
+          "support": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "x": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 4095
+              },
+              "y": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 4095
+              }
+            },
+            "required": [
+              "x",
+              "y"
+            ]
+          },
+          "normal": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "x": {
+                "type": "integer",
+                "minimum": -1,
+                "maximum": 1
+              },
+              "y": {
+                "type": "integer",
+                "minimum": -1,
+                "maximum": 1
+              }
+            },
+            "required": [
+              "x",
+              "y"
+            ]
+          },
+          "nearPropId": {
+            "type": "string"
+          },
+          "propDistance": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 8192
+          }
+        },
+        "required": [
+          "id",
+          "roomId",
+          "typeId",
+          "mount",
+          "anchor",
+          "height",
+          "cone",
+          "radius",
+          "initiallyOn"
+        ],
+        "allOf": [
+          {
+            "if": {
+              "properties": {
+                "mount": {
+                  "const": "wall"
+                }
+              }
+            },
+            "then": {
+              "required": [
+                "support",
+                "normal"
+              ]
+            },
+            "else": {
+              "not": {
+                "anyOf": [
+                  {
+                    "required": [
+                      "support"
+                    ]
+                  },
+                  {
+                    "required": [
+                      "normal"
+                    ]
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      },
+      "minItems": 0,
+      "maxItems": 3000
+    },
+    "media": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "roomId": {
+            "type": "string"
+          },
+          "type": {
+            "enum": [
+              "water",
+              "oil",
+              "poison",
+              "fog",
+              "poison-gas"
+            ]
+          },
+          "layer": {
+            "enum": [
+              "liquid",
+              "gas"
+            ]
+          },
+          "shape": {
+            "enum": [
+              "square",
+              "circle",
+              "ellipse",
+              "spill"
+            ]
+          },
+          "cells": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "x": {
+                  "type": "integer",
+                  "minimum": 0,
+                  "maximum": 4095
+                },
+                "y": {
+                  "type": "integer",
+                  "minimum": 0,
+                  "maximum": 4095
+                }
+              },
+              "required": [
+                "x",
+                "y"
+              ]
+            },
+            "minItems": 3,
+            "maxItems": 65536
+          },
+          "depth": {
+            "enum": [
+              "shallow",
+              "film"
+            ]
+          },
+          "blocksMovement": {
+            "const": false
+          },
+          "source": {
+            "enum": [
+              "room-template",
+              "spill"
+            ]
+          },
+          "conductive": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "id",
+          "roomId",
+          "type",
+          "layer",
+          "cells",
+          "depth",
+          "blocksMovement",
+          "source",
+          "conductive",
+          "shape"
+        ]
+      },
+      "minItems": 0,
+      "maxItems": 120
+    },
+    "circuits": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "roomId": {
+            "type": "string"
+          },
+          "mediumId": {
+            "type": "string"
+          },
+          "control": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "roomId": {
+                "type": "string"
+              },
+              "type": {
+                "const": "power-switch"
+              },
+              "anchor": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "x": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 4095
+                  },
+                  "y": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 4095
+                  }
+                },
+                "required": [
+                  "x",
+                  "y"
+                ]
+              },
+              "approach": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "properties": {
+                    "x": {
+                      "type": "integer",
+                      "minimum": 0,
+                      "maximum": 4095
+                    },
+                    "y": {
+                      "type": "integer",
+                      "minimum": 0,
+                      "maximum": 4095
+                    }
+                  },
+                  "required": [
+                    "x",
+                    "y"
+                  ]
+                },
+                "minItems": 1,
+                "maxItems": 4
+              },
+              "pathToMedium": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "properties": {
+                    "x": {
+                      "type": "integer",
+                      "minimum": 0,
+                      "maximum": 4095
+                    },
+                    "y": {
+                      "type": "integer",
+                      "minimum": 0,
+                      "maximum": 4095
+                    }
+                  },
+                  "required": [
+                    "x",
+                    "y"
+                  ]
+                },
+                "minItems": 2,
+                "maxItems": 4
+              }
+            },
+            "required": [
+              "id",
+              "roomId",
+              "type",
+              "anchor",
+              "approach",
+              "pathToMedium"
+            ]
+          },
+          "initiallyOn": {
+            "type": "boolean"
+          },
+          "effect": {
+            "const": "electrify"
+          },
+          "affects": {
+            "const": "actors-in-medium"
+          }
+        },
+        "required": [
+          "id",
+          "roomId",
+          "mediumId",
+          "control",
+          "initiallyOn",
+          "effect",
+          "affects"
+        ]
+      },
+      "minItems": 0,
+      "maxItems": 120
+    },
+    "warnings": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 0,
+      "maxItems": 1000
+    },
+    "note": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "version",
+    "lights",
+    "media",
+    "circuits"
+  ]
+}

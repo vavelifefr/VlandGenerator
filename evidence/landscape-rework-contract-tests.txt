@@ -1,0 +1,22 @@
+✔ new landscape defaults contain independent explicit structure and biome choices without competing base controls (10.7129ms)
+✔ landscape recipes reject incomplete, unknown or malformed profiles before generation (12.2353ms)
+✔ profiles are scoped to landscape workspaces rather than changing other generators (32.1979ms)
+✔ landscape profile survives JSON export/import, context and runtime while edits leave its source immutable (591.0522ms)
+✔ changing profile metadata without rebuilding is diagnosed and blocks runtime export (198.5242ms)
+✔ caves and relief without surface profiles retain their observed native fingerprints (430.7806ms)
+✔ every published structure and biome choice passes recipe validation in both landscape workspaces (22.2878ms)
+✔ landscape recipes default to independent empty additional-biome arrays (11.217ms)
+✔ optional biome selections normalize as an immutable canonical set and reject malformed selections (2.7752ms)
+✔ atlas sides 50,100,200,300 are accepted while side 301 and oversized physical stacks are rejected (2.8484ms)
+✔ published request/context schemas describe optional unique selections and exclude the main biome (5.5833ms)
+✔ native output schemas cover a 300-square cell index and the no-sea distance sentinel (1.032ms)
+✔ recipe/native/context preserve the same selected set and reordering is not a stale generation (393.6276ms)
+✔ inline biome selection uses one expandable checklist, excludes the main choice and updates its draft summary (6.3163ms)
+ℹ tests 14
+ℹ suites 0
+ℹ pass 14
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1420.1071

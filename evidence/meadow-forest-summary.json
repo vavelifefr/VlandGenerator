@@ -1,0 +1,79 @@
+{
+  "ok": true,
+  "complete": true,
+  "updatedAt": "2026-10-24T08:43:08.726590+00:00",
+  "scope": "Different meadow/forest colors and territory formulas on square and hex",
+  "colors": {
+    "meadow": "#78955c",
+    "forest": "#466f49",
+    "materialView": true,
+    "legendShared": true,
+    "pngShared": true,
+    "explicitUserMaterialColorWins": true
+  },
+  "morphology": {
+    "sizes": [
+      50,
+      128,
+      300
+    ],
+    "grids": [
+      "square",
+      "hex"
+    ],
+    "equalArea": true,
+    "forestBoundaryIncrease": "1.45-1.92x over smoother meadow controls",
+    "dominantForestWithMeadowClearings": true,
+    "noNewPublicSettings": true
+  },
+  "verification": {
+    "portableTests": 394,
+    "syntaxModules": 216,
+    "relativeImports": 756,
+    "actualMaps": 12,
+    "browserCases": 4,
+    "browserWidths": [
+      1100,
+      360
+    ],
+    "pageErrors": [],
+    "contentMaps": 24,
+    "contentSourceOperations": 288,
+    "schemas": 60,
+    "schemaDocuments": 381,
+    "negativeSchemaControls": 348,
+    "jsCliHttpGenerateRebuildParity": true,
+    "mainCurrentFormulaCases": 6,
+    "mainCurrentStaticFiles": 7,
+    "mainVerified": true,
+    "mainRasterExportCurrentColors": true
+  },
+  "visual": {
+    "rootViewed": [
+      "meadow-forest-stack-land300-woods25-material.png",
+      "meadow-forest-stack-land300-woods25-biome.png",
+      "meadow-forest-landscape-300-forest-material.png",
+      "meadow-forest-ui-hexlandscape-360-map.png",
+      "meadow-forest-ui-hexlandscape-360-legend.png"
+    ],
+    "comparison": "meadow-forest-comparison.html",
+    "landscapeUrl": "http://127.0.0.1:9670/Web/HTML/landscape.html#category=map",
+    "openInCodex": "queued"
+  },
+  "qaCopyRemoved": true,
+  "userProjectsAndSessionUntouched": true,
+  "noMainRestart": true,
+  "reports": [
+    "meadow-forest-verification.json",
+    "meadow-forest-main.json",
+    "meadow-forest-portable.json",
+    "meadow-forest-node.txt",
+    "meadow-forest-stack-green.txt",
+    "meadow-forest-focused.txt",
+    "meadow-forest-colors-red.txt",
+    "meadow-forest-colors-green.txt",
+    "meadow-forest-schema.txt",
+    "meadow-forest-content.txt"
+  ],
+  "note": "Root initial full suite393/394 had the expected old full-field golden mismatch after the new morphology. Root visual approved the new golden and stack256/512 check passed. Final full394/394 ran in the unrelated portable copy."
+}

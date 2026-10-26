@@ -1,0 +1,23 @@
+{
+  "ok": true,
+  "validator": "jsonschema",
+  "version": "4.26.0",
+  "draft": "2020-12",
+  "offlineRegistry": true,
+  "schemas": 60,
+  "documents": 1,
+  "negativeControls": 0,
+  "modes": [
+    "settlements",
+    "landscape",
+    "hexlandscape"
+  ],
+  "failures": [],
+  "checks": [
+    {
+      "document": "new surface palette",
+      "schema": "schemas/display-palette.schema.json",
+      "ok": true
+    }
+  ]
+}

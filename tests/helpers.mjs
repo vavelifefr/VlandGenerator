@@ -1,0 +1,3 @@
+import {createRecipe,generateBase} from '../app/index.mjs';
+export async function smallRecipe(mode='dungeon',seed=42){const r=await createRecipe(mode);r.seed=seed;if(mode==='dungeon'){r.generation.rooms.count=4;r.generation.search.candidates=1;}if(mode==='tiers')for(const l of r.generation.layers)l.request.rooms={count:3};if(mode==='sideview')r.generation.rooms=6;if(['landscape','hexlandscape','caves'].includes(mode)){r.generation.width=32;r.generation.height=32;r.generation.layers={above:0,underground:1};}if(mode==='relief'){r.generation.width=r.generation.height=32;}if(mode==='settlements'){r.generation.width=40;r.generation.height=40;}return r;}
+export async function smallProject(mode='dungeon',seed=42){return generateBase(await smallRecipe(mode,seed));}

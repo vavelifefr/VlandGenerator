@@ -1,0 +1,8 @@
+import {serializeDocument} from './app/json-export.mjs';
+import {readFile,writeFile} from 'node:fs/promises';
+import {execute} from './app/index.mjs';
+const[command,input,output]=process.argv.slice(2);
+try{
+ if(!command||command==='help'){console.log('VlandGenerator 4\nnode cli.mjs contract\nnode cli.mjs export export-job.json [document.json]\nnode cli.mjs defaults dungeon [recipe.json]\nnode cli.mjs generate-base recipe.json [project.json]\nnode cli.mjs landscape-rebuild rebuild-job.json [project.json]\nnode cli.mjs source-preview source-job.json [preview.json]\nnode cli.mjs distribution-apply apply-job.json [project.json]\nnode cli.mjs distribution-preview distribution-job.json [preview.json]\nnode cli.mjs validate project.json\nnode cli.mjs runtime project.json [map.json]\nnode cli.mjs edit operation.json [project.json]\nnode cli.mjs raster-export raster-job.json [images.json]\nnode cli.mjs diagnose project-job.json [report.json]\nRuntime: runtime-init, runtime-plan, runtime-commit, runtime-update, transition-resolve (JSON jobs)\nExport JSON: {"project":{...},"format":"project|recipe|runtime|llm-context","options":{...}}\nLandscape rebuild JSON: {\"project\":{...},\"recipe\":{...}}\nOperation JSON: {"project":{...},"operation":{...}}');}
+ else{const data=command==='contract'?{}:command==='defaults'?{mode:input??'dungeon'}:JSON.parse((await readFile(input,'utf8')).replace(/^\uFEFF/,''));const result=await execute(command,data),text=serializeDocument(result);if(output)await writeFile(output,text,'utf8');else process.stdout.write(text);if(command==='validate'&&!result.ok)process.exitCode=2;}
+}catch(e){console.error(JSON.stringify({error:{code:e.code??'ERROR',message:e.message,details:e.details??[]}}));process.exitCode=1;}

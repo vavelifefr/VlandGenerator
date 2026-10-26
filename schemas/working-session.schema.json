@@ -1,0 +1,582 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://vland.invalid/schemas/working-session.schema.json",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "schema": {
+      "const": "vland.working-session"
+    },
+    "schemaVersion": {
+      "const": 1
+    },
+    "id": {
+      "type": "string"
+    },
+    "revision": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 9007199254740991
+    },
+    "startedAt": {
+      "type": "string"
+    },
+    "updatedAt": {
+      "type": "string"
+    },
+    "tabs": {
+      "type": "object",
+      "maxProperties": 16,
+      "propertyNames": {
+        "pattern": "^[-a-zA-Z0-9_]{8,64}$"
+      },
+      "additionalProperties": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "workspaces": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "dungeon": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "recipe": {
+                    "type": "object"
+                  },
+                  "project": {
+                    "anyOf": [
+                      {
+                        "$ref": "project.schema.json"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "ui": {
+                    "type": "object"
+                  },
+                  "fileId": {
+                    "anyOf": [
+                      {
+                        "type": "string"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "fileRevision": {
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "pattern": "^[a-f0-9]{64}$"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "dirty": {
+                    "type": "boolean"
+                  },
+                  "pending": {
+                    "type": "boolean"
+                  }
+                },
+                "required": [
+                  "recipe",
+                  "project",
+                  "ui",
+                  "fileId",
+                  "fileRevision",
+                  "dirty",
+                  "pending"
+                ]
+              },
+              "tiers": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "recipe": {
+                    "type": "object"
+                  },
+                  "project": {
+                    "anyOf": [
+                      {
+                        "$ref": "project.schema.json"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "ui": {
+                    "type": "object"
+                  },
+                  "fileId": {
+                    "anyOf": [
+                      {
+                        "type": "string"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "fileRevision": {
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "pattern": "^[a-f0-9]{64}$"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "dirty": {
+                    "type": "boolean"
+                  },
+                  "pending": {
+                    "type": "boolean"
+                  }
+                },
+                "required": [
+                  "recipe",
+                  "project",
+                  "ui",
+                  "fileId",
+                  "fileRevision",
+                  "dirty",
+                  "pending"
+                ]
+              },
+              "sideview": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "recipe": {
+                    "type": "object"
+                  },
+                  "project": {
+                    "anyOf": [
+                      {
+                        "$ref": "project.schema.json"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "ui": {
+                    "type": "object"
+                  },
+                  "fileId": {
+                    "anyOf": [
+                      {
+                        "type": "string"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "fileRevision": {
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "pattern": "^[a-f0-9]{64}$"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "dirty": {
+                    "type": "boolean"
+                  },
+                  "pending": {
+                    "type": "boolean"
+                  }
+                },
+                "required": [
+                  "recipe",
+                  "project",
+                  "ui",
+                  "fileId",
+                  "fileRevision",
+                  "dirty",
+                  "pending"
+                ]
+              },
+              "caves": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "recipe": {
+                    "type": "object"
+                  },
+                  "project": {
+                    "anyOf": [
+                      {
+                        "$ref": "project.schema.json"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "ui": {
+                    "type": "object"
+                  },
+                  "fileId": {
+                    "anyOf": [
+                      {
+                        "type": "string"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "fileRevision": {
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "pattern": "^[a-f0-9]{64}$"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "dirty": {
+                    "type": "boolean"
+                  },
+                  "pending": {
+                    "type": "boolean"
+                  }
+                },
+                "required": [
+                  "recipe",
+                  "project",
+                  "ui",
+                  "fileId",
+                  "fileRevision",
+                  "dirty",
+                  "pending"
+                ]
+              },
+              "landscape": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "recipe": {
+                    "type": "object"
+                  },
+                  "project": {
+                    "anyOf": [
+                      {
+                        "$ref": "project.schema.json"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "ui": {
+                    "type": "object"
+                  },
+                  "fileId": {
+                    "anyOf": [
+                      {
+                        "type": "string"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "fileRevision": {
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "pattern": "^[a-f0-9]{64}$"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "dirty": {
+                    "type": "boolean"
+                  },
+                  "pending": {
+                    "type": "boolean"
+                  }
+                },
+                "required": [
+                  "recipe",
+                  "project",
+                  "ui",
+                  "fileId",
+                  "fileRevision",
+                  "dirty",
+                  "pending"
+                ]
+              },
+              "hexlandscape": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "recipe": {
+                    "type": "object"
+                  },
+                  "project": {
+                    "anyOf": [
+                      {
+                        "$ref": "project.schema.json"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "ui": {
+                    "type": "object"
+                  },
+                  "fileId": {
+                    "anyOf": [
+                      {
+                        "type": "string"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "fileRevision": {
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "pattern": "^[a-f0-9]{64}$"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "dirty": {
+                    "type": "boolean"
+                  },
+                  "pending": {
+                    "type": "boolean"
+                  }
+                },
+                "required": [
+                  "recipe",
+                  "project",
+                  "ui",
+                  "fileId",
+                  "fileRevision",
+                  "dirty",
+                  "pending"
+                ]
+              },
+              "settlements": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "recipe": {
+                    "type": "object"
+                  },
+                  "project": {
+                    "anyOf": [
+                      {
+                        "$ref": "project.schema.json"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "ui": {
+                    "type": "object"
+                  },
+                  "fileId": {
+                    "anyOf": [
+                      {
+                        "type": "string"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "fileRevision": {
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "pattern": "^[a-f0-9]{64}$"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "dirty": {
+                    "type": "boolean"
+                  },
+                  "pending": {
+                    "type": "boolean"
+                  }
+                },
+                "required": [
+                  "recipe",
+                  "project",
+                  "ui",
+                  "fileId",
+                  "fileRevision",
+                  "dirty",
+                  "pending"
+                ]
+              },
+              "relief": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "recipe": {
+                    "type": "object"
+                  },
+                  "project": {
+                    "anyOf": [
+                      {
+                        "$ref": "project.schema.json"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "ui": {
+                    "type": "object"
+                  },
+                  "fileId": {
+                    "anyOf": [
+                      {
+                        "type": "string"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "fileRevision": {
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "pattern": "^[a-f0-9]{64}$"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "dirty": {
+                    "type": "boolean"
+                  },
+                  "pending": {
+                    "type": "boolean"
+                  }
+                },
+                "required": [
+                  "recipe",
+                  "project",
+                  "ui",
+                  "fileId",
+                  "fileRevision",
+                  "dirty",
+                  "pending"
+                ]
+              },
+              "settings": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "recipe": {
+                    "type": "object"
+                  },
+                  "project": {
+                    "anyOf": [
+                      {
+                        "$ref": "project.schema.json"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "ui": {
+                    "type": "object"
+                  },
+                  "fileId": {
+                    "anyOf": [
+                      {
+                        "type": "string"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "fileRevision": {
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "pattern": "^[a-f0-9]{64}$"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "dirty": {
+                    "type": "boolean"
+                  },
+                  "pending": {
+                    "type": "boolean"
+                  }
+                },
+                "required": [
+                  "recipe",
+                  "project",
+                  "ui",
+                  "fileId",
+                  "fileRevision",
+                  "dirty",
+                  "pending"
+                ]
+              }
+            },
+            "required": []
+          }
+        },
+        "required": [
+          "workspaces"
+        ]
+      }
+    }
+  },
+  "required": [
+    "schema",
+    "schemaVersion",
+    "id",
+    "revision",
+    "startedAt",
+    "updatedAt",
+    "tabs"
+  ]
+}

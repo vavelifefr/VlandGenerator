@@ -1,0 +1,38 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://vland.invalid/schemas/distribution-preview.schema.json",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "schema": {
+      "const": "vland.distribution.preview"
+    },
+    "schemaVersion": {
+      "const": 4
+    },
+    "projectChecksum": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 64
+    },
+    "delta": {
+      "$ref": "distribution-delta.schema.json"
+    },
+    "validation": {
+      "type": "object"
+    },
+    "checksum": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 64
+    }
+  },
+  "required": [
+    "schema",
+    "schemaVersion",
+    "projectChecksum",
+    "delta",
+    "validation",
+    "checksum"
+  ]
+}

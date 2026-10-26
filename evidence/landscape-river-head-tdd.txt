@@ -1,0 +1,80 @@
+✔ profile streams reach their dry boundary outlet on both grids without changing the flow graph (59.0884ms)
+✔ removing undersized lakes retains strong river channels, rather than a dry gap or a restored lake (62.4662ms)
+✔ profile width one is exactly the strong river core, without an automatic extra bank (1.8134ms)
+✔ profile widening stays within width minus one neighbor layers and never replaces sea or retained lakes (16.3211ms)
+✔ profile rivers zero stays river free through lake filtering and widening, retaining ocean and large lakes (5.9919ms)
+✔ native requests without a landscape profile retain their observed water output exactly (5.9026ms)
+✔ real profile river corrections preserve native navigation and access in both workspaces (322.955ms)
+✖ profile freshwater fills to a shared conditioned head while retaining sea, masks, flow and width (1.9431ms)
+✖ profile water levels do not rise along wet flow through widened rivers, lake exits or sea contacts (0.9587ms)
+✖ profile flat bed one retains a positive freshwater depth without capping its internal head at one (1.2357ms)
+ℹ tests 10
+ℹ suites 0
+ℹ pass 7
+ℹ fail 3
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 587.1906
+
+✖ failing tests:
+
+test at tests\landscape-rivers.test.mjs:48:1
+✖ profile freshwater fills to a shared conditioned head while retaining sea, masks, flow and width (1.9431ms)
+  AssertionError [ERR_ASSERTION]: square freshwater head 1
+      at TestContext.<anonymous> (file:///C:/Vibecoding/Games/VlandGenerator/tests/landscape-rivers.test.mjs:49:642)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }
+
+test at tests\landscape-rivers.test.mjs:52:1
+✖ profile water levels do not rise along wet flow through widened rivers, lake exits or sea contacts (0.9587ms)
+  AssertionError [ERR_ASSERTION]: square river>river 109>77
+      at TestContext.<anonymous> (file:///C:/Vibecoding/Games/VlandGenerator/tests/landscape-rivers.test.mjs:53:449)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }
+
+test at tests\landscape-rivers.test.mjs:56:1
+✖ profile flat bed one retains a positive freshwater depth without capping its internal head at one (1.2357ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+  
+  + 0.059427
+  - 0.035
+       ^
+  
+      at TestContext.<anonymous> (file:///C:/Vibecoding/Games/VlandGenerator/tests/landscape-rivers.test.mjs:57:293)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 0.059427,
+    expected: 0.035,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

@@ -1,0 +1,1928 @@
+{
+  "ok": true,
+  "validator": "jsonschema",
+  "version": "4.26.0",
+  "draft": "2020-12",
+  "offlineRegistry": true,
+  "schemas": 60,
+  "documents": 381,
+  "negativeControls": 348,
+  "modes": [
+    "relief",
+    "dungeon",
+    "tiers",
+    "sideview",
+    "caves",
+    "settlements",
+    "landscape",
+    "hexlandscape"
+  ],
+  "failures": [],
+  "checks": [
+    {
+      "document": "relief recipe",
+      "schema": "schemas/recipe.schema.json",
+      "ok": true
+    },
+    {
+      "document": "relief project",
+      "schema": "schemas/project.schema.json",
+      "ok": true
+    },
+    {
+      "document": "relief raster",
+      "schema": "schemas/raster.schema.json",
+      "ok": true
+    },
+    {
+      "document": "relief context",
+      "schema": "schemas/project-context.schema.json",
+      "ok": true
+    },
+    {
+      "document": "relief export request project",
+      "schema": "schemas/export-request.schema.json",
+      "ok": true
+    },
+    {
+      "document": "relief export request recipe",
+      "schema": "schemas/export-request.schema.json",
+      "ok": true
+    },
+    {
+      "document": "relief export request runtime",
+      "schema": "schemas/export-request.schema.json",
+      "ok": true
+    },
+    {
+      "document": "relief export request llm-context",
+      "schema": "schemas/export-request.schema.json",
+      "ok": true
+    },
+    {
+      "document": "relief native",
+      "schema": "engine/schemas/atlas.schema.json",
+      "ok": true
+    },
+    {
+      "document": "relief tiles",
+      "schema": "engine/schemas/atlas-tiles.schema.json",
+      "ok": true
+    },
+    {
+      "document": "relief authored project",
+      "schema": "schemas/project.schema.json",
+      "ok": true
+    },
+    {
+      "document": "relief authored runtime",
+      "schema": "schemas/runtime.schema.json",
+      "ok": true
+    },
+    {
+      "document": "relief authored state",
+      "schema": "schemas/spawn-state.schema.json",
+      "ok": true
+    },
+    {
+      "document": "relief authored plan",
+      "schema": "schemas/spawn-plan.schema.json",
+      "ok": true
+    },
+    {
+      "document": "relief authored distribution-preview",
+      "schema": "schemas/distribution-preview.schema.json",
+      "ok": true
+    },
+    {
+      "document": "relief authored scene",
+      "schema": "schemas/content-scene.schema.json",
+      "ok": true
+    },
+    {
+      "document": "relief authored context",
+      "schema": "schemas/project-context.schema.json",
+      "ok": true
+    },
+    {
+      "document": "relief source preview",
+      "schema": "schemas/source-preview.schema.json",
+      "ok": true
+    },
+    {
+      "document": "relief distribution request",
+      "schema": "schemas/distribution-request.schema.json",
+      "ok": true
+    },
+    {
+      "document": "relief source qa-objects-zone",
+      "schema": "schemas/source.schema.json",
+      "ok": true
+    },
+    {
+      "document": "relief rule qa-objects-zone/population",
+      "schema": "schemas/source-rule.schema.json",
+      "ok": true
+    },
+    {
+      "document": "relief source qa-objects-spawner",
+      "schema": "schemas/source.schema.json",
+      "ok": true
+    },
+    {
+      "document": "relief rule qa-objects-spawner/population",
+      "schema": "schemas/source-rule.schema.json",
+      "ok": true
+    },
+    {
+      "document": "relief source qa-items-zone",
+      "schema": "schemas/source.schema.json",
+      "ok": true
+    },
+    {
+      "document": "relief rule qa-items-zone/population",
+      "schema": "schemas/source-rule.schema.json",
+      "ok": true
+    },
+    {
+      "document": "relief source qa-items-spawner",
+      "schema": "schemas/source.schema.json",
+      "ok": true
+    },
+    {
+      "document": "relief rule qa-items-spawner/population",
+      "schema": "schemas/source-rule.schema.json",
+      "ok": true
+    },
+    {
+      "document": "relief source qa-resources-zone",
+      "schema": "schemas/source.schema.json",
+      "ok": true
+    },
+    {
+      "document": "relief rule qa-resources-zone/population",
+      "schema": "schemas/source-rule.schema.json",
+      "ok": true
+    },
+    {
+      "document": "relief source qa-resources-spawner",
+      "schema": "schemas/source.schema.json",
+      "ok": true
+    },
+    {
+      "document": "relief rule qa-resources-spawner/population",
+      "schema": "schemas/source-rule.schema.json",
+      "ok": true
+    },
+    {
+      "document": "relief source qa-flora-zone",
+      "schema": "schemas/source.schema.json",
+      "ok": true
+    },
+    {
+      "document": "relief rule qa-flora-zone/population",
+      "schema": "schemas/source-rule.schema.json",
+      "ok": true
+    },
+    {
+      "document": "relief source qa-flora-spawner",
+      "schema": "schemas/source.schema.json",
+      "ok": true
+    },
+    {
+      "document": "relief rule qa-flora-spawner/population",
+      "schema": "schemas/source-rule.schema.json",
+      "ok": true
+    },
+    {
+      "document": "relief source qa-fauna-zone",
+      "schema": "schemas/source.schema.json",
+      "ok": true
+    },
+    {
+      "document": "relief rule qa-fauna-zone/population",
+      "schema": "schemas/source-rule.schema.json",
+      "ok": true
+    },
+    {
+      "document": "relief source qa-fauna-spawner",
+      "schema": "schemas/source.schema.json",
+      "ok": true
+    },
+    {
+      "document": "relief rule qa-fauna-spawner/population",
+      "schema": "schemas/source-rule.schema.json",
+      "ok": true
+    },
+    {
+      "document": "relief source qa-events-zone",
+      "schema": "schemas/source.schema.json",
+      "ok": true
+    },
+    {
+      "document": "relief rule qa-events-zone/population",
+      "schema": "schemas/source-rule.schema.json",
+      "ok": true
+    },
+    {
+      "document": "relief source qa-events-spawner",
+      "schema": "schemas/source.schema.json",
+      "ok": true
+    },
+    {
+      "document": "relief rule qa-events-spawner/population",
+      "schema": "schemas/source-rule.schema.json",
+      "ok": true
+    },
+    {
+      "document": "relief source src-84910f7b",
+      "schema": "schemas/source.schema.json",
+      "ok": true
+    },
+    {
+      "document": "relief rule src-84910f7b/population",
+      "schema": "schemas/source-rule.schema.json",
+      "ok": true
+    },
+    {
+      "document": "relief source src-6bfe454f",
+      "schema": "schemas/source.schema.json",
+      "ok": true
+    },
+    {
+      "document": "relief rule src-6bfe454f/population",
+      "schema": "schemas/source-rule.schema.json",
+      "ok": true
+    },
+    {
+      "document": "dungeon recipe",
+      "schema": "schemas/recipe.schema.json",
+      "ok": true
+    },
+    {
+      "document": "dungeon project",
+      "schema": "schemas/project.schema.json",
+      "ok": true
+    },
+    {
+      "document": "dungeon raster",
+      "schema": "schemas/raster.schema.json",
+      "ok": true
+    },
+    {
+      "document": "dungeon context",
+      "schema": "schemas/project-context.schema.json",
+      "ok": true
+    },
+    {
+      "document": "dungeon export request project",
+      "schema": "schemas/export-request.schema.json",
+      "ok": true
+    },
+    {
+      "document": "dungeon export request recipe",
+      "schema": "schemas/export-request.schema.json",
+      "ok": true
+    },
+    {
+      "document": "dungeon export request runtime",
+      "schema": "schemas/export-request.schema.json",
+      "ok": true
+    },
+    {
+      "document": "dungeon export request llm-context",
+      "schema": "schemas/export-request.schema.json",
+      "ok": true
+    },
+    {
+      "document": "dungeon native",
+      "schema": "engine/schemas/bundle.schema.json",
+      "ok": true
+    },
+    {
+      "document": "dungeon authored project",
+      "schema": "schemas/project.schema.json",
+      "ok": true
+    },
+    {
+      "document": "dungeon authored runtime",
+      "schema": "schemas/runtime.schema.json",
+      "ok": true
+    },
+    {
+      "document": "dungeon authored state",
+      "schema": "schemas/spawn-state.schema.json",
+      "ok": true
+    },
+    {
+      "document": "dungeon authored plan",
+      "schema": "schemas/spawn-plan.schema.json",
+      "ok": true
+    },
+    {
+      "document": "dungeon authored distribution-preview",
+      "schema": "schemas/distribution-preview.schema.json",
+      "ok": true
+    },
+    {
+      "document": "dungeon authored scene",
+      "schema": "schemas/content-scene.schema.json",
+      "ok": true
+    },
+    {
+      "document": "dungeon authored context",
+      "schema": "schemas/project-context.schema.json",
+      "ok": true
+    },
+    {
+      "document": "dungeon source preview",
+      "schema": "schemas/source-preview.schema.json",
+      "ok": true
+    },
+    {
+      "document": "dungeon distribution request",
+      "schema": "schemas/distribution-request.schema.json",
+      "ok": true
+    },
+    {
+      "document": "dungeon source qa-objects-zone",
+      "schema": "schemas/source.schema.json",
+      "ok": true
+    },
+    {
+      "document": "dungeon rule qa-objects-zone/population",
+      "schema": "schemas/source-rule.schema.json",
+      "ok": true
+    },
+    {
+      "document": "dungeon source qa-objects-spawner",
+      "schema": "schemas/source.schema.json",
+      "ok": true
+    },
+    {
+      "document": "dungeon rule qa-objects-spawner/population",
+      "schema": "schemas/source-rule.schema.json",
+      "ok": true
+    },
+    {
+      "document": "dungeon source qa-items-zone",
+      "schema": "schemas/source.schema.json",
+      "ok": true
+    },
+    {
+      "document": "dungeon rule qa-items-zone/population",
+      "schema": "schemas/source-rule.schema.json",
+      "ok": true
+    },
+    {
+      "document": "dungeon source qa-items-spawner",
+      "schema": "schemas/source.schema.json",
+      "ok": true
+    },
+    {
+      "document": "dungeon rule qa-items-spawner/population",
+      "schema": "schemas/source-rule.schema.json",
+      "ok": true
+    },
+    {
+      "document": "dungeon source qa-resources-zone",
+      "schema": "schemas/source.schema.json",
+      "ok": true
+    },
+    {
+      "document": "dungeon rule qa-resources-zone/population",
+      "schema": "schemas/source-rule.schema.json",
+      "ok": true
+    },
+    {
+      "document": "dungeon source qa-resources-spawner",
+      "schema": "schemas/source.schema.json",
+      "ok": true
+    },
+    {
+      "document": "dungeon rule qa-resources-spawner/population",
+      "schema": "schemas/source-rule.schema.json",
+      "ok": true
+    },
+    {
+      "document": "dungeon source qa-flora-zone",
+      "schema": "schemas/source.schema.json",
+      "ok": true
+    },
+    {
+      "document": "dungeon rule qa-flora-zone/population",
+      "schema": "schemas/source-rule.schema.json",
+      "ok": true
+    },
+    {
+      "document": "dungeon source qa-flora-spawner",
+      "schema": "schemas/source.schema.json",
+      "ok": true
+    },
+    {
+      "document": "dungeon rule qa-flora-spawner/population",
+      "schema": "schemas/source-rule.schema.json",
+      "ok": true
+    },
+    {
+      "document": "dungeon source qa-fauna-zone",
+      "schema": "schemas/source.schema.json",
+      "ok": true
+    },
+    {
+      "document": "dungeon rule qa-fauna-zone/population",
+      "schema": "schemas/source-rule.schema.json",
+      "ok": true
+    },
+    {
+      "document": "dungeon source qa-fauna-spawner",
+      "schema": "schemas/source.schema.json",
+      "ok": true
+    },
+    {
+      "document": "dungeon rule qa-fauna-spawner/population",
+      "schema": "schemas/source-rule.schema.json",
+      "ok": true
+    },
+    {
+      "document": "dungeon source qa-events-zone",
+      "schema": "schemas/source.schema.json",
+      "ok": true
+    },
+    {
+      "document": "dungeon rule qa-events-zone/population",
+      "schema": "schemas/source-rule.schema.json",
+      "ok": true
+    },
+    {
+      "document": "dungeon source qa-events-spawner",
+      "schema": "schemas/source.schema.json",
+      "ok": true
+    },
+    {
+      "document": "dungeon rule qa-events-spawner/population",
+      "schema": "schemas/source-rule.schema.json",
+      "ok": true
+    },
+    {
+      "document": "dungeon source src-08eec608",
+      "schema": "schemas/source.schema.json",
+      "ok": true
+    },
+    {
+      "document": "dungeon rule src-08eec608/population",
+      "schema": "schemas/source-rule.schema.json",
+      "ok": true
+    },
+    {
+      "document": "dungeon source src-08f7c064",
+      "schema": "schemas/source.schema.json",
+      "ok": true
+    },
+    {
+      "document": "dungeon rule src-08f7c064/population",
+      "schema": "schemas/source-rule.schema.json",
+      "ok": true
+    },
+    {
+      "document": "tiers recipe",
+      "schema": "schemas/recipe.schema.json",
+      "ok": true
+    },
+    {
+      "document": "tiers project",
+      "schema": "schemas/project.schema.json",
+      "ok": true
+    },
+    {
+      "document": "tiers raster",
+      "schema": "schemas/raster.schema.json",
+      "ok": true
+    },
+    {
+      "document": "tiers context",
+      "schema": "schemas/project-context.schema.json",
+      "ok": true
+    },
+    {
+      "document": "tiers export request project",
+      "schema": "schemas/export-request.schema.json",
+      "ok": true
+    },
+    {
+      "document": "tiers export request recipe",
+      "schema": "schemas/export-request.schema.json",
+      "ok": true
+    },
+    {
+      "document": "tiers export request runtime",
+      "schema": "schemas/export-request.schema.json",
+      "ok": true
+    },
+    {
+      "document": "tiers export request llm-context",
+      "schema": "schemas/export-request.schema.json",
+      "ok": true
+    },
+    {
+      "document": "tiers native",
+      "schema": "engine/schemas/world.schema.json",
+      "ok": true
+    },
+    {
+      "document": "tiers authored project",
+      "schema": "schemas/project.schema.json",
+      "ok": true
+    },
+    {
+      "document": "tiers authored runtime",
+      "schema": "schemas/runtime.schema.json",
+      "ok": true
+    },
+    {
+      "document": "tiers authored state",
+      "schema": "schemas/spawn-state.schema.json",
+      "ok": true
+    },
+    {
+      "document": "tiers authored plan",
+      "schema": "schemas/spawn-plan.schema.json",
+      "ok": true
+    },
+    {
+      "document": "tiers authored distribution-preview",
+      "schema": "schemas/distribution-preview.schema.json",
+      "ok": true
+    },
+    {
+      "document": "tiers authored scene",
+      "schema": "schemas/content-scene.schema.json",
+      "ok": true
+    },
+    {
+      "document": "tiers authored context",
+      "schema": "schemas/project-context.schema.json",
+      "ok": true
+    },
+    {
+      "document": "tiers source preview",
+      "schema": "schemas/source-preview.schema.json",
+      "ok": true
+    },
+    {
+      "document": "tiers distribution request",
+      "schema": "schemas/distribution-request.schema.json",
+      "ok": true
+    },
+    {
+      "document": "tiers source qa-objects-zone",
+      "schema": "schemas/source.schema.json",
+      "ok": true
+    },
+    {
+      "document": "tiers rule qa-objects-zone/population",
+      "schema": "schemas/source-rule.schema.json",
+      "ok": true
+    },
+    {
+      "document": "tiers source qa-objects-spawner",
+      "schema": "schemas/source.schema.json",
+      "ok": true
+    },
+    {
+      "document": "tiers rule qa-objects-spawner/population",
+      "schema": "schemas/source-rule.schema.json",
+      "ok": true
+    },
+    {
+      "document": "tiers source qa-items-zone",
+      "schema": "schemas/source.schema.json",
+      "ok": true
+    },
+    {
+      "document": "tiers rule qa-items-zone/population",
+      "schema": "schemas/source-rule.schema.json",
+      "ok": true
+    },
+    {
+      "document": "tiers source qa-items-spawner",
+      "schema": "schemas/source.schema.json",
+      "ok": true
+    },
+    {
+      "document": "tiers rule qa-items-spawner/population",
+      "schema": "schemas/source-rule.schema.json",
+      "ok": true
+    },
+    {
+      "document": "tiers source qa-resources-zone",
+      "schema": "schemas/source.schema.json",
+      "ok": true
+    },
+    {
+      "document": "tiers rule qa-resources-zone/population",
+      "schema": "schemas/source-rule.schema.json",
+      "ok": true
+    },
+    {
+      "document": "tiers source qa-resources-spawner",
+      "schema": "schemas/source.schema.json",
+      "ok": true
+    },
+    {
+      "document": "tiers rule qa-resources-spawner/population",
+      "schema": "schemas/source-rule.schema.json",
+      "ok": true
+    },
+    {
+      "document": "tiers source qa-flora-zone",
+      "schema": "schemas/source.schema.json",
+      "ok": true
+    },
+    {
+      "document": "tiers rule qa-flora-zone/population",
+      "schema": "schemas/source-rule.schema.json",
+      "ok": true
+    },
+    {
+      "document": "tiers source qa-flora-spawner",
+      "schema": "schemas/source.schema.json",
+      "ok": true
+    },
+    {
+      "document": "tiers rule qa-flora-spawner/population",
+      "schema": "schemas/source-rule.schema.json",
+      "ok": true
+    },
+    {
+      "document": "tiers source qa-fauna-zone",
+      "schema": "schemas/source.schema.json",
+      "ok": true
+    },
+    {
+      "document": "tiers rule qa-fauna-zone/population",
+      "schema": "schemas/source-rule.schema.json",
+      "ok": true
+    },
+    {
+      "document": "tiers source qa-fauna-spawner",
+      "schema": "schemas/source.schema.json",
+      "ok": true
+    },
+    {
+      "document": "tiers rule qa-fauna-spawner/population",
+      "schema": "schemas/source-rule.schema.json",
+      "ok": true
+    },
+    {
+      "document": "tiers source qa-events-zone",
+      "schema": "schemas/source.schema.json",
+      "ok": true
+    },
+    {
+      "document": "tiers rule qa-events-zone/population",
+      "schema": "schemas/source-rule.schema.json",
+      "ok": true
+    },
+    {
+      "document": "tiers source qa-events-spawner",
+      "schema": "schemas/source.schema.json",
+      "ok": true
+    },
+    {
+      "document": "tiers rule qa-events-spawner/population",
+      "schema": "schemas/source-rule.schema.json",
+      "ok": true
+    },
+    {
+      "document": "tiers source src-976d29a4",
+      "schema": "schemas/source.schema.json",
+      "ok": true
+    },
+    {
+      "document": "tiers rule src-976d29a4/population",
+      "schema": "schemas/source-rule.schema.json",
+      "ok": true
+    },
+    {
+      "document": "tiers source src-d75873ac",
+      "schema": "schemas/source.schema.json",
+      "ok": true
+    },
+    {
+      "document": "tiers rule src-d75873ac/population",
+      "schema": "schemas/source-rule.schema.json",
+      "ok": true
+    },
+    {
+      "document": "sideview recipe",
+      "schema": "schemas/recipe.schema.json",
+      "ok": true
+    },
+    {
+      "document": "sideview project",
+      "schema": "schemas/project.schema.json",
+      "ok": true
+    },
+    {
+      "document": "sideview raster",
+      "schema": "schemas/raster.schema.json",
+      "ok": true
+    },
+    {
+      "document": "sideview context",
+      "schema": "schemas/project-context.schema.json",
+      "ok": true
+    },
+    {
+      "document": "sideview export request project",
+      "schema": "schemas/export-request.schema.json",
+      "ok": true
+    },
+    {
+      "document": "sideview export request recipe",
+      "schema": "schemas/export-request.schema.json",
+      "ok": true
+    },
+    {
+      "document": "sideview export request runtime",
+      "schema": "schemas/export-request.schema.json",
+      "ok": true
+    },
+    {
+      "document": "sideview export request llm-context",
+      "schema": "schemas/export-request.schema.json",
+      "ok": true
+    },
+    {
+      "document": "sideview native",
+      "schema": "engine/schemas/platformer.schema.json",
+      "ok": true
+    },
+    {
+      "document": "sideview authored project",
+      "schema": "schemas/project.schema.json",
+      "ok": true
+    },
+    {
+      "document": "sideview authored runtime",
+      "schema": "schemas/runtime.schema.json",
+      "ok": true
+    },
+    {
+      "document": "sideview authored state",
+      "schema": "schemas/spawn-state.schema.json",
+      "ok": true
+    },
+    {
+      "document": "sideview authored plan",
+      "schema": "schemas/spawn-plan.schema.json",
+      "ok": true
+    },
+    {
+      "document": "sideview authored distribution-preview",
+      "schema": "schemas/distribution-preview.schema.json",
+      "ok": true
+    },
+    {
+      "document": "sideview authored scene",
+      "schema": "schemas/content-scene.schema.json",
+      "ok": true
+    },
+    {
+      "document": "sideview authored context",
+      "schema": "schemas/project-context.schema.json",
+      "ok": true
+    },
+    {
+      "document": "sideview source preview",
+      "schema": "schemas/source-preview.schema.json",
+      "ok": true
+    },
+    {
+      "document": "sideview distribution request",
+      "schema": "schemas/distribution-request.schema.json",
+      "ok": true
+    },
+    {
+      "document": "sideview source qa-objects-zone",
+      "schema": "schemas/source.schema.json",
+      "ok": true
+    },
+    {
+      "document": "sideview rule qa-objects-zone/population",
+      "schema": "schemas/source-rule.schema.json",
+      "ok": true
+    },
+    {
+      "document": "sideview source qa-objects-spawner",
+      "schema": "schemas/source.schema.json",
+      "ok": true
+    },
+    {
+      "document": "sideview rule qa-objects-spawner/population",
+      "schema": "schemas/source-rule.schema.json",
+      "ok": true
+    },
+    {
+      "document": "sideview source qa-items-zone",
+      "schema": "schemas/source.schema.json",
+      "ok": true
+    },
+    {
+      "document": "sideview rule qa-items-zone/population",
+      "schema": "schemas/source-rule.schema.json",
+      "ok": true
+    },
+    {
+      "document": "sideview source qa-items-spawner",
+      "schema": "schemas/source.schema.json",
+      "ok": true
+    },
+    {
+      "document": "sideview rule qa-items-spawner/population",
+      "schema": "schemas/source-rule.schema.json",
+      "ok": true
+    },
+    {
+      "document": "sideview source qa-resources-zone",
+      "schema": "schemas/source.schema.json",
+      "ok": true
+    },
+    {
+      "document": "sideview rule qa-resources-zone/population",
+      "schema": "schemas/source-rule.schema.json",
+      "ok": true
+    },
+    {
+      "document": "sideview source qa-resources-spawner",
+      "schema": "schemas/source.schema.json",
+      "ok": true
+    },
+    {
+      "document": "sideview rule qa-resources-spawner/population",
+      "schema": "schemas/source-rule.schema.json",
+      "ok": true
+    },
+    {
+      "document": "sideview source qa-flora-zone",
+      "schema": "schemas/source.schema.json",
+      "ok": true
+    },
+    {
+      "document": "sideview rule qa-flora-zone/population",
+      "schema": "schemas/source-rule.schema.json",
+      "ok": true
+    },
+    {
+      "document": "sideview source qa-flora-spawner",
+      "schema": "schemas/source.schema.json",
+      "ok": true
+    },
+    {
+      "document": "sideview rule qa-flora-spawner/population",
+      "schema": "schemas/source-rule.schema.json",
+      "ok": true
+    },
+    {
+      "document": "sideview source qa-fauna-zone",
+      "schema": "schemas/source.schema.json",
+      "ok": true
+    },
+    {
+      "document": "sideview rule qa-fauna-zone/population",
+      "schema": "schemas/source-rule.schema.json",
+      "ok": true
+    },
+    {
+      "document": "sideview source qa-fauna-spawner",
+      "schema": "schemas/source.schema.json",
+      "ok": true
+    },
+    {
+      "document": "sideview rule qa-fauna-spawner/population",
+      "schema": "schemas/source-rule.schema.json",
+      "ok": true
+    },
+    {
+      "document": "sideview source qa-events-zone",
+      "schema": "schemas/source.schema.json",
+      "ok": true
+    },
+    {
+      "document": "sideview rule qa-events-zone/population",
+      "schema": "schemas/source-rule.schema.json",
+      "ok": true
+    },
+    {
+      "document": "sideview source qa-events-spawner",
+      "schema": "schemas/source.schema.json",
+      "ok": true
+    },
+    {
+      "document": "sideview rule qa-events-spawner/population",
+      "schema": "schemas/source-rule.schema.json",
+      "ok": true
+    },
+    {
+      "document": "sideview source src-38e8d780",
+      "schema": "schemas/source.schema.json",
+      "ok": true
+    },
+    {
+      "document": "sideview rule src-38e8d780/population",
+      "schema": "schemas/source-rule.schema.json",
+      "ok": true
+    },
+    {
+      "document": "sideview source src-6b7d4287",
+      "schema": "schemas/source.schema.json",
+      "ok": true
+    },
+    {
+      "document": "sideview rule src-6b7d4287/population",
+      "schema": "schemas/source-rule.schema.json",
+      "ok": true
+    },
+    {
+      "document": "caves recipe",
+      "schema": "schemas/recipe.schema.json",
+      "ok": true
+    },
+    {
+      "document": "caves project",
+      "schema": "schemas/project.schema.json",
+      "ok": true
+    },
+    {
+      "document": "caves raster",
+      "schema": "schemas/raster.schema.json",
+      "ok": true
+    },
+    {
+      "document": "caves context",
+      "schema": "schemas/project-context.schema.json",
+      "ok": true
+    },
+    {
+      "document": "caves export request project",
+      "schema": "schemas/export-request.schema.json",
+      "ok": true
+    },
+    {
+      "document": "caves export request recipe",
+      "schema": "schemas/export-request.schema.json",
+      "ok": true
+    },
+    {
+      "document": "caves export request runtime",
+      "schema": "schemas/export-request.schema.json",
+      "ok": true
+    },
+    {
+      "document": "caves export request llm-context",
+      "schema": "schemas/export-request.schema.json",
+      "ok": true
+    },
+    {
+      "document": "caves native",
+      "schema": "engine/schemas/atlas.schema.json",
+      "ok": true
+    },
+    {
+      "document": "caves tiles",
+      "schema": "engine/schemas/atlas-tiles.schema.json",
+      "ok": true
+    },
+    {
+      "document": "caves authored project",
+      "schema": "schemas/project.schema.json",
+      "ok": true
+    },
+    {
+      "document": "caves authored runtime",
+      "schema": "schemas/runtime.schema.json",
+      "ok": true
+    },
+    {
+      "document": "caves authored state",
+      "schema": "schemas/spawn-state.schema.json",
+      "ok": true
+    },
+    {
+      "document": "caves authored plan",
+      "schema": "schemas/spawn-plan.schema.json",
+      "ok": true
+    },
+    {
+      "document": "caves authored distribution-preview",
+      "schema": "schemas/distribution-preview.schema.json",
+      "ok": true
+    },
+    {
+      "document": "caves authored scene",
+      "schema": "schemas/content-scene.schema.json",
+      "ok": true
+    },
+    {
+      "document": "caves authored context",
+      "schema": "schemas/project-context.schema.json",
+      "ok": true
+    },
+    {
+      "document": "caves source preview",
+      "schema": "schemas/source-preview.schema.json",
+      "ok": true
+    },
+    {
+      "document": "caves distribution request",
+      "schema": "schemas/distribution-request.schema.json",
+      "ok": true
+    },
+    {
+      "document": "caves source qa-objects-zone",
+      "schema": "schemas/source.schema.json",
+      "ok": true
+    },
+    {
+      "document": "caves rule qa-objects-zone/population",
+      "schema": "schemas/source-rule.schema.json",
+      "ok": true
+    },
+    {
+      "document": "caves source qa-objects-spawner",
+      "schema": "schemas/source.schema.json",
+      "ok": true
+    },
+    {
+      "document": "caves rule qa-objects-spawner/population",
+      "schema": "schemas/source-rule.schema.json",
+      "ok": true
+    },
+    {
+      "document": "caves source qa-items-zone",
+      "schema": "schemas/source.schema.json",
+      "ok": true
+    },
+    {
+      "document": "caves rule qa-items-zone/population",
+      "schema": "schemas/source-rule.schema.json",
+      "ok": true
+    },
+    {
+      "document": "caves source qa-items-spawner",
+      "schema": "schemas/source.schema.json",
+      "ok": true
+    },
+    {
+      "document": "caves rule qa-items-spawner/population",
+      "schema": "schemas/source-rule.schema.json",
+      "ok": true
+    },
+    {
+      "document": "caves source qa-resources-zone",
+      "schema": "schemas/source.schema.json",
+      "ok": true
+    },
+    {
+      "document": "caves rule qa-resources-zone/population",
+      "schema": "schemas/source-rule.schema.json",
+      "ok": true
+    },
+    {
+      "document": "caves source qa-resources-spawner",
+      "schema": "schemas/source.schema.json",
+      "ok": true
+    },
+    {
+      "document": "caves rule qa-resources-spawner/population",
+      "schema": "schemas/source-rule.schema.json",
+      "ok": true
+    },
+    {
+      "document": "caves source qa-flora-zone",
+      "schema": "schemas/source.schema.json",
+      "ok": true
+    },
+    {
+      "document": "caves rule qa-flora-zone/population",
+      "schema": "schemas/source-rule.schema.json",
+      "ok": true
+    },
+    {
+      "document": "caves source qa-flora-spawner",
+      "schema": "schemas/source.schema.json",
+      "ok": true
+    },
+    {
+      "document": "caves rule qa-flora-spawner/population",
+      "schema": "schemas/source-rule.schema.json",
+      "ok": true
+    },
+    {
+      "document": "caves source qa-fauna-zone",
+      "schema": "schemas/source.schema.json",
+      "ok": true
+    },
+    {
+      "document": "caves rule qa-fauna-zone/population",
+      "schema": "schemas/source-rule.schema.json",
+      "ok": true
+    },
+    {
+      "document": "caves source qa-fauna-spawner",
+      "schema": "schemas/source.schema.json",
+      "ok": true
+    },
+    {
+      "document": "caves rule qa-fauna-spawner/population",
+      "schema": "schemas/source-rule.schema.json",
+      "ok": true
+    },
+    {
+      "document": "caves source qa-events-zone",
+      "schema": "schemas/source.schema.json",
+      "ok": true
+    },
+    {
+      "document": "caves rule qa-events-zone/population",
+      "schema": "schemas/source-rule.schema.json",
+      "ok": true
+    },
+    {
+      "document": "caves source qa-events-spawner",
+      "schema": "schemas/source.schema.json",
+      "ok": true
+    },
+    {
+      "document": "caves rule qa-events-spawner/population",
+      "schema": "schemas/source-rule.schema.json",
+      "ok": true
+    },
+    {
+      "document": "caves source src-84910f7b",
+      "schema": "schemas/source.schema.json",
+      "ok": true
+    },
+    {
+      "document": "caves rule src-84910f7b/population",
+      "schema": "schemas/source-rule.schema.json",
+      "ok": true
+    },
+    {
+      "document": "caves source src-6c0831f4",
+      "schema": "schemas/source.schema.json",
+      "ok": true
+    },
+    {
+      "document": "caves rule src-6c0831f4/population",
+      "schema": "schemas/source-rule.schema.json",
+      "ok": true
+    },
+    {
+      "document": "settlements recipe",
+      "schema": "schemas/recipe.schema.json",
+      "ok": true
+    },
+    {
+      "document": "settlements project",
+      "schema": "schemas/project.schema.json",
+      "ok": true
+    },
+    {
+      "document": "settlements raster",
+      "schema": "schemas/raster.schema.json",
+      "ok": true
+    },
+    {
+      "document": "settlements context",
+      "schema": "schemas/project-context.schema.json",
+      "ok": true
+    },
+    {
+      "document": "settlements export request project",
+      "schema": "schemas/export-request.schema.json",
+      "ok": true
+    },
+    {
+      "document": "settlements export request recipe",
+      "schema": "schemas/export-request.schema.json",
+      "ok": true
+    },
+    {
+      "document": "settlements export request runtime",
+      "schema": "schemas/export-request.schema.json",
+      "ok": true
+    },
+    {
+      "document": "settlements export request llm-context",
+      "schema": "schemas/export-request.schema.json",
+      "ok": true
+    },
+    {
+      "document": "settlements native",
+      "schema": "engine/schemas/atlas.schema.json",
+      "ok": true
+    },
+    {
+      "document": "settlements tiles",
+      "schema": "engine/schemas/atlas-tiles.schema.json",
+      "ok": true
+    },
+    {
+      "document": "settlements settlement",
+      "schema": "engine/schemas/settlement.schema.json",
+      "ok": true
+    },
+    {
+      "document": "settlements authored project",
+      "schema": "schemas/project.schema.json",
+      "ok": true
+    },
+    {
+      "document": "settlements authored runtime",
+      "schema": "schemas/runtime.schema.json",
+      "ok": true
+    },
+    {
+      "document": "settlements authored state",
+      "schema": "schemas/spawn-state.schema.json",
+      "ok": true
+    },
+    {
+      "document": "settlements authored plan",
+      "schema": "schemas/spawn-plan.schema.json",
+      "ok": true
+    },
+    {
+      "document": "settlements authored distribution-preview",
+      "schema": "schemas/distribution-preview.schema.json",
+      "ok": true
+    },
+    {
+      "document": "settlements authored scene",
+      "schema": "schemas/content-scene.schema.json",
+      "ok": true
+    },
+    {
+      "document": "settlements authored context",
+      "schema": "schemas/project-context.schema.json",
+      "ok": true
+    },
+    {
+      "document": "settlements source preview",
+      "schema": "schemas/source-preview.schema.json",
+      "ok": true
+    },
+    {
+      "document": "settlements distribution request",
+      "schema": "schemas/distribution-request.schema.json",
+      "ok": true
+    },
+    {
+      "document": "settlements source qa-objects-zone",
+      "schema": "schemas/source.schema.json",
+      "ok": true
+    },
+    {
+      "document": "settlements rule qa-objects-zone/population",
+      "schema": "schemas/source-rule.schema.json",
+      "ok": true
+    },
+    {
+      "document": "settlements source qa-objects-spawner",
+      "schema": "schemas/source.schema.json",
+      "ok": true
+    },
+    {
+      "document": "settlements rule qa-objects-spawner/population",
+      "schema": "schemas/source-rule.schema.json",
+      "ok": true
+    },
+    {
+      "document": "settlements source qa-items-zone",
+      "schema": "schemas/source.schema.json",
+      "ok": true
+    },
+    {
+      "document": "settlements rule qa-items-zone/population",
+      "schema": "schemas/source-rule.schema.json",
+      "ok": true
+    },
+    {
+      "document": "settlements source qa-items-spawner",
+      "schema": "schemas/source.schema.json",
+      "ok": true
+    },
+    {
+      "document": "settlements rule qa-items-spawner/population",
+      "schema": "schemas/source-rule.schema.json",
+      "ok": true
+    },
+    {
+      "document": "settlements source qa-resources-zone",
+      "schema": "schemas/source.schema.json",
+      "ok": true
+    },
+    {
+      "document": "settlements rule qa-resources-zone/population",
+      "schema": "schemas/source-rule.schema.json",
+      "ok": true
+    },
+    {
+      "document": "settlements source qa-resources-spawner",
+      "schema": "schemas/source.schema.json",
+      "ok": true
+    },
+    {
+      "document": "settlements rule qa-resources-spawner/population",
+      "schema": "schemas/source-rule.schema.json",
+      "ok": true
+    },
+    {
+      "document": "settlements source qa-flora-zone",
+      "schema": "schemas/source.schema.json",
+      "ok": true
+    },
+    {
+      "document": "settlements rule qa-flora-zone/population",
+      "schema": "schemas/source-rule.schema.json",
+      "ok": true
+    },
+    {
+      "document": "settlements source qa-flora-spawner",
+      "schema": "schemas/source.schema.json",
+      "ok": true
+    },
+    {
+      "document": "settlements rule qa-flora-spawner/population",
+      "schema": "schemas/source-rule.schema.json",
+      "ok": true
+    },
+    {
+      "document": "settlements source qa-fauna-zone",
+      "schema": "schemas/source.schema.json",
+      "ok": true
+    },
+    {
+      "document": "settlements rule qa-fauna-zone/population",
+      "schema": "schemas/source-rule.schema.json",
+      "ok": true
+    },
+    {
+      "document": "settlements source qa-fauna-spawner",
+      "schema": "schemas/source.schema.json",
+      "ok": true
+    },
+    {
+      "document": "settlements rule qa-fauna-spawner/population",
+      "schema": "schemas/source-rule.schema.json",
+      "ok": true
+    },
+    {
+      "document": "settlements source qa-events-zone",
+      "schema": "schemas/source.schema.json",
+      "ok": true
+    },
+    {
+      "document": "settlements rule qa-events-zone/population",
+      "schema": "schemas/source-rule.schema.json",
+      "ok": true
+    },
+    {
+      "document": "settlements source qa-events-spawner",
+      "schema": "schemas/source.schema.json",
+      "ok": true
+    },
+    {
+      "document": "settlements rule qa-events-spawner/population",
+      "schema": "schemas/source-rule.schema.json",
+      "ok": true
+    },
+    {
+      "document": "settlements source src-fe514c6e",
+      "schema": "schemas/source.schema.json",
+      "ok": true
+    },
+    {
+      "document": "settlements rule src-fe514c6e/population",
+      "schema": "schemas/source-rule.schema.json",
+      "ok": true
+    },
+    {
+      "document": "settlements source src-6c0831f4",
+      "schema": "schemas/source.schema.json",
+      "ok": true
+    },
+    {
+      "document": "settlements rule src-6c0831f4/population",
+      "schema": "schemas/source-rule.schema.json",
+      "ok": true
+    },
+    {
+      "document": "landscape recipe",
+      "schema": "schemas/recipe.schema.json",
+      "ok": true
+    },
+    {
+      "document": "landscape project",
+      "schema": "schemas/project.schema.json",
+      "ok": true
+    },
+    {
+      "document": "landscape raster",
+      "schema": "schemas/raster.schema.json",
+      "ok": true
+    },
+    {
+      "document": "landscape context",
+      "schema": "schemas/project-context.schema.json",
+      "ok": true
+    },
+    {
+      "document": "landscape export request project",
+      "schema": "schemas/export-request.schema.json",
+      "ok": true
+    },
+    {
+      "document": "landscape export request recipe",
+      "schema": "schemas/export-request.schema.json",
+      "ok": true
+    },
+    {
+      "document": "landscape export request runtime",
+      "schema": "schemas/export-request.schema.json",
+      "ok": true
+    },
+    {
+      "document": "landscape export request llm-context",
+      "schema": "schemas/export-request.schema.json",
+      "ok": true
+    },
+    {
+      "document": "landscape native",
+      "schema": "engine/schemas/atlas.schema.json",
+      "ok": true
+    },
+    {
+      "document": "landscape tiles",
+      "schema": "engine/schemas/atlas-tiles.schema.json",
+      "ok": true
+    },
+    {
+      "document": "landscape authored project",
+      "schema": "schemas/project.schema.json",
+      "ok": true
+    },
+    {
+      "document": "landscape authored runtime",
+      "schema": "schemas/runtime.schema.json",
+      "ok": true
+    },
+    {
+      "document": "landscape authored state",
+      "schema": "schemas/spawn-state.schema.json",
+      "ok": true
+    },
+    {
+      "document": "landscape authored plan",
+      "schema": "schemas/spawn-plan.schema.json",
+      "ok": true
+    },
+    {
+      "document": "landscape authored distribution-preview",
+      "schema": "schemas/distribution-preview.schema.json",
+      "ok": true
+    },
+    {
+      "document": "landscape authored scene",
+      "schema": "schemas/content-scene.schema.json",
+      "ok": true
+    },
+    {
+      "document": "landscape authored context",
+      "schema": "schemas/project-context.schema.json",
+      "ok": true
+    },
+    {
+      "document": "landscape source preview",
+      "schema": "schemas/source-preview.schema.json",
+      "ok": true
+    },
+    {
+      "document": "landscape distribution request",
+      "schema": "schemas/distribution-request.schema.json",
+      "ok": true
+    },
+    {
+      "document": "landscape source qa-objects-zone",
+      "schema": "schemas/source.schema.json",
+      "ok": true
+    },
+    {
+      "document": "landscape rule qa-objects-zone/population",
+      "schema": "schemas/source-rule.schema.json",
+      "ok": true
+    },
+    {
+      "document": "landscape source qa-objects-spawner",
+      "schema": "schemas/source.schema.json",
+      "ok": true
+    },
+    {
+      "document": "landscape rule qa-objects-spawner/population",
+      "schema": "schemas/source-rule.schema.json",
+      "ok": true
+    },
+    {
+      "document": "landscape source qa-items-zone",
+      "schema": "schemas/source.schema.json",
+      "ok": true
+    },
+    {
+      "document": "landscape rule qa-items-zone/population",
+      "schema": "schemas/source-rule.schema.json",
+      "ok": true
+    },
+    {
+      "document": "landscape source qa-items-spawner",
+      "schema": "schemas/source.schema.json",
+      "ok": true
+    },
+    {
+      "document": "landscape rule qa-items-spawner/population",
+      "schema": "schemas/source-rule.schema.json",
+      "ok": true
+    },
+    {
+      "document": "landscape source qa-resources-zone",
+      "schema": "schemas/source.schema.json",
+      "ok": true
+    },
+    {
+      "document": "landscape rule qa-resources-zone/population",
+      "schema": "schemas/source-rule.schema.json",
+      "ok": true
+    },
+    {
+      "document": "landscape source qa-resources-spawner",
+      "schema": "schemas/source.schema.json",
+      "ok": true
+    },
+    {
+      "document": "landscape rule qa-resources-spawner/population",
+      "schema": "schemas/source-rule.schema.json",
+      "ok": true
+    },
+    {
+      "document": "landscape source qa-flora-zone",
+      "schema": "schemas/source.schema.json",
+      "ok": true
+    },
+    {
+      "document": "landscape rule qa-flora-zone/population",
+      "schema": "schemas/source-rule.schema.json",
+      "ok": true
+    },
+    {
+      "document": "landscape source qa-flora-spawner",
+      "schema": "schemas/source.schema.json",
+      "ok": true
+    },
+    {
+      "document": "landscape rule qa-flora-spawner/population",
+      "schema": "schemas/source-rule.schema.json",
+      "ok": true
+    },
+    {
+      "document": "landscape source qa-fauna-zone",
+      "schema": "schemas/source.schema.json",
+      "ok": true
+    },
+    {
+      "document": "landscape rule qa-fauna-zone/population",
+      "schema": "schemas/source-rule.schema.json",
+      "ok": true
+    },
+    {
+      "document": "landscape source qa-fauna-spawner",
+      "schema": "schemas/source.schema.json",
+      "ok": true
+    },
+    {
+      "document": "landscape rule qa-fauna-spawner/population",
+      "schema": "schemas/source-rule.schema.json",
+      "ok": true
+    },
+    {
+      "document": "landscape source qa-events-zone",
+      "schema": "schemas/source.schema.json",
+      "ok": true
+    },
+    {
+      "document": "landscape rule qa-events-zone/population",
+      "schema": "schemas/source-rule.schema.json",
+      "ok": true
+    },
+    {
+      "document": "landscape source qa-events-spawner",
+      "schema": "schemas/source.schema.json",
+      "ok": true
+    },
+    {
+      "document": "landscape rule qa-events-spawner/population",
+      "schema": "schemas/source-rule.schema.json",
+      "ok": true
+    },
+    {
+      "document": "landscape source src-44861d5f",
+      "schema": "schemas/source.schema.json",
+      "ok": true
+    },
+    {
+      "document": "landscape rule src-44861d5f/population",
+      "schema": "schemas/source-rule.schema.json",
+      "ok": true
+    },
+    {
+      "document": "landscape source src-84910f7b",
+      "schema": "schemas/source.schema.json",
+      "ok": true
+    },
+    {
+      "document": "landscape rule src-84910f7b/population",
+      "schema": "schemas/source-rule.schema.json",
+      "ok": true
+    },
+    {
+      "document": "hexlandscape recipe",
+      "schema": "schemas/recipe.schema.json",
+      "ok": true
+    },
+    {
+      "document": "hexlandscape project",
+      "schema": "schemas/project.schema.json",
+      "ok": true
+    },
+    {
+      "document": "hexlandscape raster",
+      "schema": "schemas/raster.schema.json",
+      "ok": true
+    },
+    {
+      "document": "hexlandscape context",
+      "schema": "schemas/project-context.schema.json",
+      "ok": true
+    },
+    {
+      "document": "hexlandscape export request project",
+      "schema": "schemas/export-request.schema.json",
+      "ok": true
+    },
+    {
+      "document": "hexlandscape export request recipe",
+      "schema": "schemas/export-request.schema.json",
+      "ok": true
+    },
+    {
+      "document": "hexlandscape export request runtime",
+      "schema": "schemas/export-request.schema.json",
+      "ok": true
+    },
+    {
+      "document": "hexlandscape export request llm-context",
+      "schema": "schemas/export-request.schema.json",
+      "ok": true
+    },
+    {
+      "document": "hexlandscape native",
+      "schema": "engine/schemas/atlas.schema.json",
+      "ok": true
+    },
+    {
+      "document": "hexlandscape tiles",
+      "schema": "engine/schemas/atlas-tiles.schema.json",
+      "ok": true
+    },
+    {
+      "document": "hexlandscape authored project",
+      "schema": "schemas/project.schema.json",
+      "ok": true
+    },
+    {
+      "document": "hexlandscape authored runtime",
+      "schema": "schemas/runtime.schema.json",
+      "ok": true
+    },
+    {
+      "document": "hexlandscape authored state",
+      "schema": "schemas/spawn-state.schema.json",
+      "ok": true
+    },
+    {
+      "document": "hexlandscape authored plan",
+      "schema": "schemas/spawn-plan.schema.json",
+      "ok": true
+    },
+    {
+      "document": "hexlandscape authored distribution-preview",
+      "schema": "schemas/distribution-preview.schema.json",
+      "ok": true
+    },
+    {
+      "document": "hexlandscape authored scene",
+      "schema": "schemas/content-scene.schema.json",
+      "ok": true
+    },
+    {
+      "document": "hexlandscape authored context",
+      "schema": "schemas/project-context.schema.json",
+      "ok": true
+    },
+    {
+      "document": "hexlandscape source preview",
+      "schema": "schemas/source-preview.schema.json",
+      "ok": true
+    },
+    {
+      "document": "hexlandscape distribution request",
+      "schema": "schemas/distribution-request.schema.json",
+      "ok": true
+    },
+    {
+      "document": "hexlandscape source qa-objects-zone",
+      "schema": "schemas/source.schema.json",
+      "ok": true
+    },
+    {
+      "document": "hexlandscape rule qa-objects-zone/population",
+      "schema": "schemas/source-rule.schema.json",
+      "ok": true
+    },
+    {
+      "document": "hexlandscape source qa-objects-spawner",
+      "schema": "schemas/source.schema.json",
+      "ok": true
+    },
+    {
+      "document": "hexlandscape rule qa-objects-spawner/population",
+      "schema": "schemas/source-rule.schema.json",
+      "ok": true
+    },
+    {
+      "document": "hexlandscape source qa-items-zone",
+      "schema": "schemas/source.schema.json",
+      "ok": true
+    },
+    {
+      "document": "hexlandscape rule qa-items-zone/population",
+      "schema": "schemas/source-rule.schema.json",
+      "ok": true
+    },
+    {
+      "document": "hexlandscape source qa-items-spawner",
+      "schema": "schemas/source.schema.json",
+      "ok": true
+    },
+    {
+      "document": "hexlandscape rule qa-items-spawner/population",
+      "schema": "schemas/source-rule.schema.json",
+      "ok": true
+    },
+    {
+      "document": "hexlandscape source qa-resources-zone",
+      "schema": "schemas/source.schema.json",
+      "ok": true
+    },
+    {
+      "document": "hexlandscape rule qa-resources-zone/population",
+      "schema": "schemas/source-rule.schema.json",
+      "ok": true
+    },
+    {
+      "document": "hexlandscape source qa-resources-spawner",
+      "schema": "schemas/source.schema.json",
+      "ok": true
+    },
+    {
+      "document": "hexlandscape rule qa-resources-spawner/population",
+      "schema": "schemas/source-rule.schema.json",
+      "ok": true
+    },
+    {
+      "document": "hexlandscape source qa-flora-zone",
+      "schema": "schemas/source.schema.json",
+      "ok": true
+    },
+    {
+      "document": "hexlandscape rule qa-flora-zone/population",
+      "schema": "schemas/source-rule.schema.json",
+      "ok": true
+    },
+    {
+      "document": "hexlandscape source qa-flora-spawner",
+      "schema": "schemas/source.schema.json",
+      "ok": true
+    },
+    {
+      "document": "hexlandscape rule qa-flora-spawner/population",
+      "schema": "schemas/source-rule.schema.json",
+      "ok": true
+    },
+    {
+      "document": "hexlandscape source qa-fauna-zone",
+      "schema": "schemas/source.schema.json",
+      "ok": true
+    },
+    {
+      "document": "hexlandscape rule qa-fauna-zone/population",
+      "schema": "schemas/source-rule.schema.json",
+      "ok": true
+    },
+    {
+      "document": "hexlandscape source qa-fauna-spawner",
+      "schema": "schemas/source.schema.json",
+      "ok": true
+    },
+    {
+      "document": "hexlandscape rule qa-fauna-spawner/population",
+      "schema": "schemas/source-rule.schema.json",
+      "ok": true
+    },
+    {
+      "document": "hexlandscape source qa-events-zone",
+      "schema": "schemas/source.schema.json",
+      "ok": true
+    },
+    {
+      "document": "hexlandscape rule qa-events-zone/population",
+      "schema": "schemas/source-rule.schema.json",
+      "ok": true
+    },
+    {
+      "document": "hexlandscape source qa-events-spawner",
+      "schema": "schemas/source.schema.json",
+      "ok": true
+    },
+    {
+      "document": "hexlandscape rule qa-events-spawner/population",
+      "schema": "schemas/source-rule.schema.json",
+      "ok": true
+    },
+    {
+      "document": "hexlandscape source src-44861d5f",
+      "schema": "schemas/source.schema.json",
+      "ok": true
+    },
+    {
+      "document": "hexlandscape rule src-44861d5f/population",
+      "schema": "schemas/source-rule.schema.json",
+      "ok": true
+    },
+    {
+      "document": "hexlandscape source src-84910f7b",
+      "schema": "schemas/source.schema.json",
+      "ok": true
+    },
+    {
+      "document": "hexlandscape rule src-84910f7b/population",
+      "schema": "schemas/source-rule.schema.json",
+      "ok": true
+    },
+    {
+      "document": "paired project",
+      "schema": "schemas/project.schema.json",
+      "ok": true
+    },
+    {
+      "document": "paired runtime",
+      "schema": "schemas/runtime.schema.json",
+      "ok": true
+    },
+    {
+      "document": "paired state",
+      "schema": "schemas/spawn-state.schema.json",
+      "ok": true
+    },
+    {
+      "document": "paired transition",
+      "schema": "schemas/transition.schema.json",
+      "ok": true
+    },
+    {
+      "document": "automatic project",
+      "schema": "schemas/project.schema.json",
+      "ok": true
+    },
+    {
+      "document": "automatic runtime",
+      "schema": "schemas/runtime.schema.json",
+      "ok": true
+    },
+    {
+      "document": "isolated working session",
+      "schema": "schemas/working-session.schema.json",
+      "ok": true
+    }
+  ]
+}

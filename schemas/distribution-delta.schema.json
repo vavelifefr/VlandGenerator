@@ -1,0 +1,51 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://vland.invalid/schemas/distribution-delta.schema.json",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "request": {
+      "$ref": "distribution-request.schema.json"
+    },
+    "sceneFingerprint": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 64
+    },
+    "removeIds": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 64,
+        "pattern": "^[a-zA-Z][a-zA-Z0-9_-]{0,63}$",
+        "not": {
+          "enum": [
+            "__proto__",
+            "prototype",
+            "constructor"
+          ]
+        }
+      },
+      "maxItems": 256,
+      "uniqueItems": true
+    },
+    "sources": {
+      "type": "array",
+      "items": {
+        "$ref": "source.schema.json"
+      },
+      "maxItems": 256
+    },
+    "report": {
+      "type": "object"
+    }
+  },
+  "required": [
+    "request",
+    "sceneFingerprint",
+    "removeIds",
+    "sources",
+    "report"
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "ok": true,
+  "nominalSeedThresholdPercent": 2,
+  "previousThresholdPercent": 50,
+  "sample": [
+    {
+      "kind": "square",
+      "sampledSeeds": 100,
+      "parallelSeeds": [
+        63
+      ],
+      "parallelPercent": 1,
+      "seed7TriangleArea": 0.11327597403553928
+    },
+    {
+      "kind": "hex",
+      "sampledSeeds": 100,
+      "parallelSeeds": [
+        63
+      ],
+      "parallelPercent": 1,
+      "seed7TriangleArea": 0.11279026891400501
+    }
+  ],
+  "landPercent": 75,
+  "landComponents": 3,
+  "seaComponents": 1,
+  "classification": "centroid triangle area below0.06; measured on generated100x100 masks",
+  "nodeReport": "evidence/island-layout-rarity-tests.txt",
+  "tddRed": "evidence/island-layout-rarity-red.txt"
+}

@@ -1,0 +1,99 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://vland.invalid/schemas/source-preview.schema.json",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "schema": {
+      "const": "vland.source.preview"
+    },
+    "schemaVersion": {
+      "const": 4
+    },
+    "projectChecksum": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 64
+    },
+    "sourceId": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 64,
+      "pattern": "^[a-zA-Z][a-zA-Z0-9_-]{0,63}$",
+      "not": {
+        "enum": [
+          "__proto__",
+          "prototype",
+          "constructor"
+        ]
+      }
+    },
+    "analysis": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "sourceId": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 64,
+          "pattern": "^[a-zA-Z][a-zA-Z0-9_-]{0,63}$",
+          "not": {
+            "enum": [
+              "__proto__",
+              "prototype",
+              "constructor"
+            ]
+          }
+        },
+        "layerId": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 64,
+          "pattern": "^[a-zA-Z][a-zA-Z0-9_-]{0,63}$",
+          "not": {
+            "enum": [
+              "__proto__",
+              "prototype",
+              "constructor"
+            ]
+          }
+        },
+        "area": {
+          "$ref": "mask.schema.json"
+        },
+        "eligibleMask": {
+          "$ref": "mask.schema.json"
+        },
+        "rules": {
+          "type": "array",
+          "items": {
+            "type": "object"
+          },
+          "maxItems": 16
+        }
+      },
+      "required": [
+        "sourceId",
+        "layerId",
+        "area",
+        "eligibleMask",
+        "rules"
+      ]
+    },
+    "plan": {
+      "$ref": "spawn-plan.schema.json"
+    },
+    "validation": {
+      "type": "object"
+    }
+  },
+  "required": [
+    "schema",
+    "schemaVersion",
+    "projectChecksum",
+    "sourceId",
+    "analysis",
+    "plan",
+    "validation"
+  ]
+}

@@ -1,0 +1,625 @@
+✔ transport settings are strict and friendly/native request roundtrips preserve their units (18.1515ms)
+✔ multiple disjoint optional areas get deterministic protected teleports, while the physical main route remains intact (4738.2266ms)
+✔ each selected automatic type really reaches optional rooms; stairs and lifts cross actual physical layers (7298.7563ms)
+✔ a world proves external access instead of inventing a local stairs jump; altered or absent real landings are rejected (2250.4611ms)
+✔ isolation stays opt-in, zero chance leaves physical passages, and necessary start/exit/boss rooms stay connected (531.6381ms)
+✔ reserved automatic platforms resist blocking edits and changed water invalidates arrival before export (2038.735ms)
+✔ native world content cannot flood automatic arrival rooms or place enemies and mechanisms on transport endpoints (2855.9506ms)
+✔ reordering JSON object properties does not change valid automatic transport settings or pair semantics (1967.0082ms)
+✔ committing an added biome share regenerates once on both grids; typing and invalid input do not (43.5874ms)
+✔ an added share commits independently of pending type edits and respects other pending card budgets (8.1514ms)
+✔ every base biome selection reaches generation on both grids without dropping confirmed or pending cards (406.374ms)
+✔ removing an active biome regenerates on both grids, including pending edits and the last card; UI-only drafts do not (40.5725ms)
+✔ both biome editors default to25percent and cap several drafts and confirmed edits at the remaining budget (8.588ms)
+✔ a new biome uses the remainder below25percent and excludes its own confirmed share when edited (2.6928ms)
+✔ new cards stay UI-only until their own Add, and edits preserve the previously confirmed quota (3.2272ms)
+✔ UI draft restore preserves unconfirmed rows and confirmed edits without changing canonical cards (2.1394ms)
+✔ bounded restore never lets pending UI rows hide existing confirmed cards (1.2162ms)
+✔ newly added biome remains expanded after the recalculation rebuilds its controls (2.3314ms)
+✔ manual mixed disclosure survives reordering and excludes removed or newly introduced IDs (0.249ms)
+✔ all manually collapsed cards remain collapsed and an absent session preference leaves defaults (0.2092ms)
+✔ both real control renderers preserve the newly added card through a recipe refresh (25.2804ms)
+✔ default meadow and forest families use exactly two greens, even with fertile ground and transition metadata (4.092ms)
+✔ dry biomes and geographic boundary bands have exact shared colors in the normal material view (0.4276ms)
+✔ secondary metadata never creates RGB gradients; explicit material and primary biome colors remain exact (0.4094ms)
+✔ biome boundaries create named geographic bands while preserving the interiors on both grids (29.2977ms)
+✔ biome view preserves the shared forest family palette after a manual material change (0.4331ms)
+✔ secondary metadata does not blend the primary named color in shared cell or PNG (13.2465ms)
+✔ an explicit primary biome color remains exact despite secondary blending and solid shading (0.7221ms)
+✔ landscape manual biome override clears only its derived band and preserves the immutable source (2522.9041ms)
+✔ hexlandscape manual biome override clears only its derived band and preserves the immutable source (2205.8549ms)
+✔ coast core width distinguishes repeated thin parallel horns from broad capes (77.9898ms)
+✔ coast opening preserves a straight shore against a dry map border (15.908ms)
+✔ square coast300 7 retains broad capes at a regional scale (468.2466ms)
+✔ square coast300 1 retains broad capes at a regional scale (363.5467ms)
+✔ square coast300 0 retains broad capes at a regional scale (334.4375ms)
+✔ square coast300 29 retains broad capes at a regional scale (379.3962ms)
+✔ hex coast300 7 retains broad capes at a regional scale (336.9202ms)
+✔ hex coast300 1 retains broad capes at a regional scale (294.1376ms)
+✔ hex coast300 0 retains broad capes at a regional scale (345.424ms)
+✔ hex coast300 29 retains broad capes at a regional scale (396.8544ms)
+✔ square coast 870414469 retains broad capes rather than repeated thin horns (78.2554ms)
+✔ square coast 4018650511 retains broad capes rather than repeated thin horns (43.0983ms)
+✔ square coast 742339477 retains broad capes rather than repeated thin horns (48.7645ms)
+✔ square coast 1501711120 retains broad capes rather than repeated thin horns (16.9969ms)
+✔ hex coast 870414469 retains broad capes rather than repeated thin horns (37.3062ms)
+✔ hex coast 4018650511 retains broad capes rather than repeated thin horns (17.0974ms)
+✔ hex coast 742339477 retains broad capes rather than repeated thin horns (28.4218ms)
+✔ hex coast 1501711120 retains broad capes rather than repeated thin horns (19.9985ms)
+✔ regional rhythm distinguishes a repetitive cape comb from one broad natural feature (13.5645ms)
+✔ square coast100 3275713831 has rare regional features rather than a repeating zigzag (172.4802ms)
+✔ square coast128 7 has rare regional features rather than a repeating zigzag (102.0941ms)
+✔ square coast300 7 has rare regional features rather than a repeating zigzag (376.4709ms)
+✔ square coast300 1 has rare regional features rather than a repeating zigzag (403.9451ms)
+✔ square coast300 29 has rare regional features rather than a repeating zigzag (376.8832ms)
+✔ hex coast100 3275713831 has rare regional features rather than a repeating zigzag (160.2192ms)
+✔ hex coast128 7 has rare regional features rather than a repeating zigzag (65.1245ms)
+✔ hex coast300 7 has rare regional features rather than a repeating zigzag (409.9925ms)
+✔ hex coast300 1 has rare regional features rather than a repeating zigzag (369.365ms)
+✔ hex coast300 29 has rare regional features rather than a repeating zigzag (393.5751ms)
+✔ regional bay metrics distinguish deep external inlets from enclosed lakes and pixel jitter (91.2825ms)
+✔ elongation measures regional proportions and topology keeps distinct island components (32.5216ms)
+✔ shore length ignores artificial dry map boundaries (4.8984ms)
+✔ coast has sparse regional features without a repeated zigzag (2736.906ms)
+✔ island erosion adds connected regional inlets beyond the smooth zero-erosion cores (3991.9743ms)
+✔ continent has regional inlets and peninsulas on both coarse scales instead of only smooth lobes (2896.7101ms)
+✔ coastline construction keeps physical topology, fixed edges and biome-card stability at all requested sizes (6995.662ms)
+✔ both landscape pages initially display 128 by 128 in their editable size fields (27.1035ms)
+✔ landscape coverage and shared uniformity controls expose defaults and remain draft edits (25.2104ms)
+✔ generation dimensions remain visible ahead of every collapsible settings group (119.0415ms)
+✔ generation controls move access options under the map while retaining their behavior (23.1146ms)
+✔ all generation settings omit static explanatory prose without hiding functional errors (14.8152ms)
+✔ valid size budgets stay silent and invalid Chunk stacks block generation (30.7014ms)
+✔ landscape pages omit physical layer settings while Chunk keeps them (6.4647ms)
+✔ generated workspace places access after the map and keeps seed directly before generation settings (1.2006ms)
+✔ all sea forms expose erosion between land percentage and uniformity, without applying numeric typing early (42.9084ms)
+✔ generation numeric inputs and biome percentages clamp finite values before publishing (30.7221ms)
+✔ workspace places both legends then visibility then access before transition controls (0.7268ms)
+✔ reported seed has a two-cell passage and a secret gate, with no disconnected room by default (738.6943ms)
+✔ validators reject a missing passage, blocked corridor cell and mismatched door even when a loop provides a bypass (486.3026ms)
+✔ intentional isolation requires the flag and a valid explicit paired link; all navigation and export paths follow it (723.3451ms)
+✔ single required room is never isolated; tier requests support isolation without breaking vertical navigation (789.6983ms)
+✔ same distribution group cannot overwrite other categories, kinds, layers or manual sources in any mode (49664.9081ms)
+✔ visual constraints round-trip every catalog definition without losing false or optional values (7.0429ms)
+✔ visual ranges reject blanks, non-numbers and contradictory bounds (0.9938ms)
+✔ context derives actual surface tags, fresh/salt media, geology and metric bounds (2.079ms)
+✔ unsupported selections remain editable and warnings do not broaden restrictions (1.1405ms)
+✔ external map empty tags are not offered and impossible numeric ranges are explained (0.4975ms)
+✔ relief: visual data saves for all six entity and source categories through the real API (1289.9479ms)
+✔ dungeon: visual data saves for all six entity and source categories through the real API (967.491ms)
+✔ tiers: visual data saves for all six entity and source categories through the real API (1230.4333ms)
+✔ sideview: visual data saves for all six entity and source categories through the real API (1486.4407ms)
+✔ caves: visual data saves for all six entity and source categories through the real API (1633.3889ms)
+✔ settlements: visual data saves for all six entity and source categories through the real API (1670.2054ms)
+✔ landscape: visual data saves for all six entity and source categories through the real API (1598.2275ms)
+✔ hexlandscape: visual data saves for all six entity and source categories through the real API (1585.6503ms)
+✔ six categories and data-driven category/type/subtype registry (2.4118ms)
+✔ canonical masks merge overlaps and preserve tile coordinates (1.5532ms)
+✔ polygon rasterization and connected fill are deterministic (1.2386ms)
+✔ zones bind exactly one physical level and reference compatible registry entries (1.6314ms)
+✔ quantity, grouping, deposits and dynamic contracts reject contradictory input (1.7172ms)
+✔ one-shot point creates exactly one entity at its own coordinates, persists spent state after deletion/load (28.8647ms)
+✔ partial acknowledgements consume only accepted items and every retry has unique IDs (25.4902ms)
+✔ cycle fills a target, respects batch and lifetime limits and replaces deaths only when due (37.0276ms)
+✔ event latch, delay, day/night, flags and inactive layers gate actual creation (22.123ms)
+✔ density denominator uses eligible geometry, not currently free slots; hard alive cap includes creatures outside radius (26.3702ms)
+✔ overlapping sources share population caps and source order; invalid shared limits are rejected (33.8466ms)
+✔ blocked exact point is retried without spending a one-shot; unsupported metrics and footprint never bypass validation (31.8962ms)
+✔ same source mechanism supports all six categories and independent module JSON (64.9822ms)
+✔ freshwater/saltwater, flight and occupied channels use the same full-footprint checks (24.7327ms)
+✔ runtime update disables destroyed spawners, preserves counters and rejects stale/tampered plans (14.7608ms)
+✔ external occupancy has unique IDs and object properties; BOM JSON loads without legacy conversion (12.5161ms)
+✔ resource quantities count connected cells, preserve amounts and do not overlap deposits (9.095ms)
+✔ large standalone content scenes export within their own import budget and roundtrip exactly (704.1115ms)
+✔ standalone scene size is enforced for object import and export as well as text (1036.6343ms)
+✔ small scenes stay readable and imports remain independent (0.5583ms)
+✔ workspace/API defaults expose coast erosion50 consistently (23.4803ms)
+✔ native/workspace/context schemas agree on the coast erosion domain (31.3831ms)
+✔ 100 recipes reject out of bounds API values and preserve the chosen erosion in context (5096.2382ms)
+✔ coastErosion is an integer 0–100 canonical setting with default50 (1.7801ms)
+✔ maximum erosion carves deep coherent marine inlets rather than a softly warped potato (7840.4343ms)
+ℹ [{"kind":"square","size":100,"seed":42,"concavity":0.13398150343846338,"bays":3,"deepBayFraction":0.06971780886886413,"seaPenetration":0.25612725110211637,"straight":0.13,"ratio":1.6534090909090908,"thin":0.015466666666666667},{"kind":"square","size":100,"seed":7,"concavity":0.13856270549553784,"bays":3,"deepBayFraction":0.0751526538280883,"seaPenetration":0.325,"straight":0.15,"ratio":1.8011363636363635,"thin":0.007866666666666666},{"kind":"square","size":100,"seed":2026,"concavity":0.14352501168770448,"bays":3,"deepBayFraction":0.09396914446002805,"seaPenetration":0.375,"straight":0.12,"ratio":1.9659090909090908,"thin":0.013066666666666667},{"kind":"square","size":300,"seed":42,"concavity":0.12033112285670967,"bays":5,"deepBayFraction":0.06592186538926136,"seaPenetration":0.2590551069942947,"straight":0.06666666666666667,"ratio":1.7291666666666667,"thin":0.01071111111111111},{"kind":"square","size":300,"seed":7,"concavity":0.12944109702888007,"bays":4,"deepBayFraction":0.06996675670060254,"seaPenetration":0.3356788444692394,"straight":0.07333333333333333,"ratio":1.9242424242424243,"thin":0.017614814814814816},{"kind":"square","size":300,"seed":2026,"concavity":0.15026615969581747,"bays":3,"deepBayFraction":0.09546261089987326,"seaPenetration":0.405,"straight":0.08333333333333333,"ratio":2.0321969696969697,"thin":0.012622222222222222},{"kind":"hex","size":100,"seed":42,"concavity":0.13013147303461226,"bays":3,"deepBayFraction":0.0665414542527502,"seaPenetration":0.28614341844043006,"straight":0.13,"ratio":1.486404833836858,"thin":0.014666666666666666},{"kind":"hex","size":100,"seed":7,"concavity":0.13034130610051065,"bays":3,"deepBayFraction":0.07363611932276269,"seaPenetration":0.33499999999999996,"straight":0.13,"ratio":1.5438066465256797,"thin":0.012},{"kind":"hex","size":100,"seed":2026,"concavity":0.15145118733509233,"bays":4,"deepBayFraction":0.09182058047493405,"seaPenetration":0.43301270189221935,"straight":0.13,"ratio":1.7099697885196374,"thin":0.014533333333333334},{"kind":"hex","size":300,"seed":42,"concavity":0.12005308880308885,"bays":3,"deepBayFraction":0.06485279922779923,"seaPenetration":0.2899056673492408,"straight":0.08666666666666667,"ratio":1.4702320887991926,"thin":0.010088888888888889},{"kind":"hex","size":300,"seed":7,"concavity":0.1313359938054679,"bays":4,"deepBayFraction":0.06885460718327477,"seaPenetration":0.33644529920169464,"straight":0.07333333333333333,"ratio":1.6770938446014128,"thin":0.01859259259259259},{"kind":"hex","size":300,"seed":2026,"concavity":0.1504852954035384,"bays":3,"deepBayFraction":0.09437756856801423,"seaPenetration":0.44833333333333325,"straight":0.07666666666666666,"ratio":1.7679112008072655,"thin":0.016162962962962962}]
+✔ continent erosion increases coherent coastline detail without losing area or physical connectivity at100/300 (9108.4812ms)
+ℹ [{"kind":"square","size":100,"seed":42,"erosion":0,"boundary":352,"boxFill":0.96849173553719,"thinLoss":0.0026666666666666666},{"kind":"square","size":100,"seed":42,"erosion":50,"boundary":428,"boxFill":0.8581235697940504,"thinLoss":0.007066666666666666},{"kind":"square","size":100,"seed":42,"erosion":100,"boundary":688,"boxFill":0.7889753839680202,"thinLoss":0.0128},{"kind":"square","size":100,"seed":2026,"erosion":0,"boundary":352,"boxFill":0.96849173553719,"thinLoss":0.0026666666666666666},{"kind":"square","size":100,"seed":2026,"erosion":50,"boundary":450,"boxFill":0.8488003621548211,"thinLoss":0.0048},{"kind":"square","size":100,"seed":2026,"erosion":100,"boundary":604,"boxFill":0.7889753839680202,"thinLoss":0.005733333333333333},{"kind":"square","size":100,"seed":870414469,"erosion":0,"boundary":352,"boxFill":0.96849173553719,"thinLoss":0.0026666666666666666},{"kind":"square","size":100,"seed":870414469,"erosion":50,"boundary":428,"boxFill":0.8491847826086957,"thinLoss":0.0072},{"kind":"square","size":100,"seed":870414469,"erosion":100,"boundary":592,"boxFill":0.7809246147438568,"thinLoss":0.0064},{"kind":"square","size":300,"seed":42,"erosion":0,"boundary":1056,"boxFill":0.96849173553719,"thinLoss":0.0023703703703703703},{"kind":"square","size":300,"seed":42,"erosion":50,"boundary":1316,"boxFill":0.8582326764144946,"thinLoss":0.00677037037037037},{"kind":"square","size":300,"seed":42,"erosion":100,"boundary":2108,"boxFill":0.7783312577833126,"thinLoss":0.011792592592592592},{"kind":"square","size":300,"seed":2026,"erosion":0,"boundary":1056,"boxFill":0.96849173553719,"thinLoss":0.0023703703703703703},{"kind":"square","size":300,"seed":2026,"erosion":50,"boundary":1358,"boxFill":0.8488110358009633,"thinLoss":0.0037185185185185186},{"kind":"square","size":300,"seed":2026,"erosion":100,"boundary":1854,"boxFill":0.7836080798699792,"thinLoss":0.009481481481481481},{"kind":"square","size":300,"seed":870414469,"erosion":0,"boundary":1056,"boxFill":0.96849173553719,"thinLoss":0.0023703703703703703},{"kind":"square","size":300,"seed":870414469,"erosion":50,"boundary":1316,"boxFill":0.8465648280532772,"thinLoss":0.006859259259259259},{"kind":"square","size":300,"seed":870414469,"erosion":100,"boundary":1874,"boxFill":0.7730187814933578,"thinLoss":0.012696296296296296},{"kind":"hex","size":100,"seed":42,"erosion":0,"boundary":662,"boxFill":0.96849173553719,"thinLoss":0.0008},{"kind":"hex","size":100,"seed":42,"erosion":50,"boundary":742,"boxFill":0.8491847826086957,"thinLoss":0.007733333333333333},{"kind":"hex","size":100,"seed":42,"erosion":100,"boundary":1110,"boxFill":0.7889753839680202,"thinLoss":0.012933333333333333},{"kind":"hex","size":100,"seed":2026,"erosion":0,"boundary":662,"boxFill":0.96849173553719,"thinLoss":0.0008},{"kind":"hex","size":100,"seed":2026,"erosion":50,"boundary":744,"boxFill":0.8488003621548211,"thinLoss":0.004933333333333333},{"kind":"hex","size":100,"seed":2026,"erosion":100,"boundary":950,"boxFill":0.7889753839680202,"thinLoss":0.010933333333333333},{"kind":"hex","size":100,"seed":870414469,"erosion":0,"boundary":662,"boxFill":0.96849173553719,"thinLoss":0.0008},{"kind":"hex","size":100,"seed":870414469,"erosion":50,"boundary":720,"boxFill":0.8585164835164835,"thinLoss":0.008},{"kind":"hex","size":100,"seed":870414469,"erosion":100,"boundary":984,"boxFill":0.7809246147438568,"thinLoss":0.02},{"kind":"hex","size":300,"seed":42,"erosion":0,"boundary":1982,"boxFill":0.9758848022206801,"thinLoss":0.0005333333333333334},{"kind":"hex","size":300,"seed":42,"erosion":50,"boundary":2270,"boxFill":0.8552423186569528,"thinLoss":0.005911111111111111},{"kind":"hex","size":300,"seed":42,"erosion":100,"boundary":3430,"boxFill":0.7757194079249793,"thinLoss":0.014355555555555555},{"kind":"hex","size":300,"seed":2026,"erosion":0,"boundary":1982,"boxFill":0.9758848022206801,"thinLoss":0.0005333333333333334},{"kind":"hex","size":300,"seed":2026,"erosion":50,"boundary":2256,"boxFill":0.8488110358009633,"thinLoss":0.004088888888888889},{"kind":"hex","size":300,"seed":2026,"erosion":100,"boundary":2986,"boxFill":0.7782774126599793,"thinLoss":0.011066666666666667},{"kind":"hex","size":300,"seed":870414469,"erosion":0,"boundary":1982,"boxFill":0.9758848022206801,"thinLoss":0.0005333333333333334},{"kind":"hex","size":300,"seed":870414469,"erosion":50,"boundary":2198,"boxFill":0.8436656334366563,"thinLoss":0.008044444444444444},{"kind":"hex","size":300,"seed":870414469,"erosion":100,"boundary":3074,"boxFill":0.7704160246533128,"thinLoss":0.021125925925925926}]
+✔ erosion affects sea structures and invalidates reused recipe geometry; cards and uniformity never change the sea mask (5538.9492ms)
+✔ generated documentation tables show content without Markdown separator rows (21.4878ms)
+✔ JSON byte limits apply equally to parsed objects and text, including UTF-8 boundaries (3.051ms)
+✔ recipe byte budget cannot be bypassed with individually valid catalog entries in object form (57.4442ms)
+✔ documents that cannot be measured as JSON report a readable JSON error (0.482ms)
+✔ editor shortcuts use existing controls without creating a second map toolbar (2.2113ms)
+✔ new landscape recipes start with one surface and allow 256 square cells per side (218.5226ms)
+✔ Gaussian kernel preserves constants and spreads impulses symmetrically; erosion conserves height (3.93ms)
+✔ Priority-Flood resolves depressions and flats into acyclic, accumulating watersheds (1.0325ms)
+✔ eight atlas presets produce playable shared-XY layers, coherent ores and repeatable snapshots (8613.6683ms)
+✔ content streams do not change natural heights, drainage or cave geometry (271.0562ms)
+✔ validation recalculates navigation/hydrology and rejects resealed contradictory snapshots (660.0096ms)
+✔ full-world path honours footprint limits and live blocked cells (481.3976ms)
+✔ hazards avoid starts, finite spawners and static sites remain reachable (825.1426ms)
+✔ strict zero settings and incompatible/oversized atlas requests are handled honestly (96.3935ms)
+✔ atlas runtime caps finite waves, respects living actors and persists unique event/resource outcomes (806.6515ms)
+✔ maximum atlas area can be exported and imported within24MiB using compact JSON (9324.6917ms)
+✔ semantic categories, genre policies and themes are explicit and deterministic (1008.7488ms)
+✔ four genres and five themes reserve safe objects and keep the obligatory exit reachable (10088.7458ms)
+✔ flood rooms are optional, full-room, with an accessible outside controller and explicit drainage (561.1218ms)
+✔ Metroidvania ability gates use symbolic capabilities with an accessible acquisition fallback (291.3754ms)
+✔ a turn trial is sized to a shortest local path plus 2–3 actions, succeeds and pays only once (305.5638ms)
+✔ timer failure warns, leaves exits open and can be retried; clocks are explicit (1181.2931ms)
+✔ destruction is material-aware, immutable and cannot destroy a pump or execute arbitrary effects (280.4144ms)
+✔ JSON importer validates scenarios independently of a recomputed checksum (2291.2971ms)
+✔ all eight puzzle masks fit their minimum size in four rotations with a 3×3 core (59.8695ms)
+✔ puzzle-only floors keep every entrance, placement area and maximum-three-cell connector (1297.8674ms)
+✔ three physical gates unlock rooms in order and permit backtracking (836.4298ms)
+✔ verified route replays movement, touches walls for kicks, respects body collisions and air resources (164.4222ms)
+✔ dash cannot tunnel through a one-tile solid wall even at maximum speed (32.1019ms)
+✔ re-sealing fake ok, cyclic acquisition, bypassed gates and blocked exits does not pass validation (740.4813ms)
+✔ a survivable deep fall without an escape is rejected even when another route reaches the exit (583.1262ms)
+✔ wide and tall actors keep clearance at shafts, ladders, rewards and gates (2982.7224ms)
+✔ all acquisition orders and initial ability subsets are supported (2168.1958ms)
+✔ new seeds, presets, small levels and 30-room bounds remain deterministic and explicit (6838.6377ms)
+✔ clear invalid physics/order errors instead of silently returning an unproven map (21.5385ms)
+✔ legacy generation and snapshot identity stay exact; v2 exports all semantic layers (1095.681ms)
+✔ side-view levels use physical support, jumps, ladders and connectors1–3 for1–30 rooms (4367.9921ms)
+✔ required jumps are verified by sampled body trajectories, not top-down flood fill (119.1866ms)
+✔ forged collision geometry and insufficient movement cannot borrow a saved ok flag (155.5519ms)
+✔ a30-room vertical chain fits the board and honours configured room bounds (158.0987ms)
+✔ spawner programs reject malformed waves and preserve explicit composition and repetition (3.2627ms)
+✔ lever controllers are deterministic, reachable reservations and validated in JSON (745.9096ms)
+✔ room-entry activates once, ignores outside positions and gives the first wave its interval (213.8169ms)
+✔ timer arms on entry and consumes explicit delay before the first wave interval (199.5808ms)
+✔ lever must be used at its controller and cannot retrigger an active block (158.9176ms)
+✔ a partial wave resumes its exact remaining roster, and once stops after the sequence (166.7217ms)
+✔ five population categories validate quotas, scope and spawner rules (0.6534ms)
+✔ floor quotas, family preferences and room quotas produce deterministic safe placements (422.9099ms)
+✔ shortage is explicit and never forces inhabitants onto protected routes (5.6975ms)
+✔ population JSON is exact and forged placements or summaries fail semantic validation (664.7337ms)
+✔ spawners warn, emit on explicit periods, obey alive/total caps and remain immutable (257.8599ms)
+✔ destroyed, paused and surrounded spawners do not emit; invalid actions are rejected (226.9316ms)
+✔ real-time adapters choose seconds and apply elapsed time without wall clocks (215.6369ms)
+✔ runtime retains natural fields and settlement street/parcel metadata for external applications (780.3367ms)
+✔ terrain traits remain visible data: frozen water has physical support and poisoned ground participates in source rules (248.0028ms)
+✔ independent content uses the same hex neighbourhood, distances, circular zones and fill as physical navigation (2.7001ms)
+✔ natural access reports, weighted types and full landing sizes are independently checked after checksum resealing (218.6641ms)
+✔ geometry stroke is atomic, undo-friendly and independent of native snapshot/content (648.4978ms)
+✔ portable PNG encoder produces lossless 8-bit RGB plus alpha (10.1057ms)
+✔ corridor units survive request, packing, validation and export without a hidden three-cell cap (481.1159ms)
+✔ landform families, ecology-independent ecotones, hydrology and cave parameters have observable deterministic outputs (1350.7558ms)
+✔ natural component access is proven against actual bidirectional links, including after edits (2109.6462ms)
+✔ hex topology has reciprocal six-way neighbours and native water, movement, scene and raster agree (565.8209ms)
+✔ separate settlements provider creates accessible geometry for town and village street families (5608.9069ms)
+✔ explicit exports distinguish editable projects, regeneration recipes, runtime and compact LLM context (1759.7392ms)
+✔ context scopes actual layers/sources and rejects unknown selectors or ambiguous export intent (1274.6638ms)
+✔ a large map produces a bounded context from current edited fields without copying tile arrays (14881.6492ms)
+✔ machine-readable operation descriptions cover the actual API and explain readonly versus returned edits (0.3365ms)
+✔ large author inventories obey the actual download budget and report every omitted entry (3414.6376ms)
+✔ context histograms describe edits while their original source fingerprint stays fixed (953.9423ms)
+✔ export rejects non-string format values instead of silently choosing another document (382.8203ms)
+✔ context marks omitted catalog references inside a fully included source (356.2863ms)
+✔ context reports omitted and shortened validation messages as truncated data (441.9572ms)
+✔ PNG and diagnostics reject corrupt project identity instead of bypassing import checks (253.922ms)
+✔ PNG and diagnostics remain available for an intact project with invalid edited navigation (254.4588ms)
+✔ recipe export rejects a current catalog that cannot fit its recipe import budget (407.3898ms)
+✔ explicit confirmed biome actions start generation; drafts and other edits remain pending (1.2805ms)
+✔ base biome selection immediately generates with and without an existing map (1.0316ms)
+✔ ordinary geometry edits remain pending without a background generation (0.3426ms)
+✔ landscape pages present separate fixed grids while caves and relief retain a grid choice (3.704ms)
+✔ generated home and hex workspace expose the separate editor at canonical Web URLs (11.0835ms)
+✔ published generation schemas distinguish fixed landscape grids from flexible relief/caves (3.9474ms)
+✔ hexlandscape is a separate workspace with independent fixed-grid defaults and natural budgets (11.8073ms)
+✔ landscape modes reject the opposite explicit topology in recipes, generation and project import (320.8874ms)
+✔ omitted topology uses the selected landscape mode without changing the caller recipe (325.3326ms)
+✔ project import checks that a valid atlas snapshot belongs to its fixed-grid workspace (366.2131ms)
+✔ an atlas request without topology has native square semantics and never produces a TypeError on import (231.3564ms)
+✔ hex landscape keeps independent physical layers, shared editing and PNG/runtime roundtrip without implicit population (1163.0067ms)
+✔ caves and relief retain hex topology through the shared natural provider (682.0881ms)
+✔ three parallel island strips are very rare across public seeds on both grids (8737.5856ms)
+ℹ {"islandLayoutFrequency":[{"kind":"square","sampledSeeds":100,"parallelSeeds":[63],"parallelPercent":1,"seed7TriangleArea":0.11327597403553928},{"kind":"hex","sampledSeeds":100,"parallelSeeds":[63],"parallelPercent":1,"seed7TriangleArea":0.11279026891400501}]}
+✔ island water passages vary with seed and include winding layouts without a central three-way junction (868.4375ms)
+ℹ [{"kind":"square","seed":1,"triangleArea":0.11188036096988978,"centerDry":false},{"kind":"square","seed":7,"triangleArea":0.11327597403553928,"centerDry":false},{"kind":"square","seed":29,"triangleArea":0.1122397111720273,"centerDry":false},{"kind":"square","seed":42,"triangleArea":0.11500696736607152,"centerDry":true},{"kind":"square","seed":63,"triangleArea":0.03910553901173979,"centerDry":true},{"kind":"square","seed":71,"triangleArea":0.11206165186474212,"centerDry":true},{"kind":"square","seed":2026,"triangleArea":0.11694162152014327,"centerDry":false},{"kind":"square","seed":870414469,"triangleArea":0.11510421348400982,"centerDry":false},{"kind":"square","seed":4018650511,"triangleArea":0.11700933883633031,"centerDry":true},{"kind":"hex","seed":1,"triangleArea":0.1117946269989397,"centerDry":false},{"kind":"hex","seed":7,"triangleArea":0.11279026891400501,"centerDry":false},{"kind":"hex","seed":29,"triangleArea":0.1125813026557217,"centerDry":false},{"kind":"hex","seed":42,"triangleArea":0.11539537440464388,"centerDry":true},{"kind":"hex","seed":63,"triangleArea":0.03874643525496755,"centerDry":true},{"kind":"hex","seed":71,"triangleArea":0.11189330453501721,"centerDry":true},{"kind":"hex","seed":2026,"triangleArea":0.11784491856958189,"centerDry":false},{"kind":"hex","seed":870414469,"triangleArea":0.11513137044811685,"centerDry":false},{"kind":"hex","seed":4018650511,"triangleArea":0.1176052860587492,"centerDry":true}]
+✔ winding straits include visible wide reaches and narrow passages on both grids100/300 (841.3152ms)
+ℹ [{"kind":"square","size":100,"seed":63,"axis":"horizontal","samples":140,"p10":1,"p50":3,"p90":6,"ratio":6,"range":5},{"kind":"square","size":300,"seed":63,"axis":"horizontal","samples":420,"p10":4,"p50":9,"p90":18,"ratio":4.5,"range":14},{"kind":"hex","size":100,"seed":63,"axis":"horizontal","samples":140,"p10":1,"p50":3,"p90":6,"ratio":6,"range":5},{"kind":"hex","size":300,"seed":63,"axis":"horizontal","samples":420,"p10":4,"p50":9,"p90":18,"ratio":4.5,"range":14}]
+✔ 75percent islands have recessed outer coasts rather than filling three pieces of a rectangular frame (6960.3431ms)
+ℹ [{"kind":"square","size":100,"seed":42,"erosion":50,"boxFill":0.7971938775510204,"sideDepthSpans":[0.08,0.03,0.05,0.11],"meanSideDepthSpan":0.0675},{"kind":"square","size":100,"seed":42,"erosion":100,"boxFill":0.7889753839680202,"sideDepthSpans":[0.09,0.03,0.05,0.12],"meanSideDepthSpan":0.0725},{"kind":"square","size":100,"seed":7,"erosion":50,"boxFill":0.8054123711340206,"sideDepthSpans":[0.13,0.02,0.07,0.03],"meanSideDepthSpan":0.0625},{"kind":"square","size":100,"seed":7,"erosion":100,"boxFill":0.7809246147438568,"sideDepthSpans":[0.14,0.03,0.1,0.04],"meanSideDepthSpan":0.0775},{"kind":"square","size":100,"seed":63,"erosion":50,"boxFill":0.8054123711340206,"sideDepthSpans":[0.1,0.1,0.01,0.02],"meanSideDepthSpan":0.0575},{"kind":"square","size":100,"seed":63,"erosion":100,"boxFill":0.8054123711340206,"sideDepthSpans":[0.09,0.08,0.03,0.02],"meanSideDepthSpan":0.05499999999999999},{"kind":"square","size":300,"seed":42,"erosion":50,"boxFill":0.78630089114101,"sideDepthSpans":[0.08,0.03,0.06,0.11333333333333333],"meanSideDepthSpan":0.07083333333333333},{"kind":"square","size":300,"seed":42,"erosion":100,"boxFill":0.7730364873222016,"sideDepthSpans":[0.09666666666666666,0.03333333333333333,0.05,0.15],"meanSideDepthSpan":0.08249999999999999},{"kind":"square","size":300,"seed":7,"erosion":50,"boxFill":0.802654109589041,"sideDepthSpans":[0.13666666666666666,0.02,0.07,0.043333333333333335],"meanSideDepthSpan":0.0675},{"kind":"square","size":300,"seed":7,"erosion":100,"boxFill":0.778295360206623,"sideDepthSpans":[0.14666666666666667,0.03333333333333333,0.10666666666666667,0.04666666666666667],"meanSideDepthSpan":0.08333333333333334},{"kind":"square","size":300,"seed":63,"erosion":50,"boxFill":0.8081896551724138,"sideDepthSpans":[0.11,0.10666666666666667,0.016666666666666666,0.02666666666666667],"meanSideDepthSpan":0.065},{"kind":"square","size":300,"seed":63,"erosion":100,"boxFill":0.7916681327187642,"sideDepthSpans":[0.09666666666666666,0.08666666666666667,0.04,0.023333333333333334],"meanSideDepthSpan":0.061666666666666675},{"kind":"hex","size":100,"seed":42,"erosion":50,"boxFill":0.7889753839680202,"sideDepthSpans":[0.08,0.03,0.05,0.12],"meanSideDepthSpan":0.07},{"kind":"hex","size":100,"seed":42,"erosion":100,"boxFill":0.7809246147438568,"sideDepthSpans":[0.1,0.02,0.04,0.14],"meanSideDepthSpan":0.07500000000000001},{"kind":"hex","size":100,"seed":7,"erosion":50,"boxFill":0.8055853920515574,"sideDepthSpans":[0.13,0.02,0.07,0.04],"meanSideDepthSpan":0.065},{"kind":"hex","size":100,"seed":7,"erosion":100,"boxFill":0.7809246147438568,"sideDepthSpans":[0.14,0.03,0.11,0.04],"meanSideDepthSpan":0.08},{"kind":"hex","size":100,"seed":63,"erosion":50,"boxFill":0.8138020833333334,"sideDepthSpans":[0.09,0.1,0.02,0.03],"meanSideDepthSpan":0.06},{"kind":"hex","size":100,"seed":63,"erosion":100,"boxFill":0.7889753839680202,"sideDepthSpans":[0.09,0.08,0.04,0.03],"meanSideDepthSpan":0.06},{"kind":"hex","size":300,"seed":42,"erosion":50,"boxFill":0.78630089114101,"sideDepthSpans":[0.08,0.03,0.06333333333333334,0.11333333333333333],"meanSideDepthSpan":0.07166666666666667},{"kind":"hex","size":300,"seed":42,"erosion":100,"boxFill":0.7704160246533128,"sideDepthSpans":[0.09,0.02666666666666667,0.04666666666666667,0.15333333333333332],"meanSideDepthSpan":0.07916666666666666},{"kind":"hex","size":300,"seed":7,"erosion":50,"boxFill":0.7999146757679181,"sideDepthSpans":[0.13666666666666666,0.02,0.07333333333333333,0.04666666666666667],"meanSideDepthSpan":0.06916666666666667},{"kind":"hex","size":300,"seed":7,"erosion":100,"boxFill":0.7756748371082842,"sideDepthSpans":[0.14666666666666667,0.03333333333333333,0.10333333333333333,0.05],"meanSideDepthSpan":0.08333333333333333},{"kind":"hex","size":300,"seed":63,"erosion":50,"boxFill":0.8026159334126041,"sideDepthSpans":[0.11,0.10666666666666667,0.02,0.02666666666666667],"meanSideDepthSpan":0.06583333333333333},{"kind":"hex","size":300,"seed":63,"erosion":100,"boxFill":0.783589886466532,"sideDepthSpans":[0.09,0.08,0.03666666666666667,0.023333333333333334],"meanSideDepthSpan":0.0575}]
+✔ small exports stay readable and preserve Unicode and the document exactly (2.0109ms)
+✔ large exports fit their own import budget without changing data (437.2333ms)
+✔ formatting threshold is based on UTF-8 bytes, not character count (14.9914ms)
+✔ LLM context downloads stay compact even below the general pretty-print threshold (0.3371ms)
+✔ a recipe near 1MiB stays importable when whitespace would exceed its budget (158.1691ms)
+✔ formatting never pushes a document beyond its declared byte budget at the exact boundary (142.4124ms)
+✔ repeatable biome rows remain drafts until per-card Add, then retain repeated types and IDs (30.3927ms)
+✖ per-card Add validates the confirmed budget atomically while invalid drafts do not block Create (4.7516ms)
+✔ request and context schemas expose repeatable percentage cards with bounded IDs (14.0302ms)
+✔ landscape rebuild request requires both source project and full recipe (1.2761ms)
+✖ restoring ten independent UI fields never changes confirmed recipe cards until Add (9.4376ms)
+✔ compact biome settings retain add action and cards without explanatory paragraphs (6.4418ms)
+✔ swamp selects its characteristic geography rather than generic noisy patches (2289.6876ms)
+ℹ {"type":"swamp","kind":"square","size":50,"featureFraction":0.7001394700139469}
+ℹ {"type":"swamp","kind":"square","size":128,"featureFraction":0.8072463768115942}
+ℹ {"type":"swamp","kind":"square","size":300,"featureFraction":0.8330535034698903}
+ℹ {"type":"swamp","kind":"hex","size":50,"featureFraction":0.704323570432357}
+ℹ {"type":"swamp","kind":"hex","size":128,"featureFraction":0.8041407867494824}
+ℹ {"type":"swamp","kind":"hex","size":300,"featureFraction":0.8287254682486381}
+✔ desert selects its characteristic geography rather than generic noisy patches (2269.7301ms)
+ℹ {"type":"desert","kind":"square","size":50,"featureFraction":0.8326666666666668}
+ℹ {"type":"desert","kind":"square","size":128,"featureFraction":0.9535143932458551}
+ℹ {"type":"desert","kind":"square","size":300,"featureFraction":0.9585}
+ℹ {"type":"desert","kind":"hex","size":50,"featureFraction":0.8313333333333334}
+ℹ {"type":"desert","kind":"hex","size":128,"featureFraction":0.9533109551418981}
+ℹ {"type":"desert","kind":"hex","size":300,"featureFraction":0.9585}
+✔ mountains selects its characteristic geography rather than generic noisy patches (1842.4395ms)
+ℹ {"type":"mountains","kind":"square","size":50,"featureFraction":0.6653333333333333}
+ℹ {"type":"mountains","kind":"square","size":128,"featureFraction":0.6371591371591371}
+ℹ {"type":"mountains","kind":"square","size":300,"featureFraction":0.6485555555555556}
+ℹ {"type":"mountains","kind":"hex","size":50,"featureFraction":0.6653333333333333}
+ℹ {"type":"mountains","kind":"hex","size":128,"featureFraction":0.6371591371591371}
+ℹ {"type":"mountains","kind":"hex","size":300,"featureFraction":0.6485555555555556}
+✔ volcanic selects its characteristic geography rather than generic noisy patches (1991.9999ms)
+ℹ {"type":"volcanic","kind":"square","size":50,"featureFraction":0.9933333333333333}
+ℹ {"type":"volcanic","kind":"square","size":128,"featureFraction":0.9877937137625877}
+ℹ {"type":"volcanic","kind":"square","size":300,"featureFraction":0.9880555555555556}
+ℹ {"type":"volcanic","kind":"hex","size":50,"featureFraction":0.9933333333333333}
+ℹ {"type":"volcanic","kind":"hex","size":128,"featureFraction":0.9877937137625877}
+ℹ {"type":"volcanic","kind":"hex","size":300,"featureFraction":0.9880740740740741}
+✔ snow receives the cold high caps before mountain foothills while both exact quotas survive (1578.5514ms)
+✔ all five territories retain area, substantial interiors, determinism and immutable terrain on both grids (14099.9328ms)
+✔ coverage controls normalize canonically and reject noninteger or out-of-range inputs (2.4747ms)
+✔ sea structures meet exact cell quotas and preserve their physical landmasses on both grids (7630.6039ms)
+ℹ 54 exact coverage/connectivity cases
+✔ high-resolution island bays cannot trap sea cells and silently increase the actual land percentage (988.9286ms)
+✔ user seed regressions preserve the requested observable ocean area after freshwater routing (771.3948ms)
+✔ coverage is immutable, deterministic and independent of cards and uniformity; land stays all land (1215.4266ms)
+✔ impossible coverage rejects explicitly instead of clamping the requested sea fraction (2.1154ms)
+✔ landscape API defaults generate a 128 by 128 surface on both grids (3120.4212ms)
+✔ the landscape size change does not alter Chunk, relief or native defaults (5.5176ms)
+✔ native landscape normalization is strict, canonical before preset merge, immutable and idempotent (11.6476ms)
+✔ all 28 landscape choices keep underlying sea geometry, base identity and valid hydrology on small square and hex surfaces (1499.1245ms)
+✔ real atlases remain valid for every structure and biome with their own normalized requests (7503.7931ms)
+✔ profile generation keeps underground physical layers linked to their actual surface and deterministic (423.4528ms)
+✔ profile-free native generation keeps its pre-integration checksum unchanged (126.2209ms)
+✔ landscape biome cards normalize strictly, immutably and preserve stable repeated-card order (3.1747ms)
+✔ explicit local landscape biome identity retains water and steep-slope exceptions (0.8816ms)
+✖ seed42 has a resolved sea-connected bay at 50 and 300 on square and hex landmasses (1852.8579ms)
+ℹ [{"size":50,"kind":"square","structure":"islands","elapsedMs":37,"parts":[{"cells":211,"bayDepth":0.5266851623825876,"hullDeficit":0.09051724137931039,"aspect":0.9444444444444444,"elongation":1.0861454100479817},{"cells":131,"bayDepth":0.5,"hullDeficit":0.06428571428571428,"aspect":0.8571428571428571,"elongation":1.2088540429917933},{"cells":283,"bayDepth":1.8407159732336889,"hullDeficit":0.15396113602391626,"aspect":2.5384615384615383,"elongation":3.028432596458968}]},{"size":50,"kind":"square","structure":"continent","elapsedMs":32,"parts":[{"cells":1125,"bayDepth":5.5,"hullDeficit":0.1207502930832356,"aspect":1.1111111111111112,"elongation":1.1538259849780048}]},{"size":50,"kind":"hex","structure":"islands","elapsedMs":28,"parts":[{"cells":209,"bayDepth":0.43386091563731255,"hullDeficit":0.06557377049180335,"aspect":0.9722222222222222,"elongation":1.0990338979517424},{"cells":135,"bayDepth":0.33167906340332975,"hullDeficit":0.07322654462242573,"aspect":0.9285714285714286,"elongation":1.2148514750037787},{"cells":281,"bayDepth":1.4738435096602045,"hullDeficit":0.13671274961597513,"aspect":2.75,"elongation":3.1197280114438226}]},{"size":50,"kind":"hex","structure":"continent","elapsedMs":23,"parts":[{"cells":1125,"bayDepth":6.265413709208044,"hullDeficit":0.13261372397841176,"aspect":1.1527777777777777,"elongation":1.1623189239523708}]},{"size":300,"kind":"square","structure":"islands","elapsedMs":421,"parts":[{"cells":7544,"bayDepth":3.1126336497510705,"hullDeficit":0.03529411764705881,"aspect":0.9902912621359223,"elongation":1.0526633026909065},{"cells":4669,"bayDepth":3.626447793020826,"hullDeficit":0.0465591178272412,"aspect":0.9285714285714286,"elongation":1.1711448550257477},{"cells":10287,"bayDepth":12.490202486549222,"hullDeficit":0.13032083527074434,"aspect":2.5454545454545454,"elongation":3.0754533850252908}]},{"size":300,"kind":"square","structure":"continent","elapsedMs":493,"parts":[{"cells":40500,"bayDepth":40.063274680025785,"hullDeficit":0.11968960907697823,"aspect":1.128440366972477,"elongation":1.1776123520638675}]},{"size":300,"kind":"hex","structure":"islands","elapsedMs":293,"parts":[{"cells":7555,"bayDepth":2.870785707666995,"hullDeficit":0.032588513989372236,"aspect":0.9951456310679612,"elongation":1.0516366728582256},{"cells":4667,"bayDepth":3.8239667359958167,"hullDeficit":0.04583091968514563,"aspect":0.9176470588235294,"elongation":1.170660356237188},{"cells":10278,"bayDepth":12.640754089144464,"hullDeficit":0.13092251754559048,"aspect":2.5454545454545454,"elongation":3.080364954203081}]},{"size":300,"kind":"hex","structure":"continent","elapsedMs":523,"parts":[{"cells":40500,"bayDepth":41.02131064766966,"hullDeficit":0.12036517514868683,"aspect":1.1382488479262673,"elongation":1.1809614244166835}]}]
+✔ irregular shapes preserve topology, determinism and bounded 300 preparation for all requested scales (3639.7514ms)
+ℹ [{"size":50,"kind":"square","structure":"islands","elapsedMs":24},{"size":50,"kind":"square","structure":"continent","elapsedMs":13},{"size":50,"kind":"square","structure":"coast","elapsedMs":9},{"size":50,"kind":"hex","structure":"islands","elapsedMs":18},{"size":50,"kind":"hex","structure":"continent","elapsedMs":10},{"size":50,"kind":"hex","structure":"coast","elapsedMs":7},{"size":100,"kind":"square","structure":"islands","elapsedMs":63},{"size":100,"kind":"square","structure":"continent","elapsedMs":44},{"size":100,"kind":"square","structure":"coast","elapsedMs":23},{"size":100,"kind":"hex","structure":"islands","elapsedMs":43},{"size":100,"kind":"hex","structure":"continent","elapsedMs":41},{"size":100,"kind":"hex","structure":"coast","elapsedMs":22},{"size":200,"kind":"square","structure":"islands","elapsedMs":181},{"size":200,"kind":"square","structure":"continent","elapsedMs":165},{"size":200,"kind":"square","structure":"coast","elapsedMs":79},{"size":200,"kind":"hex","structure":"islands","elapsedMs":159},{"size":200,"kind":"hex","structure":"continent","elapsedMs":173},{"size":200,"kind":"hex","structure":"coast","elapsedMs":104},{"size":300,"kind":"square","structure":"islands","elapsedMs":356},{"size":300,"kind":"square","structure":"continent","elapsedMs":408},{"size":300,"kind":"square","structure":"coast","elapsedMs":278},{"size":300,"kind":"hex","structure":"islands","elapsedMs":358},{"size":300,"kind":"hex","structure":"continent","elapsedMs":426},{"size":300,"kind":"hex","structure":"coast","elapsedMs":244}]
+✖ actual app seeds include an elongated island instead of three similar radial silhouettes (1413.7251ms)
+ℹ [{"mode":"landscape","seed":42,"shapeSeed":93344066,"elongation":[1.3038630847212802,1.1874575076601437,1.8543472390474094]},{"mode":"hexlandscape","seed":42,"shapeSeed":93344066,"elongation":[1.3084844883467865,1.1847312857058212,1.8553895704931496]},{"mode":"landscape","seed":7,"shapeSeed":1683744565,"elongation":[1.4033492573863788,1.701715437953051,1.8186199128083709]},{"mode":"hexlandscape","seed":7,"shapeSeed":1683744565,"elongation":[1.4085196342961326,1.709770906009413,1.8184457607400644]}]
+✖ coastline silhouettes stay deterministic under explicit coverage, including feasible16-cell islands (4.6945ms)
+✔ individual underground settings retain depth, style and independent generation in the public project (1095.1021ms)
+✔ layer settings reject missing layers, unknown fields, invalid cave options and reversed depths (2.0801ms)
+✔ changing the second underground layer preserves surface fields and determinism (361.4197ms)
+✔ individual layer settings have matching JS, HTTP and CLI generation and validation (2070.928ms)
+✔ custom physical depths keep native deposit strata integral and within the declared schema (174.2466ms)
+✔ new landscape defaults contain independent explicit structure and biome choices without competing base controls (27.9697ms)
+✔ landscape recipes reject incomplete, unknown or malformed profiles before generation (41.9251ms)
+✔ profiles are scoped to landscape workspaces rather than changing other generators (62.9699ms)
+✔ landscape profile survives JSON export/import, context and runtime while edits leave its source immutable (1212.3454ms)
+✔ changing profile metadata without rebuilding is diagnosed and blocks runtime export (465.3562ms)
+✔ native caves and relief stay deterministic and profile-free with valid physical layer transport (14834.2711ms)
+✔ every published structure and biome choice passes recipe validation in both landscape workspaces (57.664ms)
+✔ landscape forms expose four structures and seven biomes as required choices without competing controls (2.0145ms)
+✔ landscape selection has exactly four structures and seven explicit mandatory base biomes (3.3581ms)
+✔ underlying land, coast, islands and continent have their promised sea geometry on square and hex grids (465.0401ms)
+✔ all base biomes retain structure guarantees on the same geographic skeleton (172.0413ms)
+✔ profile fields are deterministic, seed-sensitive, finite on a large rectangular hex map, and do not mutate requests (384.2982ms)
+✔ base biome territories retain natural climatic subtypes, water and steep-slope contexts (0.5146ms)
+✔ broad Surface climates retain profile tendencies rather than forcing a uniform climate at every cell (8.3885ms)
+✔ volcanic profile produces a cone rim above its crater and uses existing basalt ground (0.2527ms)
+✔ profile elevation feeds existing hydrology with a sea frame while allowing freshwater (11.3676ms)
+✔ landscape-rebuild has one explicit public JS, HTTP and CLI job contract (1521.4604ms)
+✔ landscape: rebuild results agree across JS, HTTP and CLI (1417.6435ms)
+✔ hexlandscape: rebuild results agree across JS, HTTP and CLI (1539.3301ms)
+✔ landscape: rebuild retains authored catalog, sources and cell overrides atomically (598.4131ms)
+✔ hexlandscape: rebuild retains authored catalog, sources and cell overrides atomically (594.339ms)
+✔ automatic rebuild refuses unrelated pending generation, seed and mode changes (285.9773ms)
+✔ rebuild validates the entire submitted recipe instead of silently ignoring unknown fields (132.8073ms)
+✔ conflicting preserved overrides cancel rebuild instead of silently dropping edits (308.7879ms)
+✔ rebuild preserves an authored transport pair and its exact bound source points (520.5326ms)
+✔ rapid biome changes rebuild only the latest draft and commit once (1.5238ms)
+✔ undo, import or a manual action can cancel the queued rebuild (0.1932ms)
+✔ a finished worker cannot overwrite a project edited while it was running (0.2972ms)
+✔ a failed rebuild reports the conflict without applying anything (1.9377ms)
+✔ square geographic territories spend requested percentages without changing relief or wetting a new crater (79.539ms)
+✔ hex geographic territories spend requested percentages without changing relief or wetting a new crater (58.2006ms)
+✔ empty and zero-percent cards change no fields; increasing map size grows requested territories (100.2908ms)
+✔ repeated cards combine percentages while independent stable IDs influence a shared continuous field (48.1747ms)
+✔ one biome can follow several broad natural wet belts instead of being forced into one seed blob (42.1145ms)
+✔ square real surface uses chosen biome families and keeps water, material and acyclic flow consistent (87.1309ms)
+✔ hex real surface uses chosen biome families and keeps water, material and acyclic flow consistent (66.9257ms)
+✔ small islands retain every selected territory according to final dry land quotas (156.9036ms)
+✔ landscape recipes default to independent empty biome-card arrays (22.4034ms)
+✔ repeatable biome cards normalize without mutating order, IDs or area shares (5.7189ms)
+✔ atlas sides 50,100,200,300 are accepted while side 301 and oversized physical stacks are rejected (5.8973ms)
+✔ published request/context schemas describe percentage cards and repeated types (10.4399ms)
+✔ native output schemas cover a 300-square cell index and the no-sea distance sentinel (2.4199ms)
+✔ recipe/native/context preserve repeated card identities and percentages; changed shares are stale (718.5734ms)
+✔ changing the main biome retains repeatable cards and zero-percent drafts (16.1359ms)
+✔ profile river heads begin in high watersheds and converge into tributaries on both grids (106.9853ms)
+✔ larger profile maps permit more high tributaries while fifty-cell maps keep a small network (542.638ms)
+✔ selected profile channels retain the original acyclic drainage and conditioned wet heads (74.0326ms)
+✔ short lowland arms rejoin a lower existing channel within the configured width and reject a steep bank (414.0495ms)
+✔ real fifty to three-hundred maps retain valid hydrology and river-only content eligibility (24662.6405ms)
+✔ profile streams reach their dry boundary outlet on both grids without changing the flow graph (152.5371ms)
+✔ removing undersized lakes retains strong river channels, rather than a dry gap or a restored lake (162.2063ms)
+✔ profile width one is exactly the strong river core, without an automatic extra bank (8.954ms)
+✔ profile widening stays within width minus one neighbor layers and never replaces sea or retained lakes (17.6042ms)
+✔ profile rivers zero stays river free through lake filtering and widening, retaining ocean and large lakes (15.6801ms)
+✔ native requests without a landscape profile retain their observed water output exactly (19.5703ms)
+✔ real profile river corrections preserve native navigation and access in both workspaces (1054.6731ms)
+✔ profile freshwater fills to a shared conditioned head while retaining sea, masks, flow and width (12.8318ms)
+✔ profile water levels do not rise along wet flow through widened rivers, lake exits or sea contacts (3.1536ms)
+✔ profile flat bed one retains a positive freshwater depth without capping its internal head at one (6.9472ms)
+✔ normalized profile matrix keeps final wet flow levels monotone, depths bounded and navigation accessible (10747.0864ms)
+✖ generated bridge water level uses the immutable bed rather than its navigation deck elevation (37.1874ms)
+✔ both landscape workspaces advertise canonical area and uniformity defaults (28.3547ms)
+✔ published native and workspace schemas describe the same landscape settings (7.7385ms)
+✔ LLM context schema preserves land coverage and shared uniformity (1.4438ms)
+✔ the published display palette accepts the newly generated surface biomes (10.7558ms)
+✔ square shallows follow real depth near shores and offshore banks, without creating land or filling deep water (4.2243ms)
+✔ hex shallows follow real depth near shores and offshore banks, without creating land or filling deep water (1.5196ms)
+✔ landscape automatic water biome survives shared colors, scene and runtime, with the same75percent geological land mask (1570.3129ms)
+✔ hexlandscape automatic water biome survives shared colors, scene and runtime, with the same75percent geological land mask (1326.1342ms)
+✔ 100 and300 square/hex island surfaces preserve three separate75percent land masses with a depth-derived shallow sea (2690.5559ms)
+✔ hex16x256 pure seed2026 builds three connected islands without a one-cell satellite (57.7217ms)
+✔ native hex16x256 seed11 heightmap preserves the three island cores before navigation repairs (520.6715ms)
+✔ coast hex16x256 seed125 keeps shoreline land connected without a detached cell (53.0707ms)
+✔ coast remains one mainland with fully dry and sea opposite edges across 768 narrow-map cases (6187.264ms)
+✔ seed changes continent placement and aspect, and rotates the three-island composition (4682.9088ms)
+ℹ {"seedRange":"0..63","size":"64x64","reports":[{"kind":"square","structure":"islands","uniqueMasks":64,"centerX":[10.982905982905983,51.44476744186046],"centerY":[10.294736842105262,51.54492753623188],"aspect":[0.2857142857142857,2.6875]},{"kind":"square","structure":"continent","uniqueMasks":64,"centerX":[27.964188822571895,34.882799782962564],"centerY":[27.67173087357569,35.925122083559415],"aspect":[0.8363636363636363,1.2222222222222223]},{"kind":"hex","structure":"islands","uniqueMasks":64,"centerX":[11.692307692307692,51.74418604651163],"centerY":[10.312280701754386,51.60289855072464],"aspect":[0.30952380952380953,2.7333333333333334]},{"kind":"hex","structure":"continent","uniqueMasks":64,"centerX":[27.952251763429192,34.904503526858385],"centerY":[27.660336408030386,35.89582202930006],"aspect":[0.8363636363636363,1.25]}]}
+✔ connected seed geometry keeps three separated islands or one large continent and deep sea on both grids and narrow maps (1079.507ms)
+✔ minimum 16x16 maps keep every core usable across 128 seeds on both grids (474.4729ms)
+✔ prepared geometry follows request/seed changes without mutating input or exposing cache state (76.7553ms)
+✔ 256x256 prepared island and continent geometry fits the existing worker time budget (1333.4772ms)
+ℹ {"size":"256x256","results":[{"kind":"square","structure":"islands","elapsedMs":334},{"kind":"square","structure":"continent","elapsedMs":375},{"kind":"hex","structure":"islands","elapsedMs":272},{"kind":"hex","structure":"continent","elapsedMs":324}]}
+✔ chunk display identity and page remain distinct from its stable caves mode id (1.1396ms)
+✔ landscape stacks expose only surface creation and preserve imported physical layers without underground editors (5.8388ms)
+✔ chunk stack retains underground creation and per-layer cave settings (1.2123ms)
+✔ restored landscape drafts do not create ungenerated underground cards or rewrite saved layer settings (0.8303ms)
+✔ Surface profile accepts repeated stable biome cards and rejects invalid percentages atomically (3.0984ms)
+✔ biome IDs count Unicode codepoints consistently with JSON Schema maxLength (0.3227ms)
+✔ square percentages spend final dry land only, with exact rounding and no geographic mutation (56.3311ms)
+✔ hex percentages spend final dry land only, with exact rounding and no geographic mutation (21.8794ms)
+✔ square Surface relief retains broad regional variation and stable rivers while cards are changed (534.6222ms)
+✔ hex Surface relief retains broad regional variation and stable rivers while cards are changed (365.5247ms)
+✔ largest remainder allocation counts water-free tiny maps and allows zero and 100 percent (2.1116ms)
+✔ regional boundaries create real foothill terrain and retain cores instead of only tinting neighboring colors (9.7725ms)
+✔ 300 Surface generation stays identical on small worker-like JavaScript stacks (3958.7433ms)
+✔ uniformity distributes coherent relief, selected biome territories and river sources together (2475.7797ms)
+ℹ {"kind":"square","seeds":[7,42,2026],"reliefDifferenceAtEightCells":{"low":0.02949785850891523,"high":0.05584865076680675},"biomeDifferenceAtEightCells":{"low":0.31461053513801496,"high":0.511338647577324},"riverHeadNearestNeighbor":{"low":7.705704175344233,"high":45.391789565226425}}
+ℹ {"kind":"hex","seeds":[7,42,2026],"reliefDifferenceAtEightCells":{"low":0.029557216335332533,"high":0.05547920058318506},"biomeDifferenceAtEightCells":{"low":0.32212431077145404,"high":0.5181431193191838},"riverHeadNearestNeighbor":{"low":8.483907926000088,"high":49.60372538487297}}
+✔ uniformity retains deterministic geography, sea mask and disabled rivers (1860.044ms)
+✔ source balance selects separate eligible catchments without changing the watershed or river budget (165.4338ms)
+✔ uniformity preserves exact selected biome areas, repeated cards and the sea geometry (2194.3765ms)
+✔ atlas size budget counts every physical layer and explains invalid 256 square settings before work starts (1.8361ms)
+✔ square and odd-r neighbor order stays identical at every edge (1.836ms)
+✔ 256 square profile generation finishes inside worker budget with deterministic project checksum (11216.7856ms)
+✔ profile-free 256 square generation preserves the pre-optimization checksum (11128.3486ms)
+✔ display overrides are validated, copied, exact and shared by cells and PNG without editing a layer (5.6983ms)
+✔ HSV picker round-trips saturated and neutral colors including endpoints (0.5118ms)
+✔ cell details are informational, bounds-checked and localized for every physical layer kind (0.8869ms)
+✔ all registered modes and three transport types bind exact source points, preserve geometry and roundtrip through runtime (21872.3902ms)
+✔ invalid kind, same point, conditional source, occupied target and malformed transport data are rejected atomically (218.7213ms)
+✔ rebind preserves the old counterpart; destination in another pair is protected; source deletion removes only its link (465.1642ms)
+✔ a one-way hop into an isolated pocket is rejected; a bidirectional link proves access and return (329.0816ms)
+✔ bound automatic points survive redistribution; unreachable live destination is never inferred from proposals (280.827ms)
+✔ invalid access fields under the map prevent generation even when sidebar settings are valid (1.5821ms)
+✔ active physical-layer settings are validated with both settings scopes (0.2922ms)
+✔ empty access scopes and disabled access options do not block valid settings (0.287ms)
+✔ unfinished biome-card inputs never block Create while normal settings remain validated (0.3744ms)
+✔ reported wet towns never turn whole banks or thin river-side faces into gravel squares (9248.2015ms)
+✔ the reported high-water valley lets its lake meet the river instead of preserving two parallel dry rails (2126.6947ms)
+✔ city percentage controls the extent of actual streets while keeping districts and natural outskirts (1614.324ms)
+✔ gravel is a quota-controlled additional biome on both landscape grids and survives runtime export (1310.4961ms)
+✔ height colors reveal upper mountain relief with a monotone shared display curve (0.4056ms)
+✔ default material view distinguishes open meadow and darker forest while retaining legend biome colors (2.6011ms)
+✔ forest climate subtypes remain dark and non-grass materials keep their own identity (0.2828ms)
+✔ grass keeps discrete biome palette colors while explicit material RGB wins exactly (0.313ms)
+✔ material legend replaces generic turf with actual meadow and forest swatches without duplicate controls (0.8823ms)
+✔ square and odd-r PNG export show the same two grass colors as the primary map view (3.8397ms)
+✔ forest edges are more irregular than equally sized open meadows on both grids (3240.948ms)
+ℹ {"kind":"square","size":50,"meadow":606,"forest":947}
+ℹ {"kind":"square","size":128,"meadow":1581,"forest":3181}
+ℹ {"kind":"square","size":300,"meadow":3762,"forest":7870}
+ℹ {"kind":"hex","size":50,"meadow":1055,"forest":1601}
+ℹ {"kind":"hex","size":128,"meadow":2718,"forest":5446}
+ℹ {"kind":"hex","size":300,"meadow":6542,"forest":13623}
+✔ dominant forests also use their edge formula and repeated meadow IDs still affect clearings (212.6954ms)
+✔ natural physical layer chains select only an enabled vertical kind and reject teleport-only weights (4883.1846ms)
+✔ a resealed cross-layer teleport is invalid even when its type, settings and report agree (2678.2364ms)
+✔ numeric bounds enforce min/max, integral and explicit decimal steps (1.3818ms)
+✔ incomplete numeric drafts remain invalid instead of silently becoming zero (0.2028ms)
+✔ uncommitted numeric typing never replaces a partial number with its minimum (0.2641ms)
+✔ operation job fields agree with the published contract instead of silently ignoring typos (3.4151ms)
+✔ missing required job fields produce a named input error before running an operation (1.3394ms)
+✔ documented raw recipe/project inputs still work alongside canonical job envelopes (652.8544ms)
+✔ recipe modes are explicit strings and never coerced from arrays or other JSON values (39.5589ms)
+✔ relief: geometry is pure; export has programs and an empty initial state (523.6211ms)
+✔ dungeon: geometry is pure; export has programs and an empty initial state (399.918ms)
+✔ tiers: geometry is pure; export has programs and an empty initial state (883.3272ms)
+✔ sideview: geometry is pure; export has programs and an empty initial state (1788.006ms)
+✔ caves: geometry is pure; export has programs and an empty initial state (1103.5704ms)
+✔ settlements: geometry is pure; export has programs and an empty initial state (948.8899ms)
+✔ landscape: geometry is pure; export has programs and an empty initial state (880.8838ms)
+✔ hexlandscape: geometry is pure; export has programs and an empty initial state (1060.3902ms)
+✔ rejects obsolete formats and direct entity operations; geometry accepts no population settings (229.0382ms)
+✔ source edits and spawn preview do not mutate geometry or bake entities (383.2281ms)
+✔ automatic distribution is atomic, deterministic and rejects stale or altered previews (538.9618ms)
+✔ redistribution retains other layers and manually detached automatic zones (1126.655ms)
+✔ masks and empty drafts remain editable without creating entities (195.259ms)
+✔ simulated activation is explicit; delay and night obey conditions (286.8906ms)
+✔ terrain changes preserve sources; an incompatible exact point fails export (214.0742ms)
+✔ checksum and mandatory navigation fixtures remain protected (588.8394ms)
+✔ QA pointer target keeps document coordinates stable when the outer page scrolls (2.2826ms)
+✔ QA pointer target accounts for iframe borders and horizontal scrolling (0.2115ms)
+✔ shortcuts choose the existing tool for geometry, zones and spawners without changing source kind (2.0443ms)
+✔ history uses Ctrl/Cmd Z, Shift Z and Y, including physical keys on a Russian layout (14.0243ms)
+✔ text inputs, modal dialogs, restoration, workers and active pointer strokes retain their own keyboard handling (0.4324ms)
+✔ an oversized PNG is rejected before reading cells or constructing a raster (1.8607ms)
+✔ the full selected batch budget is checked before rendering its first otherwise valid layer (0.2735ms)
+✔ invalid palettes retain their validation error before the batch size check (5.1283ms)
+✔ square/hex material and water PNG hashes stay fixed while elevation uses the contrast curve (7.7777ms)
+✔ raster layout predicts exact encoded byte lengths across stored-deflate boundaries (402.0089ms)
+✔ relief is a separate square-grid workspace with one physical surface and editable height fields (419.6207ms)
+✔ relief participates in the shared content editor and rejects hidden physical slices (206.7478ms)
+✔ schema component builders are repeatable without accumulating duplicate mode constraints (2976.3228ms)
+✔ both sea structures reject invalid erosion and export the existing canonical setting on both grids100 (9621.5869ms)
+✔ maximum erosion has a regional coast feature even for the former feature-off seed42 (623.4323ms)
+✔ maximum island erosion breaks long straight outer coasts at75percent on both grids (874.2978ms)
+✔ coast and islands erosion progressively changes coherent shores at100/300 without fingers, losing quota or cores (15266.9399ms)
+ℹ [{"structure":"coast","kind":"square","size":100,"seed":42,"erosion":0,"boundary":100,"land":1,"sea":1,"thin":0},{"structure":"coast","kind":"square","size":100,"seed":42,"erosion":50,"boundary":126,"land":1,"sea":1,"thin":0},{"structure":"coast","kind":"square","size":100,"seed":42,"erosion":100,"boundary":160,"land":1,"sea":1,"thin":0.0008},{"structure":"coast","kind":"square","size":100,"seed":7,"erosion":0,"boundary":100,"land":1,"sea":1,"thin":0},{"structure":"coast","kind":"square","size":100,"seed":7,"erosion":50,"boundary":125,"land":1,"sea":1,"thin":0},{"structure":"coast","kind":"square","size":100,"seed":7,"erosion":100,"boundary":160,"land":1,"sea":1,"thin":0.0013333333333333333},{"structure":"coast","kind":"square","size":100,"seed":870414469,"erosion":0,"boundary":100,"land":1,"sea":1,"thin":0},{"structure":"coast","kind":"square","size":100,"seed":870414469,"erosion":50,"boundary":123,"land":1,"sea":1,"thin":0},{"structure":"coast","kind":"square","size":100,"seed":870414469,"erosion":100,"boundary":151,"land":1,"sea":1,"thin":0.00013333333333333334},{"structure":"coast","kind":"square","size":100,"seed":4018650511,"erosion":0,"boundary":100,"land":1,"sea":1,"thin":0},{"structure":"coast","kind":"square","size":100,"seed":4018650511,"erosion":50,"boundary":141,"land":1,"sea":1,"thin":0},{"structure":"coast","kind":"square","size":100,"seed":4018650511,"erosion":100,"boundary":187,"land":1,"sea":1,"thin":0.0021333333333333334},{"structure":"coast","kind":"square","size":300,"seed":42,"erosion":0,"boundary":300,"land":1,"sea":1,"thin":0},{"structure":"coast","kind":"square","size":300,"seed":42,"erosion":50,"boundary":382,"land":1,"sea":1,"thin":0},{"structure":"coast","kind":"square","size":300,"seed":42,"erosion":100,"boundary":500,"land":1,"sea":1,"thin":0.002311111111111111},{"structure":"coast","kind":"square","size":300,"seed":7,"erosion":0,"boundary":300,"land":1,"sea":1,"thin":0},{"structure":"coast","kind":"square","size":300,"seed":7,"erosion":50,"boundary":389,"land":1,"sea":1,"thin":0.000044444444444444447},{"structure":"coast","kind":"square","size":300,"seed":7,"erosion":100,"boundary":572,"land":1,"sea":1,"thin":0.002414814814814815},{"structure":"coast","kind":"square","size":300,"seed":870414469,"erosion":0,"boundary":300,"land":1,"sea":1,"thin":0},{"structure":"coast","kind":"square","size":300,"seed":870414469,"erosion":50,"boundary":378,"land":1,"sea":1,"thin":0},{"structure":"coast","kind":"square","size":300,"seed":870414469,"erosion":100,"boundary":482,"land":1,"sea":1,"thin":0.0019555555555555554},{"structure":"coast","kind":"square","size":300,"seed":4018650511,"erosion":0,"boundary":300,"land":1,"sea":1,"thin":0},{"structure":"coast","kind":"square","size":300,"seed":4018650511,"erosion":50,"boundary":430,"land":1,"sea":1,"thin":0.00013333333333333334},{"structure":"coast","kind":"square","size":300,"seed":4018650511,"erosion":100,"boundary":595,"land":1,"sea":1,"thin":0.004562962962962963},{"structure":"coast","kind":"hex","size":100,"seed":42,"erosion":0,"boundary":199,"land":1,"sea":1,"thin":0},{"structure":"coast","kind":"hex","size":100,"seed":42,"erosion":50,"boundary":225,"land":1,"sea":1,"thin":0},{"structure":"coast","kind":"hex","size":100,"seed":42,"erosion":100,"boundary":258,"land":1,"sea":1,"thin":0.0006666666666666666},{"structure":"coast","kind":"hex","size":100,"seed":7,"erosion":0,"boundary":199,"land":1,"sea":1,"thin":0},{"structure":"coast","kind":"hex","size":100,"seed":7,"erosion":50,"boundary":205,"land":1,"sea":1,"thin":0.0006666666666666666},{"structure":"coast","kind":"hex","size":100,"seed":7,"erosion":100,"boundary":247,"land":1,"sea":1,"thin":0.0029333333333333334},{"structure":"coast","kind":"hex","size":100,"seed":870414469,"erosion":0,"boundary":199,"land":1,"sea":1,"thin":0},{"structure":"coast","kind":"hex","size":100,"seed":870414469,"erosion":50,"boundary":201,"land":1,"sea":1,"thin":0},{"structure":"coast","kind":"hex","size":100,"seed":870414469,"erosion":100,"boundary":227,"land":1,"sea":1,"thin":0.0013333333333333333},{"structure":"coast","kind":"hex","size":100,"seed":4018650511,"erosion":0,"boundary":199,"land":1,"sea":1,"thin":0},{"structure":"coast","kind":"hex","size":100,"seed":4018650511,"erosion":50,"boundary":240,"land":1,"sea":1,"thin":0},{"structure":"coast","kind":"hex","size":100,"seed":4018650511,"erosion":100,"boundary":292,"land":1,"sea":1,"thin":0.0005333333333333334},{"structure":"coast","kind":"hex","size":300,"seed":42,"erosion":0,"boundary":599,"land":1,"sea":1,"thin":0},{"structure":"coast","kind":"hex","size":300,"seed":42,"erosion":50,"boundary":681,"land":1,"sea":1,"thin":0.0002074074074074074},{"structure":"coast","kind":"hex","size":300,"seed":42,"erosion":100,"boundary":819,"land":1,"sea":1,"thin":0.0011555555555555555},{"structure":"coast","kind":"hex","size":300,"seed":7,"erosion":0,"boundary":599,"land":1,"sea":1,"thin":0},{"structure":"coast","kind":"hex","size":300,"seed":7,"erosion":50,"boundary":615,"land":1,"sea":1,"thin":0.00017777777777777779},{"structure":"coast","kind":"hex","size":300,"seed":7,"erosion":100,"boundary":907,"land":1,"sea":1,"thin":0.009022222222222221},{"structure":"coast","kind":"hex","size":300,"seed":870414469,"erosion":0,"boundary":599,"land":1,"sea":1,"thin":0},{"structure":"coast","kind":"hex","size":300,"seed":870414469,"erosion":50,"boundary":607,"land":1,"sea":1,"thin":0.0001925925925925926},{"structure":"coast","kind":"hex","size":300,"seed":870414469,"erosion":100,"boundary":739,"land":1,"sea":1,"thin":0.0037185185185185186},{"structure":"coast","kind":"hex","size":300,"seed":4018650511,"erosion":0,"boundary":599,"land":1,"sea":1,"thin":0},{"structure":"coast","kind":"hex","size":300,"seed":4018650511,"erosion":50,"boundary":729,"land":1,"sea":1,"thin":0},{"structure":"coast","kind":"hex","size":300,"seed":4018650511,"erosion":100,"boundary":964,"land":1,"sea":1,"thin":0.004162962962962963},{"structure":"islands","kind":"square","size":100,"seed":42,"erosion":0,"boundary":716,"land":3,"sea":1,"thin":0.0132},{"structure":"islands","kind":"square","size":100,"seed":42,"erosion":50,"boundary":732,"land":3,"sea":1,"thin":0.016666666666666666},{"structure":"islands","kind":"square","size":100,"seed":42,"erosion":100,"boundary":784,"land":3,"sea":1,"thin":0.02266666666666667},{"structure":"islands","kind":"square","size":100,"seed":7,"erosion":0,"boundary":680,"land":3,"sea":1,"thin":0.010933333333333333},{"structure":"islands","kind":"square","size":100,"seed":7,"erosion":50,"boundary":694,"land":3,"sea":1,"thin":0.013866666666666666},{"structure":"islands","kind":"square","size":100,"seed":7,"erosion":100,"boundary":730,"land":3,"sea":1,"thin":0.016266666666666665},{"structure":"islands","kind":"square","size":100,"seed":870414469,"erosion":0,"boundary":698,"land":3,"sea":1,"thin":0.013466666666666667},{"structure":"islands","kind":"square","size":100,"seed":870414469,"erosion":50,"boundary":730,"land":3,"sea":1,"thin":0.017333333333333333},{"structure":"islands","kind":"square","size":100,"seed":870414469,"erosion":100,"boundary":782,"land":3,"sea":1,"thin":0.021466666666666665},{"structure":"islands","kind":"square","size":100,"seed":4018650511,"erosion":0,"boundary":704,"land":3,"sea":1,"thin":0.012},{"structure":"islands","kind":"square","size":100,"seed":4018650511,"erosion":50,"boundary":732,"land":3,"sea":1,"thin":0.02},{"structure":"islands","kind":"square","size":100,"seed":4018650511,"erosion":100,"boundary":812,"land":3,"sea":1,"thin":0.0256},{"structure":"islands","kind":"square","size":300,"seed":42,"erosion":0,"boundary":2146,"land":3,"sea":1,"thin":0.010888888888888889},{"structure":"islands","kind":"square","size":300,"seed":42,"erosion":50,"boundary":2206,"land":3,"sea":1,"thin":0.0116},{"structure":"islands","kind":"square","size":300,"seed":42,"erosion":100,"boundary":2412,"land":3,"sea":1,"thin":0.02077037037037037},{"structure":"islands","kind":"square","size":300,"seed":7,"erosion":0,"boundary":2038,"land":3,"sea":1,"thin":0.008503703703703704},{"structure":"islands","kind":"square","size":300,"seed":7,"erosion":50,"boundary":2110,"land":3,"sea":1,"thin":0.010918518518518518},{"structure":"islands","kind":"square","size":300,"seed":7,"erosion":100,"boundary":2246,"land":3,"sea":1,"thin":0.012474074074074075},{"structure":"islands","kind":"square","size":300,"seed":870414469,"erosion":0,"boundary":2126,"land":3,"sea":1,"thin":0.010237037037037038},{"structure":"islands","kind":"square","size":300,"seed":870414469,"erosion":50,"boundary":2224,"land":3,"sea":1,"thin":0.013362962962962964},{"structure":"islands","kind":"square","size":300,"seed":870414469,"erosion":100,"boundary":2428,"land":3,"sea":1,"thin":0.018755555555555557},{"structure":"islands","kind":"square","size":300,"seed":4018650511,"erosion":0,"boundary":2128,"land":3,"sea":1,"thin":0.008325925925925926},{"structure":"islands","kind":"square","size":300,"seed":4018650511,"erosion":50,"boundary":2244,"land":3,"sea":1,"thin":0.014251851851851852},{"structure":"islands","kind":"square","size":300,"seed":4018650511,"erosion":100,"boundary":2520,"land":3,"sea":1,"thin":0.022059259259259258},{"structure":"islands","kind":"hex","size":100,"seed":42,"erosion":0,"boundary":1246,"land":3,"sea":1,"thin":0.008133333333333333},{"structure":"islands","kind":"hex","size":100,"seed":42,"erosion":50,"boundary":1270,"land":3,"sea":1,"thin":0.011733333333333333},{"structure":"islands","kind":"hex","size":100,"seed":42,"erosion":100,"boundary":1316,"land":3,"sea":1,"thin":0.02266666666666667},{"structure":"islands","kind":"hex","size":100,"seed":7,"erosion":0,"boundary":1190,"land":3,"sea":1,"thin":0.007466666666666667},{"structure":"islands","kind":"hex","size":100,"seed":7,"erosion":50,"boundary":1216,"land":3,"sea":1,"thin":0.009733333333333333},{"structure":"islands","kind":"hex","size":100,"seed":7,"erosion":100,"boundary":1248,"land":3,"sea":1,"thin":0.008533333333333334},{"structure":"islands","kind":"hex","size":100,"seed":870414469,"erosion":0,"boundary":1210,"land":3,"sea":1,"thin":0.0072},{"structure":"islands","kind":"hex","size":100,"seed":870414469,"erosion":50,"boundary":1254,"land":3,"sea":1,"thin":0.014},{"structure":"islands","kind":"hex","size":100,"seed":870414469,"erosion":100,"boundary":1328,"land":3,"sea":1,"thin":0.016533333333333334},{"structure":"islands","kind":"hex","size":100,"seed":4018650511,"erosion":0,"boundary":1222,"land":3,"sea":1,"thin":0.0084},{"structure":"islands","kind":"hex","size":100,"seed":4018650511,"erosion":50,"boundary":1272,"land":3,"sea":1,"thin":0.016},{"structure":"islands","kind":"hex","size":100,"seed":4018650511,"erosion":100,"boundary":1346,"land":3,"sea":1,"thin":0.03},{"structure":"islands","kind":"hex","size":300,"seed":42,"erosion":0,"boundary":3748,"land":3,"sea":1,"thin":0.006992592592592593},{"structure":"islands","kind":"hex","size":300,"seed":42,"erosion":50,"boundary":3816,"land":3,"sea":1,"thin":0.010014814814814815},{"structure":"islands","kind":"hex","size":300,"seed":42,"erosion":100,"boundary":4038,"land":3,"sea":1,"thin":0.024207407407407407},{"structure":"islands","kind":"hex","size":300,"seed":7,"erosion":0,"boundary":3562,"land":3,"sea":1,"thin":0.0048},{"structure":"islands","kind":"hex","size":300,"seed":7,"erosion":50,"boundary":3660,"land":3,"sea":1,"thin":0.007244444444444445},{"structure":"islands","kind":"hex","size":300,"seed":7,"erosion":100,"boundary":3818,"land":3,"sea":1,"thin":0.01165925925925926},{"structure":"islands","kind":"hex","size":300,"seed":870414469,"erosion":0,"boundary":3640,"land":3,"sea":1,"thin":0.006548148148148148},{"structure":"islands","kind":"hex","size":300,"seed":870414469,"erosion":50,"boundary":3802,"land":3,"sea":1,"thin":0.008118518518518518},{"structure":"islands","kind":"hex","size":300,"seed":870414469,"erosion":100,"boundary":4084,"land":3,"sea":1,"thin":0.016192592592592592},{"structure":"islands","kind":"hex","size":300,"seed":4018650511,"erosion":0,"boundary":3670,"land":3,"sea":1,"thin":0.0061333333333333335},{"structure":"islands","kind":"hex","size":300,"seed":4018650511,"erosion":50,"boundary":3820,"land":3,"sea":1,"thin":0.012251851851851852},{"structure":"islands","kind":"hex","size":300,"seed":4018650511,"erosion":100,"boundary":4118,"land":3,"sea":1,"thin":0.026533333333333332}]
+✔ sea erosion respects mutated recipe cache, repeatability and independence from cards/uniformity (2454.0754ms)
+✔ HTTP schema 4, zone preview/apply, explicit save conflicts and request boundaries (3483.2376ms)
+✔ presence ownership survives delayed disconnects and preserves another live tab (27.9636ms)
+✔ HTTP presence detects abrupt closure without a beacon, handles control frames and rejects foreign origins (161.5566ms)
+✔ one bounded session preserves independent modes and tabs, rejects stale saves and starts fresh after all tabs close (541.3288ms)
+✔ session limits, old page ownership, duplicated tabs, server restart and expired leases do not overwrite live work (21.3761ms)
+✔ session HTTP stores actual edited project separately from explicit projects and refuses cross-origin writes (451.5246ms)
+✔ neighborhoods fill land between streets and adjacent neighborhoods form bounded quarters (1127.6969ms)
+✔ area ranges are strict, partial options normalize and impossible geography reports unmet targets (115.3503ms)
+✔ region membership and quarter area cannot be forged by resealing the snapshot (1248.6966ms)
+✔ settlement neighborhood and quarter metadata survive materialization and runtime export (679.8192ms)
+✔ settlement labels fit their land and never overlap neighbouring labels or spill outside the map (2.8014ms)
+✔ river crossings have a walkable deck and sea/lake remain outside the road network (10.4853ms)
+✔ piers stop in the sea after at most three water cells and never bridge to the other bank (1.0448ms)
+✔ full-width road footprints avoid cliffs, including at bends (0.9354ms)
+✔ settlement streets preserve sea and cliffs, and label only river crossings as bridges (1078.1562ms)
+✔ street metadata follows the actual cell path instead of a segment across blocked terrain (164.2205ms)
+✔ settlement validation rejects forged street geometry even with a fresh checksum (681.8472ms)
+✔ the full documented settlement size range uses its single physical layer budget (3350.5464ms)
+✔ town is an open street plan with a river, bridges, lake, squares and parks, without houses (1029.5974ms)
+✔ village has roads and bridges among forests and meadows, without urban spaces or houses (1136.6037ms)
+✔ dry maps and all street families retain valid districts and deterministic open geometry (1839.4133ms)
+✔ town public spaces use shared raster/legend colors and survive scene/runtime export (903.4188ms)
+✔ water control still changes the actual water coverage in town and village (1460.1416ms)
+✔ organic village keeps wooded outskirts free from a repeated comb of subdivision roads (346.216ms)
+✔ 160-cell town at the reported seed avoids repeated long narrow district strips (2120.0578ms)
+✔ town and village accept 300 by 300 consistently in UI, API and schemas and reject 301 (6.7384ms)
+✔ redoing a newly drawn zone selects it so the next stroke edits the same source (1.0766ms)
+✔ history keeps valid selection and selects only a restored source in the current scope (0.2605ms)
+✔ all registered recipes separate terrain parameters from content definitions (84.3907ms)
+✔ every workspace keeps the ordered content editor below the map with two workflows and two source kinds (24.0096ms)
+✔ changing tier counts, common room count or headroom preserves layer IDs, corridor policies and distinct floor drafts (34.2509ms)
+✔ Chunk has a canonical chunk page while caves remains only its stable mode id (24.4275ms)
+✔ all browser pages and assets live under Web, leaving no root HTML or ui directory (46.7251ms)
+✔ relocated CMD launchers work from an unrelated directory and start only one owned server (5833.4731ms)
+✔ home, nested pages, styles and transitive browser modules resolve through HTTP (176.3506ms)
+ℹ tests 459
+ℹ suites 0
+ℹ pass 453
+ℹ fail 6
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 60143.0772
+
+✖ failing tests:
+
+test at tests\landscape-biome-cards.test.mjs:26:1
+✖ per-card Add validates the confirmed budget atomically while invalid drafts do not block Create (4.7516ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  75 !== 95
+  
+      at TestContext.<anonymous> (file:///C:/Vibecoding/Games/VlandGenerator/tests/landscape-biome-cards.test.mjs:26:591)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 75,
+    expected: 95,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests\landscape-biome-cards.test.mjs:31:1
+✖ restoring ten independent UI fields never changes confirmed recipe cards until Add (9.4376ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  3.5 !== 0.5
+  
+      at TestContext.<anonymous> (file:///C:/Vibecoding/Games/VlandGenerator/tests/landscape-biome-cards.test.mjs:31:1018)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 3.5,
+    expected: 0.5,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests\landscape-irregular.test.mjs:39:1
+✖ seed42 has a resolved sea-connected bay at 50 and 300 on square and hex landmasses (1852.8579ms)
+  AssertionError [ERR_ASSERTION]: {"size":50,"kind":"square","structure":"islands","elapsedMs":37,"parts":[{"cells":211,"bayDepth":0.5266851623825876,"hullDeficit":0.09051724137931039,"aspect":0.9444444444444444,"elongation":1.0861454100479817},{"cells":131,"bayDepth":0.5,"hullDeficit":0.06428571428571428,"aspect":0.8571428571428571,"elongation":1.2088540429917933},{"cells":283,"bayDepth":1.8407159732336889,"hullDeficit":0.15396113602391626,"aspect":2.5384615384615383,"elongation":3.028432596458968}]} sea-connected bay depth at least2/12 cells
+      at TestContext.<anonymous> (file:///C:/Vibecoding/Games/VlandGenerator/tests/landscape-irregular.test.mjs:43:67)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }
+
+test at tests\landscape-irregular.test.mjs:56:1
+✖ actual app seeds include an elongated island instead of three similar radial silhouettes (1413.7251ms)
+  AssertionError [ERR_ASSERTION]: {"mode":"landscape","seed":42,"shapeSeed":93344066,"elongation":[1.3038630847212802,1.1874575076601437,1.8543472390474094]} at least one major/minor spread ratio >=2; visual acceptance remains separate
+      at TestContext.<anonymous> (file:///C:/Vibecoding/Games/VlandGenerator/tests/landscape-irregular.test.mjs:61:66)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }
+
+test at tests\landscape-irregular.test.mjs:64:1
+✖ coastline silhouettes stay deterministic under explicit coverage, including feasible16-cell islands (4.6945ms)
+  AssertionError [ERR_ASSERTION]: square/islands/16
+  + actual - expected
+  
+  + '6e0152459a0293ae008aa8fe60fd3e840907b2023c205fedee773adf36cd29b9'
+  - '98eaa8dd40159fd8fcce7f53382f72e7e9521c99f9840d315605056de4fa6cda'
+  
+      at TestContext.<anonymous> (file:///C:/Vibecoding/Games/VlandGenerator/tests/landscape-irregular.test.mjs:66:315)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: '6e0152459a0293ae008aa8fe60fd3e840907b2023c205fedee773adf36cd29b9',
+    expected: '98eaa8dd40159fd8fcce7f53382f72e7e9521c99f9840d315605056de4fa6cda',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests\landscape-rivers.test.mjs:67:1
+✖ generated bridge water level uses the immutable bed rather than its navigation deck elevation (37.1874ms)
+  AssertionError [ERR_ASSERTION]: fixture contains real raised decks
+      at TestContext.<anonymous> (file:///C:/Vibecoding/Games/VlandGenerator/tests/landscape-rivers.test.mjs:68:401)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }
